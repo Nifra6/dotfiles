@@ -1,4 +1,4 @@
-
+#!/bin/zsh
 # ---------------------------------------------------------
 # ---                 zsh run commands                  ---
 # ---------------------------------------------------------
@@ -86,6 +86,10 @@ case $HOSTNAME in
     fpath+=~/.zfunc
     autoload -Uz compinit && compinit
     source $SHELL_DOTFILES/zsh/completions/chezmoi.zsh
+    ;;
+
+  "nascane")
+    source $SHELL_DOTFILES/zsh/.zshrc_nascane
     ;;
 
   *)

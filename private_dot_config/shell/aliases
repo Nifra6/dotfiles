@@ -15,6 +15,13 @@ alias ll='ls -Al'
 # Alias pour supplanter d'autres commandes
 alias vim='nvim'
 alias lg='lazygit'
+alias apv='mpv --volume=50 --no-audio-display'
+alias feh='feh --scale-down --auto-zoom'
+
+# Archivage
+alias compress='tar zcvf archive.tar.gz'
+alias decompress='tar zxvf'
+
 
 # Divers
 alias venv="source .venv/bin/activate"
@@ -27,7 +34,7 @@ alias zshrc='nvim $HOME/.config/shell/zsh/.zshrc'
 
 
 case $HOSTNAME in
-  
+
   "gonto")
     # Mises à jour
     alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; python /home/nmaignan/Applications/update_pip.py'
@@ -37,5 +44,23 @@ case $HOSTNAME in
     # Divers
     alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
     ;;
+
+  "nascane")
+    # Système
+    alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && sudo pacdiff'
+    alias day_mode='pkill -USR1 redshift'
+    alias retirer='sh ~/Applications/Scripts/umount.sh'
+    alias backup='sh ~/Applications/Scripts/backup.sh'
+    # Fonds d'écran
+    alias background-cli='sh ~/Applications/Scripts/choice.sh'
+    # Applications
+    alias convertir='sh ~/Applications/Scripts/convertisseur.sh'
+    alias video2gif='sh ~/Applications/Scripts/video2gif.sh'
+    alias matlab='~/Applications/Matlab/R2023a/bin/matlab -nodesktop'
+    alias matlab-gui='~/Applications/Matlab/R2023a/bin/matlab'
+    # Private aliases
+    source $HOME/.config/shell/aliases_nascane
+    ;;
+
 
 esac
