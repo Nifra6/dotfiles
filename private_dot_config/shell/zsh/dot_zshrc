@@ -8,7 +8,6 @@
 # -- Variables
 # ---------------------------
 SHELL_DOTFILES=$HOME/.config/shell/
-HOSTNAME=$(hostname)
 
 
 # -- History
@@ -86,6 +85,7 @@ case $HOSTNAME in
     zstyle :compinstall filename '/home/nmaignan/.zshrc'
     fpath+=~/.zfunc
     autoload -Uz compinit && compinit
+    source $SHELL_DOTFILES/zsh/completions/chezmoi.zsh
     ;;
 
   *)

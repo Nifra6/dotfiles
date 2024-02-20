@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Couleurs dans le terminal
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
@@ -7,29 +9,33 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Alias pour ls
-alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -Al'
 
 # Alias pour supplanter d'autres commandes
 alias vim='nvim'
-
-# Mises à jour
-alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; python /home/nmaignan/Applications/update_pip.py'
-
-# Backups
-alias backup="cp -nrv /home/nmaignan/Documents/Zotero/storage /media/nmaignan/HDD Arcé ; cp -nrv /home/nmaignan/Thèse /media/nmaignan/HDD Arcé"
-alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
+alias lg='lazygit'
 
 # Divers
-alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
 alias venv="source .venv/bin/activate"
-#alias matlab="/usr/local/MATLAB/R2023a/bin/matlab"
 alias docker_clean="docker system prune"
 
-
 # Modifications config
-alias dotfiles_update='chezmoi re-add'
 alias aliases='nvim $HOME/.config/shell/aliases'
 alias zshenv='nvim $HOME/.config/shell/zsh/.zshenv'
 alias zshrc='nvim $HOME/.config/shell/zsh/.zshrc'
+
+
+case $HOSTNAME in
+  
+  "gonto")
+    # Mises à jour
+    alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; python /home/nmaignan/Applications/update_pip.py'
+    # Backups
+    alias backup="cp -nrv /home/nmaignan/Documents/Zotero/storage /media/nmaignan/HDD Arcé ; cp -nrv /home/nmaignan/Thèse /media/nmaignan/HDD Arcé"
+    alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
+    # Divers
+    alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
+    ;;
+
+esac

@@ -8,4 +8,5 @@
 # -- Variables
 # ---------------------------
 EDITOR=nvim
+HOSTNAME=$(hostname)
 ZDOTDIR=$HOME/.config/shell/zsh/
