@@ -28,9 +28,9 @@ alias venv="source .venv/bin/activate"
 alias docker_clean="docker system prune"
 
 # Modifications config
-alias aliases='nvim $HOME/.config/shell/aliases'
-alias zshenv='nvim $HOME/.config/shell/zsh/.zshenv'
-alias zshrc='nvim $HOME/.config/shell/zsh/.zshrc'
+alias aliases='chezmoi edit $HOME/.config/shell/aliases ; chezmoi apply'
+alias zshenv='chezmoi edit $HOME/.config/shell/zsh/.zshenv ; chezmoi apply'
+alias zshrc='chezmoi edit $HOME/.config/shell/zsh/.zshrc ; chezmoi apply'
 
 
 case $HOSTNAME in

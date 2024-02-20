@@ -7,19 +7,26 @@
 
 # -- Variables
 # ---------------------------
-SHELL_DOTFILES=$HOME/.config/shell/
+SHELL_DOTFILES=${HOME}/.config/shell
 
 
 # -- History
 # ---------------------------
-HISTFILE=$SHELL_DOTFILES/.histfile
-HISTSIZE=500
+HISTFILE=${SHELL_DOTFILES}/.histfile
+HISTSIZE=1000
 SAVEHIST=5000
+
+
+# -- Completion
+# ---------------------------
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
 
 
 # -- Aliases
 # ---------------------------
-source $SHELL_DOTFILES/aliases
+source ${SHELL_DOTFILES}/aliases
 
 
 # -- Prompt
@@ -28,13 +35,15 @@ PROMPT='%F{magenta}%B%K{magenta}█▓▒░%F{black}%K{magenta}%B%n@%m%b%F{mage
 %}%F{magenta}%K{black}%B%~/%b%k%f '
 
 
+# -- Miscellaneous
+# ---------------------------
+bindkey -v
+
+
 case $HOSTNAME in
 
   "gonto")
     # Complétion des commandes
-    autoload -Uz compinit
-    compinit
-    zstyle ':comletion:*' menu select
     # Suggestions et couleurs
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -75,21 +84,23 @@ case $HOSTNAME in
     # -- Miscellaneous
     # ---------------------------
     unsetopt beep
-    bindkey -v
-    export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
     fpath+=/home/nmaignan/Applications/conda-zsh-completion
     compinit
     zstyle ':completion::complete:*' use-cache 1
     zstyle ":conda_zsh_completion:*" sort-envs-by-time true
     zstyle ":conda_zsh_completion:*" show-global-envs-first true
-    zstyle :compinstall filename '/home/nmaignan/.zshrc'
     fpath+=~/.zfunc
     autoload -Uz compinit && compinit
-    source $SHELL_DOTFILES/zsh/completions/chezmoi.zsh
+    source ${SHELL_DOTFILES}/zsh/completions/chezmoi.zsh
     ;;
 
   "nascane")
-    source $SHELL_DOTFILES/zsh/.zshrc_nascane
+    # Suggestions et couleurs
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    # -- Miscellaneous
+    # ---------------------------
+    source ${SHELL_DOTFILES}/zsh/.zshrc_nascane
     ;;
 
   *)
