@@ -1,2 +1,11 @@
+#!/bin/zsh
+# ------------------------------------------------------------
+# ---                    zsh environment                   ---
+# ------------------------------------------------------------
+
+# Please create a symlink of this file to your $HOME
+
+# -- Variables
+# ---------------------------
 EDITOR=nvim
 ZDOTDIR=$HOME/.config/shell/zsh/
