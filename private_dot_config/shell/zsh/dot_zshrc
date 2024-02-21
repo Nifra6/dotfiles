@@ -43,8 +43,8 @@ bindkey -v
 case $HOSTNAME in
 
   "gonto")
-    # Complétion des commandes
-    # Suggestions et couleurs
+    # -- Suggestions and colours
+    # ---------------------------
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     # -- pip
