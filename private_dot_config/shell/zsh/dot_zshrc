@@ -22,7 +22,7 @@ SAVEHIST=5000
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
-
+# matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # -- Aliases
 # ---------------------------
