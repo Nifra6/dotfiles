@@ -8,6 +8,7 @@
 # -- Variables
 # ---------------------------
 export EDITOR=nvim
+export VISUAL=nvim
 export HOSTNAME=$(hostname)
 export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
 export ZDOTDIR=${HOME}/.config/shell/zsh
