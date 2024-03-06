@@ -16,9 +16,7 @@ set $mod Mod4
 set $term kitty
 
 # Lanceur d'application
-set $menu rofi -no-levenshtein-sort -color-enabled -show run\
-	-run-command "zsh -i -c '{cmd}'" | xargs swaymsg exec --
-
+set $menu rofi -show run | xargs swaymsg exec --
 
 
 # ---------------------------------------------------------
