@@ -1,0 +1,202 @@
+// ------------------------------------------------------------------------------------------------------
+// ---                             Fichier de configuration de Waybar                                 ---
+// ------------------------------------------------------------------------------------------------------
+
+{
+
+    // -----------------------------------------------------
+    // ---             Configuration globale             ---
+    // -----------------------------------------------------
+
+    // Forme de la barre
+    "position": "top",
+    "height": 30,
+
+    // Ordres des modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "custom/media",
+        "custom/pacman"
+    ],
+    "modules-center": [
+        "idle_inhibitor",
+        "clock",
+        "tray"
+    ],
+    "modules-right": [
+        "disk",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "pulseaudio",
+        "battery"
+    ],
+
+
+
+    // -----------------------------------------------------
+    // ---      Configuration des modules : gauche       ---
+    // -----------------------------------------------------
+
+    // Workspace
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}"
+    },
+
+    // Mode de Sway
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    // Afficheur média
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 80,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "sh $HOME/.config/waybar/mediaplayer.sh"
+    },
+
+    "custom/pacman": {
+        "format": " {icon} {} ",
+        "return-type": "json",
+        "format-icons": {
+            "uptodate": "\uf00c",
+            "available": "\uf019"
+        },
+        "interval": 600,
+        "exec": "sh $HOME/.config/waybar/pacman.sh",
+        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update", // update system
+        "signal": 8
+    },
+
+    // -----------------------------------------------------
+    // ---      Configuration des modules : milieu       ---
+    // -----------------------------------------------------
+
+    // Désactivation de la veille
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    // Tray
+    "tray": {
+        "spacing": 10
+    },
+
+    // Horloge
+    "clock": {
+        "timezone": "Europe/Paris",
+        "format": "{:%A %d %B | %H:%M}"
+    },
+
+
+
+    // -----------------------------------------------------
+    // ---      Configuration des modules : droite       ---
+    // -----------------------------------------------------
+
+    // Espace disque
+    "disk": {
+        "interval": 30,
+        "format": "{free} libres",
+        "path": "/",
+        "on-click": "filelight",
+    },
+
+    // Réseau
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Déconnecté ",
+        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c nmtui",
+        "interval": 10
+    },
+
+
+    // Usage processeur
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop"
+    },
+
+    // RAM
+    "memory": {
+        "format": "{}% ",
+        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop"
+    },
+
+    // Température processeur
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+
+    // Luminosité
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""],
+        "on-click": "pkill -USR1 redshift"
+    },
+
+    // Son
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Batterie
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} | {capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+
+
+    // -----------------------------------------------------
+    // ---            Modules peu importants             ---
+    // -----------------------------------------------------
+
+    //"custom/left-arrow": {
+    //  "format": "",
+    //  "tooltip": false
+    //},
+
+}
