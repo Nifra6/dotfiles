@@ -1,0 +1,271 @@
+# ------------------------------------------------------------------------------------------------------
+# ---                                Fichier de configuration de Sway                                ---
+# ------------------------------------------------------------------------------------------------------
+
+
+
+
+# ---------------------------------------------------------
+# ---                     Variables                     ---
+# ---------------------------------------------------------
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Emulateur de terminal
+set $term kitty
+
+# Lanceur d'application
+set $menu rofi -no-levenshtein-sort -color-enabled -show run\
+	-run-command "zsh -i -c '{cmd}'" | xargs swaymsg exec --
+
+
+
+# ---------------------------------------------------------
+# ---                      Sorties                      ---
+# ---------------------------------------------------------
+
+# Fonds d'écran
+output * bg $HOME/Images/Wallpaper/wallpaper.jpg fill
+output HDMI-A-2 bg $HOME/Images/Wallpaper/wallpaper_huawei.jpg fill position 0 0
+
+# Idle
+exec swayidle -w \
+	timeout 300 'swaylock -f -c 000000' \
+	timeout 310 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 000000'
+
+# Filtre lumière bleue
+exec redshift -l 48.41:6.11 -t 6500:2500
+
+
+# ---------------------------------------------------------
+# ---                      Entrées                      ---
+# ---------------------------------------------------------
+
+# Clavier
+input "*" {
+	xkb_layout fr
+	xkb_variant latin9
+	xkb_numlock enable
+}
+
+# Touchpad
+input "*" {
+	tap enabled
+	natural_scroll enabled
+}
+
+
+
+# ---------------------------------------------------------
+# ---                    Keybindings                    ---
+# ---------------------------------------------------------
+
+
+# ----------- Fonctions de base
+
+    # Démarrer le lanceur
+    bindsym $mod+x exec $menu
+
+    # Démarrer un terminal
+    bindsym $mod+Return exec $term
+
+    # Fenêtre flottante
+    floating_modifier $mod normal
+
+    # Fermer la fenêtre active
+    bindsym $mod+Shift+q kill
+
+    # Recharger le fichier de configuration de Sway
+    bindsym $mod+Shift+c reload
+
+    # Quitter Sway
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Voulez vous vraiment quitter Sway et mettre fin à votre session Wayland ?' -b 'Oui, fermeture de sway' 'swaymsg exit'
+
+
+# ----------- Fonctions systèmes
+
+    # Son
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+    # Luminosité
+    bindsym XF86MonBrightnessUp exec sh Applications/Scripts/brightness.sh +
+    bindsym XF86MonBrightnessDown exec sh Applications/Scripts/brightness.sh -
+
+    # Capture d'écran
+    bindsym Print exec grim -g "$(slurp -d -b BD00FF10)" - | wl-copy -t image/png
+
+# ----------- Se déplacer
+
+    # Déplacer le focus
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Déplacer la fenêtre active
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+
+# ----------- Workspace
+
+    # Aller au workspace number
+    bindsym $mod+ampersand workspace number 1
+    bindsym $mod+eacute workspace number 2
+    bindsym $mod+quotedbl workspace number 3
+    bindsym $mod+apostrophe workspace number 4
+    bindsym $mod+parenleft workspace number 5
+    bindsym $mod+minus workspace number 6
+    bindsym $mod+egrave workspace number 7
+    bindsym $mod+underscore workspace number 8
+    bindsym $mod+ccedilla workspace number 9
+    bindsym $mod+agrave workspace number 10
+
+    # Déplacer la fenêtre active vers le workspace number
+    bindsym $mod+Shift+ampersand move container to workspace number 1
+    bindsym $mod+Shift+eacute move container to workspace number 2
+    bindsym $mod+Shift+quotedbl move container to workspace number 3
+    bindsym $mod+Shift+apostrophe move container to workspace number 4
+    bindsym $mod+Shift+parenleft move container to workspace number 5
+    bindsym $mod+Shift+minus move container to workspace number 6
+    bindsym $mod+Shift+egrave move container to workspace number 7
+    bindsym $mod+Shift+underscore move container to workspace number 8
+    bindsym $mod+Shift+ccedilla move container to workspace number 9
+    bindsym $mod+Shift+agrave move container to workspace number 10
+
+	# Déplacer le workspace number
+	bindsym $mod+l move workspace to output left
+	bindsym $mod+m move workspace to output right
+
+
+# ----------- [WIP] Layout stuff
+
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    #bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+Shift+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+
+	# Rotate screen
+	bindsym $mod+k output eDP-1 transform 90 clockwise
+	bindsym $mod+j output eDP-1 transform 90 anticlockwise
+
+
+# ----------- [WIP] Scratchpad
+
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+parenright move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+parenright scratchpad show
+
+
+# ----------- Redimensionner les fenêtres
+
+mode "resize" {
+    # Réduire la largeur
+    bindsym Left resize shrink width 10px
+    # Augmenter la largeur
+    bindsym Down resize grow height 10px
+    # Réduire la hauteur
+    bindsym Up resize shrink height 10px
+    # Augmenter la hauteur
+    bindsym Right resize grow width 10px
+
+    # Retourner au mode par défault
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+# ----------- Applications
+
+    bindsym $mod+f exec firefox
+    bindsym $mod+d exec discord
+    bindsym $mod+s exec spotify
+	bindsym $mod+t exec qbittorrent
+
+
+
+# ---------------------------------------------------------
+# ---                 Barre de statut                   ---
+# ---------------------------------------------------------
+
+bar {
+	swaybar_command waybar
+}
+
+
+# ---------------------------------------------------------
+# ---                Aspect des fenêtres                ---
+# ---------------------------------------------------------
+
+# Bordures
+smart_gaps on
+gaps inner 8
+default_border none
+
+# Transparence
+for_window [class="discord"] opacity 0.95
+for_window [class="Spotify"] opacity 0.9
+for_window [class="thunderbird"] opacity 0.9
+for_window [title="qBittorrent"] opacity 0.94
+for_window [title="Syncplay"] opacity 0.9
+
+
+
+# ---------------------------------------------------------
+# ---                     Démarrage                     ---
+# ---------------------------------------------------------
+
+# Positionnement au lancement
+assign [class="discord"] workspace number 1
+assign [class="Spotify"] workspace number 2
+assign [class="thunderbird"] workspace number 6
+assign [title="Mullvad VPN"] workspace number 8
+assign [class="qBittorrent"] workspace number 8
+
+# Applications au lancement
+exec thunderbird
+exec discord
+exec blueman-applet
+exec blueman-tray
+exec udiskie
+
+
+# ---------------------------------------------------------
+# ---                      Bordel                       ---
+# ---------------------------------------------------------
+
+include .config/environment.d/*
+exec xrdb ~/.Xresources
+exec_always --no-startup-id workstyle &> /tmp/workstyle.log
