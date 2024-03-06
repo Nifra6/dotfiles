@@ -1,6 +1,11 @@
 #!/bin/zsh
+# ------------------------------------------------------------
+# ---                     shell aliases                    ---
+# ------------------------------------------------------------
 
-# Couleurs dans le terminal
+
+# -- Colours command
+# ---------------------------
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -8,27 +13,36 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Alias pour ls
+
+# -- ls aliases
+# ---------------------------
 alias la='ls -A'
 alias ll='ls -Al'
 
-# Alias pour supplanter d'autres commandes
-alias vim='nvim'
+
+# -- Alt names
+# ---------------------------
 alias vi='nvim'
+alias vim='nvim'
 alias lg='lazygit'
-alias apv='mpv --volume=50 --no-audio-display'
+
+
+# -- Command config
+# ---------------------------
 alias feh='feh --scale-down --auto-zoom'
 
-# Archivage
+
+# -- New commands
+# ---------------------------
+alias apv='mpv --volume=50 --no-audio-display'
+alias venv="source .venv/bin/activate"
 alias compress='tar zcvf archive.tar.gz'
 alias decompress='tar zxvf'
-
-
-# Divers
-alias venv="source .venv/bin/activate"
 alias docker_clean="docker system prune"
 
-# Modifications config
+
+# -- Fast config access
+# ---------------------------
 alias aliases='chezmoi edit $HOME/.config/shell/aliases ; chezmoi apply'
 alias zshenv='chezmoi edit $HOME/.config/shell/zsh/.zshenv ; chezmoi apply'
 alias zshrc='chezmoi edit $HOME/.config/shell/zsh/.zshrc ; chezmoi apply'
@@ -37,32 +51,34 @@ alias zshrc='chezmoi edit $HOME/.config/shell/zsh/.zshrc ; chezmoi apply'
 case $HOSTNAME in
 
   "gonto")
-    # Mises à jour
+    # -- System functions
+    # ---------------------------
     alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; python /home/nmaignan/Applications/update_pip.py'
-    # Backups
     alias backup="cp -nrv /home/nmaignan/Documents/Zotero/storage /media/nmaignan/HDD Arcé ; cp -nrv /home/nmaignan/Thèse /media/nmaignan/HDD Arcé"
     alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
-    # Divers
+    # -- Misc
+    # ---------------------------
     alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
     alias journal="nvim $HOME/Bureau/Journal\ de\ bord\ -\ Thèse.txt"
     ;;
 
   "nascane")
-    # Système
+    # -- System functions
+    # ---------------------------
     alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && sudo pacdiff'
     alias day_mode='pkill -USR1 redshift'
     alias retirer='sh ~/Applications/Scripts/umount.sh'
     alias backup='sh ~/Applications/Scripts/backup.sh'
-    # Fonds d'écran
     alias background-cli='sh ~/Applications/Scripts/choice.sh'
-    # Applications
+    # -- New commands
+    # ---------------------------
     alias convertir='sh ~/Applications/Scripts/convertisseur.sh'
     alias video2gif='sh ~/Applications/Scripts/video2gif.sh'
     alias matlab='~/Applications/Matlab/R2023a/bin/matlab -nodesktop'
     alias matlab-gui='~/Applications/Matlab/R2023a/bin/matlab'
-    # Private aliases
+    # -- Private aliases
+    # ---------------------------
     source $HOME/.config/shell/aliases_nascane
     ;;
-
 
 esac
