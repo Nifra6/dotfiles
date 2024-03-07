@@ -43,9 +43,10 @@ alias docker_clean="docker system prune"
 
 # -- Fast config access
 # ---------------------------
-alias aliases='chezmoi edit --watch $HOME/.config/shell/aliases'
-alias zshenv='chezmoi edit --watch $HOME/.config/shell/zsh/.zshenv'
-alias zshrc='chezmoi edit --watch $HOME/.config/shell/zsh/.zshrc'
+alias cedit='chezmoi edit --watch'
+alias aliases='cedit $HOME/.config/shell/aliases'
+alias zshenv='cedit $HOME/.config/shell/zsh/.zshenv'
+alias zshrc='cedit $HOME/.config/shell/zsh/.zshrc'
 
 
 # -- Kittens
