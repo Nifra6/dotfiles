@@ -2,5 +2,5 @@
 	name = Nicolas MAIGNAN
 	email = nicolas.maignan@univ-lorraine.fr
 [credential]
-	helper = git-credential-manager
+	helper = manager
 	credentialStore = gpg
