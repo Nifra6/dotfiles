@@ -43,9 +43,9 @@ alias docker_clean="docker system prune"
 
 # -- Fast config access
 # ---------------------------
-alias aliases='chezmoi edit $HOME/.config/shell/aliases ; chezmoi apply'
-alias zshenv='chezmoi edit $HOME/.config/shell/zsh/.zshenv ; chezmoi apply'
-alias zshrc='chezmoi edit $HOME/.config/shell/zsh/.zshrc ; chezmoi apply'
+alias aliases='chezmoi edit --watch $HOME/.config/shell/aliases'
+alias zshenv='chezmoi edit --watch $HOME/.config/shell/zsh/.zshenv'
+alias zshrc='chezmoi edit --watch $HOME/.config/shell/zsh/.zshrc'
 
 
 case $HOSTNAME in
