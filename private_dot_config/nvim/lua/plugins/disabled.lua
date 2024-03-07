@@ -13,7 +13,6 @@ return {
     { "mini.comment", enabled = false },
     { "mini.ai", enabled = false },
     -- Colorscheme
-    --{ "tokyonight.nvim", enabled = false }, -- colorscheme
     { "catppucin", enabled = false },  -- another colorscheme
     -- Editor
     --{ "neo-tree.nvim", enabled = false },  -- file explorer on the left
@@ -41,20 +40,8 @@ return {
     { "nvim-treesiter-context", enabled = false },
     { "nvim-ts-autotag", enabled = false },
     -- UI
-    --{ "nvim-notify", enabled = false }, -- Notifications at top right corner
     { "dressing.nvim", enabled = false }, -- ?
-    --{ "bufferline.nvim", enabled = false }, -- tabs for multiple files
-    --{ "mini.bufremove", enabled = false },  -- close tab
-    --{ "lualine.nvim", enabled = false }, --statusline
-    --{ "indent-blankline.nvim", enabled = false }, -- show all indents
-    --{ "mini.indentscope", enabled = false }, -- highlight current indent
-    --{ "which-key.nvim", enabled = false }, -- show otpion when key is pressed
     { "noice.nvim", enabled = false },-- ?
-    --{ "nvim-web-devicons", enabled = false }, -- icons
-    --{ "nui.nvim", enabled = false },    --lib
-    --{ "dashboard-nvim", enabled = false }, -- Welcome page
     -- Util
     { "vim-startuptime", enabled = false },   -- count startuptime, not very useful
-    --{ "persistence.nvim", enabled = false }, -- load previous sessions
-    --{ "plenary.nvim", enabled = false },   -- lib
 }
