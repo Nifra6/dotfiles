@@ -48,6 +48,13 @@ alias zshenv='chezmoi edit --watch $HOME/.config/shell/zsh/.zshenv'
 alias zshrc='chezmoi edit --watch $HOME/.config/shell/zsh/.zshrc'
 
 
+# -- Kittens
+# ---------------------------
+alias kitten='kitty +kitten'
+alias icat='kitten icat'
+
+
+
 case $HOSTNAME in
 
   "gonto")
