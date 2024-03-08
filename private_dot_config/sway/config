@@ -1,47 +1,24 @@
-# ------------------------------------------------------------------------------------------------------
-# ---                                Fichier de configuration de Sway                                ---
-# ------------------------------------------------------------------------------------------------------
-
-
-
-
 # ---------------------------------------------------------
-# ---                     Variables                     ---
+# ---                   Sway config                     ---
 # ---------------------------------------------------------
+
+# -- Variables
+# ---------------------------
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
-# Emulateur de terminal
+# Terminal emulator
 set $term kitty
 
-# Lanceur d'application
+# Launcher
 set $menu rofi -show run | xargs swaymsg exec --
 
 
-# ---------------------------------------------------------
-# ---                      Sorties                      ---
-# ---------------------------------------------------------
+# -- Inputs
+# ---------------------------
 
-# Fonds d'écran
-output * bg $HOME/Images/Wallpaper/wallpaper.jpg fill
-output HDMI-A-2 bg $HOME/Images/Wallpaper/wallpaper_huawei.jpg fill position 0 0
-
-# Idle
-exec swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 310 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 000000'
-
-# Filtre lumière bleue
-exec redshift -l 48.41:6.11 -t 6500:2500
-
-
-# ---------------------------------------------------------
-# ---                      Entrées                      ---
-# ---------------------------------------------------------
-
-# Clavier
+# Keyboard
 input "*" {
 	xkb_layout fr
 	xkb_variant latin9
@@ -53,6 +30,25 @@ input "*" {
 	tap enabled
 	natural_scroll enabled
 }
+
+
+# -- Outputs
+# ---------------------------
+
+# Wallpaper
+output * bg $HOME/Images/Wallpaper/wallpaper.jpg fill
+output HDMI-A-2 bg $HOME/Images/Wallpaper/wallpaper_huawei.jpg fill position 0 0
+
+# Idle
+exec swayidle -w \
+	timeout 300 'swaylock -f -c 000000' \
+	timeout 310 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 000000'
+
+# Blue light filter
+exec redshift -l 48.41:6.11 -t 6500:2500
+
+
 
 
 
