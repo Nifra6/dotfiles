@@ -19,14 +19,14 @@ set $menu rofi -show run | xargs swaymsg exec --
 # ---------------------------
 
 # Keyboard
-input "*" {
+input type:Keyboard {
 	xkb_layout fr
 	xkb_variant latin9
 	xkb_numlock enable
 }
 
 # Touchpad
-input "*" {
+input type:Touchpad {
 	tap enabled
 	natural_scroll enabled
 }
