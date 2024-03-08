@@ -13,3 +13,12 @@ export SHELL="$(command -v zsh)"
 export HOSTNAME=$(hostname)
 export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
 export ZDOTDIR=${HOME}/.config/shell/zsh
+
+# -- ssh-agent
+# ---------------------------
+#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+  ssh-add
+fi
+
