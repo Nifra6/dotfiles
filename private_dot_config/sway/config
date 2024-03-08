@@ -19,14 +19,14 @@ set $menu rofi -show run | xargs swaymsg exec --
 # ---------------------------
 
 # Keyboard
-input type:Keyboard {
+input type:keyboard {
 	xkb_layout fr
 	xkb_variant latin9
 	xkb_numlock enable
 }
 
 # Touchpad
-input type:Touchpad {
+input type:touchpad {
 	tap enabled
 	natural_scroll enabled
 }
@@ -233,7 +233,6 @@ for_window [class="discord"] opacity 0.95
 for_window [class="Spotify"] opacity 0.9
 for_window [class="thunderbird"] opacity 0.9
 for_window [title="qBittorrent"] opacity 0.94
-for_window [title="Syncplay"] opacity 0.9
 
 
 
@@ -245,7 +244,6 @@ for_window [title="Syncplay"] opacity 0.9
 assign [class="discord"] workspace number 1
 assign [class="Spotify"] workspace number 2
 assign [class="thunderbird"] workspace number 6
-assign [title="Mullvad VPN"] workspace number 8
 assign [class="qBittorrent"] workspace number 8
 
 # Applications au lancement
