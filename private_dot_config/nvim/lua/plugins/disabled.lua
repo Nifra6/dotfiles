@@ -15,15 +15,12 @@ return {
     -- Colorscheme
     { "catppucin", enabled = false },  -- another colorscheme
     -- Editor
-    --{ "neo-tree.nvim", enabled = false },  -- file explorer on the left
-    --{ "nvim-spectre", enabled = false },   --search/replace in all files
     { "telescope-fzf-native.nvim", enabled = false },
     { "flash.nvim", enabled = false },
     { "gitsigns.nvim", enabled = false },
     { "vim-illuminate", enabled = false },
     { "trouble.nvim", enabled = false },
     { "todo-comments.nvim", enabled = false },
-    --{ "telescope.nvim", enabled = false },  -- fuzzy finder
     -- Formatting
     { "conform.nvim", enabled = false },
     -- Linting

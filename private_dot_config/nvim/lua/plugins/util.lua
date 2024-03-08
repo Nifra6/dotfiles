@@ -1,10 +1,7 @@
 return {
     -- Loading previous sessions
-    { "persistence.nvim", 
-        opts = { options = vim.opt.sessionoptions:get() } 
-    },
+    "folke/persistence.nvim", 
     -- Lib
-    { "plenary.nvim",
-        opts = nil 
-    },
+    "MunifTanjim/nui.nvim",
+    "nvim-lua/plenary.nvim",
 }
