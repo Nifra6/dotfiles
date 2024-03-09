@@ -20,16 +20,22 @@ set $menu rofi -show run | xargs swaymsg exec --
 
 # Keyboard
 input type:keyboard {
-	xkb_layout fr
-	xkb_variant latin9
-	xkb_numlock enable
+    xkb_layout fr
+    xkb_variant latin9
+    xkb_numlock enabled
+    xkb_capslock disabled
 }
 
 # Touchpad
 input type:touchpad {
-	tap enabled
-	natural_scroll enabled
+    tap enabled
+    natural_scroll enabled
 }
+
+# Touchscreen
+set $display-laptop         "BOE 0x08D8 Unknown"
+set $display-laptop-touch   "10900:22093:G2Touch_Multi-Touch_by_G2TSP"
+input $display-laptop-touch map_to_output $display-laptop
 
 
 # -- Outputs
@@ -41,9 +47,9 @@ output HDMI-A-2 bg $HOME/Images/Wallpaper/wallpaper_huawei.jpg fill position 0 0
 
 # Idle
 exec swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 310 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 000000'
+    timeout 300 'swaylock -f -c 000000' \
+    timeout 310 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 000000'
 
 # Blue light filter
 exec redshift -l 48.41:6.11 -t 6500:2500
