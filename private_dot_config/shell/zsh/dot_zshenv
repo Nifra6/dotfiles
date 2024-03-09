@@ -13,6 +13,7 @@ export SHELL="$(command -v zsh)"
 export HOSTNAME=$(hostname)
 export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
 export ZDOTDIR=${HOME}/.config/shell/zsh
+export LANG="fr_FR.UTF-8"
 
 # -- ssh-agent
 # ---------------------------
