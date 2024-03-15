@@ -2,5 +2,4 @@
 	name = Nicolas MAIGNAN
 	email = nicolas.maignan@univ-lorraine.fr
 [credential]
-	helper = manager
-	credentialStore = gpg
+	helper = store
