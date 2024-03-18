@@ -100,7 +100,8 @@
     // Horloge
     "clock": {
         "timezone": "Europe/Paris",
-        "format": "{:%A %d %B | %H:%M}"
+        "format": "{:L%A %d %B | %H:%M}",
+        "locale": "fr_FR.utf8",
     },
 
 
