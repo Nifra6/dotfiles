@@ -1,0 +1,7 @@
+regolith.look.path: /usr/share/regolith-look/dracula
+regolith.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/mst_key_art.original.jpg
+wm.bar.position: top
+gtk.font_name: Ubuntu Nerd Font Regular 12
+gtk.document.font_name: Ubuntu Nerd Font Regular 12
+gtk.monospace.font_name: JetBrainsMono Nerd Font Regular 12
+wm.bar.font: Ubuntu Nerd Font Regular 12
