@@ -61,7 +61,7 @@ case $HOSTNAME in
   "gonto")
     # -- System functions
     # ---------------------------
-    alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; python /home/nmaignan/Applications/update_pip.py'
+    alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; python /home/nmaignan/Applications/update_pip.py ; chezmoi update -v'
     alias backup="cp -nrv /home/nmaignan/Documents/Zotero/storage /media/nmaignan/HDD Arcé ; cp -nrv /home/nmaignan/Thèse /media/nmaignan/HDD Arcé"
     alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
     # -- Misc
@@ -73,7 +73,7 @@ case $HOSTNAME in
   "nascane")
     # -- System functions
     # ---------------------------
-    alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && sudo pacdiff'
+    alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && sudo pacdiff ; chezmoi update -v'
     alias day_mode='pkill -USR1 redshift'
     alias retirer='sh ~/Applications/Scripts/umount.sh'
     alias backup='sh ~/Applications/Scripts/backup.sh'
