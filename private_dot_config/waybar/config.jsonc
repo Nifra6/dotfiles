@@ -63,7 +63,7 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "sh $HOME/.config/waybar/mediaplayer.sh"
+        "exec": "sh $HOME/.config/waybar/mediaplayer/mediaplayer.sh"
     },
 
     "custom/pacman": {
@@ -74,7 +74,7 @@
             "available": "\uf019"
         },
         "interval": 600,
-        "exec": "sh $HOME/.config/waybar/pacman.sh",
+        "exec": "sh $HOME/.config/waybar/pacman/pacman.sh",
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update", // update system
         "signal": 8
     },
