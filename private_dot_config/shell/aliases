@@ -61,7 +61,7 @@ case $HOSTNAME in
   "gonto")
     # -- System functions
     # ---------------------------
-    alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; python /home/nmaignan/Applications/update_pip.py ; chezmoi update -v'
+    alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; chezmoi update -v'
     alias backup="cp -nrv /home/nmaignan/Documents/Zotero/storage /media/nmaignan/HDD Arcé ; cp -nrv /home/nmaignan/Thèse /media/nmaignan/HDD Arcé"
     alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
     # -- Misc
