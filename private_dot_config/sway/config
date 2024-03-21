@@ -12,7 +12,7 @@ set $mod Mod4
 set $term kitty
 
 # Launcher
-set $menu rofi -show run | xargs swaymsg exec --
+set $menu wofi --show run | xargs swaymsg exec --
 
 
 # -- Inputs

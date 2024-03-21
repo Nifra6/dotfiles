@@ -14,13 +14,14 @@
 
     // Ordres des modules
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
+        //"sway/workspaces",
+        //"sway/mode",
+        "hyprland/workspaces",
         "custom/media",
         "custom/pacman"
     ],
     "modules-center": [
-        "idle_inhibitor",
+        //"idle_inhibitor",
         "clock",
         "tray"
     ],
@@ -43,6 +44,11 @@
 
     // Workspace
     "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}"
+    },
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{icon}"

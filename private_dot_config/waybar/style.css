@@ -70,6 +70,10 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
+#workspaces button.active {
+    color: @green
+}
+
 #workspaces button.focused {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
