@@ -38,6 +38,23 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
 
 #workspaces button {
     padding: 0 5px;
@@ -67,6 +84,24 @@ window#waybar.hidden {
     border-bottom: 3px solid #ffffff;
 }
 
+#disk,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: #ffffff;
+}
 
 #clock {
 	padding-top: 3px;
@@ -112,6 +147,9 @@ label:focus {
     background-color: #bf4242;
 	margin: 0;
 	font-size: 14px;
+	/*border-bottom-left-radius: 15px;
+	border-radius: 40px 0 0 40px;*/
+    /*color: #000000;*/
 }
 
 #memory {
@@ -144,6 +182,10 @@ label:focus {
 	font-size: 14px;
 }
 
+#pulseaudio.muted {
+    /*background-color: #90b1b1;
+    color: #2a5c45;*/
+}
 
 #custom-pacman {
     background-color: #87ceeb;
@@ -166,6 +208,10 @@ label:focus {
     background-color: #66cc99;
 }
 
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
 #temperature {
 	color: rgba(50, 50, 50, 0.8);
     background-color: rgb(243, 156, 18);
@@ -177,9 +223,63 @@ label:focus {
     background-color: #eb4d4b;
 }
 
+#tray {
+    /*background-color: #2980b9;*/
+}
+
+#idle_inhibitor {
+    /*background-color: #2d3436;*/
+}
 
 #idle_inhibitor.activated {
     border-radius: 17px;
     background-color: rgb(140, 75, 165);
 }
 
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#custom-left-arrow0 {
+	font-size: 23px;
+    color: #bf4242;
+}
+#custom-left-arrow1 {
+	font-size: 23px;
+    color: #3ab296;
+    background-color: #bf4242;
+}
+#custom-left-arrow2 {
+	font-size: 23px;
+    color: rgb(243, 156, 18);
+    background-color: #3ab296;
+}
+#custom-left-arrow3 {
+	font-size: 23px;
+    color: rgb(245, 230, 83);
+    background-color: rgb(243, 156, 18);
+}
+#custom-left-arrow4 {
+	font-size: 23px;
+    color: #ad3897;
+    background-color: rgb(245, 230, 83);
+	border: none;
+}
+#custom-left-arrow5 {
+	font-size: 23px;
+    color: #ffffff;
+    background-color: #ad3897;
+}
