@@ -1,7 +1,9 @@
 ! Desktop appereance
-regolith.look.path: /usr/share/regolith-look/dracula
+regolith.look.path: /usr/share/regolith-look/lascaille
 regolith.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/heavy_hitters_key_art.original.jpg
 regolith.lockscreen.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/mst_key_art.original.jpg
+wm.gaps.inner.size: 16
+wm.window.border.size: 2
 
 ! Status bar
 wm.bar.position: top
@@ -21,3 +23,4 @@ gtk.monospace.font_name: JetBrainsMono Nerd Font Regular 12
 
 ! Keybindings
 wm.binding.launcher.app: x
+wm.binding.take_right: Shift+m
