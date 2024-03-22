@@ -17,8 +17,8 @@
         //"sway/workspaces",
         //"sway/mode",
         "hyprland/workspaces",
+        "custom/pacman",
         "custom/media",
-        "custom/pacman"
     ],
     "modules-center": [
         //"idle_inhibitor",
@@ -69,7 +69,7 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "sh $HOME/.config/waybar/mediaplayer/mediaplayer.sh"
+        "exec": "zsh $HOME/.config/waybar/mediaplayer/mediaplayer.sh"
     },
 
     "custom/pacman": {
@@ -80,7 +80,7 @@
             "available": "\uf019"
         },
         "interval": 600,
-        "exec": "sh $HOME/.config/waybar/pacman/pacman.sh",
+        "exec": "zsh $HOME/.config/waybar/pacman/pacman.sh",
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update", // update system
         "signal": 8
     },
