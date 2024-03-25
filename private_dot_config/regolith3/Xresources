@@ -23,4 +23,5 @@ gtk.monospace.font_name: JetBrainsMono Nerd Font Regular 12
 
 ! Keybindings
 wm.binding.launcher.app: x
-wm.binding.take_right: Shift+m
+wm.binding.take_right: m
+wm.binding.take_left: Shift+m
