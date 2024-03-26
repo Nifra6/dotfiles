@@ -38,7 +38,7 @@ PROMPT='%F{magenta}%B%K{magenta}█▓▒░%F{black}%K{magenta}%B%n@%m%b%F{mage
 # -- Miscellaneous
 # ---------------------------
 bindkey -v
-
+source /usr/share/doc/ranger/examples/shell_automatic_cd.sh
 
 case $HOSTNAME in
 
