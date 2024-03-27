@@ -11,6 +11,7 @@
     // Forme de la barre
     "position": "top",
     "height": 30,
+    "layer": "top",
 
     // Ordres des modules
     "modules-left": [
