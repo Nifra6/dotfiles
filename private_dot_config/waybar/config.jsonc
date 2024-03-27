@@ -14,8 +14,7 @@
 
     // Ordres des modules
     "modules-left": [
-        //"sway/workspaces",
-        //"sway/mode",
+        "custom/system",
         "hyprland/workspaces",
         "custom/pacman",
         "custom/media",
@@ -42,6 +41,15 @@
     // ---      Configuration des modules : gauche       ---
     // -----------------------------------------------------
 
+    // System
+    "user": {
+        "format": "{user}",
+    },
+    "custom/system": {
+        "format": "",
+        "on-click": "wlogout"
+    },
+
     // Workspace
     "sway/workspaces": {
         "disable-scroll": true,
@@ -65,24 +73,24 @@
         "return-type": "json",
         "max-length": 80,
         "format-icons": {
-            "spotify": "",
-            "default": "🎜"
+            "spotify": "󰓇",
+            "default": "󰝚"
         },
         "escape": true,
         "exec": "zsh $HOME/.config/waybar/mediaplayer/mediaplayer.sh"
     },
 
+    // Updates
     "custom/pacman": {
-        "format": " {icon} {} ",
+        "format": " {icon}  {}  ",
         "return-type": "json",
         "format-icons": {
-            "uptodate": "\uf00c",
-            "available": "\uf019"
+            "uptodate": "󰗡",
+            "available": "󰚰"
         },
         "interval": 600,
         "exec": "zsh $HOME/.config/waybar/pacman/pacman.sh",
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update", // update system
-        "signal": 8
     },
 
     // -----------------------------------------------------
@@ -93,8 +101,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "󰈈",
+            "deactivated": "󰈉"
         }
     },
 
@@ -106,7 +114,7 @@
     // Horloge
     "clock": {
         "timezone": "Europe/Paris",
-        "format": "{:L%A %d %B | %H:%M}",
+        "format": " {:L%A %d %B | %H:%M}",
         "locale": "fr_FR.utf8",
     },
 
@@ -126,10 +134,10 @@
 
     // Réseau
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Déconnecté ",
+        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰌘",
+        "format-disconnected": "Déconnecté 󰌙",
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c nmtui",
         "interval": 10
     },
@@ -137,26 +145,30 @@
 
     // Usage processeur
     "cpu": {
-        "format": "{usage}% ",
+        "interval": 20,
+        "format": "{usage}% 󰻠",
         "tooltip": false,
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop"
     },
 
     // RAM
     "memory": {
-        "format": "{}% ",
+        "interval": 20,
+        "format": "{}% 󰍛",
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop"
     },
 
     // Température processeur
     "temperature": {
+        "interval": 20,
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["󱃃", "󰔏", "󱃂"]
     },
 
     // Luminosité
     "backlight": {
+        "interval": 20,
         "format": "{percent}% {icon}",
         "format-icons": ["", ""],
         "on-click": "pkill -USR1 redshift"
@@ -164,46 +176,37 @@
 
     // Son
     "pulseaudio": {
+        "interval": 20,
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-bluetooth": "{volume}% {icon}󰂯 {format_source}",
+        "format-bluetooth-muted": "󰝟{icon}󰂯 {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": "{volume}% 󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "󰋋",
+            "hands-free": "󰋋",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },
 
     // Batterie
     "battery": {
+        "interval": 20,
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} | {capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% 󰂄 ",
+        "format-plugged": "{capacity}% 󰚥 ",
+        "format-alt": "{time} | {capacity}% {icon} ",
+        "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
     },
-
-
-
-    // -----------------------------------------------------
-    // ---            Modules peu importants             ---
-    // -----------------------------------------------------
-
-    //"custom/left-arrow": {
-    //  "format": "",
-    //  "tooltip": false
-    //},
 
 }
