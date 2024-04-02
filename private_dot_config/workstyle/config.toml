@@ -23,7 +23,15 @@
 
 # File formats
 ".py" = "󰌠"
+".cpp" = "󰙲"
+".lua" = "󰢱"
+".m" = "󰘨"
+".md" = "󰍔"
+".html" = "󰌝"
+".css" = "󰌜"
 ".pdf" = ""
+".jpg" = "󰈥"
+".png" = "󰸭"
 
 # Coding
 "nvim" = ""
@@ -48,6 +56,8 @@
 "thunderbird" = ""
 "qbittorrent" = "󰛴"
 "discord" = "󰙯"
+"picard" = "󰈣"
+"filelight" = "󰃢"
 
 [other]
 fallback_icon = "🤨"
