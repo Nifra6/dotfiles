@@ -83,6 +83,11 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
+#submap {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
 #disk,
 #clock,
 #battery,

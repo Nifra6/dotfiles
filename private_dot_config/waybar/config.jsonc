@@ -19,6 +19,7 @@
         "hyprland/workspaces",
         "custom/pacman",
         "custom/media",
+        "hyprland/submap"
     ],
     "modules-center": [
         //"idle_inhibitor",
@@ -68,6 +69,10 @@
         "format": "<span style=\"italic\">{}</span>"
     },
 
+    "hyprland/submap": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
     // Afficheur média
     "custom/media": {
         "format": "{icon} {}",
@@ -75,6 +80,8 @@
         "max-length": 80,
         "format-icons": {
             "spotify": "󰓇",
+            "youtube": "󰗃",
+            "twitch": "󰕃",
             "default": "󰝚"
         },
         "escape": true,
