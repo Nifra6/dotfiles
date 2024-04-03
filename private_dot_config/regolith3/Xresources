@@ -15,6 +15,7 @@ wm.workspace.03.name: 3:
 wm.workspace.04.name: 4:
 wm.workspace.05.name: 5:󰨞
 wm.workspace.06.name: 6:
+wm.workspace.08.name: 8:
 
 ! Fonts
 gtk.font_name: Ubuntu Nerd Font Regular 12
