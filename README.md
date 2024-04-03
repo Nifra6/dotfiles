@@ -13,8 +13,8 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
 | Need | Answer | Comments |
 |------|--------|----------|
-| Distribution | Arch | love it or hate it, I love i |
-| Tile Manager | sway (moving to Hyprland WIP) | Yeah does not support nvidia (**** nvidia, like he said) but really good tile managing and way more welcoming than i3 imo |
+| Distribution | Arch | love it or hate it, I love it |
+| Tile Manager | Hyprland | Yeah does not actively support nvidia (**** nvidia, like he said) but tile manager that hype me (sway config still usable I think) |
 | Statusbar | waybar | Just perfect |
 | Shell | zsh (without oh-my-zsh) | because it's better than bash, obviously; and for fish, I prefer the feal of zsh for now |
 | File Manager | CLI : ranger / GUI : nemo | ranger is pretty damn good, nemo when I want to have a GUI |
