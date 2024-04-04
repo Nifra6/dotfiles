@@ -31,7 +31,7 @@ source ${SHELL_DOTFILES}/aliases
 
 # -- Prompt
 # ---------------------------
-PROMPT='%F{magenta}%B%K{magenta}█▓▒░%F{black}%K{magenta}%B%n@%m%b%F{magenta}%K{black}█▓▒░%F{white}%K{black}%B %D{%A %d %B} %D{%H:%M}
+PROMPT='%F{magenta}%B██%F{black}%K{magenta}%B%n@%m%b%F{magenta}%k█▓▒░%f%k%B %D{%A %d %B} %D{%H:%M}
 %}%F{magenta}%K{black}%B%~/%b%k%f '
 
 
