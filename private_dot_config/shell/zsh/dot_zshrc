@@ -37,7 +37,14 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%b'
-PROMPT='%F{magenta}%B%F{black}%K{magenta}%B%n@%m%b%F{magenta}%k %F{green}%B%F{black}%K{green}%B ${vcs_info_msg_0_}%b%F{green}%k%f%k%B %D{%A %d %B} %D{%H:%M}
+get_vcs_info_msg() {
+    if [[ -n $vcs_info_msg_0_ ]]; then
+        echo "%F{green}%B%F{black}%K{green}%B ${vcs_info_msg_0_}%b%F{green}%k"
+    else
+        echo ""
+    fi
+}
+PROMPT='%F{magenta}%B%F{black}%K{magenta}%B%n@%m%b%F{magenta}%k $(get_vcs_info_msg)%f%k%B %D{%A %d %B} %D{%H:%M}
 %}%F{magenta}%k%B%~/%b%k%f '
 
 
