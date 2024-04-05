@@ -4,7 +4,6 @@
 # ---------------------------------------------------------
 
 
-
 # -- Variables
 # ---------------------------
 SHELL_DOTFILES=${HOME}/.config/shell
@@ -53,66 +52,70 @@ PROMPT='%F{magenta}%B%F{black}%K{magenta}%B%n@%m%b%F{magenta}%k$(get_vcs_i
 bindkey -v
 source ${HOME}/.config/ranger/shell_automatic_cd.sh
 
+
+# -- Host specific conf
+# ---------------------------
 case $HOSTNAME in
 
-  "gonto")
-    # -- Suggestions and colours
-    # ---------------------------
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    # -- pip
-    # ---------------------------
-    # pip zsh completion start
-    #compdef -P pip[0-9.]#
-    __pip() {
-      compadd $( COMP_WORDS="$words[*]" \
-        COMP_CWORD=$((CURRENT-1)) \
-        PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null )
-      }
-      if [[ $zsh_eval_context[-1] == loadautofunc ]]; then
-        # autoload from fpath, call function directly
-        __pip "$@"
-      else
-        # eval/source/. command, register function for later
-        compdef __pip -P 'pip[0-9.]#'
-      fi
-      # pip zsh completion end
-    # -- Conda
-    # ---------------------------
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$('/home/nmaignan/Applications/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-      eval "$__conda_setup"
-    else
-      if [ -f "/home/nmaignan/Applications/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/nmaignan/Applications/miniconda3/etc/profile.d/conda.sh"
-      else
-        export PATH="/home/nmaignan/Applications/miniconda3/bin:$PATH"
-      fi
-    fi
-    unset __conda_setup
-    # <<< conda initialize <<<
-    conda deactivate
-    # -- Miscellaneous
-    # ---------------------------
-    fpath+=/home/nmaignan/Applications/conda-zsh-completion
-    zstyle ':completion::complete:*' use-cache 1
-    zstyle ":conda_zsh_completion:*" sort-envs-by-time true
-    zstyle ":conda_zsh_completion:*" show-global-envs-first true
-    ;;
+    "gonto")
+        # -- Suggestions and colours
+        # ---------------------------
+        source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+        source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        # -- pip
+        # ---------------------------
+        # pip zsh completion start
+        #compdef -P pip[0-9.]#
+        __pip() {
+            compadd $( COMP_WORDS="$words[*]" \
+                COMP_CWORD=$((CURRENT-1)) \
+                PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null )
+            }
+        if [[ $zsh_eval_context[-1] == loadautofunc ]]; then
+            # autoload from fpath, call function directly
+            __pip "$@"
+        else
+            # eval/source/. command, register function for later
+            compdef __pip -P 'pip[0-9.]#'
+        fi
+        # pip zsh completion end
+        # -- Conda
+        # ---------------------------
+        # >>> conda initialize >>>
+        # !! Contents within this block are managed by 'conda init' !!
+        __conda_setup="$('/home/nmaignan/Applications/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+        if [ $? -eq 0 ]; then
+            eval "$__conda_setup"
+        else
+            if [ -f "/home/nmaignan/Applications/miniconda3/etc/profile.d/conda.sh" ]; then
+                . "/home/nmaignan/Applications/miniconda3/etc/profile.d/conda.sh"
+            else
+                export PATH="/home/nmaignan/Applications/miniconda3/bin:$PATH"
+            fi
+        fi
+        unset __conda_setup
+        # <<< conda initialize <<<
+        conda deactivate
+        # -- Miscellaneous
+        # ---------------------------
+        fpath+=/home/nmaignan/Applications/conda-zsh-completion
+        zstyle ':completion::complete:*' use-cache 1
+        zstyle ":conda_zsh_completion:*" sort-envs-by-time true
+        zstyle ":conda_zsh_completion:*" show-global-envs-first true
+        ;;
 
-  "nascane")
-    # Suggestions et couleurs
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    # -- Miscellaneous
-    # ---------------------------
-    source ${SHELL_DOTFILES}/zsh/.zshrc_nascane
-    ;;
+    "nascane")
+        # -- Suggestions and colours
+        # ---------------------------
+        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+        source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+        # -- Miscellaneous
+        # ---------------------------
+        [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+        ;;
 
-  *)
-    echo "ptdr t ki"
-    ;;
+    *)
+        echo "ptdr t ki"
+        ;;
 
 esac

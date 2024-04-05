@@ -17,15 +17,16 @@ export LANG="fr_FR.UTF-8"
 
 # -- ssh-agent
 # ---------------------------
-#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 if [[ -z "$SSH_AUTH_SOCK" ]] ; then
-  eval `ssh-agent -s`
-  ssh-add
+    eval `ssh-agent -s`
+    ssh-add
 fi
 
 # -- Hyprland
 # ---------------------------
 if [[ $HOSTNAME = "nascane" && -z "${WAYLAND_DISPLAY}" && "${XDG_VTNR}" -eq 1 ]]; then
-  exec Hyprland
+    export GOPATH=$HOME/.go
+    export _JAVA_AWT_WM_NONREPARENTING=1
+    exec Hyprland
 fi
 
