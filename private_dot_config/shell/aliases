@@ -13,9 +13,14 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 
-# -- ls aliases
+# -- Replace commands
 # ---------------------------
 alias ls='lsd'
+alias cat='bat'
+
+
+# -- ls aliases
+# ---------------------------
 alias la='ls -A'
 alias ll='ls -Al'
 
@@ -66,6 +71,7 @@ case $HOSTNAME in
     alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
     # -- Misc
     # ---------------------------
+    alias cat="batcat"
     alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
     alias journal="nvim $HOME/Thèse/01_Documents/Journal\ de\ bord\ -\ Thèse.txt"
     ;;

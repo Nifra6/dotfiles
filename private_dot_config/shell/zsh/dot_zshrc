@@ -19,8 +19,7 @@ SAVEHIST=5000
 
 # -- Completion
 # ---------------------------
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 # matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -32,19 +31,18 @@ source ${SHELL_DOTFILES}/aliases
 
 # -- Prompt
 # ---------------------------
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
+autoload -Uz vcs_info
+precmd () { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b'
-get_vcs_info_msg() {
+get_vcs_info_prompt() {
     if [[ -n $vcs_info_msg_0_ ]]; then
-        echo "%F{green}%B%F{black}%K{green}%B ${vcs_info_msg_0_}%b%F{green}%k"
+        echo " %F{green}%B%F{black}%K{green}%B ${vcs_info_msg_0_}%b%F{green}%k"
     else
         echo ""
     fi
 }
-PROMPT='%F{magenta}%B%F{black}%K{magenta}%B%n@%m%b%F{magenta}%k $(get_vcs_info_msg)%f%k%B %D{%A %d %B} %D{%H:%M}
+PROMPT='%F{magenta}%B%F{black}%K{magenta}%B%n@%m%b%F{magenta}%k$(get_vcs_info_prompt)%f%k%B %D{%A %d %B} %D{%H:%M}
 %}%F{magenta}%k%B%~/%b%k%f '
 
 
@@ -98,12 +96,10 @@ case $HOSTNAME in
     # ---------------------------
     unsetopt beep
     fpath+=/home/nmaignan/Applications/conda-zsh-completion
-    compinit
     zstyle ':completion::complete:*' use-cache 1
     zstyle ":conda_zsh_completion:*" sort-envs-by-time true
     zstyle ":conda_zsh_completion:*" show-global-envs-first true
     fpath+=~/.zfunc
-    autoload -Uz compinit && compinit
     source ${SHELL_DOTFILES}/zsh/completions/chezmoi.zsh
     ;;
 
