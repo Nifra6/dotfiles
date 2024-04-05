@@ -62,23 +62,6 @@ case $HOSTNAME in
         # ---------------------------
         source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
         source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-        # -- pip
-        # ---------------------------
-        # pip zsh completion start
-        #compdef -P pip[0-9.]#
-        __pip() {
-            compadd $( COMP_WORDS="$words[*]" \
-                COMP_CWORD=$((CURRENT-1)) \
-                PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null )
-            }
-        if [[ $zsh_eval_context[-1] == loadautofunc ]]; then
-            # autoload from fpath, call function directly
-            __pip "$@"
-        else
-            # eval/source/. command, register function for later
-            compdef __pip -P 'pip[0-9.]#'
-        fi
-        # pip zsh completion end
         # -- Conda
         # ---------------------------
         # >>> conda initialize >>>
@@ -98,7 +81,7 @@ case $HOSTNAME in
         conda deactivate
         # -- Miscellaneous
         # ---------------------------
-        fpath+=/home/nmaignan/Applications/conda-zsh-completion
+        fpath+=${HOME}/Applications/conda-zsh-completion
         zstyle ':completion::complete:*' use-cache 1
         zstyle ":conda_zsh_completion:*" sort-envs-by-time true
         zstyle ":conda_zsh_completion:*" show-global-envs-first true
