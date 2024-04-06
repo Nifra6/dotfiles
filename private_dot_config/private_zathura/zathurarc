@@ -1,2 +1,2 @@
-# Pouvoir copier vers le presse-papier
+# Copy to clipboard
 set selection-clipboard clipboard

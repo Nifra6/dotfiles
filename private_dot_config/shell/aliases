@@ -56,7 +56,8 @@ alias kitten='kitty +kitten'
 alias icat='kitten icat'
 
 
-
+# -- Host specific configs
+# ---------------------------
 case $HOSTNAME in
 
   "gonto")
@@ -92,3 +93,4 @@ case $HOSTNAME in
     ;;
 
 esac
+

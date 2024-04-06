@@ -1,19 +1,10 @@
-# Config for workstyle
-#
-# Format:
-# "pattern" = "icon"
-#
-# The pattern will be used to match against the application name, class_id or WM_CLASS.
-# The icon will be used to represent that application.
-#
-# Note if multiple patterns are present in the same application name,
-# precedence is given in order of apparition in this file.
+# ------------------------------------------------------------
+# ---                  kitty config file                   ---
+# ------------------------------------------------------------
 
-# System
-"nemo" = "󰝰"
-"kitty" = ""
 
-# Websites
+# -- Websites
+# ---------------------------
 "youtube" = "󰗃"
 "twitch" = "󰕃"
 "gitlab" = "󰮠"
@@ -21,36 +12,52 @@
 "git" = "󰊢"
 "google" = "󰊭"
 
-# File formats
-".py" = "󰌠"
+
+# -- File formats
+# ---------------------------
+".html" = "󰌝"
 ".cpp" = "󰙲"
 ".lua" = "󰢱"
-".md" = "󰍔"
-".html" = "󰌝"
 ".css" = "󰌜"
 ".pdf" = ""
 ".jpg" = "󰈥"
 ".png" = "󰸭"
 ".mkv" = "󰈫"
 ".mp4" = "󰈫"
+".py" = "󰌠"
+".md" = "󰍔"
 ".m" = "󰘨"
 
-# Coding
-"nvim" = ""
+
+# -- Coding
+# ---------------------------
+"vim" = ""
 "code" = ""
 "matlab" = "󰘨"
 
-# Multimedia
+
+# -- Multimedia
+# ---------------------------
 "feh" = "󰋩"
 "mpv" = ""
 "spotify" = "󰓇"
 
-# Browsers
+
+# -- Browsers
+# ---------------------------
 "firefox" = "󰈹"
 "chrome" = "󰊯"
 "chromium" = "󰊯"
 
-# Applications
+
+# -- System
+# ---------------------------
+"nemo" = "󰝰"
+"kitty" = ""
+
+
+# -- Applications
+# ---------------------------
 "libreoffice calc" = "󱎏"
 "libreoffice writer" = "󱎒"
 "libreoffice" = "󰏆"
@@ -60,6 +67,7 @@
 "discord" = "󰙯"
 "picard" = "󰈣"
 "filelight" = "󰃢"
+
 
 [other]
 fallback_icon = "🤨"
