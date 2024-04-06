@@ -5,15 +5,16 @@
 
 # Please create a symlink of this file to your $HOME
 
+
 # -- Variables
 # ---------------------------
-export VISUAL="$(command -v nvim)"
-export EDITOR=$VISUAL
-export SHELL="$(command -v zsh)"
+export EDITOR="$(command -v nvim)"
 export HOSTNAME=$(hostname)
-export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
-export ZDOTDIR=${HOME}/.config/shell/zsh
 export LANG="fr_FR.UTF-8"
+export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
+export SHELL="$(command -v zsh)"
+export VISUAL=$EDITOR
+export ZDOTDIR=${HOME}/.config/shell/zsh
 
 # -- ssh-agent
 # ---------------------------
