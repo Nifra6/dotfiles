@@ -8,6 +8,7 @@
 
 # -- Variables
 # ---------------------------
+export DIFFPROG="nvim -d"
 export EDITOR="$(command -v nvim)"
 export HOSTNAME=$(hostname)
 export LANG="fr_FR.UTF-8"
