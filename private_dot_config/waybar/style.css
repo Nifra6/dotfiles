@@ -1,60 +1,38 @@
-/* ------------------------------------------------------------------------------------------------------
- * ---                                 Fichier de style de Waybar                                     ---
- * ----------------------------------------------------------------------------------------------------*/
+/*
+ * Waybar Style File
+ */
 
-
-/* -------------------------------------------------
- * ---          Configuration globale            ---
- * -----------------------------------------------*/
-
+/* Global Configuration */
 * {
     border: none;
     border-radius: 0;
-    font-family: Symbols Nerd Font, Helvetica;
+    font-family: 'Symbols Nerd Font', Helvetica;
     font-size: 15px;
     min-height: 0;
 }
 
+/* Styles for Waybar Window */
 window#waybar {
-    /*background-color: rgba(43, 48, 59, 0.5);*/
-	background-color: rgba(0, 86, 53, 0.3);
+    background-color: rgba(0, 86, 53, 0.3);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    transition: background-color 0.5s;
 }
 
+/* Styles for Centered Modules */
 .modules-center {
     background-color: rgba(155, 89, 182, 0.9);
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	margin-bottom: 3px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 3px;
 }
 
-
-
+/* Styles for Hidden Waybar Window */
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
+/* Styles for Workspace Buttons */
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
@@ -62,7 +40,6 @@ window#waybar.chromium {
     border-bottom: 3px solid transparent;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
     box-shadow: inherit;
@@ -78,46 +55,28 @@ window#waybar.chromium {
     background-color: #eb4d4b;
 }
 
-#mode {
+/* Styles for Mode and Submap */
+#mode, #submap {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
 }
 
-#submap {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
-#disk,
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd {
+/* Styles for Different Modules */
+#disk, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mpd {
     padding: 0 10px;
     margin: 0 4px;
     color: #ffffff;
 }
 
+/* Styles for Specific Modules */
 #clock {
-	padding-top: 3px;
-    /*background-color: #64727D;*/
+    padding-top: 3px;
 }
 
 #battery {
     background-color: #ffffff;
     color: rgba(0, 0, 0, 0.8);
-	margin: 0;
-	/*border-bottom-right-radius: 15px;
-	border-radius: 0 15px 15px 0;*/
+    margin: 0;
 }
 
 #battery.charging {
@@ -135,11 +94,7 @@ window#waybar.chromium {
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: blink 0.5s linear infinite alternate;
 }
 
 label:focus {
@@ -148,77 +103,44 @@ label:focus {
 
 #cpu {
     background-color: #bf4242;
-	margin: 0;
-	/*border-bottom-left-radius: 15px;
-	border-radius: 40px 0 0 40px;*/
-    /*color: #000000;*/
+    margin: 0;
 }
 
 #memory {
     background-color: #3ab296;
-	margin: 0;
+    margin: 0;
 }
 
 #backlight {
-    background-color: #a8ad38;
-	background-color: rgb(245, 230, 83);
+    background-color: #f5e653;
     color: rgba(50, 50, 50, 0.9);
-	margin: 0;
+    margin: 0;
 }
 
 #network {
-	margin-bottom: 1px;
-    /*background-color: #2980b9;*/
+    margin-bottom: 1px;
 }
 
 #network.disconnected {
     background-color: #f53c3c;
-	border-radius: 15px;
+    border-radius: 15px;
 }
 
 #pulseaudio {
     background-color: #ad3897;
-	margin: 0;
+    margin: 0;
 }
 
-#pulseaudio.muted {
-    /*background-color: #90b1b1;
-    color: #2a5c45;*/
+#custom-pacman, #custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 60px;
+    border-radius: 15px;
+    margin-bottom: 3px;
 }
 
 #custom-pacman {
     background-color: #87ceeb;
-    color: #2a5c45;
-    min-width: 60px;
-	border-radius: 15px;
-	margin-bottom: 3px;
-}
-
-#user {
-    background-color: #1d67ed;
-    color: #ffffff;
-}
-
-#custom-system {
-    background-color: #1d67ed;
-    font-size: 20px;
-    color: #ffffff;
-    min-width: 30px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-}
-
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-	border-radius: 15px;
-	margin-bottom: 3px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
@@ -226,25 +148,25 @@ label:focus {
 }
 
 #temperature {
-	color: rgba(50, 50, 50, 0.8);
+    color: rgba(50, 50, 50, 0.8);
     background-color: rgb(243, 156, 18);
-	margin: 0;
+    margin: 0;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
 }
 
+#custom-system {
+    background-color: #1d67ed;
+    font-size: 20px;
+    color: #ffffff;
+    min-width: 30px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
 #tray {
-    /*background-color: #2980b9;*/
-}
-
-#idle_inhibitor {
-    /*background-color: #2d3436;*/
-}
-
-#idle_inhibitor.activated {
-    border-radius: 17px;
-    background-color: rgb(140, 75, 165);
+    /* Unspecified Styles */
 }
 
