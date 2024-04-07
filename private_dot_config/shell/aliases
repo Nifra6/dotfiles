@@ -26,6 +26,7 @@ alias ll='ls -Al'
 alias vi='nvim'
 alias vim='nvim'
 alias lg='lazygit'
+alias cm='chezmoi'
 
 
 # -- Command config
@@ -76,7 +77,7 @@ case $HOSTNAME in
   "nascane")
     # -- System functions
     # ---------------------------
-    alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && sudo pacdiff ; chezmoi update -v'
+    alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && pacdiff ; chezmoi update -v'
     alias day_mode='pkill -USR1 redshift'
     alias retirer='sh ~/Applications/Scripts/umount.sh'
     alias backup='sh ~/Applications/Scripts/backup.sh'
