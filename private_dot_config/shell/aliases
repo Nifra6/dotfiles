@@ -41,6 +41,11 @@ alias venv="source .venv/bin/activate"
 alias compress='tar zcvf archive.tar.gz'
 alias decompress='tar zxvf'
 alias docker_clean="docker system prune"
+dunst_test() {
+    dunstify "Urgence : normale" "Une annonce importante mais sans plus"
+    dunstify -u low "Urgence : faible" "C'est bien pour genre ... spotify, vraiment juste une info sans risque"
+    dunstify -u critical "Urgence : critique" "Comme on dit chez moi, on est pas dans la merde !"
+}
 
 
 # -- Fast config access
