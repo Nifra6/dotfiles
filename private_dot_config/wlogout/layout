@@ -6,13 +6,13 @@
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "pkill Xwayland ; systemctl reboot",
     "text" : "Redémarrer",
     "keybind" : "r"
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "pkill Xwayland ; systemctl poweroff",
     "text" : "Éteindre",
     "keybind" : "s"
 }
