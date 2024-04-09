@@ -1,13 +1,19 @@
 {
+    "label" : "suspend",
+    "action" : "",
+    "text" : "Veille (WIP)",
+    "keybind" : "w"
+}
+{
     "label" : "reboot",
-    "action" : "pkill Xwayland ; systemctl reboot",
+    "action" : "systemctl reboot",
     "text" : "Redémarrer",
     "keybind" : "r"
 }
 {
     "label" : "shutdown",
-    "action" : "pkill Xwayland ; systemctl poweroff",
+    "action" : "systemctl poweroff",
     "text" : "Éteindre",
-    "keybind" : "s"
+    "keybind" : "e"
 }
 
