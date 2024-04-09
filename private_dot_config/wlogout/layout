@@ -1,10 +1,4 @@
 {
-    "label" : "lock",
-    "action" : "loginctl lock-session",
-    "text" : "Verrouiller",
-    "keybind" : "l"
-}
-{
     "label" : "reboot",
     "action" : "pkill Xwayland ; systemctl reboot",
     "text" : "Redémarrer",
