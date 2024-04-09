@@ -1,38 +1,53 @@
 [global]
-# Display
-monitor = 0
-follow = none
-# Geometry
-width = (0, 600)
-height = 300
-origin = top-right
-offset = 10x50
-# Frame
-frame_width = 3
-frame_color = "#00b3b3"
-gap_size = 8
-corner_radius = 12
-# Text
-font = Helvetica 10
-markup = full
-format = "<b>%s</b>\n%b"
-# Icon
-min_icon_size = 32
-max_icon_size = 128
+    # Display
+    monitor = 0
+    follow = none
+    # Geometry
+    width = (0,500)
+    height = 100
+    origin = top-right
+    offset = 10x50
+    scale = 0
+    # Frame
+    frame_width = 3
+    frame_color = "#00b3b3"
+    gap_size = 8
+    corner_radius = 12
+    # Content
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 8
+    # Text
+    font = Helvetica 10
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_indicators = no
+    # Icon
+    min_icon_size = 30
+    max_icon_size = 100
+    icon_corner_radius = 12
+    # Wayland
+    layer = top
+    force_xwayland = false
 
 [urgency_low]
-background = "#98fb98"
-foreground = "#222222"
-timeout = 8
+    background = "#98fb98"
+    foreground = "#222222"
+    timeout = 8
+    default_icon = "${HOME}/.config/dunst/low.png"
 
 [urgency_normal]
-background = "#F2DBE7"
-foreground = "#222222"
-timeout = 8
+    background = "#F2DBE7"
+    foreground = "#222222"
+    timeout = 8
+    default_icon = "${HOME}/.config/dunst/normal.png"
 
 [urgency_critical]
-background = "#900000"
-foreground = "#ffffff"
-frame_color = "#ff0000"
-timeout = 0
+    background = "#900000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 0
+    default_icon = "${HOME}/.config/dunst/critical.png"
 
