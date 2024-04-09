@@ -8,31 +8,29 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
 `chezmoi`
 
-
 ## What I use on my setup
 
 | Need | Answer | Comments |
 |------|--------|----------|
 | Distribution | Arch | love it or hate it, I love it |
-| Tile Manager | Hyprland | Yeah does not actively support nvidia (**** nvidia, like he said) but tile manager that hype me (sway config still usable I think) |
+| Compositor | Hyprland | tile manager that hype me |
 | Statusbar | waybar | Just perfect |
-| Shell | zsh (without oh-my-zsh) | because it's better than bash, obviously; and for fish, I prefer the feal of zsh for now |
-| File Manager | CLI : ranger / GUI : nemo | ranger is pretty damn good, nemo when I want to have a GUI |
+| Notification daemon | dunst | a little complicated to configure from scratch |
+| Shell | zsh (without oh-my-zsh) | better config than bash, more DIY than fish |
+| File Manager | CLI : ranger / GUI : nemo | ranger -> vim motion for the win |
 | Terminal Emulator | kitty | tiling and tabs included, pretty powerfull |
-| IDE | vscode (moving to neovim WIP) | I know, I'm working on my nvim config atm. But pretty good IDE nonetheless with simple and powerfull costumization |
-
+| IDE | vscode (moving to neovim WIP) | I know, I'm a bad boy |
 
 ## What I accomodate with at work
 
 | Need | Answer | Comments |
 |------|--------|----------|
-| Distribution | Ubuntu 22.04 | ... yeah I'm not a big fan of apt/snap combo, since apt repo ... are pretty outdated imo |
-| Desktop Environment | Regolith (i3 as TM) | At least not the gnome thing, i3 and not sway to be sure to not have issues with the GPU |
+| Distribution | Ubuntu 22.04 | canonical not the best, apt outdated |
+| Desktop Environment | Regolith (i3 as TM) | i dn't want issues with the GPU |
 | File Manager | the gnome thing | ... it works. Nothing to say |
 
+## That's everything folks
 
-# That's everything folks
-
-Yeah maybe this readme will be updated, but ... yeah that's pretty just from my usage so :shrug:
+Yeah maybe this readme will be updated, but ... yeah :shrug:
 
 À plus dans le bus !
