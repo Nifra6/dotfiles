@@ -25,11 +25,14 @@
     vertical_alignment = center
     show_indicators = no
     # Icon
+    icon_theme = Papirus
+    enable_recursive_icon_lookup = true
+    #icon_path = /usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/scalable/devices/
     min_icon_size = 30
     max_icon_size = 100
     icon_corner_radius = 12
     # Wayland
-    layer = top
+    layer = overlay
     force_xwayland = false
 
 [urgency_low]
@@ -50,4 +53,7 @@
     frame_color = "#ff0000"
     timeout = 0
     default_icon = "${HOME}/.config/dunst/critical.png"
+
+[udiskie]
+    default_icon = "${HOME}/.config/dunst/normal.png"
 
