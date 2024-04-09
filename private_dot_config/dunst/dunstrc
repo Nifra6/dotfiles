@@ -1,23 +1,24 @@
 [global]
-    width = (0, 600)
-    frame_width = 3
-    frame_color = "#00b3b3"
-    gap_size = 8
-    corner_radius = 12
+width = (0, 600)
+frame_width = 3
+frame_color = "#00b3b3"
+gap_size = 8
+corner_radius = 12
+font = Helvetica 10
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#888888"
-    timeout = 8
+background = "#98fb98"
+foreground = "#222222"
+timeout = 8
 
 [urgency_normal]
-    background = "#F2DBE7"
-    foreground = "#222222"
-    timeout = 8
+background = "#F2DBE7"
+foreground = "#222222"
+timeout = 8
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
-    timeout = 0
+background = "#900000"
+foreground = "#ffffff"
+frame_color = "#ff0000"
+timeout = 0
 
