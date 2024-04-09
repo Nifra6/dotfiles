@@ -32,6 +32,9 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+#workspaces {
+    padding: 0 5px;
+}
 /* Styles for Workspace Buttons */
 #workspaces button {
     padding: 0 5px;
@@ -164,6 +167,7 @@ label:focus {
     min-width: 30px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    padding: 0 4px;
 }
 
 #tray {
