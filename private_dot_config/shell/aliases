@@ -6,12 +6,12 @@
 
 # -- Colours command
 # ---------------------------
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 
 # -- Replace commands
 # ---------------------------
-alias ls='lsd'
 alias cat='bat'
 
 
@@ -87,6 +87,9 @@ case $HOSTNAME in
     alias retirer='sh ~/Applications/Scripts/umount.sh'
     alias backup='sh ~/Applications/Scripts/backup.sh'
     alias background-cli='sh ~/Applications/Scripts/choice.sh'
+    # -- Replace commands
+    # ---------------------------
+    alias ls='lsd'
     # -- New commands
     # ---------------------------
     alias convertir='sh ~/Applications/Scripts/convertisseur.sh'
