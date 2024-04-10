@@ -14,7 +14,7 @@
 /* Styles for Waybar Window */
 window#waybar {
     background-color: rgba(0, 86, 53, 0.3);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.8);
     color: #ffffff;
     transition: background-color 0.5s;
 }
@@ -65,8 +65,8 @@ window#waybar.hidden {
 }
 
 /* Styles for Different Modules */
-#disk, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mpd {
-    padding: 0 10px;
+#disk, #clock, #battery, #cpu, #idle_inhibitor, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mpd {
+    padding: 0 7px;
     margin: 0 4px;
     color: #ffffff;
 }
@@ -74,6 +74,10 @@ window#waybar.hidden {
 /* Styles for Specific Modules */
 #clock {
     padding-top: 3px;
+}
+
+#idle_inhibitor {
+    padding: 0 0 0 10px;
 }
 
 #battery {
@@ -135,6 +139,7 @@ label:focus {
 }
 
 #custom-pacman, #custom-media {
+    padding: 0 5px;
     background-color: #66cc99;
     color: #2a5c45;
     min-width: 60px;
@@ -144,10 +149,6 @@ label:focus {
 
 #custom-pacman {
     background-color: #87ceeb;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
@@ -162,15 +163,8 @@ label:focus {
 
 #custom-system {
     background-color: #1d67ed;
-    font-size: 20px;
+    font-size: 28px;
     color: #ffffff;
-    min-width: 30px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 0 4px;
+    border-radius: 0 28px 28px 0;
+    padding: 0 8px 0 4px;
 }
-
-#tray {
-    /* Unspecified Styles */
-}
-
