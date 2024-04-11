@@ -1,8 +1,8 @@
 {
-    "label" : "suspend",
-    "action" : "",
-    "text" : "Veille (WIP)",
-    "keybind" : "w"
+    "label" : "lock",
+    "action" : "loginctl lock-session",
+    "text" : "Verrouillage",
+    "keybind" : "l"
 }
 {
     "label" : "reboot",

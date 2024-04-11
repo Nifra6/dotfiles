@@ -25,6 +25,10 @@ button:focus, button:active, button:hover {
 	outline-style: none;
 }
 
+#lock {
+    background-image: url("lock.png");
+}
+
 #suspend {
     background-image: url("suspend.png");
 }
