@@ -11,6 +11,12 @@
     "keybind" : "r"
 }
 {
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "Veille",
+    "keybind" : "v"
+}
+{
     "label" : "shutdown",
     "action" : "systemctl poweroff",
     "text" : "Éteindre",

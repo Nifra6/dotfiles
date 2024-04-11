@@ -11,6 +11,14 @@
     min-height: 0;
 }
 
+tooltip {
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: white;
+}
+
 /* Styles for Waybar Window */
 window#waybar {
     background-color: rgba(0, 86, 53, 0.3);
@@ -162,7 +170,7 @@ label:focus {
 }
 
 #custom-system {
-    background-color: #1d67ed;
+    background-color: #1793d1;
     font-size: 28px;
     color: #ffffff;
     border-radius: 0 28px 28px 0;

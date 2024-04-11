@@ -47,7 +47,7 @@
     // ---------------------------
     "custom/system": {
         "format": "",
-        "on-click": "wlogout",
+        "on-click": "wlogout -b 2 -c 16 -r 16",
         "on-click-right": "killall -SIGUSR2 waybar",
         "tooltip": false
     },
