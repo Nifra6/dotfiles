@@ -1,5 +1,7 @@
 # My dotfiles
 
+![exemple](ressources/exemple.jpg)
+
 [![swordsShoutout](ressources/_TwitchShoutout.png)](https://swordscomic.com)
 
 ## What can you expect
