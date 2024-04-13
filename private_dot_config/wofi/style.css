@@ -21,5 +21,6 @@ window {
 
 #entry:selected {
     background-color: #704264;
+    border-radius: 0 0 12px 12px;
     color: #dbafa0;
 }

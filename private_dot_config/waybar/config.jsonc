@@ -197,7 +197,7 @@
     // ---------------------------
     "backlight": {
         "format": "{percent}% {icon}",
-        "format-icons": ["", ""],
+        "format-icons": ["󰄰","󱎖", "󰄯"],
         "interval": 20,
         "on-click": "pkill -USR1 redshift",
         "tooltip": false
