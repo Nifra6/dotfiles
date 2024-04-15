@@ -1,0 +1,6 @@
+# weather
+#
+# Display local weather
+[weather]
+interval=300
+command=curl 'https://wttr.in/Nancy?format=1'
