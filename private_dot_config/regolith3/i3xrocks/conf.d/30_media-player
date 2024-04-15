@@ -3,3 +3,5 @@
 # Displays media controls
 [media-player]
 interval=5
+background=#66cc99
+color=#2a5c45

@@ -9,6 +9,11 @@ wm.window.border.size: 2
 wm.bar.position: top
 wm.bar.font: Ubuntu Nerd Font Regular 12
 i3xrocks.date.format2: %A %d %B | %H:%M
+i3xrocks.weather.location: Nancy
+i3xrocks.weather.format: 1
+i3xrocks.value.font: Ubuntu Nerd Font Regular 12
+i3xrocks.value.mediaplayerwidth: 200
+i3xrocks.label.color: #2a5c45
 wm.workspace.01.name: 1:󰙯
 wm.workspace.02.name: 2:󰓇
 wm.workspace.03.name: 3:
