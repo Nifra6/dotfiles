@@ -6,11 +6,19 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: 'Symbols Nerd Font', Helvetica;
+    font-family: 'Symbols Nerd Font', "Noto Sans";
     font-size: 15px;
-    min-height: 0;
 }
 
+/* Styles for the bar itself */
+window#waybar {
+    background-color: rgba(0, 86, 53, 0.3);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.8);
+    color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+/* Tooltip when hover modules */
 tooltip {
     border-radius: 12px;
 }
@@ -19,21 +27,67 @@ tooltip label {
     color: white;
 }
 
-/* Styles for Waybar Window */
-window#waybar {
-    background-color: rgba(0, 86, 53, 0.3);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.8);
+/* Styles for the left group */
+#custom-system {
+    background-color: #1793d1;
+    border-radius: 0 28px 28px 0;
     color: #ffffff;
-    transition: background-color 0.5s;
+    font-size: 28px;
+    padding: 0 8px 0 4px;
 }
 
-/* Styles for Centered Modules */
+#custom-media {
+    background-color: #66cc99;
+    border-radius: 15px;
+    color: #2a5c45;
+    margin-bottom: 3px;
+    min-width: 60px;
+    padding: 0 5px;
+}
+
+#custom-pacman {
+    background-color: #87ceeb;
+    border-radius: 15px;
+    color: #2a5c45;
+    margin-bottom: 3px;
+    min-width: 60px;
+    padding: 0 5px;
+}
+
+/* Styles for the center group */
 .modules-center {
     background-color: rgba(155, 89, 182, 0.9);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-radius: 0 0 28px 28px;
     margin-bottom: 3px;
 }
+
+#idle_inhibitor {
+    padding-left: 12px;
+}
+
+#clock {
+    padding: 0 10px;
+}
+
+#tray {
+    padding-right: 12px;
+}
+
+
+/* Styles for the left group */
+.modules-right {
+    background-color: rgba(100, 100, 100, 0.9);
+    border-radius: 28px 0 0 28px;
+}
+
+
+/*Not sure*/
+
+
+
+
+
+
 
 /* Styles for Hidden Waybar Window */
 window#waybar.hidden {
@@ -43,6 +97,7 @@ window#waybar.hidden {
 #workspaces {
     padding: 0 5px;
 }
+
 /* Styles for Workspace Buttons */
 #workspaces button {
     padding: 0 5px;
@@ -73,21 +128,15 @@ window#waybar.hidden {
 }
 
 /* Styles for Different Modules */
-#disk, #clock, #battery, #cpu, #idle_inhibitor, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mpd {
+#disk, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media {
     padding: 0 7px;
     margin: 0 4px;
     color: #ffffff;
 }
 
 /* Styles for Specific Modules */
-#clock {
-    padding-top: 3px;
-}
 
-#idle_inhibitor {
-    padding: 0 0 0 10px;
-}
-
+/*
 #battery {
     background-color: #ffffff;
     color: rgba(0, 0, 0, 0.8);
@@ -135,29 +184,17 @@ label:focus {
 #network {
     margin-bottom: 1px;
 }
-
+*/
 #network.disconnected {
     background-color: #f53c3c;
     border-radius: 15px;
 }
-
+/*
 #pulseaudio {
     background-color: #ad3897;
     margin: 0;
 }
 
-#custom-pacman, #custom-media {
-    padding: 0 5px;
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 60px;
-    border-radius: 15px;
-    margin-bottom: 3px;
-}
-
-#custom-pacman {
-    background-color: #87ceeb;
-}
 
 #temperature {
     color: rgba(50, 50, 50, 0.8);
@@ -168,11 +205,5 @@ label:focus {
 #temperature.critical {
     background-color: #eb4d4b;
 }
+*/
 
-#custom-system {
-    background-color: #1793d1;
-    font-size: 28px;
-    color: #ffffff;
-    border-radius: 0 28px 28px 0;
-    padding: 0 8px 0 4px;
-}
