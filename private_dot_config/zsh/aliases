@@ -51,9 +51,9 @@ dunst_test() {
 # -- Fast config access
 # ---------------------------
 alias cedit='chezmoi edit --watch'
-alias aliases='cedit $ZSH_DOTFILES/aliases'
-alias zshenv='cedit $ZSH_DOTFILES/.zshenv'
-alias zshrc='cedit $ZSH_DOTFILES/.zshrc'
+alias aliases='cedit $ZDOTDIR/aliases'
+alias zshenv='cedit $ZDOTDIR/.zshenv'
+alias zshrc='cedit $ZDOTDIR/.zshrc'
 
 
 # -- Kittens
@@ -99,7 +99,7 @@ case $HOSTNAME in
     alias ssh_gonto="kitten ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
     # -- Private aliases
     # ---------------------------
-    source $HOME/.config/shell/aliases_nascane
+    source $ZDOTDIR/aliases_nascane
     ;;
 
 esac

@@ -4,21 +4,16 @@
 # ---------------------------------------------------------
 
 
-# -- Variables
-# ---------------------------
-ZSH_DOTFILES=${HOME}/.config/zsh
-
-
 # -- History
 # ---------------------------
-HISTFILE=${ZSH_DOTFILES}/.histfile
+HISTFILE=${ZDOTDIR}/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
 
 
 # -- Completion
 # ---------------------------
-fpath+=${ZSH_DOTFILES}/completions
+fpath+=${ZDOTDIR}/completions
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 # matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -26,7 +21,7 @@ zstyle ':completion:*' menu select
 
 # -- Aliases
 # ---------------------------
-source ${ZSH_DOTFILES}/aliases
+source ${ZDOTDIR}/aliases
 
 
 # -- Prompt
