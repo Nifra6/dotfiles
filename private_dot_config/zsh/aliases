@@ -51,9 +51,9 @@ dunst_test() {
 # -- Fast config access
 # ---------------------------
 alias cedit='chezmoi edit --watch'
-alias aliases='cedit $HOME/.config/shell/aliases'
-alias zshenv='cedit $HOME/.config/shell/zsh/.zshenv'
-alias zshrc='cedit $HOME/.config/shell/zsh/.zshrc'
+alias aliases='cedit $ZSH_DOTFILES/aliases'
+alias zshenv='cedit $ZSH_DOTFILES/.zshenv'
+alias zshrc='cedit $ZSH_DOTFILES/.zshrc'
 
 
 # -- Kittens
