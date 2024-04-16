@@ -23,12 +23,13 @@
     ],
     "modules-center": [
         "idle_inhibitor",
+        "custom/weather",
         "clock",
         "tray"
     ],
     "modules-right": [
-        "disk",
         "network",
+        "disk",
         "cpu",
         "memory",
         "temperature",
@@ -123,10 +124,12 @@
         "tooltip-format-deactivated": "Veille activée"
     },
 
-    // -- System tray
+    // -- Weather
     // ---------------------------
-    "tray": {
-        "spacing": 10
+    "custom/weather": {
+        "exec": "curl 'https://wttr.in/Nancy?m&lang=fr&format=1'",
+        "format": "{} |",
+        "interval": 600
     },
 
     // -- Clock
@@ -135,6 +138,12 @@
         "format": " {:L%A %d %B | %H:%M}",
         "locale": "fr_FR.utf8",
         "timezone": "Europe/Paris",
+    },
+
+    // -- System tray
+    // ---------------------------
+    "tray": {
+        "spacing": 10
     },
 
 
@@ -146,7 +155,7 @@
     // -- Free disk space
     // ---------------------------
     "disk": {
-        "format": "{free} libres",
+        "format": "{free} 󰋊",
         "interval": 30,
         "on-click": "filelight",
         "path": "/",
