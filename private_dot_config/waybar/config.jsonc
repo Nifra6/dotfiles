@@ -84,7 +84,7 @@
         "format": "{icon} {}",
         "format-icons": {
             "default": "󰝚",
-            "firefox": "󰈹",
+            "firefox": "",
             "mpv": "",
             "spotify": "󰓇"
         },
