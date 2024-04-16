@@ -89,6 +89,9 @@
             "youtube": "󰗃"
         },
         "max-length": 80,
+        "on-click": "playerctl play-pause",
+        "on-click-middle": "playerctl previous",
+        "on-click-right": "playerctl next",
         "return-type": "json"
     },
 
