@@ -6,13 +6,12 @@
 
 # -- Variables
 # ---------------------------
-SHELL_DOTFILES=${HOME}/.config/shell
-ZSH_DOTFILES=${SHELL_DOTFILES}/zsh
+ZSH_DOTFILES=${HOME}/.config/zsh
 
 
 # -- History
 # ---------------------------
-HISTFILE=${SHELL_DOTFILES}/.histfile
+HISTFILE=${ZSH_DOTFILES}/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
 
@@ -27,7 +26,7 @@ zstyle ':completion:*' menu select
 
 # -- Aliases
 # ---------------------------
-source ${SHELL_DOTFILES}/aliases
+source ${ZSH_DOTFILES}/aliases
 
 
 # -- Prompt

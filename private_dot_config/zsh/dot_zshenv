@@ -15,7 +15,7 @@ export LANG="fr_FR.UTF-8"
 export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
 export SHELL="$(command -v zsh)"
 export VISUAL=$EDITOR
-export ZDOTDIR=${HOME}/.config/shell/zsh
+export ZDOTDIR=${HOME}/.config/zsh
 
 # -- ssh-agent
 # ---------------------------
