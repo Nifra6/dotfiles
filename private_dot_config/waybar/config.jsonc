@@ -84,8 +84,9 @@
         "format": "{icon} {}",
         "format-icons": {
             "default": "󰝚",
-            "spotify": "󰓇",
             "firefox": "󰈹",
+            "mpv": "",
+            "spotify": "󰓇"
         },
         "max-length": 80,
         "on-click": "playerctl play-pause",

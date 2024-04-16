@@ -33,7 +33,9 @@ def on_metadata(player, metadata, manager):
     logger.info("Received new metadata")
     track_info = ""
 
-    if player.props.player_name == "spotify" and (
+    if player.props.player_name == "mpv":
+        track_info = player.get_title()
+    elif player.props.player_name == "spotify" and (
         "mpris:trackid" in metadata.keys()
         and ":ad:" in player.props.metadata["mpris:trackid"]
         or "xesam:url" in metadata.keys()
