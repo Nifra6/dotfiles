@@ -131,7 +131,8 @@
     "custom/weather": {
         "exec": "curl 'https://wttr.in/Nancy?m&lang=fr&format=1'",
         "format": "{} |",
-        "interval": 600
+        "interval": 600,
+        "tooltip": false
     },
 
     // -- Clock
