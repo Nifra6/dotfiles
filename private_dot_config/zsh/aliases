@@ -84,8 +84,6 @@ case $HOSTNAME in
     # -- System functions
     # ---------------------------
     alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && pacdiff ; chezmoi update -v'
-    alias day_mode='pkill -USR1 redshift'
-    alias retirer='sh ~/Applications/Scripts/umount.sh'
     alias backup='sh ~/Applications/Scripts/backup.sh'
     alias background-cli='sh ~/Applications/Scripts/choice.sh'
     # -- Replace commands
@@ -93,14 +91,9 @@ case $HOSTNAME in
     alias ls='lsd'
     # -- New commands
     # ---------------------------
-    alias convertir='sh ~/Applications/Scripts/convertisseur.sh'
-    alias video2gif='sh ~/Applications/Scripts/video2gif.sh'
     alias matlab='~/Applications/Matlab/R2023a/bin/matlab -nodesktop'
     alias matlab-gui='~/Applications/Matlab/R2023a/bin/matlab'
     alias ssh_gonto="kitten ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
-    # -- Private aliases
-    # ---------------------------
-    source $ZDOTDIR/aliases_nascane
     ;;
 
 esac
