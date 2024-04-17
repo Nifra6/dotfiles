@@ -67,6 +67,8 @@
 "vim" = ""
 "code" = ""
 "matlab" = "󰘨"
+"nmtui" = "󰛳"
+"nm-connection-editor" = "󰛳"
 
 [other]
 fallback_icon = "🤨"
