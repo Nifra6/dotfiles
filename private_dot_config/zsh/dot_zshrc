@@ -72,6 +72,7 @@ case $HOSTNAME in
         # -- Miscellaneous
         # ---------------------------
         fpath+=${HOME}/Applications/conda-zsh-completion
+        compinit
         zstyle ':completion::complete:*' use-cache 1
         zstyle ":conda_zsh_completion:*" sort-envs-by-time true
         zstyle ":conda_zsh_completion:*" show-global-envs-first true
