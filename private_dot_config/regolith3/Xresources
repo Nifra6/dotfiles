@@ -2,6 +2,7 @@
 regolith.look.path: /usr/share/regolith-look/lascaille
 regolith.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/heavy_hitters_key_art.original.jpg
 regolith.lockscreen.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/mst_key_art.original.jpg
+gtk.theme_name: Yaru-magenta
 wm.gaps.inner.size: 16
 wm.window.border.size: 2
 wm.gaps.focus_follows_mouse: yes
