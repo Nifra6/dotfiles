@@ -13,6 +13,9 @@ wm.bar.background.color: #e4fff5
 i3xrocks.date.format2: %A %d %B | %H:%M
 ! i3xrocks.weather.location: 48.6937223\,6.1834097
 ! i3xrocks.weather.format: 1
+i3xrocks.action.media-player.left: playerctl play-pause
+i3xrocks.action.media-player.middle: playerctl previous
+i3xrocks.action.media-player.right: playerctl next
 i3xrocks.value.font: Ubuntu Nerd Font Regular 12
 i3xrocks.value.color: #2a5c45
 i3xrocks.value.mediaplayerwidth: 200
