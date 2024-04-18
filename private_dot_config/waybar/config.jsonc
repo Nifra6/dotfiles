@@ -75,6 +75,20 @@
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
     },
+    
+    // -- System updates
+    // ---------------------------
+    "custom/pacman": {
+        "exec": "python $HOME/.config/waybar/pacman/pacman.py",
+        "format": "{icon}  {}",
+        "format-icons": {
+            "available": "󰚰",
+            "uptodate": "󰗡"
+        },
+        "interval": 600,
+        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update",
+        "return-type": "json",
+    },
 
     // -- Multimedia
     // ---------------------------
@@ -95,21 +109,7 @@
         "return-type": "json"
     },
 
-    // -- System updates
-    // ---------------------------
-    "custom/pacman": {
-        "exec": "zsh $HOME/.config/waybar/pacman/pacman.sh",
-        "format": "{icon}  {}",
-        "format-icons": {
-            "available": "󰚰",
-            "uptodate": "󰗡"
-        },
-        "interval": 600,
-        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update",
-        "return-type": "json",
-    },
-
-
+    
 
     // --------------------------------------------------------
     // ---               middle modules config              ---
@@ -130,11 +130,11 @@
     // -- Weather
     // ---------------------------
     "custom/weather": {
-        //"exec": "curl 'https://wttr.in/Nancy?m&lang=fr&format=1'",
-        "exec": "zsh $HOME/.config/waybar/weather/weather.sh",
+        "exec": "python $HOME/.config/waybar/weather/weather.py",
         "format": "{} |",
         "interval": 600,
-        "return-type": "json"
+        "return-type": "json",
+        "tooltip": false
     },
 
     // -- Clock
@@ -157,6 +157,18 @@
     // ---               right modules config               ---
     // --------------------------------------------------------
 
+    // -- Network
+    // ---------------------------
+    "network": {
+        "format-disconnected": "Déconnecté 󰌙",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰌘",
+        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
+        "interval": 10,
+        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c nmtui",
+        "tooltip": false
+    },
+
     // -- Free disk space
     // ---------------------------
     "disk": {
@@ -168,19 +180,6 @@
             "critical": 90,
             "warning": 75
         },
-
-        "tooltip": false
-    },
-
-    // -- Network
-    // ---------------------------
-    "network": {
-        "format-disconnected": "Déconnecté 󰌙",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
-        "format-linked": "{ifname} (No IP) 󰌘",
-        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
-        "interval": 10,
-        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c nmtui",
         "tooltip": false
     },
 
@@ -251,12 +250,12 @@
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% 󰚥",
-        "format-alt": "{time} | {capacity}% {icon}",
         "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
         "states": {
             "critical": 15,
             "warning": 30
         },
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "Temps restant : {time}"
     },
 }

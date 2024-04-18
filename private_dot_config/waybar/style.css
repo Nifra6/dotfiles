@@ -22,7 +22,6 @@ window#waybar {
 tooltip {
     border-radius: 12px;
 }
-
 tooltip label {
     color: white;
 }
@@ -35,9 +34,8 @@ tooltip label {
     font-size: 28px;
     padding: 0 8px 0 4px;
 }
-
-#custom-media {
-    background-color: #66cc99;
+#custom-pacman {
+    background-color: #87ceeb;
     border-radius: 15px;
     color: #2a5c45;
     margin-bottom: 3px;
@@ -45,9 +43,8 @@ tooltip label {
     min-width: 60px;
     padding: 0 5px;
 }
-
-#custom-pacman {
-    background-color: #87ceeb;
+#custom-media {
+    background-color: #66cc99;
     border-radius: 15px;
     color: #2a5c45;
     margin-bottom: 3px;
@@ -62,42 +59,63 @@ tooltip label {
     border-radius: 0 0 28px 28px;
     margin-bottom: 3px;
 }
-
 #idle_inhibitor {
     padding: 0 12px;
 }
-
-#custom-weather {
-}
-
-#clock {
-}
-
+#custom-weather {}
+#clock {}
 #tray {
     padding: 0 12px;
 }
 
 
-/* Styles for the left group */
+/* Styles for the right group */
 .modules-right {
     background-color: rgba(100, 100, 100, 0.9);
     border-radius: 28px 0 0 28px;
     margin-bottom: 3px;
 }
-
-
-/*Not sure*/
-
-
-
-
-
-
-
-/* Styles for Hidden Waybar Window */
-window#waybar.hidden {
-    opacity: 0.2;
+#network, #disk, #cpu, #memory, #temperature, #backlight, #pulseaudio {
+    padding: 0 7px;
+    color: #ffffff;
 }
+/* disk style */
+#disk.warning {
+    background-color: #ffff66;
+    color: #2a5c45;
+}
+#disk.critical {
+    background-color: #f53c3c;
+}
+#network.disconnected {
+    background-color: #f53c3c;
+    border-radius: 15px;
+}
+/* battery style */
+#battery {
+    border-radius: 15px 0 0 15px;
+    color: #ffffff;
+    padding: 0 7px;
+}
+#battery.charging {
+    background-color: #26a65b;
+}
+#battery.warning:not(.charging) {
+    background-color: #ffff66;
+    color: #2a5c45;
+}
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+}
+
+
+
+
+
+
+
+
+
 
 #workspaces {
     padding-left: 5px;
@@ -133,45 +151,12 @@ window#waybar.hidden {
 }
 
 /* Styles for Different Modules */
-#disk, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
-    padding: 0 7px;
-    color: #ffffff;
-}
-
-#disk.warning {
-    background-color: #ffff66;
-    color: #2a5c45;
-}
-
-#disk.critical {
-    background-color: #f53c3c;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-    border-radius: 15px;
-}
-
-#battery {
-    border-radius: 15px 0 0 15px;
-    color: #ffffff;
-    padding: 0 7px;
-}
-
-#battery.charging {
-    background-color: #26a65b;
-}
-
-#battery.warning:not(.charging) {
-    background-color: #ffff66;
-    color: #2a5c45;
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-}
-
 /* Styles for Specific Modules */
+
+/* Styles for Hidden Waybar Window */
+window#waybar.hidden {
+    opacity: 0.2;
+}
 
 /*
 #battery {
