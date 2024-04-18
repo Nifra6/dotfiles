@@ -29,15 +29,26 @@
     ],
     "modules-right": [
         "network",
+        "custom/separation",
         "disk",
+        "custom/separation",
         "cpu",
+        "custom/separation",
         "memory",
+        "custom/separation",
         "temperature",
+        "custom/separation",
         "backlight",
+        "custom/separation",
         "pulseaudio",
+        "custom/separation",
         "battery"
     ],
 
+    "custom/separation": {
+        "format": "|",
+        "tooltip": false
+    },
 
 
     // --------------------------------------------------------
