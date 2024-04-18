@@ -106,7 +106,7 @@
         },
         "interval": 600,
         "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update",
-        "return-type": "json"
+        "return-type": "json",
     },
 
 
@@ -130,10 +130,11 @@
     // -- Weather
     // ---------------------------
     "custom/weather": {
-        "exec": "curl 'https://wttr.in/Nancy?m&lang=fr&format=1'",
+        //"exec": "curl 'https://wttr.in/Nancy?m&lang=fr&format=1'",
+        "exec": "zsh $HOME/.config/waybar/weather/weather.sh",
         "format": "{} |",
         "interval": 600,
-        "tooltip": false
+        "return-type": "json"
     },
 
     // -- Clock
@@ -163,6 +164,11 @@
         "interval": 30,
         "on-click": "filelight",
         "path": "/",
+        "states": {
+            "critical": 90,
+            "warning": 75
+        },
+
         "tooltip": false
     },
 

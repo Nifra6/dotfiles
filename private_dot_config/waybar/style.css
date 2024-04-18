@@ -135,8 +135,16 @@ window#waybar.hidden {
 /* Styles for Different Modules */
 #disk, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
     padding: 0 7px;
-    margin: 0 4px;
     color: #ffffff;
+}
+
+#disk.warning {
+    background-color: #ffff66;
+    color: #2a5c45;
+}
+
+#disk.critical {
+    background-color: #f53c3c;
 }
 
 #network.disconnected {
