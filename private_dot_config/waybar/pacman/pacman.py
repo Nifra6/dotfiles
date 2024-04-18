@@ -1,11 +1,13 @@
+import json
 import subprocess
 import sys
-import json
 
 
 def check_updates():
     try:
-        output = subprocess.check_output(["checkupdates"], universal_newlines=True)
+        output = subprocess.check_output(
+            ["checkupdates", "--nocolor"], universal_newlines=True
+        )
         updates = output.strip().split("\n")
         return updates
     except subprocess.CalledProcessError:
@@ -17,17 +19,26 @@ def write_output(packages):
     match nb_packages:
         case 0:
             output_text = "À jour"
-            output_class = "good"
             output_alt = "uptodate"
+            output_tooltip = ""
+            output_class = "good"
         case 1:
             output_text = "1 paquet disponible"
-            output_class = "info"
             output_alt = "available"
+            output_tooltip = packages[0]
+            output_class = "info"
         case _:
             output_text = f"{nb_packages} paquets disponibles"
-            output_class = "info"
             output_alt = "available"
-    output = {"text": output_text, "class": output_class, "alt": output_alt}
+            output_tooltip = "\n".join(packages)
+
+            output_class = "info"
+    output = {
+        "text": output_text,
+        "alt": output_alt,
+        "tooltip": output_tooltip,
+        "class": output_class,
+    }
     sys.stdout.write(json.dumps(output) + "\n")
     sys.stdout.flush()
 
