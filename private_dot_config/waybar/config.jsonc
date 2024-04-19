@@ -91,6 +91,7 @@
     // ---------------------------
     "custom/pacman": {
         "exec": "python $HOME/.config/waybar/pacman/pacman.py",
+        "exec-on-event": true,
         "format": "{icon}  {}",
         "format-icons": {
             "available": "󰚰",
