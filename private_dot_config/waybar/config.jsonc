@@ -146,7 +146,7 @@
         "format": "{} |",
         "interval": 600,
         "return-type": "json",
-        "tooltip": false
+        "tooltip": true
     },
 
     // -- Clock
