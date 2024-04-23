@@ -733,9 +733,10 @@ require('lazy').setup({
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          --['<CR>'] = cmp.mapping.confirm { select = true },
-          --['<Tab>'] = cmp.mapping.select_next_item(),
-          --['<S-Tab>'] = cmp.mapping.select_prev_item(),
+          ['<Tab>'] = cmp.mapping.confirm { select = true },
+          ['<Down>'] = cmp.mapping.select_next_item(),
+          ['<Up>'] = cmp.mapping.select_prev_item(),
+          ['²'] = cmp.mapping.select_next_item(),
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
@@ -811,9 +812,6 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
-
-      -- Show current indent scope
-      require('mini.indentscope').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
