@@ -9,9 +9,9 @@
 # -- Variables
 # ---------------------------
 export DIFFPROG="nvim -d"
+export DISTRO="$(if [ -f /etc/os-release ]; then . /etc/os-release; echo "$NAME"; fi)"
 export EDITOR="$(command -v nvim)"
 export HOSTNAME=$(hostname)
-export DISTRO="$(if [ -f /etc/os-release ]; then . /etc/os-release; echo "$NAME"; fi)"
 export LANG="fr_FR.UTF-8"
 export PYTHONPYCACHEPREFIX="${HOME}/.cache/Python"
 export SHELL="$(command -v zsh)"
