@@ -28,6 +28,12 @@ if [[ -z "$SSH_AUTH_SOCK" ]] ; then
     ssh-add
 fi
 
+# -- Neovim under Ubuntu
+# ---------------------------
+if [[ $HOSTNAME = "gonto" ]]; then
+    export PATH=/snap/node/current/bin:$PATH
+fi
+
 # -- Hyprland
 # ---------------------------
 if [[ $HOSTNAME = "nascane" && -z "${WAYLAND_DISPLAY}" && "${XDG_VTNR}" -eq 1 ]]; then
