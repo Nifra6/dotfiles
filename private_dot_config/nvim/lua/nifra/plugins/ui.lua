@@ -1,6 +1,6 @@
 return {
     -- NOTE: Colorscheme
-    { "folke/tokyonight.nvim", lazy = false, priority = 1000 },
+    { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = { transparent = true } },
     -- NOTE: Welcome page
     {
         "nvimdev/dashboard-nvim",
