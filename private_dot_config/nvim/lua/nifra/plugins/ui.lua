@@ -20,8 +20,9 @@ return {
                 config = {
                     header = vim.split(logo, "\n"),
                     center = {
-                        { action = "Telescope find_files", desc = " Find File", icon = "󰱼 ", key = "f" },
+                        { action = "Telescope find_files", desc = " Open", icon = "󰱼 ", key = "f" },
                         { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
+                        { action = "Lazy update", desc = " Update", icon = "󰚰 ", key = "u" },
                         { action = "qa", desc = " Quit", icon = "󰈆 ", key = "q" },
                     },
                 },
