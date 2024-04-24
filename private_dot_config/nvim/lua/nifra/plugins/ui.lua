@@ -15,14 +15,13 @@ return {
         event = "VimEnter",
         config = function()
             local logo = [[
-              ▄▄    ▄ ▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄   ▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄ ▄▄   ▄▄ 
-             █  █  █ █   █       █   ▄  █ █      █  █ █  █   █  █▄█  █
-             █   █▄█ █   █    ▄▄▄█  █ █ █ █  ▄   █  █▄█  █   █       █
-             █       █   █   █▄▄▄█   █▄▄█▄█ █▄█  █       █   █       █
-             █  ▄    █   █    ▄▄▄█    ▄▄  █      █       █   █       █
-             █ █ █   █   █   █   █   █  █ █  ▄   ██     ██   █ ██▄██ █
-             █▄█  █▄▄█▄▄▄█▄▄▄█   █▄▄▄█  █▄█▄█ █▄▄█ █▄▄▄█ █▄▄▄█▄█   █▄█
-            ]]
+  ▄▄    ▄ ▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄   ▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄ ▄▄   ▄▄ 
+ █  █  █ █   █       █   ▄  █ █      █  █ █  █   █  █▄█  █
+ █   █▄█ █   █    ▄▄▄█  █ █ █ █  ▄   █  █▄█  █   █       █
+ █       █   █   █▄▄▄█   █▄▄█▄█ █▄█  █       █   █       █
+ █  ▄    █   █    ▄▄▄█    ▄▄  █      █       █   █       █
+ █ █ █   █   █   █   █   █  █ █  ▄   ██     ██   █ ██▄██ █
+ █▄█  █▄▄█▄▄▄█▄▄▄█   █▄▄▄█  █▄█▄█ █▄▄█ █▄▄▄█ █▄▄▄█▄█   █▄█]]
             logo = string.rep("\n", 8) .. logo .. "\n\n"
             require("dashboard").setup({
                 -- config
@@ -30,9 +29,9 @@ return {
                 config = {
                     header = vim.split(logo, "\n"),
                     center = {
-                        { action = "Telescope find_files", desc = " Find File", icon = " ", key = "f" },
+                        { action = "Telescope find_files", desc = " Find File", icon = "󰱼 ", key = "f" },
                         { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
-                        { action = "qa", desc = " Quit", icon = " ", key = "q" },
+                        { action = "qa", desc = " Quit", icon = "󰈆 ", key = "q" },
                     },
                 },
             })
