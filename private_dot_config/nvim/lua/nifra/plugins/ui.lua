@@ -1,4 +1,5 @@
 return {
+
     -- NOTE: Colorscheme
     {
         "folke/tokyonight.nvim",
@@ -15,6 +16,7 @@ return {
         end,
         opts = { transparent = true },
     },
+
     -- NOTE: Welcome page
     {
         "nvimdev/dashboard-nvim",
@@ -44,6 +46,7 @@ return {
         end,
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+
     -- NOTE: Notifications and command line input
     {
         "folke/noice.nvim",
@@ -54,6 +57,7 @@ return {
         },
         opts = {},
     },
+
     -- NOTE: Status line
     {
         "nvim-lualine/lualine.nvim",
@@ -66,13 +70,11 @@ return {
             },
         },
     },
+
     -- NOTE: File explorer
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
-        -- config = function()
-        --     require("neo-tree").setup()
-        -- end,
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -83,6 +85,25 @@ return {
             { "<leader>t", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
         },
     },
-    -- NOTE: Buffer tabs
-    { "akinsho/bufferline.nvim", version = "*", config = true, dependencies = "nvim-tree/nvim-web-devicons" },
+
+    -- NOTE: Keymaps help
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        config = function()
+            require("which-key").setup()
+            require("which-key").register({
+                ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
+                ["<leader>cc"] = { name = "[C]omment", _ = "which_key_ignore" },
+                ["<leader>cs"] = { name = "[S]ymbols", _ = "which_key_ignore" },
+                ["<leader>d"] = { name = "[D]iagnostic", _ = "which_key_ignore" },
+                ["<leader>h"] = { name = "[H]arpoon", _ = "which_key_ignore" },
+                ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
+            })
+        end,
+    },
 }

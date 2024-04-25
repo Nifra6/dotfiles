@@ -104,6 +104,7 @@ return {
             -- end, { desc = "[N]eovim files" })
         end,
     },
+    -- NOTE: Harpoon files to have easy access
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",

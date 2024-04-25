@@ -28,7 +28,7 @@ opt.breakindent = true
 opt.undofile = true
 
 -- Timing for keymaps
-opt.timeoutlen = 100
+opt.timeoutlen = 500
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
