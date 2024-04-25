@@ -109,33 +109,58 @@ return {
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
         keys = function()
+            local harpoon = require("harpoon")
             local keys = {
                 {
-                    "<leader>ha",
+                    "<leader>h",
                     function()
-                        require("harpoon"):list():add()
+                        harpoon:list():add()
                     end,
-                    desc = "[A]dd File",
+                    desc = "[H]arpoon File",
                 },
                 {
-                    "<leader>hm",
+                    "<leader>m",
                     function()
-                        local harpoon = require("harpoon")
                         harpoon.ui:toggle_quick_menu(harpoon:list())
                     end,
-                    desc = "Quick [M]enu",
+                    desc = "Harpoon [M]enu",
+                },
+                {
+                    "<leader>&",
+                    function()
+                        harpoon:list():select(1)
+                    end,
+                    desc = "Harpoon [1]",
+                },
+                {
+                    "<leader>é",
+                    function()
+                        harpoon:list():select(2)
+                    end,
+                    desc = "Harpoon [2]",
+                },
+                {
+                    '<leader>"',
+                    function()
+                        harpoon:list():select(3)
+                    end,
+                    desc = "Harpoon [3]",
+                },
+                {
+                    "<leader>'",
+                    function()
+                        harpoon:list():select(4)
+                    end,
+                    desc = "Harpoon [4]",
+                },
+                {
+                    "<leader>(",
+                    function()
+                        harpoon:list():select(5)
+                    end,
+                    desc = "Harpoon [5]",
                 },
             }
-
-            for i = 1, 5 do
-                table.insert(keys, {
-                    "<leader>" .. i,
-                    function()
-                        require("harpoon"):list():select(i)
-                    end,
-                    desc = "Harpoon to File " .. i,
-                })
-            end
             return keys
         end,
     },

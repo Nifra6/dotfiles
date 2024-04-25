@@ -80,7 +80,7 @@ return {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
         keys = {
-            { "<leader>tt", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
+            { "<leader>t", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
         },
     },
     -- NOTE: Buffer tabs
