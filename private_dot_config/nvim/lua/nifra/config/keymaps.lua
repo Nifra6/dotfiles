@@ -1,9 +1,21 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()
 
--- Switch buffer  `
+-- NOTE: Switch buffer  `
 vim.keymap.set("n", "<leader>B", ":bprevious<CR>", { desc = "Previous [B]uffer" })
 vim.keymap.set("n", "<leader>b", ":bnext<CR>", { desc = "Next [b]uffer" })
+
+-- NOTE: Remapping AZERTY &,é...,à to 1,2,...,0 in normal mode
+vim.keymap.set("n", "&", "1", { noremap = true, silent = true })
+vim.keymap.set("n", "é", "2", { noremap = true, silent = true })
+vim.keymap.set("n", '"', "3", { noremap = true, silent = true })
+vim.keymap.set("n", "'", "4", { noremap = true, silent = true })
+vim.keymap.set("n", "(", "5", { noremap = true, silent = true })
+vim.keymap.set("n", "-", "6", { noremap = true, silent = true })
+vim.keymap.set("n", "è", "7", { noremap = true, silent = true })
+vim.keymap.set("n", "_", "8", { noremap = true, silent = true })
+vim.keymap.set("n", "ç", "9", { noremap = true, silent = true })
+vim.keymap.set("n", "à", "0", { noremap = true, silent = true })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")

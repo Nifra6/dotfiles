@@ -5,6 +5,9 @@ return {
         -- See `:help ibl`
         main = "ibl",
         opts = {
+            scope = {
+                enabled = false,
+            },
             exclude = {
                 filetypes = {
                     "help",
