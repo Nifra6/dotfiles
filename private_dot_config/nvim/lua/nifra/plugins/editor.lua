@@ -1,9 +1,31 @@
 return {
+    -- NOTE: Show indentation guides
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {
+            exclude = {
+                filetypes = {
+                    "help",
+                    "alpha",
+                    "dashboard",
+                    "neo-tree",
+                    "Trouble",
+                    "trouble",
+                    "lazy",
+                    "mason",
+                    "notify",
+                    "toggleterm",
+                    "lazyterm",
+                },
+            },
+        },
+    },
+    -- NOTE: Highlight current indentation guide
     {
         "echasnovski/mini.indentscope",
-        version = false, -- wait till new 0.7.0 release to put it back on semver
+        version = false,
         opts = {
-            -- symbol = "▏",
             symbol = "│",
             options = { try_as_border = true },
         },

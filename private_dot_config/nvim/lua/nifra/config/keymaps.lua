@@ -1,5 +1,9 @@
 -- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+--  See `:help vim.keymap.set()
+
+-- Switch buffer  `
+vim.keymap.set("n", "<leader>B", ":bprevious<CR>", { desc = "Previous [B]uffer" })
+vim.keymap.set("n", "<leader>b", ":bnext<CR>", { desc = "Next [b]uffer" })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
