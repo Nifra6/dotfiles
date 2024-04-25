@@ -24,4 +24,18 @@ return {
             },
         },
     },
+    -- NOTE: Comment utils
+    {
+        "numToStr/Comment.nvim",
+        keys = function()
+            local api = require("Comment.api")
+            local keys = { { "<leader>ccc", api.toggle.linewise.current, desc = "[C]urrent line" } }
+            return keys
+        end,
+        opts = {
+            -- add any options here
+            --mappings.basi)c
+        },
+        lazy = false,
+    },
 }

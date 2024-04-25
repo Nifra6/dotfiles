@@ -52,9 +52,6 @@ require("lazy").setup({
     --  This is equivalent to:
     --    require('Comment').setup({})
 
-    -- "gc" to comment visual regions/lines
-    { "numToStr/Comment.nvim", opts = {} },
-
     -- Here is a more advanced example where we pass configuration
     -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
     --    require('gitsigns').setup({ ... })
@@ -97,10 +94,12 @@ require("lazy").setup({
             -- Document existing key chains
             require("which-key").register({
                 ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-                --["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
+                ["<leader>cc"] = { name = "[C]omment", _ = "which_key_ignore" },
+                ["<leader>cs"] = { name = "[S]ymbols", _ = "which_key_ignore" },
                 ["<leader>h"] = { name = "[H]arpoon", _ = "which_key_ignore" },
-                --["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
                 ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
+                --["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
+                --["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
                 --["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
             })
         end,
