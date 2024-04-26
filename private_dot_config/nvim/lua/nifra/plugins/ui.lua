@@ -178,7 +178,6 @@ return {
                 ["<leader>cc"] = { name = "[C]omment", _ = "which_key_ignore" },
                 ["<leader>cs"] = { name = "[S]ymbols", _ = "which_key_ignore" },
                 ["<leader>d"] = { name = "[D]iagnostic", _ = "which_key_ignore" },
-                ["<leader>h"] = { name = "[H]arpoon", _ = "which_key_ignore" },
                 ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
             })
         end,
