@@ -6,13 +6,9 @@ return {
         lazy = false,
         priority = 1000,
         init = function()
-            -- Load the colorscheme here.
-            -- Like many other themes, this one has different styles, and you could load
-            -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
             vim.cmd.colorscheme("tokyonight-night")
-
             -- You can configure highlights by doing something like:
-            vim.cmd.hi("Comment gui=none")
+            -- vim.cmd.hi("Comment gui=none")
         end,
         opts = { transparent = true },
     },
@@ -70,12 +66,15 @@ return {
             "MunifTanjim/nui.nvim",
             "rcarriga/nvim-notify",
         },
-        opts = {},
+        keys = {
+            { "<leader>n", "<Cmd>Noice<CR>", desc = "[N]otifications" },
+        },
     },
 
     -- NOTE: Status line
     {
         "nvim-lualine/lualine.nvim",
+        event = { "BufNewFile", "BufReadPost" },
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             options = {
@@ -92,9 +91,8 @@ return {
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
         keys = {
             { "<leader>t", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
