@@ -119,6 +119,22 @@ return {
             { "<leader>t", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
         },
     },
+
+    -- NOTE: Diagnostics
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        keys = {
+            {
+                "<leader>cd",
+                function()
+                    require("trouble").toggle("workspace_diagnostics")
+                end,
+                desc = "[D]iagnostics",
+            },
+        },
+    },
+
     -- NOTE: Layout
     {
         "folke/edgy.nvim",
