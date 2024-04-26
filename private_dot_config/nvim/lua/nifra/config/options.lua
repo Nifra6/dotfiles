@@ -30,6 +30,10 @@ opt.undofile = true
 -- Timing for keymaps
 opt.timeoutlen = 500
 
+-- For edgy.nvim
+opt.laststatus = 3
+opt.splitkeep = "screen"
+
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
 

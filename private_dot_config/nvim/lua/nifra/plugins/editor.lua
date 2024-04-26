@@ -44,6 +44,7 @@ return {
     -- NOTE: Git indications
     {
         "lewis6991/gitsigns.nvim",
+        event = { "BufNewFile", "BufReadPost" },
         opts = {
             signs = {
                 add = { text = "▎" },
@@ -58,7 +59,7 @@ return {
     -- NOTE: Auto format code
     {
         "stevearc/conform.nvim",
-        event = "BufWriteCmd",
+        event = "VeryLazy",
         keys = {
             {
                 "<leader>cf",
