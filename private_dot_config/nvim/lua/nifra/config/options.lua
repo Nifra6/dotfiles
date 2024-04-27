@@ -34,21 +34,9 @@ opt.timeoutlen = 500
 opt.laststatus = 3
 opt.splitkeep = "screen"
 
--- Keep signcolumn on by default
-vim.opt.signcolumn = "yes"
+-- Split windows to the right with :vs and below with :sp
+opt.splitright = true
+opt.splitbelow = true
 
--- Decrease update time
-vim.opt.updatetime = 250
-
--- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
--- Preview substitutions live, as you type!
-vim.opt.inccommand = "split"
+-- Preview substitutions
+opt.inccommand = "split"
