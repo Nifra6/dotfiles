@@ -28,12 +28,8 @@ opt.breakindent = true
 -- Save undo history
 opt.undofile = true
 
--- Timing for keymaps
-opt.timeoutlen = 500
-
--- For edgy.nvim
+-- Status line
 opt.laststatus = 3
-opt.splitkeep = "screen"
 
 -- Split windows to the right with :vs and below with :sp
 opt.splitright = true

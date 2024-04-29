@@ -84,23 +84,57 @@ return {
                 lsp_doc_border = false, -- add a border to hover docs and signature help
             },
         },
-        keys = {
-            { "<leader>n", "<Cmd>Noice<CR>", desc = "[N]otifications" },
+    },
+    -- NOTE: Buffer tabs
+    {
+        "akinsho/bufferline.nvim",
+        config = true,
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        opts = {
+            options = {
+                offsets = {
+                    {
+                        filetype = "neo-tree",
+                        text = "File Explorer",
+                        text_align = "center",
+                        -- separator = true,
+                    },
+                },
+            },
         },
     },
-
     -- NOTE: Status line
     {
         "nvim-lualine/lualine.nvim",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = { "nvim-tree/nvim-web-devicons" },
+        dependencies = { "nvim-tree/nvim-web-devicons", "letieu/harpoon-lualine" },
         opts = {
             options = {
                 theme = "tokyonight",
+                globalstatus = true,
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
             },
             extensions = { "neo-tree", "lazy" },
+            sections = {
+                lualine_a = { "mode" },
+                lualine_b = { { "harpoon2", icon = "󱡅 " }, "branch" },
+                lualine_c = {
+                    {
+                        "filename",
+                        file_status = true,
+                        newfile_status = true,
+                        path = 1,
+                        symbols = { modified = "󰏫 ", readonly = "󰌾 ", newfile = "󰎔 ", unnamed = "󰡯 " },
+                    },
+                    "diff",
+                    "diagnostics",
+                },
+                lualine_x = { "encoding", "fileformat", { "filetype", icon_only = true } },
+                lualine_y = { "progress", "location" },
+                lualine_z = { { "datetime", icon = "󰅐 ", style = "%H:%M" } },
+            },
         },
     },
 
@@ -133,34 +167,6 @@ return {
         },
     },
 
-    -- FIXME: Layout
-    {
-        "folke/edgy.nvim",
-        event = "VeryLazy",
-        opts = {
-
-            left = {
-                -- Neo-tree filesystem always takes half the screen height
-                {
-                    title = "Neo-Tree",
-                    ft = "neo-tree",
-                    filter = function(buf)
-                        return vim.b[buf].neo_tree_source == "filesystem"
-                    end,
-                    size = { height = 0.5 },
-                },
-                {
-                    title = "Neo-Tree Git",
-                    ft = "neo-tree",
-                    filter = function(buf)
-                        return vim.b[buf].neo_tree_source == "git_status"
-                    end,
-                    pinned = true,
-                    open = "Neotree position=right git_status",
-                },
-            },
-        },
-    },
     -- NOTE: Keymaps help
     {
         "folke/which-key.nvim",
