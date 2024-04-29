@@ -14,6 +14,7 @@ return {
     -- NOTE: Welcome page
     {
         "nvimdev/dashboard-nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         event = "VimEnter",
         config = function()
             local logo = [[
@@ -54,10 +55,9 @@ return {
                 },
             })
         end,
-        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
-    -- NOTE: Notifications and command line input
+    -- FIXME: Notifications and command line input
     {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -93,9 +93,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             options = {
                 theme = "tokyonight",
@@ -135,7 +133,7 @@ return {
         },
     },
 
-    -- NOTE: Layout
+    -- FIXME: Layout
     {
         "folke/edgy.nvim",
         event = "VeryLazy",
@@ -169,15 +167,13 @@ return {
         event = "VeryLazy",
         init = function()
             vim.o.timeout = true
-            vim.o.timeoutlen = 300
+            vim.o.timeoutlen = 200
         end,
         config = function()
             require("which-key").setup()
             require("which-key").register({
                 ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-                ["<leader>cc"] = { name = "[C]omment", _ = "which_key_ignore" },
                 ["<leader>cs"] = { name = "[S]ymbols", _ = "which_key_ignore" },
-                ["<leader>d"] = { name = "[D]iagnostic", _ = "which_key_ignore" },
                 ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
             })
         end,

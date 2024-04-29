@@ -5,6 +5,7 @@ opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.scrolloff = 10
+opt.signcolumn = "yes"
 
 -- Search
 opt.ignorecase = true

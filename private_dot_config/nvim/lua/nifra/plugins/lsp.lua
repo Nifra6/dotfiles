@@ -5,12 +5,12 @@ return {
         lazy = false,
         dependencies = {
             -- Automatically install LSPs and related tools to stdpath for Neovim
-            { "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+            { "williamboman/mason.nvim", config = true }, -- FIXME: Must be loaded before dependants
             "williamboman/mason-lspconfig.nvim",
             "WhoIsSethDaniel/mason-tool-installer.nvim",
 
             -- Useful status updates for LSP.
-            -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+            -- FIXME: `opts = {}` is the same as calling `require('fidget').setup({})`
             { "j-hui/fidget.nvim", opts = {} },
 
             -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
@@ -50,7 +50,7 @@ return {
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
                 callback = function(event)
-                    -- NOTE: Remember that Lua is a real programming language, and as such it is possible
+                    -- FIXME: Remember that Lua is a real programming language, and as such it is possible
                     -- to define small helper and utility functions so you don't have to repeat yourself.
                     --
                     -- In this case, we create a function that lets us more easily define mappings specific
