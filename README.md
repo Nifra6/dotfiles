@@ -30,7 +30,7 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 | Shell | [zsh](https://www.zsh.org/) (without oh-my-zsh) | better config than bash, more DIY than fish |
 | File Manager | CLI : [ranger](https://ranger.fm/) / GUI : [nemo](https://github.com/linuxmint/nemo) | ranger -> vim motion for the win |
 | Terminal Emulator | [kitty](https://sw.kovidgoyal.net/kitty/) | tiling and tabs included, pretty powerfull |
-| IDE | vscode (moving to neovim WIP) | I know, I'm a bad boy |
+| IDE | [neovim](https://neovim.io/) with [lazy.vim](https://github.com/folke/lazy.nvim) | Config is working even if not super clean |
 
 ## What I accomodate with at work
 
