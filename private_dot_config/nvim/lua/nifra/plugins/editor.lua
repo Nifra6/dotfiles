@@ -66,7 +66,8 @@ return {
             end,
             formatters_by_ft = {
                 lua = { "stylua" },
-                python = { "isort", "black" }, -- Launched in sequence
+                toml = { "taplo" },
+                python = { "ruff" },
             },
         },
     },
