@@ -1,6 +1,9 @@
 -- NOTE: Open Lazy
 vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "[L]azy" })
 
+-- NOTE: Close curret buffer
+vim.keymap.set("n", "<leader>q", "<Cmd>bd<CR>", { desc = "[Q]uit current buffer" })
+
 -- NOTE: Remapping AZERTY &,é...,à to 1,2,...,0 in normal mode
 vim.keymap.set("n", "&", "1", { noremap = true, silent = true })
 vim.keymap.set("n", "é", "2", { noremap = true, silent = true })
