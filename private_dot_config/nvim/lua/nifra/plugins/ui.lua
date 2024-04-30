@@ -1,5 +1,4 @@
 return {
-
     -- NOTE: Colorscheme
     {
         "folke/tokyonight.nvim",
@@ -10,7 +9,6 @@ return {
         end,
         opts = { transparent = true },
     },
-
     -- NOTE: Welcome page
     {
         "nvimdev/dashboard-nvim",
@@ -66,7 +64,6 @@ return {
             end
         end,
     },
-
     -- FIXME: Notifications and command line input
     {
         "folke/noice.nvim",
@@ -147,7 +144,6 @@ return {
             },
         },
     },
-
     -- NOTE: File explorer
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -161,7 +157,6 @@ return {
             { "<leader>t", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
         },
     },
-
     -- NOTE: Diagnostics
     {
         "folke/trouble.nvim",
@@ -176,7 +171,6 @@ return {
             },
         },
     },
-
     -- NOTE: Keymaps help
     {
         "folke/which-key.nvim",
