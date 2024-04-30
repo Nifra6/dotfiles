@@ -24,7 +24,7 @@ return {
             formatters_by_ft = {
                 lua = { "stylua" },
                 toml = { "taplo" },
-                python = { "ruff" },
+                python = { "ruff_format" },
             },
         },
     },
