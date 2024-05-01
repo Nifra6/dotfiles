@@ -8,7 +8,8 @@ return {
             {
                 "<leader>cp",
                 "<Cmd>MarkdownPreview<Enter>",
-                desc = "[P]review markdown",
+                desc = "[P]review in browser",
+                ft = { "markdown" },
             },
         },
 
@@ -20,6 +21,6 @@ return {
     {
         "lukas-reineke/headlines.nvim",
         dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true, -- or `opts = {}`
+        config = true,
     },
 }

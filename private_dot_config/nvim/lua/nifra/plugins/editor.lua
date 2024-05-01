@@ -101,7 +101,7 @@ return {
                     ["<Tab>"] = cmp.mapping.select_next_item(),
                     ["<Down>"] = cmp.mapping.select_next_item(),
                     ["<Up>"] = cmp.mapping.select_prev_item(),
-                    ["<Esc>"] = cmp.mapping.abort(),
+                    -- ["<Esc>"] = cmp.mapping.abort(),
                     ["<C-Backspace>"] = cmp.mapping.abort(),
 
                     -- Think of <c-l> as moving to the right of your snippet expansion.
