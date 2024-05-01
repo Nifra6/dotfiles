@@ -1,0 +1,25 @@
+return {
+    -- NOTE: Markdown : preview in browser
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        keys = {
+            {
+                "<leader>cp",
+                "<Cmd>MarkdownPreview<Enter>",
+                desc = "[P]review markdown",
+            },
+        },
+
+        build = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    },
+    -- NOTE: Markdown : show headlines directly in editor
+    {
+        "lukas-reineke/headlines.nvim",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = true, -- or `opts = {}`
+    },
+}

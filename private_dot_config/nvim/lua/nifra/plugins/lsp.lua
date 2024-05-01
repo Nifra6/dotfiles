@@ -207,6 +207,7 @@ return {
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
                 "stylua", -- Used to format Lua code
+                "markdownlint", -- markdown linter
             })
             require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -232,6 +233,7 @@ return {
             events = { "BufWritePost", "BufReadPost", "InsertLeave" },
             linters_by_ft = {
                 python = { "ruff", "pylint" },
+                markdown = { "markdownlint" },
                 -- Use the "*" filetype to run linters on all filetypes.
                 -- ['*'] = { 'global linter' },
                 -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
