@@ -1,39 +1,39 @@
 local opt = vim.opt
 
--- Lines
+-- NOTE: Lines
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.scrolloff = 10
 opt.signcolumn = "yes"
 
--- Search
+-- NOTE: Search
 opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = true
 
--- Mouse
+-- NOTE: Mouse
 opt.mouse = "a"
 
--- Clipboard
+-- NOTE: Clipboard
 opt.clipboard = "unnamedplus"
 
--- Indent
+-- NOTE: Indent
 opt.expandtab = true
 opt.shiftwidth = 4
 opt.smartindent = true
 opt.autoindent = true
 opt.breakindent = true
 
--- Save undo history
+-- NOTE: Save undo history
 opt.undofile = true
 
--- Status line
+-- NOTE: Status line
 opt.laststatus = 3
 
--- Split windows to the right with :vs and below with :sp
+-- NOTE: Split windows to the right with :vs and below with :sp
 opt.splitright = true
 opt.splitbelow = true
 
--- Preview substitutions
+-- NOTE: Preview substitutions
 opt.inccommand = "split"
