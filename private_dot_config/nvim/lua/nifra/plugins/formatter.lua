@@ -25,6 +25,7 @@ return {
                 lua = { "stylua" },
                 toml = { "taplo" },
                 python = { "ruff_format" },
+                markdown = { "prettier" },
             },
         },
     },
