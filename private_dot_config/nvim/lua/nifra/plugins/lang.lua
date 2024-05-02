@@ -20,14 +20,6 @@ return {
         "lukas-reineke/headlines.nvim",
         dependencies = "nvim-treesitter/nvim-treesitter",
         ft = { "markdown" },
+        config = true,
     },
-    --[[ {
-        "linux-cultist/venv-selector.nvim",
-        dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
-        event = "VeryLazy",
-        ft = "python",
-        keys = {
-            { "<leader>v", "<cmd>VenvSelect<cr>", desc = "Select [V]irtual environment", ft = "python" },
-        },
-    }, ]]
 }
