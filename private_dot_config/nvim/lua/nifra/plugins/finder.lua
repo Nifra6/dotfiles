@@ -109,34 +109,6 @@ return {
                     end,
                     desc = "Harpoon [4]",
                 },
-                {
-                    "<leader>(",
-                    function()
-                        harpoon:list():select(5)
-                    end,
-                    desc = "Harpoon [5]",
-                },
-                {
-                    "<leader>-",
-                    function()
-                        harpoon:list():select(6)
-                    end,
-                    desc = "Harpoon [6]",
-                },
-                {
-                    "<leader>è",
-                    function()
-                        harpoon:list():select(7)
-                    end,
-                    desc = "Harpoon [7]",
-                },
-                {
-                    "<leader>_",
-                    function()
-                        harpoon:list():select(8)
-                    end,
-                    desc = "Harpoon [8]",
-                },
             }
             return keys
         end,
