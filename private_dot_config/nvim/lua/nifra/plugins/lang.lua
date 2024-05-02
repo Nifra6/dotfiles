@@ -2,7 +2,6 @@ return {
     -- NOTE: Markdown : preview in browser
     {
         "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         keys = {
             {
@@ -12,7 +11,6 @@ return {
                 ft = { "markdown" },
             },
         },
-
         build = function()
             vim.fn["mkdp#util#install"]()
         end,
@@ -21,6 +19,6 @@ return {
     {
         "lukas-reineke/headlines.nvim",
         dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true,
+        ft = { "markdown" },
     },
 }

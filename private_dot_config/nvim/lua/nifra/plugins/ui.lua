@@ -31,9 +31,15 @@ return {
                     header = vim.split(logo, "\n"),
                     center = {
                         { action = "Telescope find_files", desc = " Chercher un fichier", icon = "󰱼 ", key = "f" },
-                        { action = "Telescope live_grep", desc = " Chercher un texte", icon = "󱎸 ", key = "g" },
+                        { action = "Telescope live_grep", desc = " Chercher un texte", icon = "󱎸 ", key = "t" },
                         { action = "Lazy", desc = " Ouvrir Lazy", icon = "󰒲 ", key = "l" },
                         { action = "Lazy update", desc = " Mettre à jour", icon = "󰚰 ", key = "u" },
+                        {
+                            action = "cd ~/.config/nvim | Telescope find_files",
+                            desc = " Configurer Neovim",
+                            icon = "󰒓 ",
+                            key = "c",
+                        },
                         { action = "qa", desc = " Quitter", icon = "󰈆 ", key = "q" },
                     },
                     footer = function()
@@ -105,7 +111,6 @@ return {
                         filetype = "neo-tree",
                         text = "File Explorer",
                         text_align = "center",
-                        -- separator = true,
                     },
                 },
             },
