@@ -41,4 +41,58 @@ return {
             },
         },
     },
+    -- NOTE: Harpoon files to have easy access
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        keys = function()
+            local harpoon = require("harpoon")
+            local keys = {
+                {
+                    "<leader>h",
+                    function()
+                        harpoon:list():add()
+                    end,
+                    desc = "[H]arpoon File",
+                },
+                {
+                    "<leader>m",
+                    function()
+                        harpoon.ui:toggle_quick_menu(harpoon:list())
+                    end,
+                    desc = "Harpoon [M]enu",
+                },
+                {
+                    "<leader>&",
+                    function()
+                        harpoon:list():select(1)
+                    end,
+                    desc = "Harpoon [1]",
+                },
+                {
+                    "<leader>é",
+                    function()
+                        harpoon:list():select(2)
+                    end,
+                    desc = "Harpoon [2]",
+                },
+                {
+                    '<leader>"',
+                    function()
+                        harpoon:list():select(3)
+                    end,
+                    desc = "Harpoon [3]",
+                },
+                {
+                    "<leader>'",
+                    function()
+                        harpoon:list():select(4)
+                    end,
+                    desc = "Harpoon [4]",
+                },
+            }
+            return keys
+        end,
+    },
 }
