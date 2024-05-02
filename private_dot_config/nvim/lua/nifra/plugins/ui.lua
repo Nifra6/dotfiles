@@ -25,7 +25,6 @@ return {
                                                          erm actually it's neovim ... 🤓👆]]
             logo = string.rep("\n", 8) .. logo .. "\n\n"
             require("dashboard").setup({
-                -- config
                 theme = "doom",
                 config = {
                     header = vim.split(logo, "\n"),
@@ -128,7 +127,7 @@ return {
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
             },
-            extensions = { "neo-tree", "lazy" },
+            extensions = { "lazy", "mason", "neo-tree", "trouble" },
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { { "harpoon2", icon = "󱡅 " }, "branch" },
@@ -188,7 +187,8 @@ return {
             require("which-key").setup()
             require("which-key").register({
                 ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-                ["<leader>cs"] = { name = "[S]ymbols", _ = "which_key_ignore" },
+                ["<leader>g"] = { name = "[G]o to", _ = "which_key_ignore" },
+                ["<leader>s"] = { name = "[S]ymbols", _ = "which_key_ignore" },
                 ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
             })
         end,

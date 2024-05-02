@@ -71,26 +71,18 @@ return {
                     --  Useful when your language has ways of declaring types without an actual implementation.
                     map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 
-                    -- Jump to the type of the word under your cursor.
-                    --  Useful when you're not sure what type a variable is and you want to see
-                    --  the definition of its *type*, not where it was *defined*.
-                    map("<leader>ct", require("telescope.builtin").lsp_type_definitions, "[T]ype of the symbol")
+                    -- NOTE: My keymaps
+                    -- NOTE: Go to with <leader>g
+                    map("<leader>gd", require("telescope.builtin").lsp_definitions, "[D]efinition")
+                    map("<leader>gD", vim.lsp.buf.declaration, "[D]eclaration")
+                    map("<leader>gr", require("telescope.builtin").lsp_references, "[R]eferences")
+                    map("<leader>gi", require("telescope.builtin").lsp_implementations, "[I]mplementation")
+                    map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "[T]ype Definition")
 
-                    -- Fuzzy find all the symbols in your current document.
-                    --  Symbols are things like variables, functions, types, etc.
-                    map("<leader>csd", require("telescope.builtin").lsp_document_symbols, "[D]ocument Symbols")
-
-                    -- Fuzzy find all the symbols in your current workspace.
-                    --  Similar to document symbols, except searches over your entire project.
-                    map(
-                        "<leader>csw",
-                        require("telescope.builtin").lsp_dynamic_workspace_symbols,
-                        "[W]orkspace Symbols"
-                    )
-
-                    -- Rename the variable under your cursor.
-                    --  Most Language Servers support renaming across files, etc.
-                    map("<leader>cr", vim.lsp.buf.rename, "[R]ename symbol")
+                    -- NOTE: List or rename symbols
+                    map("<leader>sr", vim.lsp.buf.rename, "[R]ename symbol")
+                    map("<leader>sd", require("telescope.builtin").lsp_document_symbols, "[D]ocument Symbols")
+                    map("<leader>sw", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace Symbols")
 
                     -- Execute a code action, usually your cursor needs to be on top of an error
                     -- or a suggestion from your LSP for this to activate.
