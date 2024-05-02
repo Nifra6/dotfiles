@@ -100,7 +100,8 @@ return {
     -- NOTE: Buffer tabs
     {
         "akinsho/bufferline.nvim",
-        event = "VeryLazy",
+        -- event = "VeryLazy",
+        event = { "BufNewFile", "BufReadPost" },
         dependencies = "nvim-tree/nvim-web-devicons",
         keys = {
             { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle [P]in" },
