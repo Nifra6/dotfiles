@@ -2,7 +2,7 @@ return {
     -- NOTE: Auto format code
     {
         "stevearc/conform.nvim",
-        event = { "BufNewFile", "BufReadPre" },
+        event = { "BufNewFile", "BufReadPost" },
         keys = {
             {
                 "<leader>cf",

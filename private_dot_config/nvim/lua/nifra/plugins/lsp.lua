@@ -1,5 +1,6 @@
 return {
-    { -- LSP Configuration & Plugins
+    -- FIXME: LSP Configuration & Plugins
+    {
         "neovim/nvim-lspconfig",
         -- event = "VeryLazy",
         lazy = false,

@@ -13,6 +13,7 @@ return {
                 "gitignore",
                 "hyprlang",
                 "lua",
+                "luadoc",
                 "markdown",
                 "markdown_inline",
                 "matlab",

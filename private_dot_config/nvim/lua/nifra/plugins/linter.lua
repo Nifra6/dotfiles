@@ -1,4 +1,5 @@
 return {
+    -- FIXME: Lint code
     {
         "mfussenegger/nvim-lint",
         event = { "BufNewFile", "BufReadPost" },
