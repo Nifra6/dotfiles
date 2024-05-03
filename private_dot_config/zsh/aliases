@@ -78,7 +78,7 @@ case $HOSTNAME in
     # ---------------------------
     alias cat="batcat"
     alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
-    alias journal="nvim $HOME/Thèse/01_Documents/Journal\ de\ bord\ -\ Thèse.txt"
+    alias journal="nvim $HOME/Thèse/01_Documents/Journal\ de\ bord\ -\ Thèse.md"
     ;;
 
   "nascane")
