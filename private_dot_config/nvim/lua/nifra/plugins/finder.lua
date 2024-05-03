@@ -26,11 +26,11 @@ return {
                 },
             })
 
-            --NOTE: Enable Telescope extensions
+            -- NOTE: Enable Telescope extensions
             pcall(require("telescope").load_extension, "fzf")
             pcall(require("telescope").load_extension, "ui-select")
 
-            --NOTE: Keymaps
+            -- NOTE: Keymaps
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[H]elp" })
             vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "[K]eymaps" })
