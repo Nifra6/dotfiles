@@ -37,7 +37,7 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
 ## Installation
 
-> [!IMPORTANT]
+> ⚠️
 > A symlink is needed : `ln -s .config/zsh/.zshenv .zshenv`, once you have cloned the repo.
 
 ### Arch Linux :
@@ -72,7 +72,7 @@ sudo snap install node --classic
 sudo snap install nvim --classic
 ```
 
-> [!IMPORTANT]
+> ⚠️
 > For nvim to work with node.js, it is needed to add the node snap directly in your path : `export PATH=/snap/node/current/bin:$PATH` (see the .zshenv).
 
 </details>
