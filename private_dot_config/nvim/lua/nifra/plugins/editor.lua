@@ -29,7 +29,7 @@ return {
     -- NOTE: Git indications
     {
         "lewis6991/gitsigns.nvim",
-        event = { "BufNewFile", "BufReadPost" },
+        event = { "BufNewFile", "BufReadPre" },
         opts = {
             signs = {
                 add = { text = "▎" },
