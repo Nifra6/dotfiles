@@ -10,15 +10,6 @@ return {
             },
         },
     },
-    -- NOTE: Comment and uncomment
-    {
-        "numToStr/Comment.nvim",
-        event = { "BufNewFile", "BufReadPost" },
-        opts = {
-            opleader = { line = "<Leader>cc", block = "<Leader>cb" },
-            toggler = { line = "<Leader>ccc", block = "<Leader>cbc" },
-        },
-    },
     -- NOTE: Highlight todo, notes, etc in comments
     {
         "folke/todo-comments.nvim",
@@ -39,6 +30,15 @@ return {
                 changedelete = { text = "▎" },
                 untracked = { text = "▎" },
             },
+        },
+    },
+    -- NOTE: Comment and uncomment
+    {
+        "numToStr/Comment.nvim",
+        event = { "BufNewFile", "BufReadPost" },
+        opts = {
+            opleader = { line = "<Leader>cc", block = "<Leader>cb" },
+            toggler = { line = "<Leader>ccc", block = "<Leader>cbc" },
         },
     },
     -- NOTE: Harpoon files to have easy access
