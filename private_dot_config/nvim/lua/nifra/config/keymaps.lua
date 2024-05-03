@@ -5,8 +5,6 @@ vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "[L]azy" })
 vim.keymap.set("n", "<leader>q", function(n)
     require("mini.bufremove").delete(n, false)
 end, { desc = "[Q]uit current buffer" })
-vim.keymap.set("n", "<leader>p", "<Cmd>bprev<CR>", { desc = "[P]revious buffer" })
-vim.keymap.set("n", "<leader>n", "<Cmd>bnext<CR>", { desc = "[N]ext buffer" })
 
 -- NOTE: Remapping AZERTY &,é...,à to 1,2,...,0 in normal mode
 vim.keymap.set("n", "&", "1", { noremap = true, silent = true })

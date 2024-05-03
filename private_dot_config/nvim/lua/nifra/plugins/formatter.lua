@@ -22,10 +22,14 @@ return {
                 }
             end,
             formatters_by_ft = {
+                css = { "prettier" },
+                json = { "prettier" },
+                jsonc = { "prettier" },
+                markdown = { "prettier" },
+                yaml = { "prettier" },
                 lua = { "stylua" },
                 toml = { "taplo" },
                 python = { "ruff_format" },
-                markdown = { "prettier" },
             },
         },
     },
