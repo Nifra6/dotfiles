@@ -38,8 +38,8 @@ return {
                         [[]],
                     },
                     center = {
-                        { action = "Telescope find_files", desc = " Search File", icon = "󰱼 ", key = "f" },
-                        { action = "Telescope live_grep", desc = " Search Text", icon = "󱎸 ", key = "t" },
+                        { action = "Telescope find_files", desc = " Find File", icon = "󰱼 ", key = "f" },
+                        { action = "Telescope live_grep", desc = " Find Text", icon = "󱎸 ", key = "t" },
                         { action = "Lazy", desc = " Open Lazy", icon = "󰒲 ", key = "l" },
                         { action = "Lazy update", desc = " Update Plugins", icon = "󰚰 ", key = "u" },
                         {
@@ -110,9 +110,8 @@ return {
     -- NOTE: Buffer tabs
     {
         "akinsho/bufferline.nvim",
-        -- event = "VeryLazy",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = "nvim-tree/nvim-web-devicons",
+        dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.nvim" },
         keys = {
             { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle [P]in" },
             { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete [O]ther Buffers" },
@@ -129,6 +128,8 @@ return {
                 right_mouse_command = function(n)
                     require("mini.bufremove").delete(n, false)
                 end,
+                left_mouse_command = "buffer %d",
+                middle_mouse_command = "BufferLineTogglePin",
                 diagnostics = "nvim_lsp",
                 always_show_bufferline = false,
                 offsets = {
@@ -138,6 +139,7 @@ return {
                         text_align = "center",
                     },
                 },
+                separator_style = "slope",
             },
         },
         config = function(_, opts)

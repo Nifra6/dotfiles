@@ -22,6 +22,7 @@ return {
                 "ssh_config",
                 "toml",
                 "vim",
+                "vimdoc",
                 "yaml",
                 "zathurarc",
             },
