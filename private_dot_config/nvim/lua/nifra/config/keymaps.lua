@@ -2,7 +2,9 @@
 vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "[L]azy" })
 
 -- NOTE: Buffer
-vim.keymap.set("n", "<leader>q", "<Cmd>bd<CR>", { desc = "[Q]uit current buffer" })
+vim.keymap.set("n", "<leader>q", function(n)
+    require("mini.bufremove").delete(n, false)
+end, { desc = "[Q]uit current buffer" })
 vim.keymap.set("n", "<leader>p", "<Cmd>bprev<CR>", { desc = "[P]revious buffer" })
 vim.keymap.set("n", "<leader>n", "<Cmd>bnext<CR>", { desc = "[N]ext buffer" })
 
