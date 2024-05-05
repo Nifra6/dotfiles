@@ -6,13 +6,15 @@ return {
         opts = {
             events = { "BufWritePost", "BufReadPost", "InsertLeave" },
             linters_by_ft = {
-                python = { "ruff", "pylint" },
-                markdown = { "markdownlint" },
+                ["*"] = { "typos" },
+                bash = { "shellcheck" },
+                markdown = { "markdownlint", "languagetool" },
+                python = { "ruff" },
+                sh = { "shellcheck" },
                 -- Use the "*" filetype to run linters on all filetypes.
                 -- ['*'] = { 'global linter' },
                 -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
                 -- ['_'] = { 'fallback linter' },
-                -- ["*"] = { "typos" },
             },
             -- LazyVim extension to easily override linter options
             -- or add custom linters.

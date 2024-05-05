@@ -16,7 +16,7 @@ return {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
                 callback = function(event)
                     -- In this case, we create a function that lets us more easily define mappings specific
-                    -- for LSP related items. It sets the mode, buffer and description for us each time.
+                    -- for LSP related items. It sets the mode, buffer and description for us each time. Kek
                     local map = function(keys, func, desc)
                         vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc .. " (LSP)" })
                     end
@@ -125,9 +125,12 @@ return {
             -- NOTE: Install other tools (linters, formatters, ...)
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
-                "stylua", -- Used to format Lua code
+                "beautysh", -- Used to format sh, bash
                 "markdownlint", -- Used to lint Markdown
                 "prettier", -- Used to format Markdown
+                "shellcheck", -- Used to format sh, bash
+                "stylua", -- Used to format Lua code
+                "typos", -- Used to lint typos
             })
 
             require("mason").setup()
