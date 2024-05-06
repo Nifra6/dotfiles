@@ -2,8 +2,8 @@ return {
     -- FIXME: LSP Configuration & Plugins
     {
         "neovim/nvim-lspconfig",
-        -- event = "VeryLazy",
-        lazy = false,
+        event = "VeryLazy",
+        -- lazy = false,
         dependencies = {
             { "williamboman/mason.nvim", config = true },
             "williamboman/mason-lspconfig.nvim",
@@ -12,57 +12,37 @@ return {
             { "folke/neodev.nvim", opts = {} },
         },
         config = function()
+            -- NOTE: Attach LSP to the buffer
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
                 callback = function(event)
-                    -- In this case, we create a function that lets us more easily define mappings specific
-                    -- for LSP related items. It sets the mode, buffer and description for us each time. Kek
                     local map = function(keys, func, desc)
                         vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc .. " (LSP)" })
                     end
 
-                    -- Jump to the definition of the word under your cursor.
-                    --  This is where a variable was first declared, or where a function is defined, etc.
-                    --  To jump back, press <C-t>.
+                    -- NOTE: Go to ...
                     map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-
-                    -- Find references for the word under your cursor.
-                    map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-
-                    -- Jump to the implementation of the word under your cursor.
-                    --  Useful when your language has ways of declaring types without an actual implementation.
-                    map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-
-                    -- NOTE: My keymaps
-                    -- NOTE: Go to with <leader>g
                     map("<leader>gd", require("telescope.builtin").lsp_definitions, "[D]efinition")
+                    map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
                     map("<leader>gD", vim.lsp.buf.declaration, "[D]eclaration")
+                    map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
                     map("<leader>gr", require("telescope.builtin").lsp_references, "[R]eferences")
+                    map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
                     map("<leader>gi", require("telescope.builtin").lsp_implementations, "[I]mplementation")
                     map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "[T]ype Definition")
 
-                    -- NOTE: List or rename symbols
+                    -- NOTE: Symbols
                     map("<leader>sr", vim.lsp.buf.rename, "[R]ename symbol")
                     map("<leader>sd", require("telescope.builtin").lsp_document_symbols, "[D]ocument Symbols")
                     map("<leader>sw", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace Symbols")
 
-                    -- Execute a code action, usually your cursor needs to be on top of an error
-                    -- or a suggestion from your LSP for this to activate.
-                    -- map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+                    -- NOTE: Code actions
+                    map("<leader>ca", vim.lsp.buf.code_action, "Code [A]ction")
 
-                    -- Opens a popup that displays documentation about the word under your cursor
-                    --  See `:help K` for why this keymap.
+                    -- NOTE: Documentation
                     map("K", vim.lsp.buf.hover, "Hover Documentation")
 
-                    -- WARN: This is not Goto Definition, this is Goto Declaration.
-                    --  For example, in C this would take you to the header.
-                    map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-
-                    -- The following two autocommands are used to highlight references of the
-                    -- word under your cursor when your cursor rests there for a little while.
-                    --    See `:help CursorHold` for information about when this is executed
-                    --
-                    -- When you move your cursor, the highlights will be cleared (the second autocommand).
+                    -- NOTE: Highlight references of the word under your cursor
                     local client = vim.lsp.get_client_by_id(event.data.client_id)
                     if client and client.server_capabilities.documentHighlightProvider then
                         local highlight_augroup =
@@ -80,10 +60,7 @@ return {
                         })
                     end
 
-                    -- The following autocommand is used to enable inlay hints in your
-                    -- code, if the language server you are using supports them
-                    --
-                    -- This may be unwanted, since they displace some of your code
+                    -- NOTE: Inlay hints
                     if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
                         map("<leader>th", function()
                             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -92,6 +69,7 @@ return {
                 end,
             })
 
+            -- NOTE: Detach LSP from the buffer
             vim.api.nvim_create_autocmd("LspDetach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
                 callback = function(event)
@@ -100,25 +78,36 @@ return {
                 end,
             })
 
-            -- LSP servers and clients are able to communicate to each other what features they support.
-            --  By default, Neovim doesn't support everything that is in the LSP specification.
-            --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-            --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
+            -- NOTE: Extend NeoVim capabilities
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-            -- NOTE: Enable the following language servers
-            --
-            --  Add any additional override configuration in the following tables. Available keys are:
-            --  - cmd (table): Override the default command used to start the server
-            --  - filetypes (table): Override the default list of associated filetypes for the server
-            --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-            --  - settings (table): Override the default settings passed when initializing the server.
-            --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+            -- NOTE: Enable language servers
             local servers = {
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
                 marksman = {},
-                pyright = {},
+                pyright = {
+                    settings = {
+                        pyright = {
+                            -- Using Ruff's import organizer
+                            disableOrganizeImports = true,
+                        },
+                        python = {
+                            analysis = {
+                                -- Ignore all files for analysis to exclusively use Ruff for linting
+                                ignore = { "*" },
+                            },
+                        },
+                    },
+                },
+                ruff = {
+                    on_attach = function(client, _)
+                        if client.name == "ruff" then
+                            -- Disable hover in favor of Pyright
+                            client.server_capabilities.hoverProvider = false
+                        end
+                    end,
+                },
                 taplo = {},
             }
 
