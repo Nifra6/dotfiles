@@ -2,272 +2,262 @@
 // ---                     waybar config                    ---
 // ------------------------------------------------------------
 {
-    // --------------------------------------------------------
-    // ---                   global config                  ---
-    // --------------------------------------------------------
+  // --------------------------------------------------------
+  // ---                   global config                  ---
+  // --------------------------------------------------------
 
-    // -- Bar shape
-    // ---------------------------
-    "height": 30,
-    "layer": "top",
-    "position": "top",
+  // -- Bar shape
+  // ---------------------------
+  "height": 30,
+  "layer": "top",
+  "position": "top",
 
-    // -- Modules order
-    // ---------------------------
-    "modules-left": [
-        "custom/system",
-        "hyprland/workspaces",
-        "custom/pacman",
-        "custom/media",
-        "hyprland/submap"
-    ],
-    "modules-center": [
-        "idle_inhibitor",
-        "custom/weather",
-        "clock",
-        "tray"
-    ],
-    "modules-right": [
-        "network",
-        "custom/separation",
-        "disk",
-        "custom/separation",
-        "cpu",
-        "custom/separation",
-        "memory",
-        "custom/separation",
-        "temperature",
-        "custom/separation",
-        "backlight",
-        "custom/separation",
-        "pulseaudio",
-        "custom/separation",
-        "battery"
-    ],
+  // -- Modules order
+  // ---------------------------
+  "modules-left": [
+    "custom/system",
+    "hyprland/workspaces",
+    "custom/pacman",
+    "custom/media",
+    "hyprland/submap",
+  ],
+  "modules-center": ["idle_inhibitor", "custom/weather", "clock", "tray"],
+  "modules-right": [
+    "network",
+    "custom/separation",
+    "disk",
+    "custom/separation",
+    "cpu",
+    "custom/separation",
+    "memory",
+    "custom/separation",
+    "temperature",
+    "custom/separation",
+    "backlight",
+    "custom/separation",
+    "pulseaudio",
+    "custom/separation",
+    "battery",
+  ],
 
-    "custom/separation": {
-        "format": "|",
-        "tooltip": false
+  "custom/separation": {
+    "format": "|",
+    "tooltip": false,
+  },
+
+  // --------------------------------------------------------
+  // ---                left modules config               ---
+  // --------------------------------------------------------
+
+  // -- System & reload bar
+  // ---------------------------
+  "custom/system": {
+    "format": "",
+    "on-click": "wleave -b 2 -c 16 -r 16 -L 500 -R 500 -T 150 -B 150",
+    "on-click-right": "killall -SIGUSR2 waybar",
+    "tooltip": false,
+  },
+
+  // -- Workspaces
+  // ---------------------------
+  "sway/workspaces": {
+    "all-outputs": true,
+    "disable-scroll": true,
+    "format": "{icon}",
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "disable-scroll": true,
+    "format": "{icon}",
+  },
+
+  // -- Compositor mode
+  // ---------------------------
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
+  },
+
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>",
+  },
+
+  // -- System updates
+  // ---------------------------
+  "custom/pacman": {
+    "exec": "python $HOME/.config/waybar/pacman/pacman.py",
+    "exec-on-event": true,
+    "format": "{icon}  {}",
+    "format-icons": {
+      "available": "󰚰",
+      "uptodate": "󰗡",
     },
+    "interval": 600,
+    "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update",
+    "return-type": "json",
+  },
 
-
-    // --------------------------------------------------------
-    // ---                left modules config               ---
-    // --------------------------------------------------------
-
-    // -- System & reload bar
-    // ---------------------------
-    "custom/system": {
-        "format": "",
-        "on-click": "wleave -b 2 -c 16 -r 16 -L 500 -R 500 -T 150 -B 150",
-        "on-click-right": "killall -SIGUSR2 waybar",
-        "tooltip": false
+  // -- Multimedia
+  // ---------------------------
+  "custom/media": {
+    "escape": true,
+    "exec": "zsh $HOME/.config/waybar/mediaplayer/mediaplayer.sh",
+    "format": "{icon} {}",
+    "format-icons": {
+      "default": "󰝚",
+      "firefox": "",
+      "mpv": "",
+      "spotify": "󰓇",
     },
+    "max-length": 80,
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "return-type": "json",
+  },
 
-    // -- Workspaces
-    // ---------------------------
-    "sway/workspaces": {
-        "all-outputs": true,
-        "disable-scroll": true,
-        "format": "{icon}"
+  // --------------------------------------------------------
+  // ---               middle modules config              ---
+  // --------------------------------------------------------
+
+  // -- Idle
+  // ---------------------------
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉",
     },
-    "hyprland/workspaces": {
-        "all-outputs": true,
-        "disable-scroll": true,
-        "format": "{icon}"
+    "tooltip-format-activated": "Veille désactivée",
+    "tooltip-format-deactivated": "Veille activée",
+  },
+
+  // -- Weather
+  // ---------------------------
+  "custom/weather": {
+    "exec": "python $HOME/.config/waybar/weather/weather.py",
+    "format": "{} |",
+    "interval": 600,
+    "return-type": "json",
+    "tooltip": true,
+  },
+
+  // -- Clock
+  // ---------------------------
+  "clock": {
+    "format": " {:L%A %d %B | %H:%M}",
+    "locale": "fr_FR.utf8",
+    "timezone": "Europe/Paris",
+  },
+
+  // -- System tray
+  // ---------------------------
+  "tray": {
+    "spacing": 10,
+  },
+
+  // --------------------------------------------------------
+  // ---               right modules config               ---
+  // --------------------------------------------------------
+
+  // -- Network
+  // ---------------------------
+  "network": {
+    "format-disconnected": "Déconnecté 󰌙",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
+    "format-linked": "{ifname} (No IP) 󰌘",
+    "format-wifi": "{essid} ({signalStrength}%) 󰖩",
+    "interval": 10,
+    "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c nmtui",
+    "tooltip": false,
+  },
+
+  // -- Free disk space
+  // ---------------------------
+  "disk": {
+    "format": "{free} 󰋊",
+    "interval": 30,
+    "on-click": "filelight",
+    "path": "/",
+    "states": {
+      "critical": 90,
+      "warning": 75,
     },
+    "tooltip": false,
+  },
 
-    // -- Compositor mode
-    // ---------------------------
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+  // -- CPU
+  // ---------------------------
+  "cpu": {
+    "format": "{usage}% 󰻠",
+    "interval": 20,
+    "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop",
+    "tooltip": false,
+  },
+
+  // -- RAM
+  // ---------------------------
+  "memory": {
+    "format": "{}% 󰍛",
+    "interval": 20,
+    "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop",
+    "tooltip": false,
+  },
+
+  // -- Laptop temperature
+  // ---------------------------
+  "temperature": {
+    "critical-threshold": 70,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["󱃃", "󰔏", "󱃂"],
+    "interval": 20,
+    "tooltip": false,
+  },
+
+  // -- Brightness
+  // ---------------------------
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["󰄰", "󱎖", "󰄯"],
+    "interval": 20,
+    "on-click": "pkill -USR1 redshift",
+    "tooltip": false,
+  },
+
+  // -- Sound
+  // ---------------------------
+  "pulseaudio": {
+    "interval": 20,
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}󰂯 {format_source}",
+    "format-bluetooth-muted": "󰝟{icon}󰂯 {format_source}",
+    "format-muted": "󰝟 {format_source}",
+    "format-source": "{volume}% 󰍬",
+    "format-source-muted": "󰍭",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋋",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰏲",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"],
     },
+    "on-click": "pavucontrol",
+  },
 
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
+  // -- Laptop battery
+  // ---------------------------
+  "battery": {
+    "interval": 20,
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰚥",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "states": {
+      "critical": 15,
+      "warning": 30,
     },
-    
-    // -- System updates
-    // ---------------------------
-    "custom/pacman": {
-        "exec": "python $HOME/.config/waybar/pacman/pacman.py",
-        "exec-on-event": true,
-        "format": "{icon}  {}",
-        "format-icons": {
-            "available": "󰚰",
-            "uptodate": "󰗡"
-        },
-        "interval": 600,
-        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update",
-        "return-type": "json",
-    },
-
-    // -- Multimedia
-    // ---------------------------
-    "custom/media": {
-        "escape": true,
-        "exec": "zsh $HOME/.config/waybar/mediaplayer/mediaplayer.sh",
-        "format": "{icon} {}",
-        "format-icons": {
-            "default": "󰝚",
-            "firefox": "",
-            "mpv": "",
-            "spotify": "󰓇"
-        },
-        "max-length": 80,
-        "on-click": "playerctl play-pause",
-        "on-click-middle": "playerctl previous",
-        "on-click-right": "playerctl next",
-        "return-type": "json"
-    },
-
-    
-
-    // --------------------------------------------------------
-    // ---               middle modules config              ---
-    // --------------------------------------------------------
-
-    // -- Idle
-    // ---------------------------
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
-        },
-        "tooltip-format-activated": "Veille désactivée",
-        "tooltip-format-deactivated": "Veille activée"
-    },
-
-    // -- Weather
-    // ---------------------------
-    "custom/weather": {
-        "exec": "python $HOME/.config/waybar/weather/weather.py",
-        "format": "{} |",
-        "interval": 600,
-        "return-type": "json",
-        "tooltip": true
-    },
-
-    // -- Clock
-    // ---------------------------
-    "clock": {
-        "format": " {:L%A %d %B | %H:%M}",
-        "locale": "fr_FR.utf8",
-        "timezone": "Europe/Paris",
-    },
-
-    // -- System tray
-    // ---------------------------
-    "tray": {
-        "spacing": 10
-    },
-
-
-
-    // --------------------------------------------------------
-    // ---               right modules config               ---
-    // --------------------------------------------------------
-
-    // -- Network
-    // ---------------------------
-    "network": {
-        "format-disconnected": "Déconnecté 󰌙",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
-        "format-linked": "{ifname} (No IP) 󰌘",
-        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
-        "interval": 10,
-        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c nmtui",
-        "tooltip": false
-    },
-
-    // -- Free disk space
-    // ---------------------------
-    "disk": {
-        "format": "{free} 󰋊",
-        "interval": 30,
-        "on-click": "filelight",
-        "path": "/",
-        "states": {
-            "critical": 90,
-            "warning": 75
-        },
-        "tooltip": false
-    },
-
-    // -- CPU
-    // ---------------------------
-    "cpu": {
-        "format": "{usage}% 󰻠",
-        "interval": 20,
-        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop",
-        "tooltip": false
-    },
-
-    // -- RAM
-    // ---------------------------
-    "memory": {
-        "format": "{}% 󰍛",
-        "interval": 20,
-        "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c btop",
-        "tooltip": false
-    },
-
-    // -- Laptop temperature
-    // ---------------------------
-    "temperature": {
-        "critical-threshold": 70,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["󱃃", "󰔏", "󱃂"],
-        "interval": 20,
-        "tooltip": false
-    },
-
-    // -- Brightness
-    // ---------------------------
-    "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": ["󰄰","󱎖", "󰄯"],
-        "interval": 20,
-        "on-click": "pkill -USR1 redshift",
-        "tooltip": false
-    },
-
-    // -- Sound
-    // ---------------------------
-    "pulseaudio": {
-        "interval": 20,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon}󰂯 {format_source}",
-        "format-bluetooth-muted": "󰝟{icon}󰂯 {format_source}",
-        "format-muted": "󰝟 {format_source}",
-        "format-source": "{volume}% 󰍬",
-        "format-source-muted": "󰍭",
-        "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "󰋋",
-            "headset": "󰋎",
-            "phone": "󰏲",
-            "portable": "󰏲",
-            "car": "󰄋",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "on-click": "pavucontrol"
-    },
-
-    // -- Laptop battery
-    // ---------------------------
-    "battery": {
-        "interval": 20,
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}% 󰚥",
-        "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-        "states": {
-            "critical": 15,
-            "warning": 30
-        },
-        "tooltip": true,
-        "tooltip-format": "Temps restant : {time}"
-    },
+    "tooltip": true,
+    "tooltip-format": "Temps restant : {time}",
+  },
 }
