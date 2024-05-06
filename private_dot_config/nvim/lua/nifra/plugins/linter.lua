@@ -6,9 +6,9 @@ return {
         opts = {
             events = { "BufWritePost", "BufReadPost", "InsertLeave" },
             linters_by_ft = {
-                ["*"] = { "typos" },
+                -- ["*"] = { "typos" },
                 bash = { "shellcheck" },
-                markdown = { "markdownlint", "languagetool" },
+                markdown = { "markdownlint" },
                 python = { "ruff" },
                 sh = { "shellcheck" },
                 -- Use the "*" filetype to run linters on all filetypes.
