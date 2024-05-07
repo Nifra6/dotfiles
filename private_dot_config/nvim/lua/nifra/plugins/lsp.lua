@@ -1,9 +1,8 @@
 return {
-    -- FIXME: LSP Configuration & Plugins
+    -- NOTE: LSP Configuration & Plugins
     {
         "neovim/nvim-lspconfig",
-        event = "VeryLazy",
-        -- lazy = false,
+        event = { "BufNewFile", "BufReadPre" },
         dependencies = {
             { "williamboman/mason.nvim", config = true },
             "williamboman/mason-lspconfig.nvim",

@@ -5,9 +5,11 @@ return {
         main = "ibl",
         event = { "BufNewFile", "BufReadPre" },
         opts = {
+            indent = { char = "▍" },
             scope = {
                 enabled = true,
             },
+            viewport_buffer = { min = 100 },
         },
     },
     -- NOTE: Highlight todo, notes, etc in comments
@@ -15,7 +17,10 @@ return {
         "folke/todo-comments.nvim",
         event = { "BufNewFile", "BufReadPre" },
         dependencies = { "nvim-lua/plenary.nvim" },
-        opts = { signs = true },
+        opts = {
+            signs = true,
+            sign_priority = 8,
+        },
     },
     -- NOTE: Git indications
     {
@@ -23,12 +28,12 @@ return {
         event = { "BufNewFile", "BufReadPre" },
         opts = {
             signs = {
-                add = { text = "▎" },
-                change = { text = "▎" },
+                add = { text = "▍" },
+                change = { text = "▍" },
                 delete = { text = "" },
                 topdelete = { text = "" },
-                changedelete = { text = "▎" },
-                untracked = { text = "▎" },
+                changedelete = { text = "▍" },
+                untracked = { text = "▍" },
             },
         },
     },
