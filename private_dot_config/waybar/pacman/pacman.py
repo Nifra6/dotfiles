@@ -18,17 +18,17 @@ def write_output(packages):
     nb_packages = len(packages)
     match nb_packages:
         case 0:
-            output_text = "À jour"
+            output_text = ""
             output_alt = "uptodate"
             output_tooltip = ""
             output_class = "good"
         case 1:
-            output_text = "1 paquet disponible"
+            output_text = "  1 paquet disponible"
             output_alt = "available"
             output_tooltip = packages[0]
             output_class = "info"
         case _:
-            output_text = f"{nb_packages} paquets disponibles"
+            output_text = f"  {nb_packages} paquets disponibles"
             output_alt = "available"
             output_tooltip = "\n".join(packages)
 
