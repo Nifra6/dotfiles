@@ -85,6 +85,10 @@ return {
             local servers = {
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
                 marksman = {},
+                matlab_ls = {
+                    settings = { matlab = { installPath = "$HOME/Applications/Matlab/" } },
+                    single_file_support = true,
+                },
                 pyright = {
                     settings = {
                         pyright = {
