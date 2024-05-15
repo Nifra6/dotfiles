@@ -25,6 +25,10 @@ opt.smartindent = true
 opt.autoindent = true
 opt.breakindent = true
 
+-- NOTE: Spelling
+opt.spelllang = { "en", "fr" }
+opt.spell = true
+
 -- NOTE: Save undo history
 opt.undofile = true
 
