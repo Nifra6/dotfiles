@@ -1,5 +1,5 @@
 -- NOTE: Open Lazy
-vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "[L]azy" })
+vim.keymap.set("n", "<leader>lv", "<Cmd>Lazy<CR>", { desc = "Lazy[V]im" })
 
 -- NOTE: Buffer
 vim.keymap.set("n", "<leader>q", function(n)

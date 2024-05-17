@@ -2,6 +2,7 @@ return {
     -- NOTE: Show indentation guides
     {
         "lukas-reineke/indent-blankline.nvim",
+        version = "3.5.4", -- FIX: 3.6.0 broken
         main = "ibl",
         event = { "BufNewFile", "BufReadPre" },
         opts = {
