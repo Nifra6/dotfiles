@@ -39,7 +39,6 @@ alias feh='feh --scale-down --auto-zoom'
 # ---------------------------
 alias apv='mpv --volume=50 --no-audio-display'
 alias venv="source .venv/bin/activate"
-alias meteo="sh ~/.scripts/meteo.sh"
 alias compress='tar zcvf archive.tar.gz'
 alias decompress='tar zxvf'
 alias docker_clean="docker system prune"
