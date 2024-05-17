@@ -210,6 +210,7 @@ return {
                 ["<leader>b"] = { name = "[B]uffers", _ = "which_key_ignore" },
                 ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
                 ["<leader>g"] = { name = "[G]o to", _ = "which_key_ignore" },
+                ["<leader>l"] = { name = "[L]azy", _ = "which_key_ignore" },
                 ["<leader>s"] = { name = "[S]ymbols", _ = "which_key_ignore" },
                 ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
             })
