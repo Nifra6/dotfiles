@@ -20,6 +20,7 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 | Distribution        | [Arch](https://archlinux.org/)                                                       | love it or hate it, I love it                                          |
 | Compositor          | [Hyprland](https://hyprland.org/)                                                    | tile manager that hype me                                              |
 | Statusbar           | [waybar](https://github.com/Alexays/Waybar)                                          | just perfect                                                           |
+| Wallpaper daemon    | [swww](https://github.com/LGFae/swww)                                                | dynamic and beautiful transitions                                      |
 | Notification daemon | [dunst](https://dunst-project.org/)                                                  | a little complicated to configure from scratch                         |
 | Logout Utility      | [wleave](https://github.com/AMNatty/wleave)                                          | I prefer this fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) |
 | Shell               | [zsh](https://www.zsh.org/) (without oh-my-zsh)                                      | better config than bash, more DIY than fish                            |
@@ -38,7 +39,7 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 ## Installation
 
 > ⚠️
-> A symlink is needed : `ln -s .config/zsh/.zshenv .zshenv`, once you have cloned the repo.
+> A symlink is needed : `ln -s ~/.config/zsh/.zshenv ~/.zshenv`, once you have cloned the repo.
 
 ### Arch Linux :
 

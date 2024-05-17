@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+import os
+import subprocess
+
+
+def list_directories(path):
+    """List all directories in the given path."""
+    return [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
+
+
+def list_images(path):
+    """List all image files in the given path."""
+    image_extensions = (".png", ".jpg", ".jpeg", ".bmp", ".gif")
+    return [
+        f
+        for f in os.listdir(path)
+        if os.path.isfile(os.path.join(path, f))
+        and f.lower().endswith(image_extensions)
+    ]
+
+
+def wofi_select(options, prompt):
+    """Show options in wofi and return the selected option."""
+    command = f"echo -e '{'\n'.join(options)}' | wofi --dmenu --prompt '{prompt}'"
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    return result.stdout.strip()
+
+
+def set_wallpaper(image_path):
+    """Set the wallpaper using swww."""
+    command = f"swww img -t wipe '{image_path}'"
+    subprocess.run(command, shell=True)
+
+
+def main():
+    base_path = os.path.expanduser("~/Images/Wallpaper")
+
+    # List directories
+    directories = list_directories(base_path)
+    if not directories:
+        print("No directories found in", base_path)
+        return
+
+    # Select a directory using wofi
+    selected_directory = wofi_select(directories, "Select a directory")
+    if not selected_directory:
+        print("No directory selected")
+        return
+
+    selected_directory_path = os.path.join(base_path, selected_directory)
+
+    # List images in the selected directory
+    images = list_images(selected_directory_path)
+    if not images:
+        print("No images found in", selected_directory_path)
+        return
+
+    # Select an image using wofi
+    selected_image = wofi_select(images, "Select an image")
+    if not selected_image:
+        print("No image selected")
+        return
+
+    selected_image_path = os.path.join(selected_directory_path, selected_image)
+
+    # Set the selected image as the wallpaper
+    set_wallpaper(selected_image_path)
+    print(f"Wallpaper set to {selected_image_path}")
+
+
+if __name__ == "__main__":
+    main()
