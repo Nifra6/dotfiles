@@ -25,10 +25,10 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- NOTE: Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", '<cmd>echo "󰳝  is h, you moron !"<CR>')
-vim.keymap.set("n", "<right>", '<cmd>echo "󰳟  is l, you idiot !"<CR>')
-vim.keymap.set("n", "<up>", '<cmd>echo "󰳛  is k, you fool !"<CR>')
-vim.keymap.set("n", "<down>", '<cmd>echo "󰳛  is j, you dumb !"<CR>')
+vim.keymap.set("n", "<left>", '<cmd>echo "󰳝  is h, you moron!"<CR>')
+vim.keymap.set("n", "<right>", '<cmd>echo "󰳟  is l, you idiot!"<CR>')
+vim.keymap.set("n", "<up>", '<cmd>echo "󰳛  is k, you fool!"<CR>')
+vim.keymap.set("n", "<down>", '<cmd>echo "󰳛  is j, you dummy!"<CR>')
 
 -- NOTE: Clear highlight in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
