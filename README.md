@@ -1,5 +1,7 @@
 # My dotfiles - Managed with [chezmoi](https://www.chezmoi.io/)
 
+<!-- markdownlint-disable MD013 MD026 MD033 -->
+
 <details>
 <summary>Desktop example</summary>
 
@@ -27,6 +29,7 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 | File Manager        | CLI : [ranger](https://ranger.fm/) / GUI : [nemo](https://github.com/linuxmint/nemo) | ranger -> vim motion for the win                                       |
 | Terminal Emulator   | [kitty](https://sw.kovidgoyal.net/kitty/)                                            | tiling and tabs included, pretty powerfull                             |
 | IDE                 | [neovim](https://neovim.io/) with [lazy.vim](https://github.com/folke/lazy.nvim)     | Config is working even if not super clean                              |
+| Git TUI             | [lazygit](https://github.com/jesseduffield/lazygit)                                  | intuitive and powerfull, with vim motions                              |
 
 ## What I accomodate with at work
 
@@ -34,7 +37,7 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 | ------------------- | ---------------------------------------------------- | ------------------------------------ |
 | Distribution        | Ubuntu 22.04                                         | canonical not the best, apt outdated |
 | Desktop Environment | [Regolith](https://regolith-desktop.com/) (i3 as TM) | i dn't want issues with the GPU      |
-| File Manager        | the gnome thing                                      | ... it works. Nothing to say         |
+| File Manager (GUI)  | the gnome thing                                      | ... it works. Nothing to say         |
 
 ## Installation
 
