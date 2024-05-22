@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#! /bin/sh
+
+packages_list=""
+{{ range .packages.arch.pacman -}}
+package={{ . | quote}}
+packages_list="$packages_list $package"
+{{ end -}}
+sudo pacman -Syu $packages_list --needed
+{{ end -}}

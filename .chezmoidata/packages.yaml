@@ -1,0 +1,14 @@
+packages:
+  arch:
+    pacman:
+      - "base"
+      - "inetutils"
+      - "linux"
+      - "linux-headers"
+      - "linux-firmware"
+      - "make"
+      - "man-db"
+      - "man-pages"
+      - "pkgconfig"
+      - "sudo"
+      - "intel-media-driver"
