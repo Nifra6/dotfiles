@@ -53,6 +53,10 @@ return {
                     footer = function()
                         local stats = require("lazy").stats()
                         local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+                        local status = require("lazy.status")
+                        local updates = status.has_updates()
+                                and "There is " .. status.updates() .. " updates availables"
+                            or ""
                         return {
                             "",
                             "Lazy.nvim loaded "
@@ -63,6 +67,7 @@ return {
                                 .. ms
                                 .. " ms",
                             "👉👈",
+                            updates, -- FIXME: Don't work yet because ... check happen after VimEnter ?
                         }
                     end,
                 },
