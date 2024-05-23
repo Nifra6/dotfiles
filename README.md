@@ -43,6 +43,8 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
 > ⚠️
 > A symlink is needed : `ln -s ~/.config/zsh/.zshenv ~/.zshenv`, once you have cloned the repo.
+>
+> Note to myself: I need to automatise this with a template.
 
 ### Arch Linux :
 
@@ -51,6 +53,8 @@ pacman -S chezmoi
 chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
 ```
 
+The packages will be installed automatically (when I have finished the `.chezmoidata/packages.yaml`).
+
 ### Ubuntu :
 
 ```BASH
@@ -58,58 +62,10 @@ snap install chezmoi --classic
 chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
 ```
 
-<details>
-<summary>apt</summary>
-
-```BASH
-sudo apt install btop dunst kitty neofetch ranger zsh
-```
-
-</details>
-
-<details>
-<summary>snap</summary>
-
-```BASH
-sudo snap install mpv
-sudo snap install node --classic
-sudo snap install nvim --classic
-```
+To install all the applications, run the script `~/.scripts/make_ubuntu_usable`.
 
 > ⚠️
-> For nvim to work with node.js, it is needed to add the node snap directly in your path : `export PATH=/snap/node/current/bin:$PATH` (see the .zshenv).
-
-</details>
-
-<details>
-<summary>Lazygit</summary>
-
-```BASH
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
-```
-
-</details>
-
-<details>
-<summary>Poetry</summary>
-
-```BASH
-curl -sSL https://install.python-poetry.org | python3 -
-```
-
-</details>
-
-<details>
-<summary>Nerd Fonts</summary>
-
-```BASH
-zsh ~/.scripts/nerd_fonts_install.bash
-```
-
-</details>
+> For nvim to work with node.js, you need to add the node snap directly to your path: `export PATH=/snap/node/current/bin:$PATH` (see the .zshenv).
 
 ## That's everything folks
 
