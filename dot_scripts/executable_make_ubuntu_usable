@@ -1,8 +1,10 @@
 #! /bin/sh
 
 # Get my dotfiles
-snap install chezmoi --classic
-chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
+if ! command -v chezmoi > /dev/null 2>&1; then
+    snap install chezmoi --classic
+    chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
+fi
 
 # Packages install
 sudo apt install btop dunst git kitty neofetch ranger zathura zsh
