@@ -55,7 +55,7 @@ alias cedit='chezmoi edit --watch'
 alias aliases='cedit $ZDOTDIR/aliases'
 alias zshenv='cedit $ZDOTDIR/.zshenv'
 alias zshrc='cedit $ZDOTDIR/.zshrc'
-
+alias dotfiles='cd $HOME/.local/share/chezmoi ; nvim ; cm apply'
 
 # -- Kittens
 # ---------------------------
