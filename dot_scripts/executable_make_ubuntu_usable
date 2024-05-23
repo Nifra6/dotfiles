@@ -48,6 +48,6 @@ if ! command -v regolith-diagnostic > /dev/null 2>&1; then
 https://regolith-desktop.org/release-3_1-ubuntu-jammy-amd64 jammy main" | \
         sudo tee /etc/apt/sources.list.d/regolith.list
     sudo apt update
-    sudo apt install regolith-desktop regolith-session reogolith-look-lascaille
+    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
     echo "Plus qu'à reboot !"
 fi
