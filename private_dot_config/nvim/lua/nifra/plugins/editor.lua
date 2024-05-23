@@ -102,4 +102,19 @@ return {
             return keys
         end,
     },
+    -- NOTE: Auto pairs
+    {
+        "echasnovski/mini.pairs",
+        config = true,
+        event = { "BufNewFile", "BufReadPost" },
+        version = false,
+        opts = {
+            mappings = {
+                ["("] = { neigh_pattern = "[^\\]%W" },
+                ["["] = { neigh_pattern = "[^\\]%W" },
+                ["{"] = { neigh_pattern = "[^\\]%W" },
+                ['"'] = { neigh_pattern = "[^\\]%W" },
+            },
+        },
+    },
 }

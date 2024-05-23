@@ -107,7 +107,7 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.nvim" },
+        dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.bufremove" },
         keys = {
             { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle [P]in" },
             { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete [O]ther Buffers" },
