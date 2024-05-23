@@ -12,31 +12,40 @@ sudo snap install node --classic
 sudo snap install nvim --classic
 
 # Lazygit
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
+if ! command -v lazygit > /dev/null 2>&1; then
+    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+    tar xf lazygit.tar.gz lazygit
+    sudo install lazygit /usr/local/bin
+fi
 
 # Poetry
-curl -sSL https://install.python-poetry.org | python3 -
+if ! command -v poetry > /dev/null 2>&1; then
+    curl -sSL https://install.python-poetry.org | python3 -
+fi
 
 # Miniconda
-MINICONDA_FOLDER="$HOME/Applications/miniconda3"
-mkdir -p "$MINICONDA_FOLDER"
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_FOLDER"/miniconda.sh
-bash "$MINICONDA_FOLDER"/miniconda.sh -b -u -p "$MINICONDA_FOLDER"
-rm -rf "$MINICONDA_FOLDER"/miniconda.sh
+if ! command -v conda > /dev/null 2>&1; then
+    MINICONDA_FOLDER="$HOME/Applications/miniconda3"
+    mkdir -p "$MINICONDA_FOLDER"
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_FOLDER"/miniconda.sh
+    bash "$MINICONDA_FOLDER"/miniconda.sh -b -u -p "$MINICONDA_FOLDER"
+    rm -rf "$MINICONDA_FOLDER"/miniconda.sh
+fi
 
 # Nerd Fonts
-zsh ~/.scripts/nerd_fonts_install.bash
+if [ "$(fc-list | grep -ci 'JetBrainsMono Nerd Font')" -eq 0 ]; then
+    zsh ~/.scripts/nerd_fonts_install.bash
+fi
 
 # Install regolith
-wget -qO - https://regolith-desktop.org/regolith.key | \
-    gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
-echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+if ! command -v regolith-diagnostic > /dev/null 2>&1; then
+    wget -qO - https://regolith-desktop.org/regolith.key | \
+        gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
 https://regolith-desktop.org/release-3_1-ubuntu-jammy-amd64 jammy main" | \
-    sudo tee /etc/apt/sources.list.d/regolith.list
-sudo apt update
-sudo apt install regolith-desktop regolith-session reogolith-look-lascaille
-
-echo "Plus qu'à reboot !"
+        sudo tee /etc/apt/sources.list.d/regolith.list
+    sudo apt update
+    sudo apt install regolith-desktop regolith-session reogolith-look-lascaille
+    echo "Plus qu'à reboot !"
+fi
