@@ -193,7 +193,7 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         keys = {
             {
-                "<leader>cd",
+                "<leader>d",
                 function()
                     require("trouble").toggle("workspace_diagnostics")
                 end,
