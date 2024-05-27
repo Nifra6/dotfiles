@@ -1,6 +1,7 @@
 packages:
   arch:
     pacman:
+      # NOTE: Essential / system packages
       - "base"
       - "inetutils"
       - "linux"
@@ -20,6 +21,7 @@ packages:
       - "refind"
       - "vulkan-intel"
       - "zsh"
+      # NOTE: Languages
       - "go"
       - "lua"
       - "npm"
@@ -30,3 +32,95 @@ packages:
       - "python-poetry"
       - "python-pytorch"
       - "tensorboard"
+      # NOTE: Fonts & Themes
+      - "noto-fonts-cjk"
+      - "noto-fonts-emoji"
+      - "papirus-icon-theme"
+      - "ttf-jetbrains-mono-nerd" # patched JetBrains Mono font
+      - "ttf-nerd-fonts-symbols" # symbols aggregator
+      # NOTE: Utilities
+      - "alsa-utils" # sound kernel utilities
+      - "blueman" # bluetooth GUI with tray
+      - "bluez-utils" # bluetooth CLI
+      - "brightnessctl" # brightness control
+      - "cups-pdf" # printing drivers
+      - "pulseaudio" # sound server
+      - "udiskie" # automount
+      # NOTE: Wayland compositor
+      - "dunst" # notifications
+      - "grim" # screenshot
+      - "hypridle" # sleep system
+      - "hyprland" # compositor
+      - "hyprlock" # lock system
+      - "hyprpaper" # wallpaper
+      - "nwg-look" # change icons and mouse cursor
+      - "slurp" # region selection (used with grim for example)
+      - "waybar" # status bar
+      - "wireplumber" # screensharing
+      - "wl-clipboard" # clipboard
+      - "wleave-git" # logout menu
+      - "wlsunset" # blue light filter
+      - "wofi" # launcher
+      - "workstyle-git" # change apps icons in status bar workspaces
+      - "xdg-desktop-portal-gtk" # filepicker dbus utility
+      - "xdg-desktop-portal-hyprland" # screen share dbus utility
+      - "libva-nvidia-driver-git"
+      - "nvidia-dkms"
+      - "qt5-wayland"
+      - "qt5ct"
+      - "qt6ct"
+      # NOTE: Terminal applications
+      - "bat" # cat drop-in replacement
+      - "chezmoi" # dotfiles manager
+      - "fd" # find drop-in replacement
+      - "git" # vcs
+      - "lsd" # ls drop-in replacement
+      - "neofetch" # system information viewer
+      - "p7zip" # archiver for .zip, .7z, .rar, ...
+      - "playerctl" # mpris media controller
+      - "ripgrep" # similar to grep, alias to rg
+      - "wget" # better download than curl
+      - "yt-dlp" # download audio and video from YouTube, Twitch ... Optional dependencies of `mpv`
+      - "btop" # processor, memory and network viewer
+      - "lazygit" # git helper
+      - "neovim" # file editor and IDE
+      - "ranger" # file explorer
+      # NOTE: Graphical applications
+      - "amberol" # music player
+      - "chromium" # web browser
+      - "discord" # social app
+      - "feh" # image viewer
+      - "filelight" # disk usage in pie form
+      - "firefox" # web browser
+      - "kitty" # terminal emulator
+      - "libreoffice-fresh-fr" # office suite, in French
+      - "mpv" # music and video player
+      - "nemo" # file explorer
+      - "nm-connection-editor" # GUI for connection creation & configuration (useful for vpn)
+      - "pavucontrol" # pulseaudio frontend to manage sound
+      - "picard" # sound file tagger (for metadata)
+      - "pinta" # paint.NET like
+      - "qbittorrent" # BitTorrent client
+      - "signal-desktop" # messaging app
+      - "spotify" # music streaming
+      - "thunderbird" # mail reader
+      - "visual-studio-code-bin" # IDE
+      - "zathura" # document viewer with vi bindings
+      - "zotero-bin" # scientific biblio and article reader with annotations
+      # NOTE: Gaming
+      - "lutris" # launcher/installer for many games, including Epic, steam, ...
+      - "steam" # steam client
+      - "gamescope" # can help with games on hyprland
+      - "wine" # windows emulator
+      # NOTE: Plugins
+      - "cinnamon-translations" # nemo translation
+      - "conda-zsh-completion" # conda auto complete for zsh
+      - "firefox-i18n-fr" # French language for firefox
+      - "mpv-mpris" # use playerctl with mpv
+      - "networkmanager-openconnect" # plugin for Cisco vpn
+      - "pulseaudio-alsa" # plugin to manage `alsa`
+      - "pulseaudio-bluetooth" # plugin to support bluetooth with `bluez`
+      - "thunderbird-i18n-fr" # French language for thunderbird
+      - "zathura-pdf-mupdf" # enable PDF, ePub & OpenXPS on `zathura`
+      - "zsh-autosuggestions" # fish-like autosuggestions
+      - "zsh-syntax-highlighting" # fish-like syntax highlighting
