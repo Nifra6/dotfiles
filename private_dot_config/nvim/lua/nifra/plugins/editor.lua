@@ -2,7 +2,6 @@ return {
     -- NOTE: Show indentation guides
     {
         "lukas-reineke/indent-blankline.nvim",
-        -- version = "3.5.4", -- FIX: 3.6.0 broken
         main = "ibl",
         event = { "BufNewFile", "BufReadPre" },
         opts = {
@@ -70,35 +69,16 @@ return {
                     end,
                     desc = "Harpoon [M]enu",
                 },
-                {
-                    "<leader>&",
-                    function()
-                        harpoon:list():select(1)
-                    end,
-                    desc = "Harpoon [1]",
-                },
-                {
-                    "<leader>é",
-                    function()
-                        harpoon:list():select(2)
-                    end,
-                    desc = "Harpoon [2]",
-                },
-                {
-                    '<leader>"',
-                    function()
-                        harpoon:list():select(3)
-                    end,
-                    desc = "Harpoon [3]",
-                },
-                {
-                    "<leader>'",
-                    function()
-                        harpoon:list():select(4)
-                    end,
-                    desc = "Harpoon [4]",
-                },
             }
+            for i = 1, 5 do
+                table.insert(keys, {
+                    "<leader>" .. i,
+                    function()
+                        require("harpoon"):list():select(i)
+                    end,
+                    desc = "Harpoon [" .. i .. "]",
+                })
+            end
             return keys
         end,
     },
