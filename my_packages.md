@@ -34,7 +34,6 @@
 ## Languages
 
 `go` golang
-`jre-openjdk` java runtime environment
 `lua` lua
 `npm` JavaScript package manager
 `python` python environment

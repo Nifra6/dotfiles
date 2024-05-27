@@ -21,7 +21,6 @@ packages:
       - "vulkan-intel"
       - "zsh"
       - "go"
-      - "jre-openjdk"
       - "lua"
       - "npm"
       - "python"
