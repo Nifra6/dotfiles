@@ -7,4 +7,14 @@ package={{ . | quote}}
 packages_list="$packages_list $package"
 {{ end -}}
 sudo pacman -Syu $packages_list --needed
+
+packages_list=""
+{{ range .packages.arch.aur -}}
+package={{ . | quote}}
+packages_list="$packages_list $package"
+{{ end -}}
+if command -v yay > /dev/null; then
+    yay -Syu $packages_list --needed
+fi
+
 {{ end -}}
