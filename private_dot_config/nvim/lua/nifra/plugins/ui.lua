@@ -39,7 +39,7 @@ return {
                     },
                     center = {
                         { action = "Telescope find_files", desc = " Find File", icon = "󰱼 ", key = "f" },
-                        { action = "Telescope live_grep", desc = " Find Text", icon = "󱎸 ", key = "t" },
+                        { action = "Telescope live_grep", desc = " Grep Text", icon = "󱎸 ", key = "g" },
                         { action = "Lazy", desc = " Open Lazy", icon = "󰒲 ", key = "l" },
                         { action = "Lazy update", desc = " Update Plugins", icon = "󰚰 ", key = "u" },
                         {
