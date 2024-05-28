@@ -61,6 +61,7 @@ alias dotfiles='cd $HOME/.local/share/chezmoi ; nvim ; cm apply'
 # ---------------------------
 alias kitten='kitty +kitten'
 alias icat='kitten icat'
+alias connect='kitten ssh'
 
 
 # -- Host specific configs

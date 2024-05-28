@@ -19,6 +19,7 @@ if ! command -v lazygit > /dev/null 2>&1; then
     curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
     tar xf lazygit.tar.gz lazygit
     sudo install lazygit /usr/local/bin
+    rm lazygit lazygit.tar.gz
 fi
 
 # Poetry
@@ -28,11 +29,11 @@ fi
 
 # Miniconda
 if ! command -v conda > /dev/null 2>&1; then
-    MINICONDA_FOLDER="$HOME/Applications/miniconda3"
-    mkdir -p "$MINICONDA_FOLDER"
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_FOLDER"/miniconda.sh
-    bash "$MINICONDA_FOLDER"/miniconda.sh -b -u -p "$MINICONDA_FOLDER"
-    rm -rf "$MINICONDA_FOLDER"/miniconda.sh
+    MINICONDA_DIR="$HOME/Applications/miniconda3"
+    mkdir -p "$MINICONDA_DIR"
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_DIR"/miniconda.sh
+    bash "$MINICONDA_DIR"/miniconda.sh -b -u -p "$MINICONDA_DIR"
+    rm -rf "$MINICONDA_DIR"/miniconda.sh
 fi
 
 # Nerd Fonts
