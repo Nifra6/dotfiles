@@ -54,3 +54,7 @@
     timeout = 0
     default_icon = "${HOME}/.config/dunst/critical.png"
 
+[change-thunderbird-timeout]
+    appname = Thunderbird
+    background = #add8e6
+    timeout = 0
