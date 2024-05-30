@@ -10,7 +10,7 @@ def list_directories(path):
 
 def list_images(path):
     """List all image files in the given path."""
-    image_extensions = (".png", ".jpg", ".jpeg", ".bmp", ".gif")
+    image_extensions = (".png", ".jpg", ".jpeg", ".bmp", ".webp", ".gif")
     return [
         f
         for f in os.listdir(path)

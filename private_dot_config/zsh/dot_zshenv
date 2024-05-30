@@ -42,7 +42,7 @@ fi
 if [[ $HOSTNAME = "nascane" && -z "${WAYLAND_DISPLAY}" && "${XDG_VTNR}" -eq 1 ]]; then
     export GOPATH=$HOME/.go
     export _JAVA_AWT_WM_NONREPARENTING=1
-    export ELECTRON_OZONE_PLATFORM_HINT="auto"
+    # export ELECTRON_OZONE_PLATFORM_HINT="auto"
     exec Hyprland
 fi
 
