@@ -190,16 +190,10 @@ return {
     -- NOTE: Diagnostics
     {
         "folke/trouble.nvim",
+        event = "VeryLazy",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        keys = {
-            {
-                "<leader>d",
-                function()
-                    require("trouble").toggle("workspace_diagnostics")
-                end,
-                desc = "[D]iagnostics",
-            },
-        },
+        cmd = "Trouble",
+        keys = { { "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", desc = "[D]iagnostics" } },
     },
     -- NOTE: Keymaps help
     {
