@@ -194,6 +194,7 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         cmd = "Trouble",
         keys = { { "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", desc = "[D]iagnostics" } },
+        config = true,
     },
     -- NOTE: Keymaps help
     {
