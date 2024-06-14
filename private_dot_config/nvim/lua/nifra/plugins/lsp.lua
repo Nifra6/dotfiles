@@ -85,6 +85,7 @@ return {
             -- NOTE: Enable language servers
             local servers = {
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
+                texlab = {},
                 marksman = {},
                 matlab_ls = {
                     settings = { matlab = { installPath = "$HOME/Applications/Matlab/" } },
