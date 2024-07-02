@@ -161,7 +161,7 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons", "letieu/harpoon-lualine" },
         opts = {
             options = {
-                theme = "tokyonight",
+                theme = "tokyonight-moon",
                 globalstatus = true,
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
