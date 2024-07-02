@@ -85,7 +85,20 @@ return {
             -- NOTE: Enable language servers
             local servers = {
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
-                texlab = {},
+                texlab = {
+                    build = {
+                        args = {
+                            "-X",
+                            "compile",
+                            "%f",
+                            "--synctex",
+                            "--keep-logs",
+                            "--keep-intermediates",
+                        },
+                        executable = "tectonic",
+                        onSave = true,
+                    },
+                },
                 marksman = {},
                 matlab_ls = {
                     settings = { matlab = { installPath = "$HOME/Applications/Matlab/" } },
@@ -114,6 +127,7 @@ return {
                     end,
                 },
                 taplo = {},
+                typst_lsp = {},
             }
 
             -- NOTE: Install other tools (linters, formatters, ...)

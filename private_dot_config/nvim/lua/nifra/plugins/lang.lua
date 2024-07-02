@@ -38,4 +38,21 @@ return {
             { "<leader>cv", "<cmd>VenvSelect<cr>", desc = "Select [V]env" },
         },
     },
+    -- NOTE: Typst : preview in browser
+    {
+        "chomosuke/typst-preview.nvim",
+        ft = "typst",
+        version = "0.3.*",
+        keys = {
+            {
+                "<leader>cp",
+                "<Cmd>TypstPreview<Enter>",
+                desc = "[P]review in browser",
+                ft = "typst",
+            },
+        },
+        build = function()
+            require("typst-preview").update()
+        end,
+    },
 }
