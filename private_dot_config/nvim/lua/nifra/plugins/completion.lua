@@ -17,6 +17,7 @@ return {
             "saadparwaiz1/cmp_luasnip",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
+            "micangl/cmp-vimtex",
         },
         config = function()
             local cmp = require("cmp")
@@ -64,6 +65,7 @@ return {
                     { name = "nvim_lsp" }, -- LSP
                     { name = "luasnip" }, -- Snippets
                     { name = "path" }, -- Path
+                    { name = "vimtex" }, -- Vimtex
                 },
             })
         end,

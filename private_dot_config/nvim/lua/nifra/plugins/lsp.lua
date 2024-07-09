@@ -113,7 +113,6 @@ return {
                     end,
                 },
                 taplo = {},
-                texlab = {},
                 typst_lsp = {},
             }
 
