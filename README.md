@@ -2,6 +2,10 @@
 
 <!-- markdownlint-disable MD013 MD026 MD033 -->
 
+<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra/badges/plugins?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra/badges/leaderkey?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra/badges/plugin-manager?style=for-the-badge" /></a>
+
 <details>
 <summary>Desktop example</summary>
 
