@@ -33,12 +33,14 @@ return {
             vim.fn["mkdp#util#install"]()
         end,
     },
-    -- NOTE: Markdown : show headlines directly in editor
+    -- NOTE: Markdown : preview in vim
     {
-        "lukas-reineke/headlines.nvim",
-        dependencies = "nvim-treesitter/nvim-treesitter",
+        "OXY2DEV/markview.nvim",
         ft = { "markdown" },
-        opts = {},
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons",
+        },
     },
     -- NOTE: Python : select virtual environment
     {
