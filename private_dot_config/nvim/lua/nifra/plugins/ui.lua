@@ -204,17 +204,22 @@ return {
             vim.o.timeout = true
             vim.o.timeoutlen = 200
         end,
-        config = function()
-            require("which-key").setup()
-            require("which-key").register({
-                ["<leader>b"] = { name = "[B]uffers", _ = "which_key_ignore" },
-                ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-                ["<leader>g"] = { name = "[G]o to", _ = "which_key_ignore" },
-                ["<leader>l"] = { name = "[L]azy", _ = "which_key_ignore" },
-                ["<leader>s"] = { name = "[S]ymbols", _ = "which_key_ignore" },
-                ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
-            })
-        end,
+        opts = {
+            spec = {
+                { "<leader>b", group = "[B]uffers" },
+                { "<leader>b_", hidden = true },
+                { "<leader>c", group = "[C]ode" },
+                { "<leader>c_", hidden = true },
+                { "<leader>f", group = "[F]ind" },
+                { "<leader>f_", hidden = true },
+                { "<leader>g", group = "[G]o to" },
+                { "<leader>g_", hidden = true },
+                { "<leader>l", group = "[L]azy" },
+                { "<leader>l_", hidden = true },
+                { "<leader>s", group = "[S]ymbols" },
+                { "<leader>s_", hidden = true },
+            },
+        },
     },
     -- NOTE: File explorer
     {
