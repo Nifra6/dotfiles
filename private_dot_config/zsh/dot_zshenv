@@ -33,7 +33,7 @@ fi
 # -- Neovim under Ubuntu
 # ---------------------------
 if [[ $DISTRO = "Ubuntu" ]]; then
-    setxkbmap fr-alt
+    # setxkbmap fr-alt
     export PATH=/snap/node/current/bin:$PATH
 fi
 
