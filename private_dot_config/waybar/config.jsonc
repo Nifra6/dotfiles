@@ -86,7 +86,7 @@
   "custom/pacman": {
     "exec": "python $HOME/.config/waybar/pacman/pacman.py",
     "exec-on-event": true,
-    "format": "{icon}{}",
+    "format": "{icon}{0}",
     "format-icons": {
       "available": "󰚰",
       "uptodate": "󰗡",
@@ -101,7 +101,7 @@
   "custom/media": {
     "escape": true,
     "exec": "zsh $HOME/.config/waybar/mediaplayer/mediaplayer.sh",
-    "format": "{icon} {}",
+    "format": "{icon} {0}",
     "format-icons": {
       "default": "󰝚",
       "firefox": "",
