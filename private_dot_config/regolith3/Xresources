@@ -1,7 +1,7 @@
 ! Desktop appereance
 regolith.look.path: /usr/share/regolith-look/lascaille
-regolith.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/heavy_hitters_key_art.original.jpg
-regolith.lockscreen.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/mst_key_art.original.jpg
+regolith.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/ALT_BTG_AX_002_H_Subhash_and_Marmo.jpg
+regolith.lockscreen.wallpaper.file: /home/nmaignan/Images/Papiers\ peints/KA_KAIBARA.jpg
 gtk.theme_name: Yaru-magenta
 gtk.icon_theme_name: Papirus
 wm.gaps.inner.size: 16
