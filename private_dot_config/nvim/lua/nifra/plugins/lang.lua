@@ -59,6 +59,23 @@ return {
             { "<leader>cv", "<cmd>VenvSelect<cr>", desc = "Select [V]env" },
         },
     },
+    -- NOTE: Quarto: official plugin
+    {
+        "quarto-dev/quarto-nvim",
+        ft = "quarto",
+        keys = {
+            {
+                "<leader>cp",
+                "<Cmd>QuartoPreview<Enter>",
+                desc = "[P]review in browser",
+                ft = "quarto",
+            },
+        },
+        dependencies = {
+            "jmbuhr/otter.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+    },
     -- NOTE: Typst : preview in browser
     {
         "chomosuke/typst-preview.nvim",
