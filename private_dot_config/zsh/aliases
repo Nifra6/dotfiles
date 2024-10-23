@@ -28,6 +28,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias lg='lazygit'
 alias cm='chezmoi'
+alias py='python'
 
 
 # -- Command config

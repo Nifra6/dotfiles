@@ -114,6 +114,7 @@ return {
                 },
                 taplo = {},
                 typst_lsp = {},
+                zls = {},
             }
 
             -- NOTE: Install other tools (linters, formatters, ...)

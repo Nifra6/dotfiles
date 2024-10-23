@@ -26,6 +26,7 @@ return {
                 "vimdoc",
                 "yaml",
                 "zathurarc",
+                "zig",
             },
             auto_install = false,
             highlight = {
