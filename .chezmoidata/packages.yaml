@@ -3,7 +3,6 @@ packages:
     aur:
       - "wleave-git" # logout menu
       - "workstyle-git" # change apps icons in status bar workspaces
-      - "libva-nvidia-driver-git"
       - "amberol" # music player
       - "spotify" # music streaming
       - "vscodium" # IDE
@@ -21,15 +20,25 @@ packages:
       - "man-pages"
       - "pkgconfig"
       - "sudo"
-      - "intel-media-driver"
-      - "intel-ucode"
       - "networkmanager"
       - "pacman-contrib"
       - "pass"
       - "pkgstats"
-      - "refind"
-      - "vulkan-intel"
       - "zsh"
+      # NOTE: Boot manager
+      - "refind"
+      # NOTE: CPUs
+      - "intel-ucode" # Intel CPU updates
+      - "amd-ucode" # AMD CPU updates
+      # NOTE: Intel GPU
+      - "intel-media-driver"
+      - "vulkan-intel"
+      # NOTE: Nvidia GPU
+      - "nvidia-dkms" # the driver
+      - "nvidia-utils" # Vulkan
+      - "lib32-nvidia-utils" # Vulkan 32bits for Steam/Wine
+      - "egl-wayland" # Wayland protocol compatibility
+      - "libva-nvidia-driver" # Hardware video acceleration
       # NOTE: Languages
       - "go"
       - "lua"
@@ -71,7 +80,6 @@ packages:
       - "wofi" # launcher
       - "xdg-desktop-portal-gtk" # filepicker dbus utility
       - "xdg-desktop-portal-hyprland" # screen share dbus utility
-      - "nvidia-dkms"
       - "qt5-wayland"
       - "qt6-wayland"
       - "qt5ct"
