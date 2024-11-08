@@ -50,6 +50,7 @@ packages:
       - "python-pytorch"
       - "tensorboard"
       # NOTE: Fonts & Themes
+      - "noto-fonts"
       - "noto-fonts-cjk"
       - "noto-fonts-emoji"
       - "papirus-icon-theme"
