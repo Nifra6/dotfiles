@@ -63,7 +63,7 @@
   "hyprland/workspaces": {
     "all-outputs": true,
     "disable-scroll": true,
-    "format": "{windows}",
+    "format": "{icon}: {windows}",
     "format-window-separator": " ",
     "window-rewrite-default": "",
     "window-rewrite": {

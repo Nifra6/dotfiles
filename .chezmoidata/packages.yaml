@@ -2,10 +2,9 @@ packages:
   arch:
     aur:
       - "wleave-git" # logout menu
-      - "workstyle-git" # change apps icons in status bar workspaces
       - "amberol" # music player
       - "spotify" # music streaming
-      - "vscodium" # IDE
+      - "code" # IDE
       - "zotero-bin" # scientific biblio and article reader with annotations
       - "conda-zsh-completion" # conda auto complete for zsh
     pacman:
@@ -54,6 +53,7 @@ packages:
       - "noto-fonts-cjk"
       - "noto-fonts-emoji"
       - "papirus-icon-theme"
+      - "capitaine-cursors"
       - "ttf-jetbrains-mono-nerd" # patched JetBrains Mono font
       - "ttf-nerd-fonts-symbols" # symbols aggregator
       # NOTE: Utilities
@@ -70,7 +70,7 @@ packages:
       - "hypridle" # sleep system
       - "hyprland" # compositor
       - "hyprlock" # lock system
-      - "hyprpaper" # wallpaper
+      - "swww" # wallpaper
       - "slurp" # region selection (used with grim for example)
       - "waybar" # status bar
       - "wireplumber" # screensharing
