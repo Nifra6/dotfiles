@@ -6,7 +6,7 @@ packages:
       - "libva-nvidia-driver-git"
       - "amberol" # music player
       - "spotify" # music streaming
-      - "visual-studio-code-bin" # IDE
+      - "vscodium" # IDE
       - "zotero-bin" # scientific biblio and article reader with annotations
       - "conda-zsh-completion" # conda auto complete for zsh
     pacman:
@@ -112,7 +112,6 @@ packages:
       - "zathura" # document viewer with vi bindings
       # NOTE: Gaming
       - "steam" # steam client
-      - "gamescope" # can help with games on hyprland
       # NOTE: Plugins
       - "cinnamon-translations" # nemo translation
       - "firefox-i18n-fr" # French language for firefox
