@@ -94,10 +94,12 @@ case $DISTRO in
         source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
         source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
         ;;
-    2|3) echo 2 or 3
-    ;;
-    *) echo default
-    ;;
+    "Arch Linux")
+        # -- Suggestions and colours
+        # ---------------------------
+        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+        source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+        ;;
 esac
 
 
@@ -128,10 +130,6 @@ case $HOSTNAME in
         ;;
 
     "nascane")
-        # -- Suggestions and colours
-        # ---------------------------
-        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-        source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
         # -- Conda
         # ---------------------------
         __conda_setup="$('/home/nifra/Applications/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

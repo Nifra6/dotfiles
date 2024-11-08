@@ -63,8 +63,8 @@
   "hyprland/workspaces": {
     "all-outputs": true,
     "disable-scroll": true,
-    "format": "<sub>{icon}</sub>\n{windows}",
-    "format-window-separator": "\n",
+    "format": "{windows}",
+    "format-window-separator": " ",
     "window-rewrite-default": "",
     "window-rewrite": {
       "title<.*youtube.*>": " ",
