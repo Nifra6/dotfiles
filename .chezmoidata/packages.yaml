@@ -71,7 +71,6 @@ packages:
       - "hyprland" # compositor
       - "hyprlock" # lock system
       - "hyprpaper" # wallpaper
-      - "nwg-look" # change icons and mouse cursor
       - "slurp" # region selection (used with grim for example)
       - "waybar" # status bar
       - "wireplumber" # screensharing
@@ -80,10 +79,11 @@ packages:
       - "wofi" # launcher
       - "xdg-desktop-portal-gtk" # filepicker dbus utility
       - "xdg-desktop-portal-hyprland" # screen share dbus utility
-      - "qt5-wayland"
-      - "qt6-wayland"
-      - "qt5ct"
-      - "qt6ct"
+      - "qt5-wayland" # Qt5 with wayland compatibility
+      - "qt6-wayland" # Qt6 with wayland compatibility
+      - "nwg-look" # change icons and mouse cursor
+      - "qt5ct" # Qt5 configuration tool
+      - "qt6ct" # Qt6 configuration tool
       # NOTE: Terminal applications
       - "bat" # cat drop-in replacement
       - "chezmoi" # dotfiles manager
