@@ -1,4 +1,4 @@
-// ------------------------------------------------------------
+// -y-----------------------------------------------------------
 // ---                     waybar config                    ---
 // ------------------------------------------------------------
 {
@@ -60,23 +60,66 @@
 
   // -- Workspaces
   // ---------------------------
-  "sway/workspaces": {
-    "all-outputs": true,
-    "disable-scroll": true,
-    "format": "{icon}",
-  },
   "hyprland/workspaces": {
     "all-outputs": true,
     "disable-scroll": true,
-    "format": "{icon}",
+    "format": "<sub>{icon}</sub>\n{windows}",
+    "format-window-separator": "\n",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "title<.*youtube.*>": " ",
+      "title<.*twitch.*>": "󰕃 ",
+      "title<.*gitlab.*>": "󰮠 ",
+      "title<.*github.*>": "󰊤 ",
+      "title<.*git.*>": "󰊢 ",
+      "title<.*google.*>": "󰊭 ",
+      "class<firefox>": " ",
+      ".html": "󰌝",
+      ".cpp": "󰙲",
+      ".lua": "󰢱",
+      ".css": "󰌜",
+      ".pdf": "",
+      ".jpg": "󰈥",
+      ".png": "󰸭",
+      ".mkv": "󰈫",
+      ".mp4": "󰈫",
+      ".py": "󰌠",
+      ".md": "󰍔",
+      ".m": "󰘨",
+      "foot": "",
+      "code": "󰨞",
+      "feh": "󰋩",
+      "mpv": "",
+      "spotify": "󰓇",
+      "firefox": "󰈹",
+      "chrome": "󰊯",
+      "chromium": "󰊯",
+      "nemo": "󰝰",
+      "kitty": "",
+      "pavucontrol": "󱟛",
+      "amberol": "󰥠",
+      "libreoffice calc": "󱎏",
+      "libreoffice writer": "󱎒",
+      "libreoffice": "󰏆",
+      "zotero": "󰂺",
+      "thunderbird": "",
+      "qbittorrent": "󰛴",
+      "discord": "󰙯",
+      "picard": "󰈣",
+      "filelight": "󰃢",
+      "steam": "󰓓",
+      "lutris": "󰊗",
+      "epicgameslauncher.exe": "󰊗",
+      "vim": "",
+      "code": "",
+      "matlab": "󰘨",
+      "nmtui": "󰛳",
+      "nm-connection-editor": "󰛳",
+    },
   },
 
   // -- Compositor mode
   // ---------------------------
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>",
-  },
-
   "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>",
   },
