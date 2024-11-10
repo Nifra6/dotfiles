@@ -67,12 +67,32 @@ alias connect='kitten ssh'
 
 # -- Host specific configs
 # ---------------------------
+
+
+case $DISTRO in
+
+    "Ubuntu") 
+        # -- System functions
+        # ---------------------------
+        alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; chezmoi update -v'
+        ;;
+    "Arch Linux")
+        # -- System functions
+        # ---------------------------
+        alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && pacdiff ; chezmoi update -v'
+        # -- Replace commands
+        # ---------------------------
+        alias ls='lsd'
+        ;;
+esac
+
+
+
 case $HOSTNAME in
 
   "gonto")
     # -- System functions
     # ---------------------------
-    alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; chezmoi update -v'
     alias backup="cp -nrv /home/nmaignan/Documents/Zotero/storage /media/nmaignan/HDD Arcé ; cp -nrv /home/nmaignan/Thèse /media/nmaignan/HDD Arcé"
     alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
     # -- Misc
@@ -85,13 +105,9 @@ case $HOSTNAME in
   "nascane")
     # -- System functions
     # ---------------------------
-    alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && pacdiff ; chezmoi update -v'
     alias backup='sh ~/Applications/Scripts/backup.sh'
     alias background-cli='sh ~/Applications/Scripts/choice.sh'
-    # -- Replace commands
-    # ---------------------------
-    alias ls='lsd'
-    # -- New commands
+        # -- New commands
     # ---------------------------
     alias matlab='~/Applications/Matlab/R2023a/bin/matlab -nodesktop'
     alias matlab-gui='~/Applications/Matlab/R2023a/bin/matlab'
