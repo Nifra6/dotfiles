@@ -63,7 +63,7 @@ packages:
       - "bluez-utils" # bluetooth CLI
       - "brightnessctl" # brightness control
       - "cups-pdf" # printing drivers
-      - "pulseaudio" # sound server
+      - "pipewire" # sound server
       - "udiskie" # automount
       # NOTE: Wayland compositor
       - "dunst" # notifications
@@ -112,7 +112,7 @@ packages:
       - "mpv" # music and video player
       - "nemo" # file explorer
       - "nm-connection-editor" # GUI for connection creation & configuration (useful for vpn)
-      - "pavucontrol" # pulseaudio frontend to manage sound
+      - "pavucontrol" # audio frontend to manage sound
       - "picard" # sound file tagger (for metadata)
       - "pinta" # paint.NET like
       - "qbittorrent" # BitTorrent client
@@ -126,8 +126,7 @@ packages:
       - "firefox-i18n-fr" # French language for firefox
       - "mpv-mpris" # use playerctl with mpv
       - "networkmanager-openconnect" # plugin for Cisco vpn
-      - "pulseaudio-alsa" # plugin to manage `alsa`
-      - "pulseaudio-bluetooth" # plugin to support bluetooth with `bluez`
+      - "pipewire-pulse" # plugin to support bluetooth with `bluez`
       - "thunderbird-i18n-fr" # French language for thunderbird
       - "zathura-pdf-mupdf" # enable PDF, ePub & OpenXPS on `zathura`
       - "zsh-autosuggestions" # fish-like autosuggestions
