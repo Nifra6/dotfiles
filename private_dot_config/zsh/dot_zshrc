@@ -146,6 +146,7 @@ case $HOSTNAME in
         ;;
 
     "wrandrall")
+        rfkill unblock bluetooth
         ;;
 
     *)

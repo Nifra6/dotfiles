@@ -126,6 +126,7 @@ packages:
       - "firefox-i18n-fr" # French language for firefox
       - "mpv-mpris" # use playerctl with mpv
       - "networkmanager-openconnect" # plugin for Cisco vpn
+      - "pipewire-alsa" # plugin to support ALSA
       - "pipewire-pulse" # plugin to support bluetooth with `bluez`
       - "thunderbird-i18n-fr" # French language for thunderbird
       - "zathura-pdf-mupdf" # enable PDF, ePub & OpenXPS on `zathura`
