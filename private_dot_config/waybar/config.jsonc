@@ -84,7 +84,7 @@
       "class<*pavucontrol>": "󱟛",
       "class<Zotero>": "󰂺",
       "class<thunderbird>": "",
-      "class<*qBittorrent>": "󰛴",
+      "class<org.qbittorrent.qBittorrent>": "󰛴 ",
       "class<discord>": "󰙯",
       "class<*filelight>": "󰃢",
       "class<steam>": "󰓓",
