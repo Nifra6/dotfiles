@@ -8,7 +8,7 @@
 
   // -- Bar shape
   // ---------------------------
-  "height": 30,
+  "height": 40,
   "layer": "top",
   "position": "top",
 
@@ -24,19 +24,12 @@
   "modules-center": ["idle_inhibitor", "custom/weather", "clock", "tray"],
   "modules-right": [
     "network",
-    "custom/separation",
     "disk",
-    "custom/separation",
     "cpu",
-    "custom/separation",
     "memory",
-    "custom/separation",
     "temperature",
-    "custom/separation",
     "backlight",
-    "custom/separation",
     "pulseaudio",
-    "custom/separation",
     "battery",
   ],
 
