@@ -8,6 +8,7 @@
   border-radius: 0;
   font-family: "Symbols Nerd Font", "Noto Sans";
   font-size: 15px;
+  color: #ffffff;
 }
 
 /* Styles for the bar itself */
@@ -32,20 +33,18 @@ tooltip label {
   border-radius: 0 0 28px 28px;
   margin-bottom: 5px;
   padding: 5px 10px;
-  color: #ffffff;
 }
 .modules-right {
   background-color: rgba(100, 100, 100, 0.9);
   border-radius: 28px;
-  margin: 8px 8px 12px;
+  margin: 6px;
 }
 
 /* Styles for the left group */
 #custom-system {
   background-color: #1793d1;
   border-radius: 50%;
-  color: #ffffff;
-  font-size: 30px;
+  font-size: 20px;
   padding: 5px;
   margin: 0px 5px;
 }
@@ -53,9 +52,9 @@ tooltip label {
   background-color: #87ceeb;
   border-radius: 15px;
   color: #2a5c45;
-  margin: 5px 5px;
   min-width: 18px;
   padding: 5px;
+  margin: 0px 5px;
 }
 #custom-media {
   background-color: #66cc99;
@@ -87,7 +86,6 @@ tooltip label {
 #backlight,
 #pulseaudio {
   padding: 0 7px;
-  color: #ffffff;
 }
 /* disk style */
 #disk.warning {
@@ -104,7 +102,6 @@ tooltip label {
 /* battery style */
 #battery {
   border-radius: 15px 0 0 15px;
-  color: #ffffff;
   padding: 0 7px;
 }
 #battery.charging {
@@ -126,7 +123,6 @@ tooltip label {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #ffffff;
   border-bottom: 3px solid transparent;
 }
 
@@ -159,64 +155,3 @@ tooltip label {
 window#waybar.hidden {
   opacity: 0.2;
 }
-
-/*
-#battery {
-    background-color: #ffffff;
-    color: rgba(0, 0, 0, 0.8);
-    margin: 0;
-}
-
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation: blink 0.5s linear infinite alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#cpu {
-    background-color: #bf4242;
-    margin: 0;
-}
-
-#memory {
-    background-color: #3ab296;
-    margin: 0;
-}
-
-#backlight {
-    background-color: #f5e653;
-    color: rgba(50, 50, 50, 0.9);
-    margin: 0;
-}
-
-#network {
-    margin-bottom: 1px;
-}
-#pulseaudio {
-    background-color: #ad3897;
-    margin: 0;
-}
-
-
-#temperature {
-    color: rgba(50, 50, 50, 0.8);
-    background-color: rgb(243, 156, 18);
-    margin: 0;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-*/
