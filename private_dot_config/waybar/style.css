@@ -2,7 +2,7 @@
  * Waybar Style File
  */
 
-/* Global Configuration */
+/* === Global Configuration === */
 * {
   border: none;
   border-radius: 0;
@@ -10,12 +10,12 @@
   font-size: 15px;
 }
 
-/* Styles for the bar itself */
+/* === Bar Styling === */
 window#waybar {
   background-color: rgba(0, 86, 53, 0);
 }
 
-/* Tooltip when hover modules */
+/* === Tooltip Styling === */
 tooltip {
   border-radius: 12px;
 }
@@ -24,32 +24,33 @@ tooltip label {
   font-family: "Symbols Nerd Font", "Noto Sans Mono";
 }
 
+/* === Module Groups === */
 .modules-left {
-  margin: 5px 0px;
-  color: #ffffff;
+  margin: 5px 0;
+  color: white;
 }
 .modules-center {
   background-color: rgba(155, 89, 182, 0.9);
   border-radius: 0 0 28px 28px;
   margin-bottom: 10px;
-  padding: 0px 10px;
-  color: #ffffff;
+  padding: 0 10px;
+  color: white;
 }
 .modules-right {
   background-color: rgba(100, 100, 100, 0.9);
   border-radius: 28px;
   margin: 5px 8px;
-  color: #ffffff;
+  color: white;
 }
 
-/* Styles for the left group */
+/* === Left Group Modules === */
 #custom-system {
   background-color: #1793d1;
   border-radius: 50%;
   font-size: 22px;
   min-width: 30px;
   min-height: 30px;
-  margin: 0px 8px;
+  margin: 0 8px;
 }
 #custom-pacman,
 #custom-media {
@@ -59,27 +60,23 @@ tooltip label {
   margin: 2px 5px;
 }
 #custom-pacman {
-  min-width: 18px;
   background-color: #87ceeb;
+  min-width: 18px;
 }
 #custom-media {
   background-color: #66cc99;
   min-width: 60px;
 }
 
-/* Styles for the center group */
-#idle_inhibitor {
-}
+/* === Center Group Modules === */
 #custom-weather {
   padding-left: 10px;
 }
 #clock {
   padding-right: 10px;
 }
-#tray {
-}
 
-/* Styles for the right group */
+/* === Right Group Modules === */
 #network,
 #disk,
 #cpu,
@@ -98,27 +95,18 @@ tooltip label {
 #battery {
   border-left: 1px solid white;
 }
-/* disk style */
-#disk.warning {
-  background-color: #ffff66;
-  color: #2a5c45;
-}
-#disk.critical {
-  background-color: #f53c3c;
-}
 #network {
   border-right: 1px solid white;
 }
-#network.disconnected {
-  background-color: #f53c3c;
-}
-/* battery style */
 #battery {
   border-left: 1px solid white;
   padding: 0 7px;
 }
-/* alternatives form */
+
+/* === Conditional Styling === */
 #network.disconnected,
+#disk.warning,
+#disk.critical,
 #battery.charging,
 #battery.warning,
 #battery.critical {
@@ -128,52 +116,44 @@ tooltip label {
 #battery.charging {
   background-color: #26a65b;
 }
+
+#disk.warning,
 #battery.warning:not(.charging) {
   background-color: #ffff66;
   color: #2a5c45;
 }
+#network.disconnected,
+#disk.critical,
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
 }
 
+/* === Workspaces Styling === */
 #workspaces {
   padding-left: 5px;
 }
-
-/* Styles for Workspace Buttons */
 #workspaces button {
-  color: #ffffff;
+  color: white;
   padding: 0 5px;
   background-color: transparent;
   border-bottom: 3px solid transparent;
 }
-
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
   box-shadow: inherit;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid white;
 }
-
 #workspaces button.active {
   background-color: #64727d;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid white;
 }
-
 #workspaces button.urgent {
   background-color: #eb4d4b;
 }
 
-/* Styles for Mode and Submap */
+/* === Mode and Submap Styling === */
 #mode,
 #submap {
   background-color: #64727d;
-  border-bottom: 3px solid #ffffff;
-}
-
-/* Styles for Different Modules */
-/* Styles for Specific Modules */
-
-/* Styles for Hidden Waybar Window */
-window#waybar.hidden {
-  opacity: 0.2;
+  border-bottom: 3px solid white;
 }
