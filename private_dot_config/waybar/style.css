@@ -86,9 +86,17 @@ tooltip label {
 #memory,
 #temperature,
 #backlight,
-#pulseaudio {
-  border-left: 1px solid white;
+#pulseaudio,
+#battery {
   padding: 0 7px;
+}
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#pulseaudio,
+#battery {
+  border-left: 1px solid white;
 }
 /* disk style */
 #disk.warning {
@@ -99,21 +107,23 @@ tooltip label {
   background-color: #f53c3c;
 }
 #network {
-  border: none;
+  border-right: 1px solid white;
 }
 #network.disconnected {
   background-color: #f53c3c;
-  border-radius: 15px;
 }
 /* battery style */
 #battery {
   border-left: 1px solid white;
   padding: 0 7px;
 }
+/* alternatives form */
+#network.disconnected,
 #battery.charging,
-#battery.warning {
+#battery.warning,
+#battery.critical {
+  border-radius: 15px;
   border: none;
-  border-radius: 15px 0 0 15px;
 }
 #battery.charging {
   background-color: #26a65b;
