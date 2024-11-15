@@ -24,61 +24,61 @@ tooltip label {
   font-family: "Symbols Nerd Font", "Noto Sans Mono";
 }
 
-/* Styles for the left group */
 .modules-left {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0px;
 }
+.modules-center {
+  background-color: rgba(155, 89, 182, 0.9);
+  border-radius: 0 0 28px 28px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+}
+.modules-right {
+  background-color: rgba(100, 100, 100, 0.9);
+  border-radius: 28px;
+  margin: 8px 8px 12px;
+}
+
+/* Styles for the left group */
 #custom-system {
   background-color: #1793d1;
-  border-radius: 0 28px 28px 0;
+  border-radius: 50%;
   color: #ffffff;
-  font-size: 28px;
-  padding: 0 8px 0 4px;
+  font-size: 30px;
+  padding: 5px;
+  margin: 0px 5px;
 }
 #custom-pacman {
   background-color: #87ceeb;
   border-radius: 15px;
   color: #2a5c45;
-  margin-bottom: 3px;
-  margin-left: 5px;
+  margin: 5px 5px;
   min-width: 18px;
-  padding: 0 5px;
+  padding: 5px;
 }
 #custom-media {
   background-color: #66cc99;
   border-radius: 15px;
   color: #2a5c45;
-  margin-bottom: 3px;
-  margin-left: 5px;
+  margin: 5px 5px;
   min-width: 60px;
   padding: 0 5px;
 }
 
 /* Styles for the center group */
-.modules-center {
-  background-color: rgba(155, 89, 182, 0.9);
-  border-radius: 0 0 28px 28px;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
 #idle_inhibitor {
-  padding: 0 12px;
 }
 #custom-weather {
+  padding-left: 10px;
 }
 #clock {
+  padding-right: 10px;
 }
 #tray {
-  padding: 0 12px;
 }
 
 /* Styles for the right group */
-.modules-right {
-  background-color: rgba(100, 100, 100, 0.9);
-  border-radius: 28px;
-  margin: 5px;
-}
 #network,
 #disk,
 #cpu,
