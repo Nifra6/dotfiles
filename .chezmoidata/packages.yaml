@@ -65,6 +65,7 @@ packages:
       - "cups-pdf" # printing drivers
       - "pipewire" # sound server
       - "udiskie" # automount
+      - "v4l2loopback-dkms" # virtual camera
       # NOTE: Wayland compositor
       - "dunst" # notifications
       - "grim" # screenshot
@@ -112,6 +113,7 @@ packages:
       - "mpv" # music and video player
       - "nemo" # file explorer
       - "nm-connection-editor" # GUI for connection creation & configuration (useful for vpn)
+      - "obs-studio" # streaming app
       - "pavucontrol" # audio frontend to manage sound
       - "picard" # sound file tagger (for metadata)
       - "pinta" # paint.NET like
