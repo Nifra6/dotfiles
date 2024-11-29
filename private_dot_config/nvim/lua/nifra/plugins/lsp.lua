@@ -7,8 +7,8 @@ return {
             { "williamboman/mason.nvim", config = true },
             "williamboman/mason-lspconfig.nvim",
             "WhoIsSethDaniel/mason-tool-installer.nvim",
-            { "j-hui/fidget.nvim", opts = {} },
-            { "folke/neodev.nvim", opts = {} },
+            { "j-hui/fidget.nvim",       opts = {} },
+            { "folke/neodev.nvim",       opts = {} },
         },
         config = function()
             -- NOTE: Attach LSP to the buffer
@@ -84,6 +84,8 @@ return {
 
             -- NOTE: Enable language servers
             local servers = {
+                dockerls = {},
+                docker_compose_language_service = {},
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
                 marksman = {},
                 matlab_ls = {
@@ -120,12 +122,13 @@ return {
             -- NOTE: Install other tools (linters, formatters, ...)
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
-                "beautysh", -- Used to format sh, bash
+                "beautysh",     -- Used to format sh, bash
+                "hadolint",     -- Used to lint dockerfile
                 "markdownlint", -- Used to lint Markdown
-                "prettier", -- Used to format Markdown
-                "shellcheck", -- Used to format sh, bash
-                "stylua", -- Used to format Lua code
-                "typos", -- Used to lint typos
+                "prettier",     -- Used to format Markdown
+                "shellcheck",   -- Used to format sh, bash
+                "stylua",       -- Used to format Lua code
+                "typos",        -- Used to lint typos
             })
 
             require("mason").setup()
