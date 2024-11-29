@@ -114,5 +114,10 @@ case $HOSTNAME in
     alias ssh_gonto="kitten ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
     ;;
 
+  "wrandrall")
+    alias ssh_gonto="kitten ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
+    ;;
+
+
 esac
 
