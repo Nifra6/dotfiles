@@ -65,6 +65,7 @@ packages:
       - "brightnessctl" # brightness control
       - "cups-pdf" # printing drivers
       - "docker" # container management
+      - "docker-buildx" # container builder
       - "docker-compose" # connect container images
       - "pipewire" # sound server
       - "udiskie" # automount

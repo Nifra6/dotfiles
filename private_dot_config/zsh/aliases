@@ -20,6 +20,11 @@ alias cat='bat'
 alias la='ls -A'
 alias ll='ls -Al'
 
+# -- docker aliases
+# ---------------------------
+alias d='docker'
+alias dc='docker container ls'
+alias di='docker image ls'
 
 # -- Alt names
 # ---------------------------
