@@ -117,7 +117,7 @@ packages:
       - "kitty" # terminal emulator
       - "libreoffice-fresh-fr" # office suite, in French
       - "mpv" # music and video player
-      - "nemo" # file explorer
+      - "nautilus" # file explorer
       - "nm-connection-editor" # GUI for connection creation & configuration (useful for vpn)
       - "pavucontrol" # audio frontend to manage sound
       - "picard" # sound file tagger (for metadata)
