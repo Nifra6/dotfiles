@@ -109,10 +109,10 @@ packages:
       - "neovim" # file editor and IDE
       - "ranger" # file explorer
       # NOTE: Graphical applications
+      - "baobab" # disk usage in pie form
       - "chromium" # web browser
       - "discord" # social app
       - "feh" # image viewer
-      - "filelight" # disk usage in pie form
       - "firefox" # web browser
       - "kitty" # terminal emulator
       - "libreoffice-fresh-fr" # office suite, in French
