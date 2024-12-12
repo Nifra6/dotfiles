@@ -69,6 +69,7 @@ packages:
       - "docker-compose" # connect container images
       - "gnome-keyring" # password storing - needed by proton bridge
       - "pipewire" # sound server
+      - "polkit-kde-agent" # authentification deamon
       - "udiskie" # automount
       - "v4l2loopback-dkms" # virtual camera
       # NOTE: Wayland compositor
@@ -118,7 +119,6 @@ packages:
       - "mpv" # music and video player
       - "nemo" # file explorer
       - "nm-connection-editor" # GUI for connection creation & configuration (useful for vpn)
-      - "obs-studio" # streaming app
       - "pavucontrol" # audio frontend to manage sound
       - "picard" # sound file tagger (for metadata)
       - "pinta" # paint.NET like

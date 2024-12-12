@@ -65,6 +65,7 @@
       "class<firefox> title<.*gitlab.*>": "󰮠 ",
       "class<firefox> title<.*github.*>": "󰊤 ",
       "class<firefox> title<.*google.*>": "󰊭 ",
+      "class<firefox> title<.*lemonde.*>": "󰎕 ",
       "class<firefox>": "󰈹 ",
       "class<kitty> title<v>": " ",
       "class<kitty>": " ",
