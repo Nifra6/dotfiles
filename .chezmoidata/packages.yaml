@@ -24,7 +24,8 @@ packages:
       - "pass"
       - "pkgstats"
       - "zsh"
-      # NOTE: Boot manager
+      # NOTE: Boot/login manager
+      - "gdm"
       - "refind"
       # NOTE: CPUs
       - "intel-ucode" # Intel CPU updates
