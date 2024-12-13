@@ -4,7 +4,6 @@ packages:
       - "wleave-git" # logout menu
       - "amberol" # music player
       - "spotify" # music streaming
-      - "code" # IDE
       - "zotero-bin" # scientific biblio and article reader with annotations
       - "conda-zsh-completion" # conda auto complete for zsh
     pacman:
@@ -111,6 +110,7 @@ packages:
       # NOTE: Graphical applications
       - "baobab" # disk usage in pie form
       - "chromium" # web browser
+      - "code" # IDE
       - "discord" # social app
       - "feh" # image viewer
       - "firefox" # web browser
