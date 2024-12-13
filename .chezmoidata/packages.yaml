@@ -1,12 +1,11 @@
 packages:
   arch:
     aur:
-      - "wleave-git" # logout menu
-      - "amberol" # music player
-      - "spotify" # music streaming
-      - "code" # IDE
-      - "zotero-bin" # scientific biblio and article reader with annotations
       - "conda-zsh-completion" # conda auto complete for zsh
+      - "gdm-settings" # configure gdm
+      - "spotify" # music streaming
+      - "wleave-git" # logout menu
+      - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
       # NOTE: Essential / system packages
       - "base"
@@ -110,8 +109,10 @@ packages:
       - "neovim" # file editor and IDE
       - "ranger" # file explorer
       # NOTE: Graphical applications
+      - "amberol" # music player
       - "baobab" # disk usage in pie form
       - "chromium" # web browser
+      - "code" # IDE
       - "discord" # social app
       - "feh" # image viewer
       - "firefox" # web browser
