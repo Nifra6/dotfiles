@@ -22,6 +22,17 @@ return {
             sign_priority = 8,
         },
     },
+    -- NOTE: Highlight colors
+    {
+        "NvChad/nvim-colorizer.lua",
+        event = "BufReadPre",
+        opts = {
+            filetypes = {
+                "*",
+                css = { rgb_fn = true },
+            },
+        },
+    },
     -- NOTE: Comfort editor
     {
         "folke/zen-mode.nvim",
