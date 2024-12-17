@@ -11,12 +11,6 @@
 
 ![exemple](ressources/exemple.png)
 
-[![swordsShoutout](ressources/_TwitchShoutout.png)](https://swordscomic.com)
-
-</details>
-> ⚠️
-> I need to retake a screenshot.
-
 ## What can you expect
 
 Bad casual english and some french in dotfiles. Bc I'm french, yup.
