@@ -11,6 +11,8 @@
 
 ![exemple](ressources/exemple.png)
 
+</details>
+
 ## What can you expect
 
 Bad casual english and some french in dotfiles. Bc I'm french, yup.
