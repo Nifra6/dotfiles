@@ -21,7 +21,13 @@
     "custom/media",
     "hyprland/submap",
   ],
-  "modules-center": ["idle_inhibitor", "custom/weather", "clock", "tray"],
+  "modules-center": [
+    "idle_inhibitor",
+    "custom/weather",
+    "clock#date",
+    "clock#hour",
+    "tray",
+  ],
   "modules-right": [
     "network",
     "disk",
@@ -32,11 +38,6 @@
     "pulseaudio",
     "battery",
   ],
-
-  "custom/separation": {
-    "format": "|",
-    "tooltip": false,
-  },
 
   // --------------------------------------------------------
   // ---                left modules config               ---
@@ -75,6 +76,7 @@
       "class<nemo>": "󰝰 ",
       "class<Spotify>": "󰓇 ",
       "class<Chromium>": "󰊯 ",
+      "class<Brave-browser>": "󰊯 ",
       "class<*pavucontrol>": "󱟛",
       "class<Zotero>": "󰂺",
       "class<thunderbird>": "",
@@ -147,7 +149,7 @@
   // ---------------------------
   "custom/weather": {
     "exec": "python $HOME/.config/waybar/weather/weather.py",
-    "format": "{} |",
+    "format": "{}",
     "interval": 600,
     "return-type": "json",
     "tooltip": true,
@@ -155,10 +157,33 @@
 
   // -- Clock
   // ---------------------------
-  "clock": {
-    "format": " {:L%A %d %B | %H:%M}",
+  "clock#date": {
+    "format": "{:L%A %d %B} ",
     "locale": "fr_FR.utf8",
     "timezone": "Europe/Paris",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+    },
+  },
+  "clock#hour": {
+    "format": " {:%H:%M}",
+    "locale": "fr_FR.utf8",
+    "timezone": "Europe/Paris",
+    "tooltip": false,
   },
 
   // -- System tray

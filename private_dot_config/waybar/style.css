@@ -69,11 +69,15 @@ tooltip label {
 }
 
 /* === Center Group Modules === */
-#custom-weather {
-  padding-left: 10px;
+#idle_inhibitor,
+#custom-weather,
+#clock.date,
+#clock.hour {
+  padding: 0 7px;
+  border-right: 1px solid gray;
 }
-#clock {
-  padding-right: 10px;
+#tray {
+  padding: 0 7px;
 }
 
 /* === Right Group Modules === */
