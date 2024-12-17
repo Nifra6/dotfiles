@@ -12,7 +12,13 @@ return {
             {
                 "<leader>cp",
                 "<Cmd>VimtexCompile<Enter>",
-                desc = "[P]rint the document",
+                desc = "[P]review the document",
+                ft = "tex",
+            },
+            {
+                "<leader>cg",
+                "<Cmd>VimtexView<Enter>",
+                desc = "[G]o to this line in preview",
                 ft = "tex",
             },
         },
