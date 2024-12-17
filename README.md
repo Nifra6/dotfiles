@@ -9,7 +9,7 @@
 <details>
 <summary>Desktop example</summary>
 
-![exemple](ressources/exemple.jpg)
+![exemple](ressources/exemple.png)
 
 [![swordsShoutout](ressources/_TwitchShoutout.png)](https://swordscomic.com)
 
@@ -23,19 +23,19 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
 ## What I use on my setup
 
-| Need                | Answer                                                                               | Comments                                                               |
-| ------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| Distribution        | [Arch](https://archlinux.org/)                                                       | love it or hate it, I love it                                          |
-| Compositor          | [Hyprland](https://hyprland.org/)                                                    | tile manager that hype me                                              |
-| Statusbar           | [waybar](https://github.com/Alexays/Waybar)                                          | just perfect                                                           |
-| Wallpaper daemon    | [swww](https://github.com/LGFae/swww)                                                | dynamic and beautiful transitions                                      |
-| Notification daemon | [dunst](https://dunst-project.org/)                                                  | a little complicated to configure from scratch                         |
-| Logout Utility      | [wleave](https://github.com/AMNatty/wleave)                                          | I prefer this fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) |
-| Shell               | [zsh](https://www.zsh.org/) (without oh-my-zsh)                                      | better config than bash, more DIY than fish                            |
-| File Manager        | CLI : [ranger](https://ranger.fm/) / GUI : [nemo](https://github.com/linuxmint/nemo) | ranger -> vim motion for the win                                       |
-| Terminal Emulator   | [kitty](https://sw.kovidgoyal.net/kitty/)                                            | tiling and tabs included, pretty powerfull                             |
-| IDE                 | [neovim](https://neovim.io/) with [lazy.vim](https://github.com/folke/lazy.nvim)     | Config is working even if not super clean                              |
-| Git TUI             | [lazygit](https://github.com/jesseduffield/lazygit)                                  | intuitive and powerfull, with vim motions                              |
+| Need                | Answer                                                                                     | Comments                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| Distribution        | [Arch](https://archlinux.org/)                                                             | love it or hate it, I love it                                          |
+| Compositor          | [Hyprland](https://hyprland.org/)                                                          | tile manager that hype me                                              |
+| Statusbar           | [waybar](https://github.com/Alexays/Waybar)                                                | just perfect                                                           |
+| Wallpaper daemon    | [swww](https://github.com/LGFae/swww)                                                      | dynamic and beautiful transitions                                      |
+| Notification daemon | [dunst](https://dunst-project.org/)                                                        | a little complicated to configure from scratch                         |
+| Logout Utility      | [wleave](https://github.com/AMNatty/wleave)                                                | I prefer this fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) |
+| Shell               | [zsh](https://www.zsh.org/) (without oh-my-zsh)                                            | better config than bash, more DIY than fish                            |
+| File Manager        | CLI : [ranger](https://ranger.fm/) / GUI : [nautilus](https://apps.gnome.org/fr/Nautilus/) | ranger -> vim motion for the win                                       |
+| Terminal Emulator   | [kitty](https://sw.kovidgoyal.net/kitty/)                                                  | tiling and tabs included, pretty powerfull                             |
+| IDE                 | [neovim](https://neovim.io/) with [lazy.vim](https://github.com/folke/lazy.nvim)           | Config is working even if not super clean                              |
+| Git TUI             | [lazygit](https://github.com/jesseduffield/lazygit)                                        | intuitive and powerfull, with vim motions                              |
 
 ## What I accomodate with at work
 
@@ -43,7 +43,6 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 | ------------------- | ---------------------------------------------------- | ------------------------------------ |
 | Distribution        | Ubuntu 22.04                                         | canonical not the best, apt outdated |
 | Desktop Environment | [Regolith](https://regolith-desktop.com/) (i3 as TM) | i dn't want issues with the GPU      |
-| File Manager (GUI)  | the gnome thing                                      | ... it works. Nothing to say         |
 
 ## Installation
 
