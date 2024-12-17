@@ -116,7 +116,7 @@ return {
                     end,
                 },
                 taplo = {},
-                typst_lsp = {},
+                tinymist = {},
                 zls = {},
             }
 
