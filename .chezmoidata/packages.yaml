@@ -3,7 +3,6 @@ packages:
     aur:
       - "brave-bin" # chromium based browser
       - "conda-zsh-completion" # conda auto complete for zsh
-      - "gdm-settings" # configure gdm
       - "spotify" # music streaming
       - "wleave-git" # logout menu
       - "quarto-cli-bin" # Quarto language binary
@@ -25,8 +24,7 @@ packages:
       - "pass"
       - "pkgstats"
       - "zsh"
-      # NOTE: Boot/login manager
-      - "gdm"
+      # NOTE: Boot manager
       - "refind"
       # NOTE: CPUs
       - "intel-ucode" # Intel CPU updates
