@@ -5,6 +5,7 @@ packages:
       - "gdm-settings" # configure gdm
       - "spotify" # music streaming
       - "wleave-git" # logout menu
+      - "quarto-cli-bin" # Quarto language binary
       - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
       # NOTE: Essential / system packages
