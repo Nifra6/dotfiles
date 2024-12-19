@@ -1,6 +1,7 @@
 packages:
   arch:
     aur:
+      - "brave-bin" # chromium based browser
       - "conda-zsh-completion" # conda auto complete for zsh
       - "gdm-settings" # configure gdm
       - "spotify" # music streaming
@@ -112,7 +113,6 @@ packages:
       # NOTE: Graphical applications
       - "amberol" # music player
       - "baobab" # disk usage in pie form
-      - "chromium" # web browser
       - "code" # IDE
       - "discord" # social app
       - "feh" # image viewer
