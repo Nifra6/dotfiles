@@ -33,16 +33,6 @@ return {
             },
         },
     },
-    -- NOTE: Comfort editor
-    {
-        "folke/zen-mode.nvim",
-        opts = {
-            kitty = { enabled = true },
-        },
-        keys = {
-            { "<leader>z", "<Cmd>ZenMode<CR>", desc = "[Z]enMode" },
-        },
-    },
     -- NOTE: Git indications
     {
         "lewis6991/gitsigns.nvim",
