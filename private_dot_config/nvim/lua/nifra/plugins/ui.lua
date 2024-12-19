@@ -214,13 +214,13 @@ return {
         end,
         opts = {
             spec = {
-                { "<leader>c", group = "[C]ode", icon = "󱋆 " },
+                { "<leader>c", mode = "n", group = "[C]ode", icon = "󱋆 " },
+                { "<leader>c", mode = "v", group = "[C]omment", icon = "󰅺 " },
                 { "<leader>c_", hidden = true },
                 { "<leader>ca", icon = "󰦻 " },
-                { "<leader>cb", mode = { "v" }, icon = "󰆈 " },
-                { "<leader>cc", mode = { "v" }, icon = "󰆄 " },
-                { "<leader>cb", mode = { "n" }, hidden = true },
-                { "<leader>cc", mode = { "n" }, hidden = true },
+                { "<leader>cb", mode = "v", icon = "󰆈 " },
+                { "<leader>cb", mode = "n", hidden = true },
+                { "<leader>cc", mode = { "n", "v" }, icon = "󰆄 " },
                 { "<leader>cf", icon = "󱕅 " },
                 { "<leader>cp", icon = "󰨇 " },
                 { "<leader>d", group = "[D]ebug", icon = " " },

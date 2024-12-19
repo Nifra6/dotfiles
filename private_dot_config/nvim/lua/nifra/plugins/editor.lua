@@ -53,8 +53,12 @@ return {
         "numToStr/Comment.nvim",
         event = { "BufNewFile", "BufReadPost" },
         opts = {
+            mappings = {
+                basic = true,
+                extra = false,
+            },
             opleader = { line = "<Leader>cc", block = "<Leader>cb" },
-            toggler = { line = "<Leader>ccc", block = "<Leader>cbc" },
+            toggler = { line = "<Leader>cc" },
         },
     },
     -- NOTE: Harpoon files to have easy access
