@@ -9,3 +9,5 @@ cat > "$SETTINGS_FILE" <<EOL
   "SKIP_HOST_UPDATE": true
 }
 EOL
+
+echo "Dotfiles: Settings file created at $SETTINGS_FILE"

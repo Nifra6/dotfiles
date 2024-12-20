@@ -42,11 +42,6 @@ Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
 ## Installation
 
-> ⚠️
-> A symlink is needed : `ln -s ~/.config/zsh/.zshenv ~/.zshenv`, once you have cloned the repo.
->
-> Note to myself: I need to automatise this with a template.
-
 ### Arch Linux :
 
 ```BASH
