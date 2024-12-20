@@ -116,11 +116,11 @@ case $HOSTNAME in
     # ---------------------------
     alias matlab='~/Applications/Matlab/R2023a/bin/matlab -nodesktop'
     alias matlab-gui='~/Applications/Matlab/R2023a/bin/matlab'
-    alias ssh_gonto="kitten ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
+    alias ssh_gonto="ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
     ;;
 
   "wrandrall")
-    alias ssh_gonto="kitten ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
+    alias ssh_gonto="ssh nmaignan@gonto -L 8008:localhost:8008 -X -t 'zsh -l'"
     ;;
 
 
