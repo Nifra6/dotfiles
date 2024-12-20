@@ -68,6 +68,7 @@
       "class<firefox> title<.*google.*>": "󰊭 ",
       "class<firefox> title<.*lemonde.*>": "󰎕 ",
       "class<firefox>": "󰈹 ",
+      "class<heroic>": "󰊖 ",
       "class<kitty> title<v>": " ",
       "class<kitty>": " ",
       "class<code-oss>": "󰨞 ",
@@ -86,6 +87,8 @@
       "class<discord>": "󰙯",
       "class<*filelight>": "󰃢",
       "class<steam>": "󰓓",
+      "class<wineboot.exe>": "󰡶 ",
+      "class<factorio>": "󰊖 ",
     },
   },
 

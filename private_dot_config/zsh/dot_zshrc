@@ -132,6 +132,9 @@ case $HOSTNAME in
         zstyle ":conda_zsh_completion:*" show-global-envs-first true
         ;;
 
+    "nascane")
+        ;;
+
     "wrandrall")
         rfkill unblock bluetooth
         ;;
