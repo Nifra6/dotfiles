@@ -26,7 +26,8 @@ return {
     -- NOTE: Markdown : preview in browser
     {
         "iamcco/markdown-preview.nvim",
-        ft = "markdown",
+        ft = { "markdown" },
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         keys = {
             {
                 "<leader>cp",
@@ -35,8 +36,10 @@ return {
                 ft = "markdown",
             },
         },
-        build = function()
-            vim.fn["mkdp#util#install"]()
+
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
         end,
     },
     -- NOTE: Markdown : preview in vim
