@@ -16,20 +16,14 @@ return {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
                 callback = function(event)
                     local map = function(keys, func, desc)
-                        vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc .. " (LSP)" })
+                        vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc })
                     end
 
                     -- NOTE: Go to ...
                     map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
                     map("<leader>gd", require("telescope.builtin").lsp_definitions, "[D]efinition")
-                    map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-                    map("<leader>gD", vim.lsp.buf.declaration, "[D]eclaration")
                     map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
                     map("<leader>gr", require("telescope.builtin").lsp_references, "[R]eferences")
-                    map("<S-j>", require("telescope.builtin").lsp_references, "References")
-                    map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-                    map("<leader>gi", require("telescope.builtin").lsp_implementations, "[I]mplementation")
-                    map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "[T]ype Definition")
 
                     -- NOTE: Symbols
                     map("<leader>sr", vim.lsp.buf.rename, "[R]ename symbol")
