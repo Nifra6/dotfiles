@@ -25,6 +25,10 @@ opt.smartindent = true
 opt.autoindent = true
 opt.breakindent = true
 
+-- NOTE: Folding
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- NOTE: Spelling
 opt.spelllang = { "en", "fr" }
 opt.spell = true
