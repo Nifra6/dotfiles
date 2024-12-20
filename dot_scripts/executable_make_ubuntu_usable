@@ -27,15 +27,6 @@ if ! command -v poetry > /dev/null 2>&1; then
     curl -sSL https://install.python-poetry.org | python3 -
 fi
 
-# Miniconda
-if ! command -v conda > /dev/null 2>&1; then
-    MINICONDA_DIR="$HOME/Applications/miniconda3"
-    mkdir -p "$MINICONDA_DIR"
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_DIR"/miniconda.sh
-    bash "$MINICONDA_DIR"/miniconda.sh -b -u -p "$MINICONDA_DIR"
-    rm -rf "$MINICONDA_DIR"/miniconda.sh
-fi
-
 # Nerd Fonts
 if [ "$(fc-list | grep -ci 'JetBrainsMono Nerd Font')" -eq 0 ]; then
     zsh ~/.scripts/nerd_fonts_install.bash
