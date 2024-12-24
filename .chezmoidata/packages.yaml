@@ -40,6 +40,10 @@ packages:
       - "lib32-nvidia-utils" # Vulkan 32bits for Steam/Wine
       - "egl-wayland" # Wayland protocol compatibility
       - "libva-nvidia-driver" # Hardware video acceleration
+      # NOTE: Print drivers
+      - "cups" # print drivers
+      - "cups-pdf" # PDF printer
+      - "hplip" # drivers for HP printers
       # NOTE: Languages
       - "go"
       - "texlive-meta"
@@ -65,7 +69,6 @@ packages:
       - "blueman" # bluetooth GUI with tray
       - "bluez-utils" # bluetooth CLI
       - "brightnessctl" # brightness control
-      - "cups-pdf" # printing drivers
       - "docker" # container management
       - "docker-buildx" # container builder
       - "docker-compose" # connect container images
@@ -101,7 +104,7 @@ packages:
       - "git" # vcs
       - "lsd" # ls drop-in replacement
       - "neofetch" # system information viewer
-      - "p7zip" # archiver for .zip, .7z, .rar, ...
+      - "7zip" # archiver for .zip, .7z, .rar, ...
       - "playerctl" # mpris media controller
       - "ripgrep" # similar to grep, alias to rg
       - "wget" # better download than curl
