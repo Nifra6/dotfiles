@@ -78,6 +78,7 @@ packages:
       - "udiskie" # automount
       - "v4l2loopback-dkms" # virtual camera
       # NOTE: Wayland compositor
+      - "cliphist" # clipboard manager
       - "dunst" # notifications
       - "grim" # screenshot
       - "hypridle" # sleep system
