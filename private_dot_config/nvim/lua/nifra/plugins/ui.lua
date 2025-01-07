@@ -222,6 +222,7 @@ return {
                 { "<leader>cb", mode = "n", hidden = true },
                 { "<leader>cc", mode = { "n", "v" }, icon = "󰆄 " },
                 { "<leader>cf", icon = "󱕅 " },
+                { "<leader>cg", icon = "󰈦 " },
                 { "<leader>cp", icon = "󰨇 " },
                 { "<leader>d", group = "[D]ebug", icon = " " },
                 { "<leader>d_", hidden = true },
