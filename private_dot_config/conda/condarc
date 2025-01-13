@@ -1,2 +1,6 @@
 auto_activate_base: false
 solver: libmamba
+channels:
+    - pytorch
+    - conda-forge
+    - defaults
