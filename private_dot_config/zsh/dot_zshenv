@@ -36,10 +36,3 @@ fi
 if [[ $DISTRO = "Ubuntu" ]]; then
     export PATH=/snap/node/current/bin:$PATH
 fi
-
-# -- Hyprland
-# ---------------------------
-if [[ $DISTRO = "Arch Linux" && -z "${WAYLAND_DISPLAY}" && "${XDG_VTNR}" -eq 1 ]]; then
-    exec Hyprland
-fi
-
