@@ -13,10 +13,10 @@ x-scheme-handler/mailto=userapp-Thunderbird-4UGBZ2.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-4UGBZ2.desktop;
 
 [Default Applications]
-x-scheme-handler/http=brave.desktop
-x-scheme-handler/https=brave.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/chrome=brave.desktop
-text/html=brave.desktop
+text/html=brave-browser.desktop
 application/x-extension-htm=brave.desktop
 application/x-extension-html=brave.desktop
 application/x-extension-shtml=brave.desktop
@@ -72,3 +72,5 @@ audio/vnd.wave=mpv.desktop
 audio/mpeg=mpv.desktop
 audio/x-adpcm=mpv.desktop
 audio/ac3=mpv.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
