@@ -31,11 +31,11 @@
   "modules-right": [
     "network",
     "disk",
-    "cpu",
-    "memory",
-    "temperature",
-    "backlight",
+    // "cpu",
+    // "memory",
+    // "temperature",
     "pulseaudio",
+    "backlight",
     "battery",
   ],
 
