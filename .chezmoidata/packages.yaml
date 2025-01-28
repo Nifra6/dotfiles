@@ -4,9 +4,10 @@ packages:
       - "brave-bin" # chromium based browser
       - "conda-zsh-completion" # conda auto complete for zsh
       - "gdm-settings" # configure gdm
+      - "quarto-cli-bin" # Quarto language binary
+      - "r2modman-bin" # thunderstore od manager for linux
       - "spotify" # music streaming
       - "wleave-git" # logout menu
-      - "quarto-cli-bin" # Quarto language binary
       - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
       # NOTE: Essential / system packages
