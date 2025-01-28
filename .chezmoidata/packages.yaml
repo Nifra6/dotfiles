@@ -44,6 +44,8 @@ packages:
       - "cups" # print drivers
       - "cups-pdf" # PDF printer
       - "hplip" # drivers for HP printers
+      - "nss-mdns" # auto-discovery
+      - "simple-scan" # scanner GUI
       # NOTE: Languages
       - "go"
       - "texlive-meta"
