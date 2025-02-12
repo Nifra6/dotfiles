@@ -8,7 +8,8 @@ return {
             linters_by_ft = {
                 bash = { "shellcheck" },
                 markdown = { "markdownlint" },
-                python = { "pylint", "mypy" },
+                python = { "pylint" },
+                -- python = { "pylint", "mypy" },
                 sh = { "shellcheck" },
                 -- ["*"] = { "typos" }, -- NOTE: Global linter
                 -- ["_"] = {}, -- NOTE: Fallback linter
