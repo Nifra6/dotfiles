@@ -12,6 +12,7 @@ packages:
     pacman:
       # NOTE: Essential / system packages
       - "base"
+      - "base-devel"
       - "inetutils"
       - "linux"
       - "linux-headers"
@@ -118,7 +119,6 @@ packages:
       - "neovim" # file editor and IDE
       - "ranger" # file explorer
       # NOTE: Graphical applications
-      - "amberol" # music player
       - "baobab" # disk usage in pie form
       - "code" # IDE
       - "discord" # social app
