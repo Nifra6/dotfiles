@@ -50,6 +50,7 @@ packages:
       - "simple-scan" # scanner GUI
       # NOTE: Languages
       - "go"
+      - "jre-openjdk"
       - "texlive-meta"
       - "lua"
       - "npm"
