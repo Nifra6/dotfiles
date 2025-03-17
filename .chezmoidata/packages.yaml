@@ -20,6 +20,7 @@ packages:
       - "make"
       - "man-db"
       - "man-pages"
+      - "net-tools"
       - "pkgconfig"
       - "sudo"
       - "networkmanager"
