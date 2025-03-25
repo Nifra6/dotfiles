@@ -105,13 +105,13 @@ packages:
       - "qt5ct" # Qt5 configuration tool
       - "qt6ct" # Qt6 configuration tool
       # NOTE: Terminal applications
+      - "7zip" # archiver for .zip, .7z, .rar, ...
       - "bat" # cat drop-in replacement
       - "chezmoi" # dotfiles manager
       - "fd" # find drop-in replacement
       - "git" # vcs
       - "lsd" # ls drop-in replacement
       - "neofetch" # system information viewer
-      - "7zip" # archiver for .zip, .7z, .rar, ...
       - "playerctl" # mpris media controller
       - "ripgrep" # similar to grep, alias to rg
       - "wget" # better download than curl
@@ -120,6 +120,8 @@ packages:
       - "lazygit" # git helper
       - "neovim" # file editor and IDE
       - "ranger" # file explorer
+      - "zip" # archiver .zip
+      - "unzip" # unarchiver .zip
       # NOTE: Graphical applications
       - "baobab" # disk usage in pie form
       - "code" # IDE
