@@ -127,7 +127,6 @@ packages:
       - "code" # IDE
       - "discord" # social app
       - "feh" # image viewer
-      - "firefox" # web browser
       - "kitty" # terminal emulator
       - "libreoffice-fresh-fr" # office suite, in French
       - "mpv" # music and video player
@@ -145,7 +144,6 @@ packages:
       - "steam" # steam client
       # NOTE: Plugins
       - "cinnamon-translations" # nemo translation
-      - "firefox-i18n-fr" # French language for firefox
       - "mpv-mpris" # use playerctl with mpv
       - "networkmanager-openconnect" # plugin for Cisco vpn
       - "pipewire-alsa" # plugin to support ALSA
