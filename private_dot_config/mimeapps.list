@@ -11,6 +11,7 @@ application/x-extension-xhtml=brave.desktop;
 application/x-extension-xht=brave.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-4UGBZ2.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-4UGBZ2.desktop;
+-image/jpeg=feh.desktop;
 
 [Default Applications]
 x-scheme-handler/http=brave-browser.desktop
@@ -74,3 +75,4 @@ audio/x-adpcm=mpv.desktop
 audio/ac3=mpv.desktop
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
+-image/jpeg=feh.desktop;
