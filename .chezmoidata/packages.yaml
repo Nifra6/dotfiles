@@ -52,6 +52,7 @@ packages:
       # NOTE: Languages
       - "go"
       - "jdk-openjdk"
+      - "jupyterlab"
       - "texlive-meta"
       - "lua"
       - "npm"
