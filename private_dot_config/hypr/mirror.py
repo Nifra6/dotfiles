@@ -91,14 +91,20 @@ def apply_mirror(main_monitor_id: int = 0) -> None:
                 text=True,
             )
         _ = subprocess.run(
-            ["dunstify", "-u", "low", "Mode mirroir", "L'écran principal est partagé."],
+            [
+                "notify-send",
+                "-u",
+                "low",
+                "Mode mirroir",
+                "L'écran principal est partagé.",
+            ],
             check=True,
             stdout=subprocess.PIPE,
             text=True,
         )
     else:
         _ = subprocess.run(
-            ["dunstify", "-u", "low", "Mode mirroir", "Aucun autre écran."],
+            ["notify-send", "-u", "low", "Mode mirroir", "Aucun autre écran."],
             check=True,
             stdout=subprocess.PIPE,
             text=True,
@@ -125,7 +131,7 @@ def remove_mirror():
         text=True,
     )
     _ = subprocess.run(
-        ["dunstify", "-u", "low", "Mode mirroir", "Le partage est désactivé."],
+        ["notify-send", "-u", "low", "Mode mirroir", "Le partage est désactivé."],
         check=True,
         stdout=subprocess.PIPE,
         text=True,
