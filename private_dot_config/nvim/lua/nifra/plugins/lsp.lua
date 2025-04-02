@@ -80,6 +80,7 @@ return {
             local servers = {
                 dockerls = {},
                 docker_compose_language_service = {},
+                jdtls = {},
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
                 ltex = { settings = { ltex = { language = "en-US" } } },
                 marksman = {},

@@ -12,6 +12,7 @@ return {
                 "git_config",
                 "gitignore",
                 "hyprlang",
+                "java",
                 "lua",
                 "luadoc",
                 "markdown",
