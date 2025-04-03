@@ -122,6 +122,7 @@ return {
                 "hadolint", -- Used to lint dockerfile
                 "markdownlint", -- Used to lint Markdown
                 "prettier", -- Used to format Markdown
+                "pylint", -- Used to lint python
                 "shellcheck", -- Used to format sh, bash
                 "stylua", -- Used to format Lua code
                 "typos", -- Used to lint typos
