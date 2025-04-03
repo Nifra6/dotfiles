@@ -1,4 +1,5 @@
 import psutil
+import sys
 
 
 class BatteryTime:
@@ -18,11 +19,9 @@ class BatteryTime:
         else:
             time_left = ""
         if self._hours >= 1:
-            time_left += f"{self._hours} heures "
+            time_left += f"{self._hours} h "
         if self._minutes >= 1:
-            time_left += f"{self._minutes} minutes "
-        if self._seconds >= 1:
-            time_left += f"{self._seconds} secondes"
+            time_left += f"{self._minutes} min "
         return time_left
 
 
@@ -53,8 +52,7 @@ def get_battery_percentage(battery):
             icon = "󰁹"
         if battery.power_plugged:
             icon = "󰂄"
-            return f"{icon} {percentage}%"
-        return f"{icon} {percentage}%"
+        return f"{percentage}% {icon}"
     else:
         return ""
 
@@ -62,11 +60,23 @@ def get_battery_percentage(battery):
 def get_time_left(battery):
     if battery:
         if type(battery.secsleft) is int:
-            return "\n󰥔 " + str(BatteryTime(battery.secsleft))
+            return str(BatteryTime(battery.secsleft)) + "restant"
         return ""
 
 
 if __name__ == "__main__":
-    BATTERY = psutil.sensors_battery()
-    # print("Coucou")
-    print(get_battery_percentage(BATTERY))
+    args = sys.argv
+    match len(args):
+        case 1:
+            BATTERY = psutil.sensors_battery()
+            print(get_battery_percentage(BATTERY))
+        case 2:
+            match args[1]:
+                case "per" | "percentage" | "percent":
+                    BATTERY = psutil.sensors_battery()
+                    print(get_battery_percentage(BATTERY))
+                case "time":
+                    BATTERY = psutil.sensors_battery()
+                    print(get_time_left(BATTERY))
+        case _:
+            raise ValueError("Too much arguments.")
