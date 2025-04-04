@@ -31,20 +31,32 @@ import psutil
 class BatteryTime:
     """A class to represent the remaining battery time in a human-readable format."""
 
-    def __init__(self, seconds: int):
-        """Initializes the BatteryTime object with the given number of seconds.
+    def __init__(self, seconds=int):
+        """Calculates the time units (days, hours, minutes,seconds) after initialization."""
+        self._days = seconds // 86400
+        self._hours = (seconds % 86400) // 3600
+        self._minutes = (seconds % 3600) // 60
+        self._seconds = seconds % 60
 
-        Args:
-            seconds: The total number of seconds remaining.
-        """
-        minutes = int(seconds / 60)
-        hours = int(minutes / 60)
-        self._days = int(hours / 24)
-        self._hours = hours - self._days * 24
-        self._minutes = minutes - (self._days * 24 + self._hours) * 60
-        self._seconds = (
-            seconds - ((self._days * 24 + self._hours) * 60 + self._minutes) * 60
-        )
+    @property
+    def days(self):
+        """Returns the number of days."""
+        return self._days
+
+    @property
+    def hours(self):
+        """Returns the number of hours."""
+        return self._hours
+
+    @property
+    def minutes(self):
+        """Returns the number of minutes."""
+        return self._minutes
+
+    @property
+    def seconds(self):
+        """Returns the number of remaining seconds."""
+        return self._seconds
 
     def __str__(self) -> str:
         """Returns a string representation of the remaining battery time.
@@ -52,14 +64,25 @@ class BatteryTime:
         Returns:
             A human-readable string representing the remaining battery time.
         """
-        if self._days >= 1:
-            time_left = f"{self._days} jours "
-        else:
-            time_left = ""
+        match self._days:
+            case 0:
+                time_left = ""
+            case 1:
+                time_left = f"{self._days} jour "
+            case _:
+                time_left = f"{self._days} jours "
         if self._hours >= 1:
             time_left += f"{self._hours} h "
         if self._minutes >= 1:
             time_left += f"{self._minutes} min "
+        if self._minutes > 1 or (self._minutes == 0 and self._hours > 1):
+            time_left += "restantes"
+        elif self._minutes == 0 and self._hours == 0 and self._days > 1:
+            time_left += "restants"
+        elif self._minutes == 1 or (self._minutes == 0 and self._hours == 1):
+            time_left += "restante"
+        else:
+            time_left += "restant"
         return time_left
 
 
@@ -96,9 +119,8 @@ def get_time_left(battery: NamedTuple) -> str:
     Returns:
         A string representing the remaining battery time.
     """
-    if battery:
-        if isinstance(battery.secsleft, int):
-            return str(BatteryTime(battery.secsleft)) + "restant"
+    if battery and isinstance(battery.secsleft, int):
+        return BatteryTime(battery.secsleft)
     return ""
 
 
