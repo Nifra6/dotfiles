@@ -24,13 +24,11 @@ return {
     },
     -- NOTE: Highlight colors
     {
-        "NvChad/nvim-colorizer.lua",
+        "catgoose/nvim-colorizer.lua",
         event = "BufReadPre",
         opts = {
-            filetypes = {
-                "*",
-                css = { rgb_fn = true },
-            },
+            filetypes = { "*" },
+            user_default_options = { rgb_fn = true },
         },
     },
     -- NOTE: Git indications
