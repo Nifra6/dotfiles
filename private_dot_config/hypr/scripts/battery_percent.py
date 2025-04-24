@@ -119,7 +119,7 @@ def get_time_left(battery: NamedTuple) -> str:
     Returns:
         A string representing the remaining battery time.
     """
-    if battery and isinstance(battery.secsleft, int):
+    if battery and not battery.power_plugged and isinstance(battery.secsleft, int):
         return BatteryTime(battery.secsleft)
     return ""
 
