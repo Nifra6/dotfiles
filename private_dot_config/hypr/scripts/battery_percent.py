@@ -96,10 +96,10 @@ def get_battery_percentage(battery: NamedTuple) -> str:
         A string representing the battery percentage and icon.
     """
     if battery:
+        percentage = int(battery.percent)
         if battery.power_plugged:
             icon = "󰂄"
         else:
-            percentage = int(battery.percent)
             icons = ("󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹")
             if 0 <= percentage <= 100:
                 index = (percentage + 4) // 10
@@ -119,7 +119,7 @@ def get_time_left(battery: NamedTuple) -> str:
     Returns:
         A string representing the remaining battery time.
     """
-    if battery and isinstance(battery.secsleft, int):
+    if battery and not battery.power_plugged and isinstance(battery.secsleft, int):
         return BatteryTime(battery.secsleft)
     return ""
 
