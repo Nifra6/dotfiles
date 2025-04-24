@@ -96,10 +96,10 @@ def get_battery_percentage(battery: NamedTuple) -> str:
         A string representing the battery percentage and icon.
     """
     if battery:
+        percentage = int(battery.percent)
         if battery.power_plugged:
             icon = "󰂄"
         else:
-            percentage = int(battery.percent)
             icons = ("󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹")
             if 0 <= percentage <= 100:
                 index = (percentage + 4) // 10
