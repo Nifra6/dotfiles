@@ -82,7 +82,17 @@ return {
                 docker_compose_language_service = {},
                 jdtls = {},
                 lua_ls = { settings = { Lua = { completion = { callSnippet = "Replace" } } } },
-                ltex = { settings = { ltex = { language = "en-US" } } },
+                ltex = {
+                    settings = {
+                        ltex = {
+                            enabled = {
+                                "bibtex",
+                                "latex",
+                            },
+                            language = "en-US",
+                        },
+                    },
+                },
                 marksman = {},
                 matlab_ls = {
                     settings = { matlab = { installPath = "$HOME/Applications/Matlab/" } },
