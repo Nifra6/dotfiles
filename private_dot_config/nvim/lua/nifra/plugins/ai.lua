@@ -1,7 +1,14 @@
 return {
     {
         "olimorris/codecompanion.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
         opts = {
+            opts = {
+                language = "French",
+            },
             strategies = {
                 chat = {
                     adapter = "ollama_felix",
@@ -31,10 +38,6 @@ return {
                     })
                 end,
             },
-        },
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
         },
     },
 }
