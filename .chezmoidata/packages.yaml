@@ -56,6 +56,7 @@ packages:
       - "texlive-meta"
       - "lua"
       - "npm"
+      - "pyenv"
       - "python"
       - "python-black"
       - "python-isort"
