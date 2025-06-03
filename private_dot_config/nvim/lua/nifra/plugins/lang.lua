@@ -83,7 +83,7 @@ return {
             },
             {
                 "<leader>cs",
-                "<Cmd>QuartoStopPreview<Enter>",
+                "<Cmd>QuartoClosePreview<Enter>",
                 desc = "[S]top the preview",
                 ft = "quarto",
             },
