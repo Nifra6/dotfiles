@@ -15,6 +15,11 @@ alias grep='grep --color=auto'
 alias cat='bat'
 
 
+# -- git aliases
+# ---------------------------
+alias gp='git pull'
+alias gP='git push'
+
 # -- ls aliases
 # ---------------------------
 alias la='ls -A'
