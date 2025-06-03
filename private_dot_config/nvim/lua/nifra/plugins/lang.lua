@@ -81,6 +81,12 @@ return {
                 desc = "[P]review in browser",
                 ft = "quarto",
             },
+            {
+                "<leader>cs",
+                "<Cmd>QuartoStopPreview<Enter>",
+                desc = "[S]top the preview",
+                ft = "quarto",
+            },
         },
         dependencies = {
             "jmbuhr/otter.nvim",
