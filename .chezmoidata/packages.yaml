@@ -63,6 +63,7 @@ packages:
       - "python-pip"
       - "python-poetry"
       - "python-pytorch"
+      - "ruff"
       - "tensorboard"
       # NOTE: Fonts & Themes
       - "noto-fonts"

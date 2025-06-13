@@ -9,3 +9,6 @@ require("nifra.config.keymaps")
 
 -- NOTE: Add highlight on yanking
 require("nifra.config.autocommands")
+
+-- NOTE: LSP
+require("nifra.config.lsp")
