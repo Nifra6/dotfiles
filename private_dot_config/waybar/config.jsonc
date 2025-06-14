@@ -85,7 +85,7 @@
       "class<discord>": "󰙯",
       "class<*filelight>": "󰃢",
       "class<steam>": "󰓓",
-      "class<steam_app_0>": "󰊖 ",
+      "class<steam_app_*>": "󰊖 ",
       "class<wineboot.exe>": "󰡶 ",
       "class<factorio>": "󰊖 ",
     },
