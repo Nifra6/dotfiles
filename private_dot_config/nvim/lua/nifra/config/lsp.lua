@@ -2,22 +2,9 @@ local lsp = vim.lsp
 
 -- NOTE: LPS Configs
 lsp.config["luals"] = {
-    -- Command and arguments to start the server.
     cmd = { "lua-language-server" },
-
-    -- Filetypes to automatically attach to.
     filetypes = { "lua" },
-
-    -- Sets the "root directory" to the parent directory of the file in the
-    -- current buffer that contains either a ".luarc.json" or a
-    -- ".luarc.jsonc" file. Files that share a root directory will reuse
-    -- the connection to the same LSP server.
-    -- Nested lists indicate equal priority, see |vim.lsp.Config|.
     root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
-
-    -- Specific settings to send to the server. The schema for this is
-    -- defined by the server. For example the schema for lua-language-server
-    -- can be found here https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
     settings = {
         Lua = {
             runtime = {
@@ -32,6 +19,32 @@ lsp.config("ruff", {
     filetypes = { "python" },
     root_markers = { "pyproject.toml", "ruff.toml", ".ruff.toml", ".git" },
     settings = {},
+})
+
+-- NOTE: Keymaps
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local map = function(keys, func, desc)
+            vim.keymap.set("n", keys, func, { buffer = args.buf, desc = desc })
+        end
+
+        -- NOTE: Go to ...
+        map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+        map("<leader>gd", require("telescope.builtin").lsp_definitions, "[D]efinition")
+        map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+        map("<leader>gr", require("telescope.builtin").lsp_references, "[R]eferences")
+
+        -- NOTE: Symbols
+        map("<leader>sr", vim.lsp.buf.rename, "[R]ename symbol")
+        map("<leader>sd", require("telescope.builtin").lsp_document_symbols, "[D]ocument Symbols")
+        map("<leader>sw", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace Symbols")
+
+        -- NOTE: Code actions
+        map("<leader>ca", vim.lsp.buf.code_action, "Code [A]ction")
+
+        -- NOTE: Documentation
+        map("K", vim.lsp.buf.hover, "Hover Documentation")
+    end,
 })
 
 -- NOTE: LPS Executions
