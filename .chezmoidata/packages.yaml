@@ -38,6 +38,7 @@ packages:
       - "intel-media-driver"
       - "vulkan-intel"
       # NOTE: Nvidia GPU
+      - "nvidia-container-toolkit" # enable gpu in docker containers
       - "nvidia-dkms" # the driver
       - "nvidia-utils" # Vulkan
       - "lib32-nvidia-utils" # Vulkan 32bits for Steam/Wine
