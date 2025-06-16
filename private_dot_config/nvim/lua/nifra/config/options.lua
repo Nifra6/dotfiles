@@ -47,4 +47,4 @@ opt.splitbelow = true
 opt.inccommand = "split"
 
 -- NOTE: Diagnostic
-vim.diagnostic.config({ virtual_lines = true })
+-- vim.diagnostic.config({ virtual_lines = true })

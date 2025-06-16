@@ -19,6 +19,7 @@ return {
             formatters_by_ft = {
                 bash = { "beautysh" },
                 css = { "prettier" },
+                html = { "prettier" },
                 json = { "prettier" },
                 jsonc = { "prettier" },
                 lua = { "stylua" },
