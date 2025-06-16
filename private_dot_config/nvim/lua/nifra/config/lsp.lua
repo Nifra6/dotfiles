@@ -18,6 +18,7 @@ vim.lsp.config("ruff", {
     cmd = { "ruff", "server" }, -- Will use venv ruff first if available
     filetypes = { "python" },
     root_markers = { "pyproject.toml", "ruff.toml", ".ruff.toml", ".git" },
+    capabilities = { offsetEncoding = { "utf-16" } },
     settings = {},
 })
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -29,7 +30,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
         if client.name == 'ruff' then
             -- Disable hover in favor of Pyright
-            client.server_capabilities.hoverProvider = false
+            local caps = client.server_capabilities
+            caps.definitionProvider = false
+            caps.referencesProvider = false
+            caps.renameProvider = false
+            caps.hoverProvider = false
         end
     end,
     desc = 'LSP: Disable hover capability from Ruff',
@@ -56,6 +61,12 @@ vim.lsp.config("basedpyright", {
             },
         },
     },
+})
+
+-- INFO: TOML: Taplo
+vim.lsp.config("taplo", {
+    cmd = { "taplo", "lsp", "stdio" },
+    filetypes = { "toml" }
 })
 
 -- NOTE: Keymaps
@@ -88,3 +99,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.lsp.enable("luals")
 vim.lsp.enable("ruff")
 vim.lsp.enable("basedpyright")
+vim.lsp.enable("taplo")

@@ -12,3 +12,6 @@ require("nifra.config.autocommands")
 
 -- NOTE: LSP
 require("nifra.config.lsp")
+
+-- NOTE: Diagnostic
+require("nifra.config.diagnostic")
