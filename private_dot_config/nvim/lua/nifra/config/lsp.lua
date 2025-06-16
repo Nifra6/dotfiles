@@ -1,12 +1,11 @@
-local lsp = vim.lsp
-
--- NOTE: LPS Configs
-lsp.config["luals"] = {
+-- NOTE: Lua: LuaLS
+vim.lsp.config["luals"] = {
     cmd = { "lua-language-server" },
     filetypes = { "lua" },
     root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
     settings = {
         Lua = {
+            diagnostics = { globals = { "vim" } },
             runtime = {
                 version = "LuaJIT",
             },
@@ -14,11 +13,49 @@ lsp.config["luals"] = {
     },
 }
 
-lsp.config("ruff", {
+-- NOTE: Python: Ruff
+vim.lsp.config("ruff", {
     cmd = { "ruff", "server" }, -- Will use venv ruff first if available
     filetypes = { "python" },
     root_markers = { "pyproject.toml", "ruff.toml", ".ruff.toml", ".git" },
     settings = {},
+})
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client == nil then
+            return
+        end
+        if client.name == 'ruff' then
+            -- Disable hover in favor of Pyright
+            client.server_capabilities.hoverProvider = false
+        end
+    end,
+    desc = 'LSP: Disable hover capability from Ruff',
+})
+
+-- NOTE: Python: BasedPyright
+vim.lsp.config("basedpyright", {
+    cmd = { "basedpyright-langserver", "--stdio" },
+    filetypes = { "python" },
+    root_markers = {
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile",
+        "pyrightconfig.json",
+        ".git",
+    },
+    settings = {
+        basedpyright = {
+            disableOrganizeImports = true,
+            analysis = {
+                ignore = { "*" }
+            },
+        },
+    },
 })
 
 -- NOTE: Keymaps
@@ -48,5 +85,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- NOTE: LPS Executions
-lsp.enable("luals")
-lsp.enable("ruff")
+vim.lsp.enable("luals")
+vim.lsp.enable("ruff")
+vim.lsp.enable("basedpyright")
