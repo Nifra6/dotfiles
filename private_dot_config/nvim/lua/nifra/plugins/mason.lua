@@ -1,4 +1,5 @@
 return {
+    -- INFO: LSPs and Linters Manager
     {
         "mason-org/mason.nvim",
         opts = {
@@ -11,13 +12,11 @@ return {
             },
         },
     },
+    -- INFO: Auto-install
     {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         opts = {
-            ensure_installed = { "lua-language-server",
-                "taplo",
-                "ruff",
-                "basedpyright"
-            }
+            ensure_installed = { "lua-language-server", "taplo", "ruff", "basedpyright" }
         }
-    } }
+    }
+}
