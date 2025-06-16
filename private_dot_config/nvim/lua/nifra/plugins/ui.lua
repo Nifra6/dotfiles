@@ -60,17 +60,17 @@ return {
                         local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
                         local status = require("lazy.status")
                         local updates = status.has_updates()
-                                and "There is " .. status.updates() .. " updates availables"
+                            and "There is " .. status.updates() .. " updates availables"
                             or ""
                         return {
                             "",
                             "Lazy.nvim loaded "
-                                .. stats.loaded
-                                .. " out of "
-                                .. stats.count
-                                .. " plugins in "
-                                .. ms
-                                .. " ms",
+                            .. stats.loaded
+                            .. " out of "
+                            .. stats.count
+                            .. " plugins in "
+                            .. ms
+                            .. " ms",
                             "👉👈",
                             updates, -- FIXME: Don't work yet because ... check happen after VimEnter ?
                         }
@@ -198,7 +198,7 @@ return {
         event = "VeryLazy",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         cmd = "Trouble",
-        keys = { { "<leader>w", "<cmd>Trouble diagnostics toggle<cr>", desc = "[W]arnings" } },
+        keys = { { "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", desc = "[D]iagnostics" } },
         config = true,
     },
     -- NOTE: Keymaps help
@@ -221,9 +221,6 @@ return {
                 { "<leader>cf", icon = "󱕅 " },
                 { "<leader>cg", icon = "󰈦 " },
                 { "<leader>cp", icon = "󰨇 " },
-                { "<leader>d", group = "[D]ebug", icon = " " },
-                { "<leader>d_", hidden = true },
-                { "<leader>d_", hidden = true },
                 { "<leader>f", group = "[F]ind", icon = "󱁴 " },
                 { "<leader>f_", hidden = true },
                 { "<leader>fd", icon = "󰔫 " },

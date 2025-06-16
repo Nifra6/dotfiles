@@ -14,6 +14,3 @@ end
 -- NOTE: Setup lazy.nvim
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("nifra.plugins", { checker = { enabled = true, notify = false } })
-
--- NOTE: How plugins works :
--- `opts = {}` is the same as calling `require('fidget').setup({})`

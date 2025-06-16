@@ -2,7 +2,7 @@ return {
     -- NOTE: Highlight, edit, and navigate code
     {
         "nvim-treesitter/nvim-treesitter",
-        event = "VeryLazy",
+        lazy = false,
         build = ":TSUpdate",
         opts = {
             ensure_installed = {
@@ -29,7 +29,7 @@ return {
                 "zathurarc",
                 "zig",
             },
-            auto_install = false,
+            auto_install = true,
             highlight = {
                 enable = true,
             },
