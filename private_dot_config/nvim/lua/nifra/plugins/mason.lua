@@ -14,7 +14,10 @@ return {
     {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         opts = {
-            ensure_installed = { "lua-language-server"
+            ensure_installed = { "lua-language-server",
+                "taplo",
+                "ruff",
+                "basedpyright"
             }
         }
     } }
