@@ -24,7 +24,7 @@ return {
                 jsonc = { "prettier" },
                 lua = { "stylua" },
                 markdown = { "prettier" },
-                python = { "ruff_format" },
+                python = { "ruff_format", "ruff_organize_imports" },
                 sh = { "beautysh" },
                 toml = { "taplo" },
                 yaml = { "prettier" },
