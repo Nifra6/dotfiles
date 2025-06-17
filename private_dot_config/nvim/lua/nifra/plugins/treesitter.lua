@@ -7,14 +7,12 @@ return {
         opts = {
             ensure_installed = {
                 "bash",
-                "bibtex",
                 "css",
                 "dockerfile",
                 "git_config",
                 "gitignore",
                 "hyprlang",
                 "java",
-                "latex",
                 "lua",
                 "luadoc",
                 "markdown",
@@ -31,7 +29,7 @@ return {
                 "zathurarc",
                 "zig",
             },
-            auto_install = true,
+            auto_install = false,
             highlight = {
                 enable = true,
             },
