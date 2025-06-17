@@ -7,12 +7,14 @@ return {
         opts = {
             ensure_installed = {
                 "bash",
+                "bibtex",
                 "css",
                 "dockerfile",
                 "git_config",
                 "gitignore",
                 "hyprlang",
                 "java",
+                "latex",
                 "lua",
                 "luadoc",
                 "markdown",
