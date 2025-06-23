@@ -40,9 +40,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     desc = 'LSP: Disable hover capability from Ruff',
 })
 
--- NOTE: Python: BasedPyright
-vim.lsp.config("basedpyright", {
-    cmd = { "basedpyright-langserver", "--stdio" },
+-- NOTE: Python: Pyright
+vim.lsp.config("pyright", {
+    cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
     root_markers = {
         "pyproject.toml",
@@ -54,8 +54,10 @@ vim.lsp.config("basedpyright", {
         ".git",
     },
     settings = {
-        basedpyright = {
-            disableOrganizeImports = true,
+        pyright = {
+            disableOrganizeImports = true
+        },
+        python = {
             analysis = {
                 ignore = { "*" }
             },
@@ -98,5 +100,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- NOTE: LPS Executions
 vim.lsp.enable("luals")
 vim.lsp.enable("ruff")
-vim.lsp.enable("basedpyright")
+vim.lsp.enable("pyright")
 vim.lsp.enable("taplo")
