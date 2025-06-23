@@ -52,6 +52,14 @@ return {
                 ignore_buftypes = {},
             },
         },
+        keys = {
+            {
+                "<leader>cP",
+                "<Cmd>Markview toggle<Enter>",
+                desc = "[P]review in nvim",
+                ft = "markdown",
+            }
+        }
     },
     -- NOTE: Quarto: official plugin
     {
