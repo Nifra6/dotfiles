@@ -89,7 +89,7 @@ case $DISTRO in
     "Arch Linux")
         # -- System functions
         # ---------------------------
-        alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && sudo pacdiff ; chezmoi update -v'
+        alias update='yay -Pw && yay -Sc && yay -Syu --sudoloop && yay -Yc && pacdiff -s ; chezmoi update -v'
         # -- Replace commands
         # ---------------------------
         alias ls='lsd'
