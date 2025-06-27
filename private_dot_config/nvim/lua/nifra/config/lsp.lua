@@ -1,75 +1,20 @@
--- NOTE: Lua: LuaLS
-vim.lsp.config["luals"] = {
-    cmd = { "lua-language-server" },
-    filetypes = { "lua" },
-    root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
-    settings = {
-        Lua = {
-            diagnostics = { globals = { "vim" } },
-            runtime = {
-                version = "LuaJIT",
-            },
-        },
-    },
+-- NOTE: Load LSP list
+local lsp_configs = {
+    "luals",
+    "ruff",
+    "pyright",
+    "taplo",
 }
 
--- NOTE: Python: Ruff
-vim.lsp.config("ruff", {
-    cmd = { "ruff", "server" }, -- Will use venv ruff first if available
-    filetypes = { "python" },
-    root_markers = { "pyproject.toml", "ruff.toml", ".ruff.toml", ".git" },
-    capabilities = { offsetEncoding = { "utf-16" } },
-    settings = {},
-})
-vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
-    callback = function(args)
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if client == nil then
-            return
-        end
-        if client.name == 'ruff' then
-            -- Disable hover in favor of Pyright
-            local caps = client.server_capabilities
-            caps.definitionProvider = false
-            caps.referencesProvider = false
-            caps.renameProvider = false
-            caps.hoverProvider = false
-        end
-    end,
-    desc = 'LSP: Disable hover capability from Ruff',
-})
+-- NOTE: LPS configurations
+for _, name in ipairs(lsp_configs) do
+    require("nifra.lsp." .. name)
+end
 
--- NOTE: Python: Pyright
-vim.lsp.config("pyright", {
-    cmd = { "pyright-langserver", "--stdio" },
-    filetypes = { "python" },
-    root_markers = {
-        "pyproject.toml",
-        "setup.py",
-        "setup.cfg",
-        "requirements.txt",
-        "Pipfile",
-        "pyrightconfig.json",
-        ".git",
-    },
-    settings = {
-        pyright = {
-            disableOrganizeImports = true
-        },
-        python = {
-            analysis = {
-                ignore = { "*" }
-            },
-        },
-    },
-})
-
--- INFO: TOML: Taplo
-vim.lsp.config("taplo", {
-    cmd = { "taplo", "lsp", "stdio" },
-    filetypes = { "toml" }
-})
+-- NOTE: LPS enabling
+for _, name in ipairs(lsp_configs) do
+    vim.lsp.enable(name)
+end
 
 -- NOTE: Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -96,9 +41,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("K", vim.lsp.buf.hover, "Hover Documentation")
     end,
 })
-
--- NOTE: LPS Executions
-vim.lsp.enable("luals")
-vim.lsp.enable("ruff")
-vim.lsp.enable("pyright")
-vim.lsp.enable("taplo")
