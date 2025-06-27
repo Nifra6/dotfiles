@@ -4,6 +4,8 @@ return {
         "nvim-treesitter/nvim-treesitter",
         lazy = false,
         build = ":TSUpdate",
+        branch = "master",
+        dependencies = { "OXY2DEV/markview.nvim" },
         opts = {
             ensure_installed = {
                 "bash",
