@@ -16,7 +16,7 @@ return {
     {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         opts = {
-            ensure_installed = { "prettier", "lua-language-server", "taplo", "ruff", "pyright", "shellcheck", "markdownlint" }
+            ensure_installed = { "bash-language-server", "shellcheck", "shfmt", "prettier", "lua-language-server", "taplo", "ruff", "pyright", "markdownlint" }
         }
     }
 }

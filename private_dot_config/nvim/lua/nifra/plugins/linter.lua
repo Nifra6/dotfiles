@@ -6,10 +6,8 @@ return {
         opts = {
             events = { "BufWritePost", "BufReadPost", "InsertLeave" },
             linters_by_ft = {
-                bash = { "shellcheck" },
                 markdown = { "markdownlint" },
                 python = { "pylint" },
-                sh = { "shellcheck" },
                 -- ["*"] = { "typos" }, -- NOTE: Global linter
                 -- ["_"] = {}, -- NOTE: Fallback linter
             },

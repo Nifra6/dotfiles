@@ -1,5 +1,6 @@
 -- NOTE: Load LSP list
 local lsp_configs = {
+    "bashls",
     "luals",
     "ruff",
     "pyright",
