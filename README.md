@@ -1,10 +1,10 @@
 # My dotfiles - Managed with [chezmoi](https://www.chezmoi.io/)
 
-<!-- markdownlint-disable MD013 MD026 MD033 -->
+<!-- markdownlint-disable MD013 MD026 MD033 MD045-->
 
-<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra/badges/plugins?style=for-the-badge" /></a>
-<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra/badges/leaderkey?style=for-the-badge" /></a>
-<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim-lua-nifra/badges/plugin-manager?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim/badges/plugin-manager?style=flat" /></a>
 
 <details>
 <summary>Desktop example</summary>
