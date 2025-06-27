@@ -11,6 +11,7 @@ opt.signcolumn = "yes"
 opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = true
+opt.incsearch = true
 
 -- NOTE: Mouse
 opt.mouse = "a"
@@ -21,13 +22,17 @@ opt.clipboard = "unnamedplus"
 -- NOTE: Indent
 opt.expandtab = true
 opt.shiftwidth = 4
+opt.tabstop = 4
+opt.softtabstop = 4
 opt.smartindent = true
 opt.autoindent = true
 opt.breakindent = true
 
 -- NOTE: Folding
--- opt.foldmethod = "expr"
--- opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldlevel = 99
+opt.foldenable = false
 
 -- NOTE: Spelling
 opt.spelllang = { "en", "fr" }

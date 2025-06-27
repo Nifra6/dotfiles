@@ -9,7 +9,6 @@ vim.diagnostic.config({
     },
     underline = false,
     virtual_lines = {
-        true,
         severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN }
     },
     virtual_text = {
