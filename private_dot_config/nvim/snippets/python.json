@@ -1,0 +1,7 @@
+{
+  "pylint_ignore_line": {
+    "prefix": "#pylint",
+    "body": ["# pylint: disable=${1:import-error}"],
+    "description": "Add a pylint disable comment"
+  }
+}
