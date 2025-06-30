@@ -131,6 +131,7 @@ case $HOSTNAME in
 
     "gonto")
         fpath+=${HOME}/Applications/conda-zsh-completion
+        export PATH="$HOME/.local/bin:$PATH"
         compinit
         zstyle ':completion::complete:*' use-cache 1
         zstyle ":conda_zsh_completion:*" sort-envs-by-time true
@@ -138,7 +139,6 @@ case $HOSTNAME in
         ;;
 
     "nascane")
-        export PATH="$HOME/.local/bin:$PATH"
         export SDKMAN_DIR="$HOME/Applications/SDKMan"
         [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
         ;;
