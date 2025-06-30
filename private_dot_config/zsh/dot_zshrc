@@ -138,6 +138,7 @@ case $HOSTNAME in
         ;;
 
     "nascane")
+        export PATH="$HOME/.local/bin:$PATH"
         export SDKMAN_DIR="$HOME/Applications/SDKMan"
         [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
         ;;
