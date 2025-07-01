@@ -4,7 +4,7 @@
     "snippets": [
       {
         "language": "python",
-        "path": "./python.json"
+        "path": "./nifra/python.json"
       }
     ]
   }
