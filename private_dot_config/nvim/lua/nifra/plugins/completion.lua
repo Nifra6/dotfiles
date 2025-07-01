@@ -4,9 +4,11 @@ return {
     -- NOTE: Completions for neovim config editing
     {
         "folke/lazydev.nvim",
-        ft = "lua",
+        ft = "lua", -- only load on lua files
         opts = {
             library = {
+                -- See the configuration section for more details
+                -- Load luvit types when the `vim.uv` word is found
                 { path = "${3rd}/luv/library", words = { "vim%.uv" } },
             },
         },
@@ -24,7 +26,6 @@ return {
                 preset = 'default',
                 ["<Enter>"] = { "accept", "fallback" },
                 ["<Tab>"] = { "select_next", "fallback" },
-                ["<S-Tab>"] = { "select_prev", "fallback" }
             },
             appearance = { nerd_font_variant = 'mono' },
             completion = {
@@ -39,10 +40,13 @@ return {
                     lazydev = {
                         name = "LazyDev",
                         module = "lazydev.integrations.blink",
+                        -- make lazydev completions top priority (see `:h blink.cmp`)
                         score_offset = 100,
                     },
                 },
             },
+
+            -- See the fuzzy documentation for more information
             fuzzy = { implementation = "prefer_rust_with_warning" }
         },
         opts_extend = { "sources.default" }
