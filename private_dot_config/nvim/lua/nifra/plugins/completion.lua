@@ -24,14 +24,10 @@ return {
         opts = {
             keymap = {
                 preset = "default",
-                ["<Enter>"] = { "select_and_accept", "fallback" },
+                ["<Enter>"] = { "accept", "fallback" },
                 ["<Tab>"] = { "select_next", "fallback" },
             },
             appearance = { nerd_font_variant = "mono" },
-            cmdline = {
-                keymap = { preset = "inherit" },
-                completion = { menu = { auto_show = true } },
-            },
             completion = {
                 documentation = {
                     auto_show = true,
