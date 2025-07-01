@@ -1,6 +1,8 @@
 -- NOTE: Load LSP list
 local lsp_configs = {
     "bashls",
+    "harper",
+    "ltex",
     "luals",
     "ruff",
     "pyright",

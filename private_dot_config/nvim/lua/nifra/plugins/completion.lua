@@ -15,27 +15,31 @@ return {
     },
     -- NOTE: Completions engine
     {
-        'saghen/blink.cmp',
-        dependencies = { 'rafamadriz/friendly-snippets' },
-        version = '1.*',
+        "saghen/blink.cmp",
+        dependencies = { "rafamadriz/friendly-snippets" },
+        version = "1.*",
 
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
         opts = {
             keymap = {
-                preset = 'default',
-                ["<Enter>"] = { "accept", "fallback" },
+                preset = "default",
+                ["<Enter>"] = { "select_and_accept", "fallback" },
                 ["<Tab>"] = { "select_next", "fallback" },
             },
-            appearance = { nerd_font_variant = 'mono' },
+            appearance = { nerd_font_variant = "mono" },
+            cmdline = {
+                keymap = { preset = "inherit" },
+                completion = { menu = { auto_show = true } },
+            },
             completion = {
                 documentation = {
                     auto_show = true,
                     auto_show_delay_ms = 500,
-                }
+                },
             },
             sources = {
-                default = { "lazydev", "omni", 'lsp', 'path', 'snippets', 'buffer' },
+                default = { "lazydev", "omni", "lsp", "path", "snippets", "buffer" },
                 providers = {
                     lazydev = {
                         name = "LazyDev",
@@ -47,8 +51,8 @@ return {
             },
 
             -- See the fuzzy documentation for more information
-            fuzzy = { implementation = "prefer_rust_with_warning" }
+            fuzzy = { implementation = "prefer_rust_with_warning" },
         },
-        opts_extend = { "sources.default" }
-    }
+        opts_extend = { "sources.default" },
+    },
 }

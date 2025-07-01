@@ -14,9 +14,22 @@ return {
     },
     -- INFO: Auto-install
     {
-        'WhoIsSethDaniel/mason-tool-installer.nvim',
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
-            ensure_installed = { "bash-language-server", "shellcheck", "shfmt", "prettier", "lua-language-server", "taplo", "ruff", "pyright", "markdownlint" }
-        }
-    }
+            ensure_installed = {
+                "bash-language-server",
+                "harper-ls",
+                "prettier",
+                "ltex-ls-plus",
+                "lua-language-server",
+                "taplo",
+                "ruff",
+                "pyright",
+                "markdownlint",
+                "shellcheck",
+                "shfmt",
+                "stylua",
+            },
+        },
+    },
 }
