@@ -2,7 +2,7 @@
 local lsp_configs = {
     "bashls",
     "harper",
-    "ltex",
+    -- "ltex",
     "luals",
     "ruff",
     "pyright",
