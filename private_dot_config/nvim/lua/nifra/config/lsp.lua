@@ -9,12 +9,12 @@ local lsp_configs = {
     "taplo",
 }
 
--- NOTE: LPS configurations
+-- NOTE: LSP configurations
 for _, name in ipairs(lsp_configs) do
     require("nifra.lsp." .. name)
 end
 
--- NOTE: LPS enabling
+-- NOTE: LSP enabling
 for _, name in ipairs(lsp_configs) do
     vim.lsp.enable(name)
 end
