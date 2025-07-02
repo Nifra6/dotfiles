@@ -6,13 +6,7 @@ return {
         branch = "master",
         dependencies = {
             "nvim-lua/plenary.nvim",
-            {
-                "nvim-telescope/telescope-fzf-native.nvim",
-                build = "make",
-                cond = function()
-                    return vim.fn.executable("make") == 1
-                end,
-            },
+            { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
             "nvim-telescope/telescope-ui-select.nvim",
             "nvim-tree/nvim-web-devicons",
         },
@@ -35,7 +29,7 @@ return {
             vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[H]elp" })
             vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "[K]eymaps" })
             vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[F]iles" })
-            vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[T]ext" })
+            vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[G]rep files" })
             vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "[D]iagnostics" })
         end,
     },
