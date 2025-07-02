@@ -26,6 +26,7 @@ return {
                 markdown = { "prettier" },
                 python = { "ruff_format", "ruff_organize_imports" },
                 sh = { "shfmt" },
+                tex = { "latexindent" },
                 toml = { "taplo" },
                 yaml = { "prettier" },
             },

@@ -20,6 +20,7 @@ return {
                 "bash-language-server",
                 "harper-ls",
                 "prettier",
+                "latexindent",
                 "ltex-ls-plus",
                 "lua-language-server",
                 "taplo",
