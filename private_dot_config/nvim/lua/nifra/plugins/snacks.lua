@@ -6,7 +6,13 @@ return {
         lazy = false,
         ---@type snacks.Config
         opts = {
+            bigfile = { enabled = true },
+            input = { enabled = true },
             lazygit = { enabled = true },
+            notifier = {
+                enabled = true,
+                timeout = 3000,
+            },
         },
         keys = {
             {
