@@ -60,17 +60,17 @@ return {
                         local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
                         local status = require("lazy.status")
                         local updates = status.has_updates()
-                            and "There is " .. status.updates() .. " updates availables"
+                                and "There is " .. status.updates() .. " updates availables"
                             or ""
                         return {
                             "",
                             "Lazy.nvim loaded "
-                            .. stats.loaded
-                            .. " out of "
-                            .. stats.count
-                            .. " plugins in "
-                            .. ms
-                            .. " ms",
+                                .. stats.loaded
+                                .. " out of "
+                                .. stats.count
+                                .. " plugins in "
+                                .. ms
+                                .. " ms",
                             "👉👈",
                             updates, -- FIXME: Don't work yet because ... check happen after VimEnter ?
                         }
@@ -89,7 +89,7 @@ return {
             end
         end,
     },
-    -- NOTE: Notifications and command line input
+    -- NOTE: Command line input and documentation borders
     {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -97,18 +97,11 @@ return {
             "MunifTanjim/nui.nvim",
         },
         opts = {
-            lsp = {
-                override = {
-                    ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-                    ["vim.lsp.util.stylize_markdown"] = false,
-                    ["cmp.entry.get_documentation"] = true,
-                },
-            },
+            cmdline = { enabled = true }, -- Noice floating window for commands
             presets = {
-                bottom_search = false,
-                command_palette = true,
-                long_message_to_split = true,
-                lsp_doc_border = true,
+                bottom_search = false, -- Search same place than the command line
+                command_palette = true, -- Command line at the top
+                lsp_doc_border = true, -- Add border around documentation hover
             },
         },
     },
@@ -118,10 +111,6 @@ return {
         event = { "BufNewFile", "BufReadPost" },
         dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.bufremove" },
         keys = {
-            -- { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle [P]in" },
-            -- { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete [O]ther Buffers" },
-            -- { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete Buffers to the [R]ight" },
-            -- { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete Buffers to the [L]eft" },
             { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
             { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
         },

@@ -8,7 +8,7 @@ return {
         opts = {
             bigfile = { enabled = true },
             input = { enabled = true },
-            lazygit = { enabled = true },
+            lazygit = { enabled = true }, -- Add lazygit to nvim
             notifier = {
                 enabled = true,
                 timeout = 3000,
