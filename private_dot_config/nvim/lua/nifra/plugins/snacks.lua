@@ -12,8 +12,18 @@ return {
                 width = 40,
                 preset = {
                     keys = {
-                        { icon = "󰱼 ", key = "f", desc = "Find File", action = ":Telescope find_files" },
-                        { icon = "󱎸 ", key = "g", desc = "Grep Text", action = ":Telescope live_grep" },
+                        {
+                            icon = "󰱼 ",
+                            key = "f",
+                            desc = "Find File",
+                            action = ":lua Snacks.dashboard.pick('files')",
+                        },
+                        {
+                            icon = "󱎸 ",
+                            key = "g",
+                            desc = "Grep Text",
+                            action = ":lua Snacks.dashboard.pick('live_grep')",
+                        },
                         { icon = "󰒲 ", key = "l", desc = "Open Lazy", action = ":Lazy" },
                         { icon = "󰚰 ", key = "u", desc = "Update Plugins", action = ":Lazy update" },
                         {
@@ -40,6 +50,16 @@ return {
                 enabled = true,
                 timeout = 3000,
             },
+            picker = {
+                enabled = true,
+                win = {
+                    input = {
+                        keys = {
+                            ["<Tab>"] = { "list_down", mode = { "i", "n" } },
+                        },
+                    },
+                },
+            },
         },
         keys = {
             {
@@ -48,6 +68,93 @@ return {
                     Snacks.lazygit()
                 end,
                 desc = "Git Branches",
+            },
+            {
+                "<leader>fk",
+                function()
+                    Snacks.picker.keymaps()
+                end,
+                desc = "[K]eymaps",
+            },
+            {
+                "<leader>fh",
+                function()
+                    Snacks.picker.help()
+                end,
+                desc = "[H]elp Pages",
+            },
+            {
+                "<leader>ff",
+                function()
+                    Snacks.picker.files()
+                end,
+                desc = "[F]iles",
+            },
+            {
+                "<leader>fg",
+                function()
+                    Snacks.picker.grep()
+                end,
+                desc = "[G]rep files",
+            },
+            {
+                "<leader>fd",
+                function()
+                    Snacks.picker.diagnostics()
+                end,
+                desc = "[D]iagnostics",
+            },
+            {
+                "<leader>fs",
+                function()
+                    Snacks.picker.lsp_symbols()
+                end,
+                desc = "[S]ymbols",
+            },
+            -- NOTE: LSP - Go to...
+            {
+                "gd",
+                function()
+                    Snacks.picker.lsp_definitions()
+                end,
+                desc = "[G]oto [D]efinition",
+            },
+            {
+                "<leader>gd",
+                function()
+                    Snacks.picker.lsp_definitions()
+                end,
+                desc = "[D]efinition",
+            },
+            {
+                "gr",
+                function()
+                    Snacks.picker.lsp_references()
+                end,
+                nowait = true,
+                desc = "[G]oto [R]eferences",
+            },
+            {
+                "<leader>gr",
+                function()
+                    Snacks.picker.lsp_references()
+                end,
+                nowait = true,
+                desc = "[R]eferences",
+            },
+            {
+                "<leader>sd",
+                function()
+                    Snacks.picker.lsp_symbols()
+                end,
+                desc = "[D]ocument Symbols",
+            },
+            {
+                "<leader>sw",
+                function()
+                    Snacks.picker.lsp_workspace_symbols()
+                end,
+                desc = "[W]orkspace Symbols",
             },
         },
     },
