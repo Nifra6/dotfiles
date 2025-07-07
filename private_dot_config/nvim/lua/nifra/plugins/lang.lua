@@ -54,8 +54,8 @@ return {
                 "<Cmd>Markview toggle<Enter>",
                 desc = "[P]review in nvim",
                 ft = "markdown",
-            }
-        }
+            },
+        },
     },
     -- NOTE: Quarto: official plugin
     {

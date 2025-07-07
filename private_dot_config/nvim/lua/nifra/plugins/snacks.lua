@@ -44,6 +44,7 @@ return {
                                                          erm actually it's neovim ... 🤓👆]],
                 },
             },
+            image = { enabled = false },
             input = { enabled = true },
             lazygit = { enabled = true }, -- Add lazygit to nvim
             notifier = {
@@ -56,6 +57,8 @@ return {
                     input = {
                         keys = {
                             ["<Tab>"] = { "list_down", mode = { "i", "n" } },
+                            ["<c-h>"] = { "toggle_hidden", mode = { "i", "n" } },
+                            ["<c-i>"] = { "toggle_ignored", mode = { "i", "n" } },
                         },
                     },
                 },
