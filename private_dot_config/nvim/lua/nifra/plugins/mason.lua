@@ -23,7 +23,7 @@ return {
                 "latexindent",
                 "ltex-ls-plus",
                 "lua-language-server",
-                "taplo",
+                "tombi",
                 "ruff",
                 "pyright",
                 "markdownlint",

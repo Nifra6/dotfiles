@@ -27,7 +27,7 @@ return {
                 python = { "ruff_format", "ruff_organize_imports" },
                 sh = { "shfmt" },
                 tex = { "latexindent" },
-                toml = { "taplo" },
+                toml = { "tombi" },
                 yaml = { "prettier" },
             },
         },
