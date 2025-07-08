@@ -22,16 +22,7 @@ return {
     {
         "lewis6991/gitsigns.nvim",
         event = { "BufNewFile", "BufReadPre" },
-        opts = {
-            signs = {
-                add = { text = "▍" },
-                change = { text = "▍" },
-                delete = { text = "" },
-                topdelete = { text = "" },
-                changedelete = { text = "▍" },
-                untracked = { text = "▍" },
-            },
-        },
+        opts = { signcolumn = false, numhl = true },
     },
     -- NOTE: Comment and uncomment
     {
