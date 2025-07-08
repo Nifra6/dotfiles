@@ -97,7 +97,7 @@ return {
                         symbols = { modified = "󰏫 ", readonly = "󰌾 ", newfile = "󰎔 ", unnamed = "󰡯 " },
                     },
                     "diff",
-                    { "diagnostics", symbols = { error = "󰅙 ", warn = "󱠇 ", info = "󰋼 ", hint = "󰋼 " } },
+                    { "diagnostics", symbols = { error = "󰅙 ", warn = "󱠇 ", info = "󰋼 ", hint = "󰸥 " } },
                 },
                 lualine_x = { "encoding", "fileformat", { "filetype", icon_only = true } },
                 lualine_y = { "progress", "location" },
