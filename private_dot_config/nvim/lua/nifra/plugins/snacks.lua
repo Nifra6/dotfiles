@@ -49,6 +49,7 @@ return {
                 enabled = true,
                 indent = { char = "▍" },
                 scope = { char = "▍", underline = true },
+            },
             input = { enabled = true },
             lazygit = { enabled = true }, -- Add lazygit to nvim
             notifier = {
@@ -84,6 +85,7 @@ return {
                     Snacks.git.blame_line()
                 end,
                 desc = "[B]lame",
+                mode = { "n", "v" },
             },
             -- NOTE: Open git repository
             {
