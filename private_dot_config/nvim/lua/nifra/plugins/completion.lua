@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-doc-name
-
 return {
     -- NOTE: Completions for neovim config editing
     {
