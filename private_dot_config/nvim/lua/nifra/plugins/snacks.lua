@@ -45,6 +45,10 @@ return {
                 },
             },
             image = { enabled = false },
+            indent = {
+                enabled = true,
+                indent = { char = "▍" },
+                scope = { char = "▍", underline = true },
             input = { enabled = true },
             lazygit = { enabled = true }, -- Add lazygit to nvim
             notifier = {

@@ -1,17 +1,4 @@
 return {
-    -- NOTE: Show indentation guides
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        event = { "BufNewFile", "BufReadPre" },
-        opts = {
-            indent = { char = "▍" },
-            scope = {
-                enabled = true,
-            },
-            viewport_buffer = { min = 100 },
-        },
-    },
     -- NOTE: Highlight todo, notes, etc in comments
     {
         "folke/todo-comments.nvim",
