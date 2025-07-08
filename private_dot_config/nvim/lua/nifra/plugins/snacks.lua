@@ -69,13 +69,32 @@ return {
             },
         },
         keys = {
+            --  NOTE: Lazygit
             {
                 "<leader>lg",
                 function()
                     Snacks.lazygit()
                 end,
-                desc = "Git Branches",
+                desc = "Lazy[G]it",
             },
+            -- NOTE: Blame current line
+            {
+                "<leader>b",
+                function()
+                    Snacks.git.blame_line()
+                end,
+                desc = "[B]lame",
+            },
+            -- NOTE: Open git repository
+            {
+                "<leader>gG",
+                function()
+                    Snacks.gitbrowse()
+                end,
+                desc = "[G]it Repo",
+                mode = { "n", "v" },
+            },
+            -- NOTE: Find
             {
                 "<leader>fk",
                 function()
@@ -149,6 +168,7 @@ return {
                 nowait = true,
                 desc = "[R]eferences",
             },
+            -- NOTE: LSP symbols
             {
                 "<leader>sd",
                 function()
