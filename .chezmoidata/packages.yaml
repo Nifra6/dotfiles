@@ -126,7 +126,6 @@ packages:
       - "lazygit" # git helper
       - "neovim" # file editor and IDE
       - "ranger" # file explorer
-      - "tree-sitter-cli" # parser compiler
       - "zip" # archiver .zip
       - "unzip" # unarchiver .zip
       # NOTE: Graphical applications
