@@ -11,6 +11,9 @@ return {
                 },
             },
         },
+        keys = {
+            { "<leader>lm", "<cmd>Mason<cr>", desc = "[M]ason" },
+        },
     },
     -- INFO: Auto-install
     {
