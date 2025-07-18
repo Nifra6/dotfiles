@@ -53,7 +53,7 @@ return {
                 "<leader>cP",
                 "<Cmd>Markview toggle<Enter>",
                 desc = "[P]review in nvim",
-                ft = "markdown",
+                ft = { "markdown", "quarto" },
             },
         },
     },
