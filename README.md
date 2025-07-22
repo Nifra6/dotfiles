@@ -49,7 +49,7 @@ pacman -S chezmoi
 chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
 ```
 
-The packages will be installed automatically, but for now not everything is automatic (like `yay` install, colors and wallpaper).
+The packages will be installed automatically, but for now not everything is automatic (like `paru` install, colors and wallpaper).
 Yes I want to full automatize install from bare Arch to my distro.
 No I don't plan to do that soon.
 
