@@ -2,6 +2,20 @@
   "pylint_ignore_line": {
     "prefix": "#pylint",
     "body": ["# pylint: disable=${1:import-error}"],
-    "description": "Add a pylint disable comment"
+    "description": "Add a pylint disable comment."
+  },
+  "pathify_str": {
+    "prefix": "pathy",
+    "body": ["${1:path} = Path(${1})"],
+    "description": "Ensure a path is in pathlib."
+  },
+  "section": {
+    "prefix": "section",
+    "body": [
+      "# ------------------------------------------------------------",
+      "# ${1:SECTION}",
+      "# ------------------------------------------------------------"
+    ],
+    "description": "Add a section delimitation."
   }
 }
