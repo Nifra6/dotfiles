@@ -141,7 +141,6 @@ packages:
       - "nm-connection-editor" # GUI for connection creation & configuration (useful for vpn)
       - "pavucontrol" # audio frontend to manage sound
       - "picard" # sound file tagger (for metadata)
-      - "pinta" # paint.NET like
       - "protonmail-bridge" # enable IMAP between Proton mail and Thunderbird
       - "qbittorrent" # BitTorrent client
       - "signal-desktop" # messaging app
