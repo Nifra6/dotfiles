@@ -1,3 +1,4 @@
+-- NOTE: Diagnostic config
 vim.diagnostic.config({
     signs = {
         text = {
@@ -17,6 +18,7 @@ vim.diagnostic.config({
     },
 })
 
+-- NOTE: Keymap to toggle diagnostic virtual lines
 vim.keymap.set("n", "td", function()
     local new_config = vim.diagnostic.config().virtual_lines
     new_config.current_line = not new_config.current_line
