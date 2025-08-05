@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
 
         -- NOTE: Symbols
-        map("<leader>sr", vim.lsp.buf.rename, "[R]ename symbol")
+        map("<leader>r", vim.lsp.buf.rename, "[R]ename symbol")
 
         -- NOTE: Code actions
         map("<leader>ca", vim.lsp.buf.code_action, "Code [A]ction")

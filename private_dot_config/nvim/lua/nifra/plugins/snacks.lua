@@ -169,21 +169,6 @@ return {
                 nowait = true,
                 desc = "[R]eferences",
             },
-            -- NOTE: LSP symbols
-            {
-                "<leader>sd",
-                function()
-                    Snacks.picker.lsp_symbols()
-                end,
-                desc = "[D]ocument Symbols",
-            },
-            {
-                "<leader>sw",
-                function()
-                    Snacks.picker.lsp_workspace_symbols()
-                end,
-                desc = "[W]orkspace Symbols",
-            },
         },
     },
 }
