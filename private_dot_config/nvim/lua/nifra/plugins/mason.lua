@@ -29,6 +29,8 @@ return {
                 "tombi",
                 "ruff",
                 "pyright",
+                "ty",
+                "pyrefly",
                 "markdownlint",
                 "shellcheck",
                 "shfmt",
