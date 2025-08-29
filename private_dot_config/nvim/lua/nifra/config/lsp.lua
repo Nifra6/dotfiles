@@ -5,8 +5,8 @@ local lsp_configs = {
     -- "ltex",
     "luals",
     "ruff",
-    "pyright",
     "tombi",
+    "pyrefly", -- "pyright" or "ty",
 }
 
 -- NOTE: LSP configurations
