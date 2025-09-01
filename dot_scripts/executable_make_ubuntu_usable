@@ -1,20 +1,29 @@
 #! /bin/sh
 
 # Get my dotfiles
-if ! command -v chezmoi > /dev/null 2>&1; then
+if ! command -v chezmoi >/dev/null 2>&1; then
     snap install chezmoi --classic
     chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
 fi
 
 # Packages install
-sudo apt install btop dunst git kitty neofetch ranger zathura zsh
+sudo apt install btop dunst kitty neofetch ranger zathura zsh zsh-syntax-highlighting zsh-autosuggestions
 sudo snap install discord
+sudo snap install brave
 sudo snap install mpv
 sudo snap install node --classic
 sudo snap install nvim --classic
 
+# Brave
+if ! command -v brave-browser >/dev/null 2>&1; then
+    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+    sudo apt update
+    sudo apt install brave-browser
+fi
+
 # Lazygit
-if ! command -v lazygit > /dev/null 2>&1; then
+if ! command -v lazygit >/dev/null 2>&1; then
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
     curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
     tar xf lazygit.tar.gz lazygit
@@ -22,9 +31,9 @@ if ! command -v lazygit > /dev/null 2>&1; then
     rm lazygit lazygit.tar.gz
 fi
 
-# Poetry
-if ! command -v poetry > /dev/null 2>&1; then
-    curl -sSL https://install.python-poetry.org | python3 -
+# uv
+if ! command -v lazygit >/dev/null 2>&1; then
+    curl -LsSf https://astral.sh/uv/install.sh | sh
 fi
 
 # Nerd Fonts
@@ -33,13 +42,13 @@ if [ "$(fc-list | grep -ci 'JetBrainsMono Nerd Font')" -eq 0 ]; then
 fi
 
 # Install regolith
-if ! command -v regolith-diagnostic > /dev/null 2>&1; then
-    wget -qO - https://regolith-desktop.org/regolith.key | \
-        gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+if ! command -v regolith-diagnostic >/dev/null 2>&1; then
+    wget -qO - https://regolith-desktop.org/regolith.key |
+        gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg >/dev/null
     echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-https://regolith-desktop.org/release-3_1-ubuntu-jammy-amd64 jammy main" | \
+https://regolith-desktop.org/release-3_1-ubuntu-jammy-amd64 jammy main" |
         sudo tee /etc/apt/sources.list.d/regolith.list
     sudo apt update
-    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille i3xrocks-bluetooth i3xrocks-disk-capacity i3xrocks-media-player i3xrocks-weather
     echo "Plus qu'à reboot !"
 fi
