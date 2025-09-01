@@ -8,7 +8,7 @@ packages:
       - "quarto-cli-bin" # Quarto language binary
       - "r2modman-bin" # thunderstore od manager for linux
       - "spotify" # music streaming
-      - "wleave-git" # logout menu
+      - "wleave" # logout menu
       - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
       # NOTE: Essential / system packages
