@@ -1,0 +1,41 @@
+{
+  "buttons-per-row": "2",
+  "column-spacing": 16,
+  "row-spacing": 16,
+  "margin-left": 500,
+  "margin-right": 500,
+  "margin-top": 150,
+  "margin-bottom": 150,
+  "close-on-lost-focus": true,
+  "show-keybinds": false,
+  "buttons": [
+    {
+      "label": "lock",
+      "action": "loginctl lock-session",
+      "text": "Verrouillage",
+      "keybind": "l",
+      "height": 0.95
+    },
+    {
+      "label": "reboot",
+      "action": "systemctl reboot",
+      "text": "Redémarrer",
+      "keybind": "r",
+      "height": 0.95
+    },
+    {
+      "label": "suspend",
+      "action": "systemctl suspend",
+      "text": "Veille",
+      "keybind": "v",
+      "height": 0.95
+    },
+    {
+      "label": "shutdown",
+      "action": "systemctl poweroff",
+      "text": "Éteindre",
+      "keybind": "e",
+      "height": 0.95
+    }
+  ]
+}
