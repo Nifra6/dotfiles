@@ -7,10 +7,11 @@ if ! command -v chezmoi >/dev/null 2>&1; then
 fi
 
 # Packages install
-sudo apt install btop dunst kitty neofetch ranger zathura zsh zsh-syntax-highlighting zsh-autosuggestions
+sudo apt install -y btop dunst kitty neofetch ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions
 sudo snap install discord
 sudo snap install brave
 sudo snap install mpv
+sudo snap install zotero-snap
 sudo snap install node --classic
 sudo snap install nvim --classic
 
@@ -32,7 +33,7 @@ if ! command -v lazygit >/dev/null 2>&1; then
 fi
 
 # uv
-if ! command -v lazygit >/dev/null 2>&1; then
+if ! command -v uv >/dev/null 2>&1; then
     curl -LsSf https://astral.sh/uv/install.sh | sh
 fi
 
