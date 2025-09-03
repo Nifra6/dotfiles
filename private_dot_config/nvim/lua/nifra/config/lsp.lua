@@ -6,7 +6,8 @@ local lsp_configs = {
     "luals",
     "ruff",
     "tombi",
-    "pyrefly", -- "pyright" or "ty",
+    "ty",
+    "pyrefly",
 }
 
 -- NOTE: LSP configurations

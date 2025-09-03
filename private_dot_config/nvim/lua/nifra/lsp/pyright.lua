@@ -12,11 +12,11 @@ vim.lsp.config("pyright", {
     },
     settings = {
         pyright = {
-            disableOrganizeImports = true
+            disableOrganizeImports = true,
         },
         python = {
             analysis = {
-                ignore = { "*" }
+                ignore = { "*" },
             },
         },
     },
