@@ -7,7 +7,7 @@ if ! command -v chezmoi >/dev/null 2>&1; then
 fi
 
 # Packages install
-sudo apt install -y btop dunst kitty neofetch ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions
+sudo apt install -y btop dunst kitty neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions
 sudo snap install discord
 sudo snap install brave
 sudo snap install mpv
