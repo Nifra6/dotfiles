@@ -9,12 +9,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-
-# -- Replace commands
-# ---------------------------
-alias cat='bat'
-
-
 # -- git aliases
 # ---------------------------
 alias gp='git pull'
