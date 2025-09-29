@@ -56,22 +56,22 @@ application/xml=brave-browser.desktop
 
 x-scheme-handler/mailto=thunderbird.desktop
 
-video/mp4=mpv.desktop
-video/x-matroska=mpv.desktop
-video/x-msvideo=mpv.desktop
-application/x-matroska=mpv.desktop
-application/ogg=mpv.desktop
 
-audio/mpeg=mpv.desktop
-audio/flac=mpv.desktop
-audio/ogg=mpv.desktop
-audio/mp4=mpv.desktop
-audio/aac=mpv.desktop
-audio/x-matroska=mpv.desktop
-audio/x-flac+ogg=mpv.desktop
-audio/x-opus+ogg=mpv.desktop
-audio/x-vorbis+ogg=mpv.desktop
 
+video/mp4=mpv.desktop;mpv_mpv.desktop
+video/x-matroska=mpv.desktop;mpv_mpv.desktop
+video/x-msvideo=mpv.desktop;mpv_mpv.desktop
+application/x-matroska=mpv.desktop;mpv_mpv.desktop
+application/ogg=mpv.desktop;mpv_mpv.desktop
+audio/mpeg=mpv.desktop;mpv_mpv.desktop
+audio/flac=mpv.desktop;mpv_mpv.desktop
+audio/ogg=mpv.desktop;mpv_mpv.desktop
+audio/mp4=mpv.desktop;mpv_mpv.desktop
+audio/aac=mpv.desktop;mpv_mpv.desktop
+audio/x-matroska=mpv.desktop;mpv_mpv.desktop
+audio/x-flac+ogg=mpv.desktop;mpv_mpv.desktop
+audio/x-opus+ogg=mpv.desktop;mpv_mpv.desktop
+audio/x-vorbis+ogg=mpv.desktop;mpv_mpv.desktop
 image/jpeg=feh.desktop
 image/png=feh.desktop
 image/webp=feh.desktop
