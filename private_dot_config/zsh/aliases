@@ -101,7 +101,6 @@ case $HOSTNAME in
     alias cp_zotero="cp -nr Documents/Zotero/storage/ /media/nmaignan/Clyde/Transfert\ Rapide/"
     # -- Misc
     # ---------------------------
-    alias cat="batcat"
     alias clean_cache="sh /home/nmaignan/Applications/clean.sh"
     alias journal="nvim $HOME/Thèse/01_Documents/Journal\ de\ bord\ -\ Thèse.md"
     ;;
