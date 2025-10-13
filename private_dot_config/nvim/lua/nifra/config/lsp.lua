@@ -6,8 +6,11 @@ local lsp_configs = {
     "luals",
     "ruff",
     "tombi",
-    "pyrefly", -- or "ty",
-    "pyright",
+    "ty",
+    "basedpyright",
+    -- "pyrefly", # seems memory hungry
+    -- "zuban",
+    -- "pyright",
 }
 
 -- NOTE: LSP configurations

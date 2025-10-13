@@ -1,16 +1,12 @@
-vim.lsp.config("pyrefly", {
-    cmd = { "pyrefly", "lsp" },
+vim.lsp.config("zuban", {
+    cmd = { "zuban", "server" },
     filetypes = { "python" },
     root_markers = {
-        "pyrefly.toml",
         "pyproject.toml",
         "setup.py",
         "setup.cfg",
         "requirements.txt",
         "Pipfile",
         ".git",
-    },
-    settings = {
-        -- python = { pyrefly = { disableLanguageServices = true } },
     },
 })
