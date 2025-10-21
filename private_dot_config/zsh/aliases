@@ -52,6 +52,7 @@ dunst_test() {
     dunstify -u low "Urgence : faible" "C'est bien pour genre ... spotify, vraiment juste une info sans risque"
     dunstify -u critical "Urgence : critique" "Comme on dit chez moi, on est pas dans la merde !"
 }
+alias theme="~/.scripts/toggle-theme"
 
 
 # -- Fast config access

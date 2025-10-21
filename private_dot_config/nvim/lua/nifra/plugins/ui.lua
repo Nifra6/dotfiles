@@ -4,10 +4,13 @@ return {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
-        init = function()
-            vim.cmd.colorscheme("tokyonight-moon")
-        end,
         opts = { transparent = true },
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        opts = { transparent_background = true },
     },
     -- NOTE: Nicer help
     {
@@ -123,7 +126,7 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons", "letieu/harpoon-lualine" },
         opts = {
             options = {
-                theme = "tokyonight-moon",
+                theme = "auto",
                 globalstatus = true,
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },

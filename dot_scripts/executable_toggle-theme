@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Toggle between tokyonight-moon and catppuccin-latte for Kitty and Neovim.
+set -euo pipefail
+
+KITTY_CONF="$HOME/.config/kitty/kitty.conf"
+TOKYO_KITTY="include colorscheme/tokyonight_moon.conf"
+CATPPUCCIN_KITTY="include colorscheme/latte.conf"
+
+NEOVIM_CONF="$HOME/.config/nvim/lua/nifra/theme.lua"
+TOKYO_NVIM="tokyonight-moon"
+CATPPUCCIN_NVIM="catppuccin-latte"
+
+if [[ ! -f $KITTY_CONF || ! -f $NEOVIM_CONF ]]; then
+    echo "Error: missing config file." >&2
+    exit 1
+fi
+
+# Toggle theme
+if grep -Fq "$TOKYO_KITTY" "$KITTY_CONF"; then
+    sed -i "s|$TOKYO_KITTY|$CATPPUCCIN_KITTY|" "$KITTY_CONF"
+    sed -i "s|$TOKYO_NVIM|$CATPPUCCIN_NVIM|" "$NEOVIM_CONF"
+    THEME="Catppuccin Latte 🌿"
+else
+    sed -i "s|$CATPPUCCIN_KITTY|$TOKYO_KITTY|" "$KITTY_CONF"
+    sed -i "s|$CATPPUCCIN_NVIM|$TOKYO_NVIM|" "$NEOVIM_CONF"
+    THEME="TokyoNight Moon 🌙"
+fi
+echo "Theme updated in files → $THEME"
+
+# --- Reload Kitty safely ---
+if command -v kitty >/dev/null 2>&1 && kitty @ ls >/dev/null 2>&1; then
+    kitty @ set-colors -a "$KITTY_CONF"
+    echo "Kitty config reloaded via socket ✅"
+else
+    echo "⚠️ Kitty socket not available — try restarting Kitty manually."
+    echo "Tip: from a Kitty terminal, run → kitty @ set-colors -a $KITTY_CONF"
+fi
+
+# --- Optional desktop notification ---
+if command -v notify-send >/dev/null 2>&1; then
+    notify-send "Theme switched" "$THEME" -i preferences-desktop-theme
+fi
