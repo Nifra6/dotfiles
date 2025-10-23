@@ -2,9 +2,9 @@
 # Toggle between tokyonight-moon and catppuccin-latte for Kitty and Neovim.
 set -euo pipefail
 
-KITTY_CONF="$HOME/.config/kitty/kitty.conf"
-TOKYO_KITTY="include colorscheme/tokyonight_moon.conf"
-CATPPUCCIN_KITTY="include colorscheme/latte.conf"
+KITTY_CONF="$HOME/.config/kitty/current-theme.conf"
+TOKYO_KITTY="$HOME/.config/kitty/themes/tokyonight_moon.conf"
+CATPPUCCIN_KITTY="$HOME/.config/kitty/themes/latte.conf"
 
 NEOVIM_CONF="$HOME/.config/nvim/lua/nifra/theme.lua"
 TOKYO_NVIM="tokyonight-moon"
@@ -16,12 +16,12 @@ if [[ ! -f $KITTY_CONF || ! -f $NEOVIM_CONF ]]; then
 fi
 
 # Toggle theme
-if grep -Fq "$TOKYO_KITTY" "$KITTY_CONF"; then
-    sed -i "s|$TOKYO_KITTY|$CATPPUCCIN_KITTY|" "$KITTY_CONF"
+if grep -Fq "$TOKYO_NVIM" "$NEOVIM_CONF"; then
+    cp $CATPPUCCIN_KITTY $KITTY_CONF
     sed -i "s|$TOKYO_NVIM|$CATPPUCCIN_NVIM|" "$NEOVIM_CONF"
     THEME="Catppuccin Latte 🌿"
 else
-    sed -i "s|$CATPPUCCIN_KITTY|$TOKYO_KITTY|" "$KITTY_CONF"
+    cp $TOKYO_KITTY $KITTY_CONF
     sed -i "s|$CATPPUCCIN_NVIM|$TOKYO_NVIM|" "$NEOVIM_CONF"
     THEME="TokyoNight Moon 🌙"
 fi
