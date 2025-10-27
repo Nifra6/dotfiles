@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Toggle between tokyonight-moon and catppuccin-latte for Kitty and Neovim.
+# Toggle between light and dark themes for Kitty and Neovim.
 set -euo pipefail
 
 KITTY_CONF="$HOME/.config/kitty/current-theme.conf"
-TOKYO_KITTY="$HOME/.config/kitty/themes/tokyonight_moon.conf"
-CATPPUCCIN_KITTY="$HOME/.config/kitty/themes/latte.conf"
+LIGHT_KITTY="$HOME/.config/kitty/themes/tokyonight_day.conf"
+DARK_KITTY="$HOME/.config/kitty/themes/tokyonight_moon.conf"
 
 NEOVIM_CONF="$HOME/.config/nvim/lua/nifra/theme.lua"
-TOKYO_NVIM="tokyonight-moon"
-CATPPUCCIN_NVIM="catppuccin-latte"
+LIGHT_NVIM="tokyonight-day"
+DARK_NVIM="tokyonight-moon"
 
 if [[ ! -f $KITTY_CONF || ! -f $NEOVIM_CONF ]]; then
     echo "Error: missing config file." >&2
@@ -16,14 +16,14 @@ if [[ ! -f $KITTY_CONF || ! -f $NEOVIM_CONF ]]; then
 fi
 
 # Toggle theme
-if grep -Fq "$TOKYO_NVIM" "$NEOVIM_CONF"; then
-    cp $CATPPUCCIN_KITTY $KITTY_CONF
-    sed -i "s|$TOKYO_NVIM|$CATPPUCCIN_NVIM|" "$NEOVIM_CONF"
-    THEME="Catppuccin Latte 🌿"
+if grep -Fq "$DARK_NVIM" "$NEOVIM_CONF"; then
+    cp $LIGHT_KITTY $KITTY_CONF
+    sed -i "s|$DARK_NVIM|$LIGHT_NVIM|" "$NEOVIM_CONF"
+    THEME="Light theme ☀️"
 else
-    cp $TOKYO_KITTY $KITTY_CONF
-    sed -i "s|$CATPPUCCIN_NVIM|$TOKYO_NVIM|" "$NEOVIM_CONF"
-    THEME="TokyoNight Moon 🌙"
+    cp $DARK_KITTY $KITTY_CONF
+    sed -i "s|$LIGHT_NVIM|$DARK_NVIM|" "$NEOVIM_CONF"
+    THEME="Dark theme 🌙"
 fi
 echo "Theme updated in files → $THEME"
 
