@@ -7,7 +7,7 @@ return {
             events = { "BufWritePost", "BufReadPost", "InsertLeave" },
             linters_by_ft = {
                 markdown = { "markdownlint" },
-                python = { "pylint" },
+                -- python = { "pylint" },
                 -- ["*"] = { "typos" }, -- NOTE: Global linter
                 -- ["_"] = {}, -- NOTE: Fallback linter
             },
