@@ -4,13 +4,9 @@ local lsp_configs = {
     -- "harper",
     -- "ltex",
     "luals",
-    "ruff",
+    "ruff", -- Python formatter + linter
     "tombi",
-    "ty", -- best Python type checker
-    "basedpyright", -- best Python editor features
-    -- "pyrefly", -- Python, seems memory hungry
-    -- "zuban", -- Python, more promising tc but do not stop with nvim for now
-    -- "pyright", -- Python, support close source, bla bla bla
+    "ty", -- Python type checker + LSP
 }
 
 -- NOTE: LSP configurations

@@ -20,7 +20,7 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
             ensure_installed = {
-                "basedpyright",
+                -- "basedpyright",
                 "bash-language-server",
                 "harper-ls",
                 "prettier",

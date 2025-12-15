@@ -3,6 +3,6 @@ vim.lsp.config("ty", {
     filetypes = { "python" },
     root_markers = { "ty.toml", "pyproject.toml", ".git" },
     settings = {
-        ty = { disableLanguageServices = true },
+        -- ty = { disableLanguageServices = true }, -- To use only as type checker
     },
 })
