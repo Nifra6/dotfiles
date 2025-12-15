@@ -1,0 +1,17 @@
+line-length = 88
+indent-width = 4
+
+[lint]
+select = ["ALL"]
+ignore = ["COM812", "TD"]
+
+[lint.isort]
+split-on-trailing-comma = false
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+docstring-code-format = true
+line-ending = "lf"
+skip-magic-trailing-comma = true
