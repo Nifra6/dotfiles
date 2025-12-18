@@ -17,10 +17,3 @@ vim.diagnostic.config({
         severity = { vim.diagnostic.severity.INFO, vim.diagnostic.severity.HINT },
     },
 })
-
--- NOTE: Keymap to toggle diagnostic virtual lines
-vim.keymap.set("n", "td", function()
-    local new_config = vim.diagnostic.config().virtual_lines
-    new_config.current_line = not new_config.current_line
-    vim.diagnostic.config({ virtual_lines = new_config })
-end, { desc = "Toggle diagnostic virtual_lines" })

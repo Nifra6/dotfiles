@@ -1,17 +1,17 @@
--- NOTE: Import vim global variables
+-- NOTE: Global variables
 require("nifra.config.global")
 
--- NOTE: Import vim options
+-- NOTE: Options
 require("nifra.config.options")
 
--- NOTE: Import vim keymaps
-require("nifra.config.keymaps")
+-- NOTE: Diagnostic configurations
+require("nifra.config.diagnostic")
 
--- NOTE: Add highlight on yanking
-require("nifra.config.autocommands")
-
--- NOTE: LSP
+-- NOTE: LSPs
 require("nifra.config.lsp")
 
--- NOTE: Diagnostic
-require("nifra.config.diagnostic")
+-- NOTE: General keymaps
+require("nifra.config.keymaps")
+
+-- NOTE: Autocommands
+require("nifra.config.autocommands")

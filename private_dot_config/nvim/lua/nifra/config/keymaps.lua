@@ -23,3 +23,10 @@ map("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- NOTE: Clear highlight in normal mode
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
+
+-- NOTE: Toggle diagnostic virtual lines
+map("n", "td", function()
+    local new_config = vim.diagnostic.config().virtual_lines
+    new_config.current_line = not new_config.current_line
+    vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = "Toggle diagnostic virtual_lines" })
