@@ -24,7 +24,7 @@ return {
                 jsonc = { "prettier" },
                 lua = { "stylua" },
                 markdown = { "prettier" },
-                python = { "ruff_format", "ruff_organize_imports" },
+                python = { "ruff_organize_imports", "ruff_format" },
                 sh = { "shfmt" },
                 tex = { "latexindent" },
                 toml = { "tombi" },

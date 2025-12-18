@@ -20,6 +20,6 @@ require("lazy").setup({
     spec = {
         { import = "nifra.plugins" },
     },
-    install = { colorscheme = { "tokyonight-moon" } },
+    install = { colorscheme = { "tokyonight-day" } },
     checker = { enabled = true, notify = false },
 })
