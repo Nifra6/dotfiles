@@ -13,13 +13,12 @@ return {
         dependencies = { "rafamadriz/friendly-snippets" },
         version = "1.*",
 
-        ---@module 'blink.cmp'
-        ---@type blink.cmp.Config
         opts = {
             keymap = {
                 preset = "default",
                 ["<Enter>"] = { "accept", "fallback" },
                 ["<Tab>"] = { "select_next", "fallback" },
+                ["<S-Tab>"] = { "select_prev", "fallback" },
             },
             appearance = { nerd_font_variant = "mono" },
             completion = {
@@ -29,7 +28,7 @@ return {
                 },
             },
             sources = {
-                default = { "lazydev", "omni", "lsp", "path", "snippets", "buffer" },
+                default = { "lazydev", "lsp", "path", "snippets", "buffer" },
                 providers = {
                     lazydev = {
                         name = "LazyDev",
