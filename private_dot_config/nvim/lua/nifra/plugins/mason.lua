@@ -20,7 +20,6 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
             ensure_installed = {
-                -- "basedpyright",
                 "bash-language-server",
                 "harper-ls",
                 "prettier",
@@ -29,14 +28,10 @@ return {
                 "lua-language-server",
                 "tombi",
                 "ruff",
-                -- "pyright",
                 "ty",
-                -- "pyrefly",
-                "markdownlint",
                 "shellcheck",
                 "shfmt",
                 "stylua",
-                -- "zuban",
             },
             auto_update = true,
         },
