@@ -77,15 +77,6 @@ return {
                 end,
                 desc = "Lazy[G]it",
             },
-            -- NOTE: Blame current line
-            {
-                "<leader>b",
-                function()
-                    Snacks.git.blame_line()
-                end,
-                desc = "[B]lame",
-                mode = { "n", "v" },
-            },
             -- NOTE: Open git repository
             {
                 "<leader>gG",
