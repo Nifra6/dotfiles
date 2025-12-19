@@ -12,8 +12,9 @@ return {
     -- NOTE: Highlight colors
     {
         "catgoose/nvim-colorizer.lua",
-        event = "BufReadPre",
+        event = "VeryLazy",
         opts = {
+            lazy_load = true,
             user_default_options = { rgb_fn = true },
         },
     },
@@ -53,92 +54,6 @@ return {
             },
             opleader = { line = "<Leader>cc", block = "<Leader>cb" },
             toggler = { line = "<Leader>cc" },
-        },
-    },
-    -- NOTE: Refactor code
-    {
-        "ThePrimeagen/refactoring.nvim",
-        enabled = false,
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
-        },
-        lazy = false,
-        opts = { show_success_message = true },
-        keys = {
-            { "<leader>r", "", desc = "[R]efactor", mode = { "n", "x" } },
-            {
-                "<leader>rr",
-                function()
-                    require("refactoring").select_refactor()
-                end,
-                mode = { "n", "x" },
-                desc = "Select [R]efactor",
-                { expr = true },
-            },
-            {
-                "<leader>ri",
-                function()
-                    require("refactoring").refactor("Inline Variable")
-                end,
-                mode = { "n", "x" },
-                desc = "[I]nline Variable",
-                { expr = true },
-            },
-            {
-                "<leader>rI",
-                function()
-                    require("refactoring").refactor("Inline Function")
-                end,
-                mode = { "n", "x" },
-                desc = "[I]nline Function",
-                { expr = true },
-            },
-            {
-                "<leader>rb",
-                function()
-                    require("refactoring").refactor("Extract Block")
-                end,
-                mode = { "n", "x" },
-                desc = "Extract [B]lock",
-                { expr = true },
-            },
-            {
-                "<leader>rB",
-                function()
-                    require("refactoring").refactor("Extract Block To File")
-                end,
-                mode = { "n", "x" },
-                desc = "Extract [B]lock to File",
-                { expr = true },
-            },
-            {
-                "<leader>rf",
-                function()
-                    require("refactoring").refactor("Extract Function")
-                end,
-                mode = { "n", "x" },
-                desc = "Extract [F]unction",
-                { expr = true },
-            },
-            {
-                "<leader>rF",
-                function()
-                    require("refactoring").refactor("Extract Function To File")
-                end,
-                mode = { "n", "x" },
-                desc = "Extract [F]unction To File",
-                { expr = true },
-            },
-            {
-                "<leader>rv",
-                function()
-                    require("refactoring").refactor("Extract Variable")
-                end,
-                mode = { "n", "x" },
-                desc = "Extract [V]ariable",
-                { expr = true },
-            },
         },
     },
     -- NOTE: Harpoon files to have easy access
