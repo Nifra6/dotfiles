@@ -156,6 +156,7 @@ packages:
       - "pipewire-alsa" # plugin to support ALSA
       - "pipewire-pulse" # plugin to support bluetooth with `bluez`
       - "thunderbird-i18n-fr" # French language for thunderbird
+      - "yt-dlp-ejs" # js runtime for yt-dlp
       - "zathura-pdf-mupdf" # enable PDF, ePub & OpenXPS on `zathura`
       - "zsh-autosuggestions" # fish-like autosuggestions
       - "zsh-syntax-highlighting" # fish-like syntax highlighting
