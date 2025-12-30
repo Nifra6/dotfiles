@@ -84,7 +84,7 @@ case $DISTRO in
     "Arch Linux")
         # -- System functions
         # ---------------------------
-        alias update='paru -Pw ; paru -Sc ; paru -Syu ; pacdiff -s ; chezmoi update -v'
+        alias update='paru -Pw ; paru -Sc ; paru -Syu ; pacdiff -s ; paru -c ; chezmoi update -v'
         # -- Replace commands
         # ---------------------------
         alias ls='lsd'
