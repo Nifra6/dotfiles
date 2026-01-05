@@ -7,7 +7,6 @@ packages:
       - "paru" # AUR helper
       - "quarto-cli-bin" # Quarto language binary
       - "r2modman-bin" # thunderstore od manager for linux
-      - "spotify" # music streaming
       - "wleave" # logout menu
       - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
@@ -146,6 +145,7 @@ packages:
       - "protonmail-bridge" # enable IMAP between Proton mail and Thunderbird
       - "qbittorrent" # BitTorrent client
       - "signal-desktop" # messaging app
+      - "spotify-launcher" # music streaming
       - "thunderbird" # mail reader
       - "zathura" # document viewer with vi bindings
       # NOTE: Gaming
