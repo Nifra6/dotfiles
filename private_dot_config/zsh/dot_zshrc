@@ -14,6 +14,7 @@ SAVEHIST=5000
 # -- Completion
 # ---------------------------
 fpath+=${ZDOTDIR}/completions
+fpath+=${HOME}/.zfunc
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 # matcher-list 'm:{a-zA-Z}={A-Za-z}'
