@@ -44,6 +44,7 @@ return {
         },
     },
     -- NOTE: Comment and uncomment
+    -- TODO: Remove and use built-in commenting (with my owns keymaps)
     {
         "numToStr/Comment.nvim",
         event = { "BufNewFile", "BufReadPost" },
