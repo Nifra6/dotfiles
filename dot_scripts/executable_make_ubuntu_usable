@@ -7,13 +7,16 @@ if ! command -v chezmoi >/dev/null 2>&1; then
 fi
 
 # Packages install
-sudo apt install -y btop dunst kitty neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions
-sudo snap install discord
+sudo apt install -y dunst kitty neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions
+sudo snap install btop
 sudo snap install brave
-sudo snap install mpv
 sudo snap install zotero-snap
+sudo snap install discord
 sudo snap install node --classic
+sudo snap install lsd --classic
+sudo snap install yazi --classic
 sudo snap install nvim --classic
+sudo snap install mpv --classic
 
 # Brave
 if ! command -v brave-browser >/dev/null 2>&1; then
