@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+# Récupère la version locale de lazygit
+local_version=$(lazygit -v | grep -oP 'version=\K[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+
+# Récupère la dernière version disponible sur GitHub
+latest_version=$(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest |
+    grep '"tag_name":' |
+    sed -E 's/.*"([^"]+)".*/\1/' |
+    sed 's/^v//')
+
+# Vérification si les versions sont identiques
+if [ "$local_version" = "$latest_version" ]; then
+    echo "Lazygit à jour : $local_version"
+else
+    echo "Mettre à jour lazygit : $local_version → $latest_version"
+fi

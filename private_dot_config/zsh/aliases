@@ -79,7 +79,7 @@ case $DISTRO in
     "Ubuntu") 
         # -- System functions
         # ---------------------------
-        alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; uv self update ; chezmoi update -v'
+        alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; uv self update ; ~/.scripts/check_lazygit_version ; chezmoi update -v'
         ;;
     "Arch Linux")
         # -- System functions
