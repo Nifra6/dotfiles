@@ -65,6 +65,7 @@ return {
                 { "<leader>q", icon = " " },
                 { "<leader>r", icon = "󰑕 " },
                 { "<leader>t", icon = "󱏒 " },
+                { "<leader>$", icon = " " },
                 { "<leader>1", hidden = true },
                 { "<leader>2", hidden = true },
                 { "<leader>3", hidden = true },

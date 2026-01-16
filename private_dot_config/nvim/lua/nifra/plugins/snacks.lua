@@ -67,6 +67,7 @@ return {
                     },
                 },
             },
+            terminal = {},
         },
         keys = {
             --  NOTE: Lazygit
@@ -159,6 +160,13 @@ return {
                 end,
                 nowait = true,
                 desc = "[R]eferences",
+            },
+            {
+                "<leader>$",
+                function()
+                    Snacks.terminal()
+                end,
+                desc = "[T]erminal",
             },
         },
     },
