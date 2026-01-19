@@ -19,7 +19,7 @@ if ! command -v chezmoi >/dev/null 2>&1; then
 fi
 
 # Packages install
-sudo apt install -y dunst kitty neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions
+sudo apt install -y dunst kitty neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions openssl-dev # openssl-dev for gitlab-ci-ls for neovim
 sudo snap install btop
 sudo snap install brave
 sudo snap install zotero-snap

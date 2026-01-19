@@ -1,6 +1,9 @@
 -- NOTE: Global variables
 require("nifra.config.global")
 
+-- NOTE: Filetypes
+require("nifra.config.filetypes")
+
 -- NOTE: Options
 require("nifra.config.options")
 

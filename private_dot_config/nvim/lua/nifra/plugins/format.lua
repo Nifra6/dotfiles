@@ -28,7 +28,7 @@ return {
                 sh = { "shfmt" },
                 tex = { "latexindent" },
                 toml = { "tombi" },
-                yaml = { "prettier" },
+                yaml = { lsp_format = "prefer" },
             },
         },
     },

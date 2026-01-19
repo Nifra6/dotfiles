@@ -21,6 +21,7 @@ return {
         opts = {
             ensure_installed = {
                 "bash-language-server",
+                "gitlab-ci-ls",
                 "harper-ls",
                 "prettier",
                 "latexindent",
@@ -32,6 +33,7 @@ return {
                 "shellcheck",
                 "shfmt",
                 "stylua",
+                "yaml-language-server",
             },
             auto_update = true,
         },
