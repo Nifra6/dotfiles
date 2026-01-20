@@ -80,6 +80,7 @@ case $DISTRO in
         # -- System functions
         # ---------------------------
         alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; uv self update ; ~/.scripts/check_lazygit_version ; chezmoi update -v'
+        alias bat="batcat"
         ;;
     "Arch Linux")
         # -- System functions
