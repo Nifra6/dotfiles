@@ -56,6 +56,7 @@ return {
                 { "<leader>fh", icon = "󰋖 " },
                 { "<leader>fk", icon = "󰌌 " },
                 { "<leader>fs", icon = " " },
+                { "<leader>ft", icon = "󰄲 " },
                 { "<leader>g", icon = "󱞫 ", group = "[G]o to" },
                 { "<leader>h", icon = "󱡅 " },
                 { "<leader>l", icon = "󰒲 ", group = "[L]azy" },

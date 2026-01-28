@@ -130,6 +130,13 @@ return {
                 end,
                 desc = "[S]ymbols",
             },
+            {
+                "<leader>ft",
+                function()
+                    Snacks.picker.todo_comments()
+                end,
+                desc = "[T]odo",
+            },
             -- NOTE: LSP - Go to...
             {
                 "gd",
