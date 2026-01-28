@@ -14,6 +14,7 @@ packages:
       # NOTE: Essential / system packages
       - "base"
       - "base-devel"
+      - "fuse2" # Needed for AppImages
       - "inetutils"
       - "linux"
       - "linux-headers"
