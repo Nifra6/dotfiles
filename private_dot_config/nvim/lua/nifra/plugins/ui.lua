@@ -83,7 +83,7 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.bufremove" },
+        dependencies = { "nvim-tree/nvim-web-devicons", "nvim-mini/mini.bufremove" },
         keys = {
             { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
             { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },

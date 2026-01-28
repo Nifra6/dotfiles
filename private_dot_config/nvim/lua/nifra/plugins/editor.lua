@@ -95,17 +95,10 @@ return {
     },
     -- NOTE: Auto pairs
     {
-        "echasnovski/mini.pairs",
+        "nvim-mini/mini.pairs",
         config = true,
         event = { "BufNewFile", "BufReadPost" },
         version = false,
-        opts = {
-            mappings = {
-                ["("] = { neigh_pattern = "[^\\]%W" },
-                ["["] = { neigh_pattern = "[^\\]%W" },
-                ["{"] = { neigh_pattern = "[^\\]%W" },
-                ['"'] = { neigh_pattern = "[^\\]%W" },
-            },
-        },
+        opts = {},
     },
 }
