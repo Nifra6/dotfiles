@@ -4,15 +4,17 @@ packages:
       - "brave-bin" # chromium based browser
       - "conda-zsh-completion" # conda auto complete for zsh
       - "gdm-settings" # configure gdm
+      - "matlab-support" # correct lib issues if MATLAB is installed
       - "paru" # AUR helper
       - "quarto-cli-bin" # Quarto language binary
       - "r2modman-bin" # thunderstore od manager for linux
-      - "wleave" # logout menu
+      - "wleave-git" # logout menu
       - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
       # NOTE: Essential / system packages
       - "base"
       - "base-devel"
+      - "fuse2" # Needed for AppImages
       - "inetutils"
       - "linux"
       - "linux-headers"
