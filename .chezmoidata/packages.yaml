@@ -8,7 +8,7 @@ packages:
       - "paru" # AUR helper
       - "quarto-cli-bin" # Quarto language binary
       - "r2modman-bin" # thunderstore od manager for linux
-      - "wleave" # logout menu
+      - "wleave-git" # logout menu
       - "zotero-bin" # scientific biblio and article reader with annotations
     pacman:
       # NOTE: Essential / system packages
