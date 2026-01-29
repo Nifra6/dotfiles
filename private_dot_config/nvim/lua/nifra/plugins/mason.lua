@@ -20,20 +20,20 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
             ensure_installed = {
-                "bash-language-server",
-                "gitlab-ci-ls",
-                "harper-ls",
+                "bash-language-server", -- bash lsp
+                "gitlab-ci-ls", -- Gitlab CI lsp, works with yaml-ls
+                -- "harper-ls", -- English grammar checker
                 "prettier",
                 "latexindent",
                 "ltex-ls-plus",
                 "lua-language-server",
-                "tombi",
-                "ruff",
-                "ty",
-                "shellcheck",
-                "shfmt",
+                "tombi", -- TOML lsp
+                "ruff", -- Python linting/formating lsp
+                "ty", -- Python type-checker lsp
+                "shellcheck", -- Used by bash-ls for linting
+                "shfmt", -- Used by bash-ls for formating
                 "stylua",
-                "yaml-language-server",
+                "yaml-language-server", -- YAML lsp
             },
             auto_update = true,
         },
