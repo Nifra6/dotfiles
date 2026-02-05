@@ -21,6 +21,7 @@ return {
         opts = {
             ensure_installed = {
                 "bash-language-server", -- bash lsp
+                "bibtex-tidy", -- BibTeX formatter
                 "gitlab-ci-ls", -- Gitlab CI lsp, works with yaml-ls
                 -- "harper-ls", -- English grammar checker
                 "prettier",
@@ -28,10 +29,10 @@ return {
                 "ltex-ls-plus",
                 "lua-language-server",
                 "tombi", -- TOML lsp
-                "ruff", -- Python linting/formating lsp
+                "ruff", -- Python linting/formatting lsp
                 "ty", -- Python type-checker lsp
                 "shellcheck", -- Used by bash-ls for linting
-                "shfmt", -- Used by bash-ls for formating
+                "shfmt", -- Used by bash-ls for formatting
                 "stylua",
                 "yaml-language-server", -- YAML lsp
             },

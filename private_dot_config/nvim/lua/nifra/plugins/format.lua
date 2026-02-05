@@ -18,6 +18,7 @@ return {
             format_on_save = { timeout_ms = 500, lsp_fallback = true },
             formatters_by_ft = {
                 bash = { "shfmt" },
+                bib = { "bibtex-tidy" },
                 css = { "prettier" },
                 html = { "prettier" },
                 json = { "prettier" },
