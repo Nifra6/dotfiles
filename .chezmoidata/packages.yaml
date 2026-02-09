@@ -57,6 +57,7 @@ packages:
       - "jdk-openjdk"
       - "jupyterlab"
       - "texlive-meta"
+      - "texlive-langfrench"
       - "lua"
       - "npm"
       - "pyenv"
