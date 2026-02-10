@@ -26,9 +26,15 @@ return {
                     auto_show = true,
                     auto_show_delay_ms = 500,
                 },
+                -- To change the menu appearance, check |blink-cmp-config-completion|
             },
             sources = {
-                default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+                default = { "lsp", "path", "snippets", "buffer" },
+                per_filetype = {
+                    python = { "lsp", "snippets" },
+                    tex = { "omni", "snippets" }, -- VimTeX completion is in omni
+                    lua = { inherit_defaults = true, "lazydev" },
+                },
                 providers = {
                     lazydev = {
                         name = "LazyDev",
