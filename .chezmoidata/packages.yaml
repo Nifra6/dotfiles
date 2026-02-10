@@ -60,6 +60,8 @@ packages:
       - "texlive-langfrench"
       - "lua"
       - "npm"
+      - "perl-file-homedir" # needed by latexindent
+      - "perl-yaml-tiny" # needed by latexindent
       - "pyenv"
       - "python"
       - "python-black"
