@@ -30,3 +30,6 @@ map("n", "td", function()
     new_config.current_line = not new_config.current_line
     vim.diagnostic.config({ virtual_lines = new_config })
 end, { desc = "Toggle diagnostic virtual_lines" })
+
+-- NOTE: Jumping
+map("n", "<leader>gb", "<C-t>", { desc = "[B]ack" })

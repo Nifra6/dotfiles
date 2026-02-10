@@ -24,3 +24,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("K", vim.lsp.buf.hover, "Hover Documentation")
     end,
 })
+
+-- NOTE: Jump in help
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "help",
+    callback = function()
+        vim.keymap.set("n", "<leader>gd", "<C-]>", { buffer = true, desc = "Go to tag" })
+    end,
+})
