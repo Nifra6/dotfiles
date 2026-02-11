@@ -1,14 +1,13 @@
 -- NOTE: Load LSP list
 local lsp_configs = {
-    "bashls",
-    "gitlab_ci_ls",
-    -- "harper",
-    -- "ltex",
-    "luals",
+    "bashls", -- Bash LSP
+    "gitlab_ci_ls", -- GitLab CI plugin for yamlls
+    -- "harper", -- English grammar checker
+    "luals", -- Lua LSP
     "ruff", -- Python formatter + linter
-    "tombi",
+    "tombi", -- TOML LSP
     "ty", -- Python type checker + LSP
-    "yamlls",
+    "yamlls", -- YAML LSP
 }
 
 -- NOTE: LSP configurations

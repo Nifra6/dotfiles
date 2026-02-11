@@ -19,24 +19,23 @@ return {
     {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
-            ensure_installed = {
-                "bash-language-server", -- bash lsp
-                "bibtex-tidy", -- BibTeX formatter
-                "gitlab-ci-ls", -- Gitlab CI lsp, works with yaml-ls
-                -- "harper-ls", -- English grammar checker
-                "prettier",
-                "latexindent",
-                "ltex-ls-plus",
-                "lua-language-server",
-                "tombi", -- TOML lsp
-                "ruff", -- Python linting/formatting lsp
-                "ty", -- Python type-checker lsp
-                "shellcheck", -- Used by bash-ls for linting
-                "shfmt", -- Used by bash-ls for formatting
-                "stylua",
-                "yaml-language-server", -- YAML lsp
-            },
             auto_update = true,
+            ensure_installed = {
+                "bash-language-server", -- Bash LSP
+                "bibtex-tidy", -- BibTeX formatter
+                "gitlab-ci-ls", -- Gitlab CI LSP
+                -- "harper-ls", -- English grammar checker
+                "latexindent", -- LaTeX formatter
+                "lua-language-server", -- Lua LSP
+                "prettier", -- Many languages formatter
+                "ruff", -- Python formatter + linter
+                "shellcheck", -- Bash linter
+                "shfmt", -- Bash formatter
+                "stylua", -- Lua formatter
+                "tombi", -- TOML LSP
+                "ty", -- Python type checker + LSP
+                "yaml-language-server", -- YAML LSP
+            },
         },
     },
 }
