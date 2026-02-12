@@ -163,7 +163,11 @@ return {
         event = "VeryLazy",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         cmd = "Trouble",
-        keys = { { "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", desc = "[D]iagnostics" } },
+        keys = {
+            { "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", desc = "[D]iagnostics" },
+            { "<leader>d", "<cmd>Trouble quickfix toggle<cr>", ft = { "bib", "tex" }, desc = "[D]iagnostics" },
+            { "<leader>d", "<cmd>Trouble toggle<cr>", ft = "trouble", desc = "[D]iagnostics" },
+        },
         config = true,
     },
     -- NOTE: File explorer
