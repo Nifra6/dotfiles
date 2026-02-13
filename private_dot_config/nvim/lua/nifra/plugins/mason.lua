@@ -26,6 +26,7 @@ return {
                 "gitlab-ci-ls", -- Gitlab CI LSP
                 -- "harper-ls", -- English grammar checker
                 "latexindent", -- LaTeX formatter
+                "ltex-ls-plus", -- Grammar, style & spell checker
                 "lua-language-server", -- Lua LSP
                 "prettier", -- Many languages formatter
                 "ruff", -- Python formatter + linter
