@@ -41,6 +41,7 @@ return {
             preset = "helix",
             delay = 1000,
             sort = { "alphanum", "group" },
+            plugins = { spelling = { enabled = false } },
             spec = {
                 { "<leader>b", icon = "󰜘 " },
                 { "<leader>c", icon = "󰅴 ", group = "[C]ode" },
