@@ -50,3 +50,7 @@ opt.splitbelow = true
 
 -- NOTE: Preview substitutions
 opt.inccommand = "split"
+
+-- NOTE: Local config
+opt.exrc = true
+opt.secure = true
