@@ -1,5 +1,7 @@
+local create_autocmd = vim.api.nvim_create_autocmd
+
 -- NOTE: Highlight when yanking (copying) text
-vim.api.nvim_create_autocmd("TextYankPost", {
+create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
     callback = function()
@@ -8,7 +10,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- NOTE: LSPs keymaps
-vim.api.nvim_create_autocmd("LspAttach", {
+create_autocmd("LspAttach", {
     callback = function(args)
         local map = function(keys, func, desc)
             vim.keymap.set("n", keys, func, { buffer = args.buf, desc = desc })
@@ -25,8 +27,19 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
+-- NOTE: Prefer LSP folding if client supports it
+create_autocmd("LspAttach", {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client:supports_method("textDocument/foldingRange") then
+            local win = vim.api.nvim_get_current_win()
+            vim.wo[win][0].foldexpr = "v:lua.vim.lsp.foldexpr()"
+        end
+    end,
+})
+
 -- NOTE: Jump in help
-vim.api.nvim_create_autocmd("FileType", {
+create_autocmd("FileType", {
     pattern = "help",
     callback = function()
         vim.keymap.set("n", "<leader>gd", "<C-]>", { buffer = true, desc = "Go to tag" })
