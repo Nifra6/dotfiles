@@ -10,4 +10,5 @@ vim.lsp.config["ltex"] = {
     get_language_id = function(_, filetype)
         return language_id_mapping[filetype] or filetype
     end,
+    settings = { ltex = { language = "auto", checkFrequency = "save" } },
 }
