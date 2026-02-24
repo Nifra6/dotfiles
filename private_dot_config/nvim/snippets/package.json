@@ -3,6 +3,10 @@
   "contributes": {
     "snippets": [
       {
+        "language": "markdown",
+        "path": "./nifra/markdown.json"
+      },
+      {
         "language": "python",
         "path": "./nifra/python.json"
       },
