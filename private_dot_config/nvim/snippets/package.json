@@ -5,6 +5,10 @@
       {
         "language": "python",
         "path": "./nifra/python.json"
+      },
+      {
+        "language": "tex",
+        "path": "./nifra/latex.json"
       }
     ]
   }

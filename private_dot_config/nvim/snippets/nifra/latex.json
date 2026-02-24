@@ -1,0 +1,12 @@
+{
+  "ltex_magic_comment": {
+    "prefix": "ltex",
+    "body": ["% LTeX: ${1:enabled}=${2:false}"],
+    "description": "Add a LTeX magic comment."
+  },
+  "ltex_language": {
+    "prefix": "lang",
+    "body": ["% LTeX: language=${2:fr}"],
+    "description": "Add a LTeX magic comment to change the language checked."
+  }
+}
