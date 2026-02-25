@@ -4,15 +4,15 @@
     "snippets": [
       {
         "language": "markdown",
-        "path": "./nifra/markdown.json"
+        "path": "./markdown.json"
       },
       {
         "language": "python",
-        "path": "./nifra/python.json"
+        "path": "./python.json"
       },
       {
         "language": "tex",
-        "path": "./nifra/latex.json"
+        "path": "./latex.json"
       }
     ]
   }
