@@ -4,7 +4,7 @@ local language_id_mapping = {
     text = "plaintext",
 }
 
-vim.lsp.config["ltex"] = {
+return {
     cmd = { "ltex-ls-plus" },
     filetypes = { "bib", "markdown", "tex", "text", "quarto" },
     get_language_id = function(_, filetype)

@@ -1,4 +1,4 @@
-vim.lsp.config("rls", {
+return {
     cmd = "rust-analyser",
     filetypes = { "rust" },
-})
+}

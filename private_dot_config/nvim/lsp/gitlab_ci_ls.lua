@@ -1,6 +1,6 @@
 local cache_dir = vim.uv.os_homedir() .. "/.cache/gitlab-ci-ls/"
 
-vim.lsp.config["gitlab_ci_ls"] = {
+return {
     cmd = { "gitlab-ci-ls" },
     filetypes = { "yaml.gitlab" },
     root_markers = { ".git", ".gitlab" },

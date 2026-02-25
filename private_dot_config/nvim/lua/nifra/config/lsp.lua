@@ -11,11 +11,6 @@ local lsp_configs = {
     "yamlls", -- YAML LSP
 }
 
--- NOTE: LSP configurations
-for _, name in ipairs(lsp_configs) do
-    require("nifra.lsp." .. name)
-end
-
 -- NOTE: LSP enabling
 for _, name in ipairs(lsp_configs) do
     vim.lsp.enable(name)
