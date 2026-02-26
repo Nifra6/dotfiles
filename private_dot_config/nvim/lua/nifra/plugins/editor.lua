@@ -43,20 +43,6 @@ return {
             },
         },
     },
-    -- NOTE: Comment and uncomment
-    -- TODO: Remove and use built-in commenting (with my owns keymaps)
-    {
-        "numToStr/Comment.nvim",
-        event = { "BufNewFile", "BufReadPost" },
-        opts = {
-            mappings = {
-                basic = true,
-                extra = false,
-            },
-            opleader = { line = "<Leader>cc", block = "<Leader>cb" },
-            toggler = { line = "<Leader>cc" },
-        },
-    },
     -- NOTE: Harpoon files to have easy access
     {
         "ThePrimeagen/harpoon",

@@ -46,8 +46,6 @@ return {
                 { "<leader>b", icon = "󰜘 " },
                 { "<leader>c", icon = "󰅴 ", group = "[C]ode" },
                 { "<leader>ca", icon = "󱐋 " },
-                { "<leader>cb", icon = "󰡟 " },
-                { "<leader>cc", icon = "󰅺 " },
                 { "<leader>cf", icon = "󰁨 " },
                 { "<leader>d", icon = "󰈸 " },
                 { "<leader>f", icon = "󰍉 ", group = "[F]ind" },

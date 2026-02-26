@@ -21,6 +21,10 @@ map("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 -- map("n", "<up>", '<cmd>echo "󰳛  is k, you fool!"<CR>', opts)
 -- map("n", "<down>", '<cmd>echo "󰳛  is j, you dummy!"<CR>', opts)
 
+-- NOTE: Learn default keymaps for commenting
+vim.keymap.set("n", "<Leader>cc", '<cmd>echo "Use gcc you muppet!"<CR>')
+vim.keymap.set("v", "<Leader>cc", '<cmd>echo "Use gc you buffoon!"<CR>')
+
 -- NOTE: Clear highlight in normal mode
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
