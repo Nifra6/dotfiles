@@ -23,6 +23,7 @@ return {
             ensure_installed = {
                 "bash-language-server", -- Bash LSP
                 "bibtex-tidy", -- BibTeX formatter
+                "debugpy", -- Python DAP
                 "gitlab-ci-ls", -- Gitlab CI LSP
                 -- "harper-ls", -- English grammar checker
                 "latexindent", -- LaTeX formatter
