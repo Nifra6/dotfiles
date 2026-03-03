@@ -15,7 +15,7 @@ return {
         event = "VeryLazy",
         opts = {
             lazy_load = true,
-            user_default_options = { rgb_fn = true },
+            options = { parsers = { css = true } },
         },
     },
     -- NOTE: Git indications
