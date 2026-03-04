@@ -10,13 +10,24 @@ return {
             { "<Leader>ei", "<cmd>DapStepInto<cr>", desc = "Step [I]nto" },
             { "<Leader>eo", "<cmd>DapStepOver<cr>", desc = "Step [O]ver" },
             { "<Leader>eO", "<cmd>DapStepOut<cr>", desc = "Step [O]ut" },
-            { "<Leader>eO", "<cmd>DapStepOut<cr>", desc = "Step [O]ut" },
         },
         config = function()
             local dap = require("dap")
-
-            -- Setup DAPs
             require("dap-python").setup("uv")
+
+            -- Highlight groups
+            vim.api.nvim_set_hl(0, "DapBreakpoint", { fg = "#e06c75" })
+            vim.api.nvim_set_hl(0, "DapBreakpointCondition", { fg = "#e5c07b" })
+            vim.api.nvim_set_hl(0, "DapLogPoint", { fg = "#61afef" })
+            vim.api.nvim_set_hl(0, "DapStopped", { fg = "#98c379" })
+            vim.api.nvim_set_hl(0, "DapBreakpointRejected", { fg = "#5c6370" })
+
+            -- Icons
+            vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpoint" })
+            vim.fn.sign_define("DapBreakpointCondition", { text = "", texthl = "DapBreakpointCondition" })
+            vim.fn.sign_define("DapLogPoint", { text = "", texthl = "DapLogPoint" })
+            vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped" })
+            vim.fn.sign_define("DapBreakpointRejected", { text = "", texthl = "DapBreakpointRejected" })
         end,
     },
 }
