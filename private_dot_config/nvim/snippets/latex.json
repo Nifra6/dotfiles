@@ -6,7 +6,12 @@
   },
   "ltex_language": {
     "prefix": "lang",
-    "body": ["% LTeX: language=${2:fr}"],
+    "body": ["% LTeX: language=${1:fr}"],
     "description": "Add a LTeX magic comment to change the language checked."
+  },
+  "math_inline": {
+    "prefix": "mi",
+    "body": ["\\\\(${1:x}\\\\)"],
+    "description": "Insert Math inline environment."
   }
 }
