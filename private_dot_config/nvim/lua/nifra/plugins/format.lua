@@ -1,5 +1,5 @@
+-- Code formatting: per-filetype formatters, format-on-save.
 return {
-    -- NOTE: Auto format code
     {
         "stevearc/conform.nvim",
         event = { "BufWritePre" },

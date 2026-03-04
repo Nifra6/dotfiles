@@ -1,3 +1,4 @@
+-- UI enhancements: picker, dashboard, notifier, and more.
 return {
     {
         "folke/snacks.nvim",

@@ -1,13 +1,5 @@
+-- Autocompletion: LSP, snippets, and plugin sources.
 return {
-    -- NOTE: Completions for neovim config editing
-    {
-        "folke/lazydev.nvim",
-        ft = "lua",
-        opts = {
-            library = { { path = "${3rd}/luv/library", words = { "vim%.uv" } } },
-        },
-    },
-    -- NOTE: Completions engine
     {
         "saghen/blink.cmp",
         dependencies = { "rafamadriz/friendly-snippets" },
@@ -25,7 +17,7 @@ return {
                     auto_show = true,
                     auto_show_delay_ms = 500,
                 },
-                -- To change the menu appearance, check |blink-cmp-config-completion|
+                -- NOTE: To change the menu appearance, check |blink-cmp-config-completion|
             },
             sources = {
                 default = { "lsp", "path", "snippets", "buffer" },

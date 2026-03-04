@@ -1,4 +1,4 @@
--- NOTE: tree-sitter is horse shit, at least in terms of configuration in nvim
+-- Syntax highlighting and parsing via Tree-sitter.
 
 local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
 

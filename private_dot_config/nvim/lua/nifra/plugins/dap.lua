@@ -1,3 +1,4 @@
+-- Debug Adapter Protocol (DAP): breakpoints, step controls, and Python support via uv.
 return {
     {
         "mfussenegger/nvim-dap",

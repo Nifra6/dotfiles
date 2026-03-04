@@ -24,6 +24,14 @@ return {
             },
         },
     },
+    -- NOTE: Completions for neovim config editing
+    {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {
+            library = { { path = "${3rd}/luv/library", words = { "vim%.uv" } } },
+        },
+    },
     -- NOTE: Markdown : preview in browser
     {
         "iamcco/markdown-preview.nvim",

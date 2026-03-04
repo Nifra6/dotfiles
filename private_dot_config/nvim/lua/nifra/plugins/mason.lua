@@ -1,5 +1,6 @@
+-- LSP/linter/formatter installer.
 return {
-    -- INFO: LSPs and Linters Manager
+    -- INFO: LSPs and Formatters Manager
     {
         "mason-org/mason.nvim",
         opts = {
@@ -15,7 +16,7 @@ return {
             { "<leader>lm", "<cmd>Mason<cr>", desc = "[M]ason" },
         },
     },
-    -- INFO: Auto-install
+    -- INFO: Auto-install of tools
     {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
