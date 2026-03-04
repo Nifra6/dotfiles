@@ -74,7 +74,7 @@ return {
                 { "<leader>m", icon = "󱡅 " },
                 { "<leader>q", icon = " " },
                 { "<leader>r", icon = "󰑕 " },
-                { "<leader>t", icon = "󱏒 " },
+                { "<leader>t", icon = "󰙅 " },
                 { "<leader>$", icon = " " },
                 { "<leader>1", hidden = true },
                 { "<leader>2", hidden = true },
@@ -176,18 +176,5 @@ return {
             { "<leader>d", "<cmd>Trouble toggle<cr>", ft = "trouble", desc = "[D]iagnostics" },
         },
         config = true,
-    },
-    -- NOTE: File explorer
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
-            "MunifTanjim/nui.nvim",
-        },
-        keys = {
-            { "<leader>t", "<Cmd>Neotree toggle<CR>", desc = "Neo[T]ree" },
-        },
     },
 }

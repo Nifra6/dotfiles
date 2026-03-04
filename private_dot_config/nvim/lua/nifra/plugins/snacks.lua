@@ -44,6 +44,7 @@ return {
                                                          erm actually it's neovim ... 🤓👆]],
                 },
             },
+            explorer = { enabled = true },
             image = { enabled = false },
             indent = {
                 enabled = true,
@@ -71,6 +72,13 @@ return {
             terminal = {},
         },
         keys = {
+            {
+                "<leader>t",
+                function()
+                    Snacks.explorer()
+                end,
+                desc = "[E]xplorer",
+            },
             --  NOTE: Lazygit
             {
                 "<leader>lg",
