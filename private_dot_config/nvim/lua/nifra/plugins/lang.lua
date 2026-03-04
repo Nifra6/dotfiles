@@ -29,7 +29,11 @@ return {
         "folke/lazydev.nvim",
         ft = "lua",
         opts = {
-            library = { { path = "${3rd}/luv/library", words = { "vim%.uv" } } },
+            library = {
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+                { path = "snacks.nvim", words = { "Snacks" } },
+                { path = "snacks.nvim", words = { "Snacks" } },
+            },
         },
     },
     -- NOTE: Markdown : preview in browser

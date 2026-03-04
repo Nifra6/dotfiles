@@ -184,6 +184,13 @@ return {
                 end,
                 desc = "[T]erminal",
             },
+            {
+                "<leader>q",
+                function()
+                    Snacks.bufdelete()
+                end,
+                desc = "[Q]uit current buffer",
+            },
         },
     },
 }

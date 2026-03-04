@@ -4,11 +4,6 @@ local opts = { noremap = true, silent = true }
 -- NOTE: Open Lazy
 map("n", "<leader>lv", "<Cmd>Lazy<CR>", { desc = "Lazy[V]im" })
 
--- NOTE: Buffer
-map("n", "<leader>q", function()
-    require("mini.bufremove").delete(0, false)
-end, { desc = "[Q]uit current buffer" })
-
 -- NOTE: Use CTRL+<hjkl> to switch between windows
 map("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 map("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
