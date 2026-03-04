@@ -17,6 +17,7 @@ end
 -- NOTE: Setup lazy.nvim
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+    lockfile = vim.fn.stdpath("config") .. "/.lazy-lock.json",
     spec = {
         { import = "nifra.plugins" },
     },
