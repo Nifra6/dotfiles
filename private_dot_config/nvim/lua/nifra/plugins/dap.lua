@@ -6,11 +6,11 @@ return {
             "mfussenegger/nvim-dap-python",
         },
         keys = {
-            { "<Leader>eb", "<cmd>DapToggleBreakpoint<cr>", desc = "Toggle [B]reakpoint" },
-            { "<Leader>ec", "<cmd>DapContinue<cr>", desc = "[C]ontinue" },
-            { "<Leader>ei", "<cmd>DapStepInto<cr>", desc = "Step [I]nto" },
-            { "<Leader>eo", "<cmd>DapStepOver<cr>", desc = "Step [O]ver" },
-            { "<Leader>eO", "<cmd>DapStepOut<cr>", desc = "Step [O]ut" },
+            { "<Leader>db", "<cmd>DapToggleBreakpoint<cr>", desc = "Toggle [B]reakpoint" },
+            { "<Leader>dc", "<cmd>DapContinue<cr>", desc = "[C]ontinue" },
+            { "<Leader>di", "<cmd>DapStepInto<cr>", desc = "Step [I]nto" },
+            { "<Leader>do", "<cmd>DapStepOver<cr>", desc = "Step [O]ver" },
+            { "<Leader>dO", "<cmd>DapStepOut<cr>", desc = "Step [O]ut" },
         },
         config = function()
             local dap = require("dap")

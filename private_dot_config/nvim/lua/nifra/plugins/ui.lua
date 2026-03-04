@@ -47,13 +47,13 @@ return {
                 { "<leader>c", icon = "󰅴 ", group = "[C]ode" },
                 { "<leader>ca", icon = "󱐋 " },
                 { "<leader>cf", icon = "󰁨 " },
-                { "<leader>d", icon = "󰈸 " },
-                { "<leader>e", icon = " ", group = "D[E]bug" },
-                { "<leader>eb", icon = " " },
-                { "<leader>ec", icon = " " },
-                { "<leader>ei", icon = "󰆹 " },
-                { "<leader>eo", icon = "󰆷 " },
-                { "<leader>eO", icon = "󰆸 " },
+                { "<leader>e", icon = "󰙅 " },
+                { "<leader>d", icon = " ", group = "[D]ebug" },
+                { "<leader>db", icon = " " },
+                { "<leader>dc", icon = " " },
+                { "<leader>di", icon = "󰆹 " },
+                { "<leader>do", icon = "󰆷 " },
+                { "<leader>dO", icon = "󰆸 " },
                 { "<leader>f", icon = "󰍉 ", group = "[F]ind" },
                 { "<leader>fd", icon = "󰈸 " },
                 { "<leader>ff", icon = "󰈔 " },
@@ -74,7 +74,7 @@ return {
                 { "<leader>m", icon = "󱡅 " },
                 { "<leader>q", icon = " " },
                 { "<leader>r", icon = "󰑕 " },
-                { "<leader>t", icon = "󰙅 " },
+                { "<leader>t", icon = "󰈸 " },
                 { "<leader>$", icon = " " },
                 { "<leader>1", hidden = true },
                 { "<leader>2", hidden = true },
@@ -92,7 +92,7 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = { "nvim-tree/nvim-web-devicons", "nvim-mini/mini.bufremove" },
+        dependencies = { "nvim-tree/nvim-web-devicons", "folke/snacks.nvim" },
         keys = {
             { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
             { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
@@ -100,10 +100,10 @@ return {
         opts = {
             options = {
                 close_command = function(n)
-                    require("mini.bufremove").delete(n, false)
+                    Snacks.bufdelete(n)
                 end,
                 right_mouse_command = function(n)
-                    require("mini.bufremove").delete(n, false)
+                    Snacks.bufdelete(n)
                 end,
                 left_mouse_command = "buffer %d",
                 middle_mouse_command = "BufferLineTogglePin",
@@ -111,7 +111,7 @@ return {
                 always_show_bufferline = false,
                 offsets = {
                     {
-                        filetype = "neo-tree",
+                        filetype = "snacks_picker_list",
                         text = "File Explorer",
                         text_align = "center",
                     },
@@ -170,10 +170,10 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         cmd = "Trouble",
         keys = {
-            { "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", desc = "[D]iagnostics" },
-            { "<leader>d", "<cmd>Trouble quickfix toggle<cr>", ft = { "bib", "tex" }, desc = "VimTeX [D]iagnostics" },
-            { "<leader>D", "<cmd>Trouble diagnostics toggle<cr>", ft = { "tex" }, desc = "LTeX [D]iagnostics" },
-            { "<leader>d", "<cmd>Trouble toggle<cr>", ft = "trouble", desc = "[D]iagnostics" },
+            { "<leader>t", "<cmd>Trouble diagnostics toggle<cr>", desc = "[T]rouble" },
+            { "<leader>t", "<cmd>Trouble quickfix toggle<cr>", ft = { "bib", "tex" }, desc = "VimTeX [T]rouble" },
+            { "<leader>T", "<cmd>Trouble diagnostics toggle<cr>", ft = { "tex" }, desc = "LTeX [T]rouble" },
+            { "<leader>t", "<cmd>Trouble toggle<cr>", ft = "trouble", desc = "[T]rouble" },
         },
         config = true,
     },

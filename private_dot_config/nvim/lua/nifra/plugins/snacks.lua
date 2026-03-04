@@ -73,7 +73,7 @@ return {
         },
         keys = {
             {
-                "<leader>t",
+                "<leader>e",
                 function()
                     Snacks.explorer()
                 end,
