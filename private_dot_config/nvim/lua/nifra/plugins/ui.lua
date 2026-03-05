@@ -183,7 +183,7 @@ return {
         keys = {
             { "<leader>t", "<cmd>Trouble diagnostics toggle<cr>", desc = "[T]rouble" },
             { "<leader>t", "<cmd>Trouble quickfix toggle<cr>", ft = { "bib", "tex" }, desc = "VimTeX [T]rouble" },
-            { "<leader>T", "<cmd>Trouble diagnostics toggle<cr>", ft = { "tex" }, desc = "LTeX [T]rouble" },
+            { "<leader><c-t>", "<cmd>Trouble diagnostics toggle<cr>", ft = { "tex" }, desc = "LTeX [T]rouble" },
             { "<leader>t", "<cmd>Trouble toggle<cr>", ft = "trouble", desc = "[T]rouble" },
         },
         config = true,
