@@ -23,6 +23,8 @@ return {
         priority = 1000,
         opts = { transparent_background = true },
     },
+    -- NOTE: Keys screencaster
+    { "nvzone/showkeys", cmd = "ShowkeysToggle" },
     -- NOTE: Nicer help
     {
         "OXY2DEV/helpview.nvim",
