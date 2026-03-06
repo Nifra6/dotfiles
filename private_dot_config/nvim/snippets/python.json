@@ -17,5 +17,20 @@
       "# ------------------------------------------------------------"
     ],
     "description": "Add a section delimitation."
+  },
+  "import_numpy": {
+    "prefix": "np",
+    "body": ["import numpy as np"],
+    "description": "Import numpy with is classical alias."
+  },
+  "import_numpy_typing": {
+    "prefix": "npt",
+    "body": ["import numpy.typing as npt"],
+    "description": "Import numpy.typing with is classical alias."
+  },
+  "import_rich_print": {
+    "prefix": "rprint",
+    "body": ["from rich import print as rich_print"],
+    "description": "Import rich.print as rich_print."
   }
 }
