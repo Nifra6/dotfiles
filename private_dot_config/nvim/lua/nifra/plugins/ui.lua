@@ -125,7 +125,7 @@ return {
                 offsets = {
                     {
                         filetype = "snacks_layout_box",
-                        text = "󰙅  File Explorer",
+                        text = "󰙅 File Explorer",
                         separator = true,
                     },
                 },
@@ -158,7 +158,7 @@ return {
             extensions = { "lazy", "mason", "neo-tree", "trouble", snacks_explorer },
             sections = {
                 lualine_a = { "mode" },
-                lualine_b = { { "harpoon2", icon = "󱡅 " }, "branch" },
+                lualine_b = { { "harpoon2", icon = "󱡅 " } },
                 lualine_c = {
                     {
                         "filename",
@@ -170,9 +170,9 @@ return {
                     "diff",
                     { "diagnostics", symbols = { error = "󰅙 ", warn = "󱠇 ", info = "󰋼 ", hint = "󰸥 " } },
                 },
-                lualine_x = { "encoding", "fileformat", { "filetype", icon_only = true } },
-                lualine_y = { "progress", "location" },
-                lualine_z = { { "datetime", icon = "󰅐 ", style = "%H:%M" } },
+                lualine_x = { "location", "progress" },
+                lualine_y = { { "filetype", icon_only = true } },
+                lualine_z = { "branch" },
             },
         },
     },
