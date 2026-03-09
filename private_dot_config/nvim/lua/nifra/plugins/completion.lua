@@ -11,14 +11,12 @@ return {
                 ["<Tab>"] = { "select_next", "fallback" },
                 ["<S-Tab>"] = { "select_prev", "fallback" },
             },
-            appearance = { nerd_font_variant = "mono" },
             completion = {
                 trigger = { show_in_snippet = false },
                 documentation = {
                     auto_show = true,
                     auto_show_delay_ms = 500,
                 },
-                -- NOTE: To change the menu appearance, check |blink-cmp-config-completion|
             },
             sources = {
                 default = { "lsp", "path", "snippets", "buffer" },
@@ -35,8 +33,6 @@ return {
                     },
                 },
             },
-            fuzzy = { implementation = "prefer_rust_with_warning" },
         },
-        opts_extend = { "sources.default" },
     },
 }
