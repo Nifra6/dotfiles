@@ -24,14 +24,13 @@ return {
             },
         },
     },
-    -- NOTE: Completions for neovim config editing
+    -- NOTE: Lua: Configure LuaLS for nvim config
     {
         "folke/lazydev.nvim",
         ft = "lua",
         opts = {
             library = {
                 { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                { path = "snacks.nvim", words = { "Snacks" } },
                 { path = "snacks.nvim", words = { "Snacks" } },
             },
         },
