@@ -4,7 +4,6 @@ return {
         "folke/snacks.nvim",
         priority = 1000,
         lazy = false,
-        ---@type snacks.Config
         opts = {
             bigfile = { enabled = true },
             dashboard = {
@@ -73,6 +72,15 @@ return {
             terminal = {},
         },
         keys = {
+            -- NOTE: Open terminal
+            {
+                "<leader>$",
+                function()
+                    Snacks.terminal()
+                end,
+                desc = "[T]erminal",
+            },
+            -- NOTE: File explorer
             {
                 "<leader>e",
                 function()
@@ -80,37 +88,13 @@ return {
                 end,
                 desc = "[E]xplorer",
             },
-            --  NOTE: Lazygit
+            -- NOTE: Find ...
             {
-                "<leader>lg",
+                "<leader>fd",
                 function()
-                    Snacks.lazygit()
+                    Snacks.picker.diagnostics()
                 end,
-                desc = "Lazy[G]it",
-            },
-            -- NOTE: Open git repository
-            {
-                "<leader>gG",
-                function()
-                    Snacks.gitbrowse()
-                end,
-                desc = "[G]it Repo",
-                mode = { "n", "v" },
-            },
-            -- NOTE: Find
-            {
-                "<leader>fk",
-                function()
-                    Snacks.picker.keymaps()
-                end,
-                desc = "[K]eymaps",
-            },
-            {
-                "<leader>fh",
-                function()
-                    Snacks.picker.help()
-                end,
-                desc = "[H]elp Pages",
+                desc = "[D]iagnostics",
             },
             {
                 "<leader>ff",
@@ -127,11 +111,18 @@ return {
                 desc = "[G]rep files",
             },
             {
-                "<leader>fd",
+                "<leader>fh",
                 function()
-                    Snacks.picker.diagnostics()
+                    Snacks.picker.help()
                 end,
-                desc = "[D]iagnostics",
+                desc = "[H]elp Pages",
+            },
+            {
+                "<leader>fk",
+                function()
+                    Snacks.picker.keymaps()
+                end,
+                desc = "[K]eymaps",
             },
             {
                 "<leader>fs",
@@ -146,6 +137,22 @@ return {
                     Snacks.picker.todo_comments()
                 end,
                 desc = "[T]odo",
+            },
+            {
+                "<leader>fu",
+                function()
+                    Snacks.picker.undo()
+                end,
+                desc = "[U]ndo history",
+            },
+            -- NOTE: Open git repository
+            {
+                "<leader>gg",
+                function()
+                    Snacks.gitbrowse()
+                end,
+                desc = "[G]it Repo",
+                mode = { "n", "v" },
             },
             -- NOTE: LSP - Go to...
             {
@@ -178,13 +185,15 @@ return {
                 nowait = true,
                 desc = "[R]eferences",
             },
+            --  NOTE: Lazygit
             {
-                "<leader>$",
+                "<leader>lg",
                 function()
-                    Snacks.terminal()
+                    Snacks.lazygit()
                 end,
-                desc = "[T]erminal",
+                desc = "Lazy[G]it",
             },
+            -- NOTE: Close buffer
             {
                 "<leader>q",
                 function()
