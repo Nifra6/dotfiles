@@ -11,16 +11,20 @@ local snacks_explorer = {
 
 return {
     -- NOTE: Colorscheme
+
     {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
-        opts = { transparent = true },
+        config = function()
+            require("tokyonight").setup({ transparent = true })
+            vim.cmd.colorscheme("tokyonight-day")
+        end,
     },
     {
         "catppuccin/nvim",
         name = "catppuccin",
-        priority = 1000,
+        lazy = true,
         opts = { transparent_background = true },
     },
     -- NOTE: Keys screencaster
@@ -148,7 +152,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         event = { "BufNewFile", "BufReadPost" },
-        dependencies = { "nvim-tree/nvim-web-devicons", "letieu/harpoon-lualine" },
+        dependencies = { "nvim-tree/nvim-web-devicons", "ThePrimeagen/harpoon", "letieu/harpoon-lualine" },
         opts = {
             options = {
                 theme = "auto",
@@ -180,7 +184,6 @@ return {
     -- NOTE: Diagnostics
     {
         "folke/trouble.nvim",
-        event = "VeryLazy",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         cmd = "Trouble",
         keys = {

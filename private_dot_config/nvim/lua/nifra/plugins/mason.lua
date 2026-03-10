@@ -19,6 +19,7 @@ return {
     -- INFO: Auto-install of tools
     {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
+        event = "VeryLazy",
         opts = {
             auto_update = true,
             ensure_installed = {

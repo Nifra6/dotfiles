@@ -1,15 +1,5 @@
 -- Syntax highlighting and parsing via Tree-sitter.
 
-local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
-
-parser_configs.kitty = {
-    install_info = {
-        url = "https://github.com/OXY2DEV/tree-sitter-kitty",
-        files = { "src/parser.c" },
-        branch = "main",
-    },
-}
-
 return {
     {
         "nvim-treesitter/nvim-treesitter",
@@ -51,5 +41,16 @@ return {
             highlight = { enable = true },
             indent = { enable = true },
         },
+        config = function(_, opts)
+            local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
+            parser_configs.kitty = {
+                install_info = {
+                    url = "https://github.com/OXY2DEV/tree-sitter-kitty",
+                    files = { "src/parser.c" },
+                    branch = "main",
+                },
+            }
+            require("nvim-treesitter.configs").setup(opts)
+        end,
     },
 }

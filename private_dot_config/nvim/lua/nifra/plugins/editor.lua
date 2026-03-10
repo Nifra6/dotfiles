@@ -12,7 +12,7 @@ return {
     -- NOTE: Highlight colors
     {
         "catgoose/nvim-colorizer.lua",
-        event = "VeryLazy",
+        event = "BufReadPre",
         opts = {
             lazy_load = true,
             options = { parsers = { css = true } },
@@ -50,18 +50,18 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         opts = { settings = { save_on_toggle = true } },
         keys = function()
-            local harpoon = require("harpoon")
             local keys = {
                 {
                     "<leader>h",
                     function()
-                        harpoon:list():add()
+                        require("harpoon"):list():add()
                     end,
                     desc = "[H]arpoon File",
                 },
                 {
                     "<leader>m",
                     function()
+                        local harpoon = require("harpoon")
                         harpoon.ui:toggle_quick_menu(harpoon:list())
                     end,
                     desc = "Harpoon [M]enu",
