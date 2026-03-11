@@ -1,14 +1,3 @@
-local snacks_explorer = {
-    sections = {
-        lualine_a = {
-            function()
-                return "󰙅 File Explorer"
-            end,
-        },
-    },
-    filetypes = { "snacks_picker_list" },
-}
-
 return {
     -- NOTE: Colorscheme
 
@@ -160,7 +149,19 @@ return {
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
             },
-            extensions = { "lazy", "mason", "neo-tree", "trouble", snacks_explorer },
+            extensions = (function()
+                local snacks_explorer = {
+                    sections = {
+                        lualine_a = {
+                            function()
+                                return "󰙅 File Explorer"
+                            end,
+                        },
+                    },
+                    filetypes = { "snacks_picker_list" },
+                }
+                return { "lazy", "mason", "neo-tree", "trouble", snacks_explorer }
+            end)(),
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { { "harpoon2", icon = "󱡅 " } },

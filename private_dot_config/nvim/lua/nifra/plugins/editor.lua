@@ -1,8 +1,15 @@
 return {
+    -- NOTE: Auto pairs
+    {
+        "nvim-mini/mini.pairs",
+        event = { "BufNewFile", "BufReadPost" },
+        version = false,
+        opts = {},
+    },
     -- NOTE: Highlight todo, notes, etc in comments
     {
         "folke/todo-comments.nvim",
-        event = { "BufNewFile", "BufReadPre" },
+        event = { "BufNewFile", "BufReadPost" },
         dependencies = { "nvim-lua/plenary.nvim" },
         opts = {
             signs = true,
@@ -12,7 +19,7 @@ return {
     -- NOTE: Highlight colors
     {
         "catgoose/nvim-colorizer.lua",
-        event = "BufReadPre",
+        event = { "BufNewFile", "BufReadPost" },
         opts = {
             lazy_load = true,
             options = { parsers = { css = true } },
@@ -21,7 +28,7 @@ return {
     -- NOTE: Git indications
     {
         "lewis6991/gitsigns.nvim",
-        event = { "BufNewFile", "BufReadPre" },
+        event = { "BufNewFile", "BufReadPost" },
         opts = {
             signcolumn = false,
             numhl = true,
@@ -78,13 +85,5 @@ return {
             end
             return keys
         end,
-    },
-    -- NOTE: Auto pairs
-    {
-        "nvim-mini/mini.pairs",
-        config = true,
-        event = { "BufNewFile", "BufReadPost" },
-        version = false,
-        opts = {},
     },
 }
