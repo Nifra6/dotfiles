@@ -5,7 +5,14 @@ return {
         priority = 900,
         lazy = false,
         opts = {
-            bigfile = { enabled = true },
+            bigfile = {},
+            explorer = {},
+            input = {},
+            lazygit = {},
+            notifier = {},
+            scope = {},
+            terminal = {},
+            image = { enabled = false },
             dashboard = {
                 enabled = true,
                 width = 40,
@@ -43,18 +50,10 @@ return {
                                                          erm actually it's neovim ... 🤓👆]],
                 },
             },
-            explorer = { enabled = true },
-            image = { enabled = false },
             indent = {
                 enabled = true,
                 indent = { char = "▍" },
                 scope = { char = "▍", underline = true },
-            },
-            input = { enabled = true },
-            lazygit = { enabled = true }, -- Add lazygit to nvim
-            notifier = {
-                enabled = true,
-                timeout = 3000,
             },
             picker = {
                 enabled = true,
@@ -69,7 +68,6 @@ return {
                     },
                 },
             },
-            terminal = {},
         },
         keys = {
             -- NOTE: Open terminal
