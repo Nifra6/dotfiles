@@ -13,5 +13,15 @@
     "prefix": "mi",
     "body": ["\\\\(${1:x}\\\\)"],
     "description": "Insert Math inline environment."
+  },
+  "left_and_right_parenthesis": {
+    "prefix": "leftp",
+    "body": ["\\left( ${1:x} \\right)"],
+    "description": "Insert dynamic parenthesis."
+  },
+  "left_and_right_bracket": {
+    "prefix": "leftb",
+    "body": ["\\left[ ${1:x} \\right]"],
+    "description": "Insert dynamic bracket."
   }
 }
