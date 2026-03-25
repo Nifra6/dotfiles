@@ -7,6 +7,7 @@ def get_weather_text(location="Nancy"):
     url = f"https://wttr.in/{location}?m&lang=fr&format=1"
     response = requests.get(url)
     if response.status_code == 200:
+        response.encoding = "utf-8"
         return response.text.strip()
     else:
         return None
@@ -30,10 +31,7 @@ def main():
     weather_tooltip = get_weather_tooltip()
 
     if weather_text and weather_tooltip:
-        data = {
-            "text": weather_text,
-            "tooltip": weather_tooltip,
-        }
+        data = {"text": weather_text, "tooltip": weather_tooltip}
         json_data = json.dumps(data, ensure_ascii=False)
         print(json_data)
     else:
