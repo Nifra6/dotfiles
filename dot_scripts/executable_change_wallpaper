@@ -27,8 +27,8 @@ def wofi_select(options, prompt):
 
 
 def set_wallpaper(image_path):
-    """Set the wallpaper using swww."""
-    command = f"swww img -t wipe '{image_path}'"
+    """Set the wallpaper using awww."""
+    command = f"awww img -t wipe '{image_path}'"
     subprocess.run(command, shell=True)
 
 
