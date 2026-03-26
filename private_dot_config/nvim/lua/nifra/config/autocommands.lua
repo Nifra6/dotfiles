@@ -38,6 +38,19 @@ create_autocmd("LspAttach", {
     end,
 })
 
+-- NOTE: Enable underline for LTeX in LaTeX files
+create_autocmd("LspAttach", {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client and (client.name == "texlab" or client.name == "ltex") then
+            local ns = vim.lsp.diagnostic.get_namespace(args.data.client_id)
+            vim.diagnostic.config({
+                underline = true,
+            }, ns)
+        end
+    end,
+})
+
 -- NOTE: Jump in help
 create_autocmd("FileType", {
     pattern = "help",
