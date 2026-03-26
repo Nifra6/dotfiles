@@ -23,5 +23,20 @@
     "prefix": "leftb",
     "body": ["\\left[ ${1:x} \\right]"],
     "description": "Insert dynamic bracket."
+  },
+  "italicized_et_al": {
+    "prefix": "etal",
+    "body": ["\\textit{et al.}"],
+    "description": "Insert an italicized 'et al.'."
+  },
+  "italicized_ie": {
+    "prefix": "ie",
+    "body": ["\\textit{i.e.}"],
+    "description": "Insert an italicized 'i.e.'."
+  },
+  "italicized_eg": {
+    "prefix": "eg",
+    "body": ["\\textit{e.g.}"],
+    "description": "Insert an italicized 'e.g.'."
   }
 }

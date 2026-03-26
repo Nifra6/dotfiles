@@ -28,6 +28,11 @@
     "body": ["import numpy.typing as npt"],
     "description": "Import numpy.typing with is classical alias."
   },
+  "import_imageio": {
+    "prefix": "iio",
+    "body": ["import imageio.v3 as iio"],
+    "description": "Import imageio with is classical alias."
+  },
   "import_rich_print": {
     "prefix": "rprint",
     "body": ["from rich import print as rich_print"],
