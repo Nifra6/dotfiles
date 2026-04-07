@@ -31,8 +31,9 @@ if [[ -z "$SSH_AUTH_SOCK" ]] ; then
     ssh-add
 fi
 
-# -- Neovim under Ubuntu
+# -- Cargo & Node on Ubuntu
 # ---------------------------
 if [[ $DISTRO = "Ubuntu" ]]; then
+    . "$HOME/.cargo/env"
     export PATH=/snap/node/current/bin:$PATH
 fi
