@@ -6,6 +6,13 @@ return {
         version = false,
         opts = {},
     },
+    -- NOTE: Highlight symbols
+    {
+        "RRethy/vim-illuminate",
+        keys = {
+            { "<leader>i", "<cmd>IlluminateToggle<cr>", desc = "[I]lluminate" },
+        },
+    },
     -- NOTE: Highlight todo, notes, etc in comments
     {
         "folke/todo-comments.nvim",
