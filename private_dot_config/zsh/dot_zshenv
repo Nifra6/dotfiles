@@ -31,9 +31,10 @@ if [[ -z "$SSH_AUTH_SOCK" ]] ; then
     ssh-add
 fi
 
-# -- Cargo & Node on Ubuntu
+# -- Apps on Ubuntu
 # ---------------------------
 if [[ $DISTRO = "Ubuntu" ]]; then
     . "$HOME/.cargo/env"
     export PATH=/snap/node/current/bin:$PATH
+    export PATH=$HOME/.local/kitty.app/bin:$PATH
 fi

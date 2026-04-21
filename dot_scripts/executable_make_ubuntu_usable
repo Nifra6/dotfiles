@@ -19,7 +19,7 @@ if ! command -v chezmoi >/dev/null 2>&1; then
 fi
 
 # Packages install
-sudo apt install -y dunst kitty neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions openssl-dev # openssl-dev for gitlab-ci-ls for neovim
+sudo apt install -y dunst neofetch python-is-python3 ripgrep ranger xclip zathura zsh zsh-syntax-highlighting zsh-autosuggestions openssl-dev # openssl-dev for gitlab-ci-ls for neovim
 sudo snap install btop
 sudo snap install brave
 sudo snap install zotero-snap
@@ -29,6 +29,13 @@ sudo snap install lsd --classic
 sudo snap install yazi --classic
 sudo snap install nvim --classic
 sudo snap install mpv --classic
+
+# kitty
+if ! command -v kitty >/dev/null 2>&1; then
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+    ln -sf ~/.local/kitty.app/bin/kitty ~/.local/bin/kitty
+    ln -sf ~/.local/kitty.app/bin/kitten ~/.local/bin/kitten
+fi
 
 # Brave
 if ! command -v brave-browser >/dev/null 2>&1; then
