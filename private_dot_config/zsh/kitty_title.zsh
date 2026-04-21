@@ -15,6 +15,8 @@ _kitty_preexec() {
     local icon
     case $cmd[(w)1] in
         v|vim|nvim)  icon=" " ;;
+        y|yazi)      icon="󰇥 " ;;
+        top|btop)    icon="󰻠 " ;;
         python*)     icon="󰌠 " ;;
         lg|lazygit)  icon="󰊢 " ;;
         *)           icon=" " ;;
