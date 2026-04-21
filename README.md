@@ -17,6 +17,8 @@
 
 Bad casual english and some french in dotfiles. Bc I'm french, yup.
 
+And my nvim config is [here](https://gitlab.com/nifra/nvim).
+
 ## What I use on my setup
 
 | Need                | Answer                                                                                     | Comments                                                               |
