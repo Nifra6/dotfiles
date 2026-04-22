@@ -3,7 +3,12 @@ indent-width = 4
 
 [lint]
 select = ["ALL"]
-ignore = ["COM812", "TD"]
+ignore = [
+  "FIX",  # Editors should highlight those, but dev notes mustn't block commit
+  "TD",  # TODO/FIXME tracking overkill for solo project
+  "COM812",  # Ruff formats trailing commas, so redundant
+  "PLC0415",  # Imports inside functions needed until Python supports lazy imports natively
+]
 
 [lint.isort]
 split-on-trailing-comma = false
