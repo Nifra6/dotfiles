@@ -143,6 +143,8 @@ case $DISTRO in
 
 esac
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
+
 case $HOSTNAME in
 
     "gonto")
