@@ -2,3 +2,13 @@
 type = "git-repo"
 url = "https://gitlab.com/nifra/nvim.git"
 refreshPeriod = "12h"
+
+[".config/tmux/plugins/catppuccin"]
+type = "git-repo"
+url = "https://github.com/catppuccin/tmux.git"
+refreshPeriod = "168h"
+
+[".config/tmux/plugins/tmux-cpu"]
+type = "git-repo"
+url = "https://github.com/tmux-plugins/tmux-cpu.git"
+refreshPeriod = "168h"
