@@ -131,6 +131,7 @@ packages:
       - "playerctl" # mpris media controller
       - "ranger" # file explorer
       - "ripgrep" # similar to grep, alias to rg
+      - "tmux" # terminal multiplexer
       - "tree-sitter-cli" # CLI to interact with parsers
       - "wget" # better download than curl
       - "yazi" # file explorer

@@ -5,6 +5,7 @@ _kitty_precmd() {
     local dir=${PWD##*/}
     local short_path="${parent##*/}/$dir"
     print -Pn "\e]0; $short_path\a"
+
 }
 
 _kitty_preexec() {
@@ -19,6 +20,12 @@ _kitty_preexec() {
         top|btop)    icon="󰻠 " ;;
         python*)     icon="󰌠 " ;;
         lg|lazygit)  icon="󰊢 " ;;
+        tmux*)
+            local session
+            session=$(tmux display-message -p '#S' 2>/dev/null)
+            print -Pn "\e]0; ${session}\a"
+            return
+            ;;
         *)           icon=" " ;;
     esac
     print -Pn "\e]0;$icon $short_path\a"
