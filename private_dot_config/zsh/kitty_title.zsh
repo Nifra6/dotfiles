@@ -18,7 +18,7 @@ _kitty_preexec() {
         v|vim|nvim)  icon=" " ;;
         y|yazi)      icon="󰇥 " ;;
         top|btop)    icon="󰻠 " ;;
-        python*)     icon="󰌠 " ;;
+        py*)         icon="󰌠 " ;;
         lg|lazygit)  icon="󰊢 " ;;
         tmux*)
             local session
