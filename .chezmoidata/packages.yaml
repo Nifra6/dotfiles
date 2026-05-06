@@ -143,6 +143,7 @@ packages:
       - "code" # IDE
       - "discord" # social app
       - "feh" # image viewer
+      - "ghostty" # terminal emulator
       - "kitty" # terminal emulator
       - "libreoffice-fresh-fr" # office suite, in French
       - "mpv" # music and video player
