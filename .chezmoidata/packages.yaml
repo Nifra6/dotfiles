@@ -136,6 +136,7 @@ packages:
       - "wget" # better download than curl
       - "yazi" # file explorer
       - "yt-dlp" # download audio and video from YouTube, Twitch ... Optional dependencies of `mpv`
+      - "zellij" # terminal multiplexer
       - "zip" # archiver .zip
       - "unzip" # unarchiver .zip
       # NOTE: Graphical applications
