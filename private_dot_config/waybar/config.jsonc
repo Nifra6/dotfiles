@@ -65,6 +65,8 @@
       "class<heroic>": "󱢾 ",
       "class<kitty> title<v>": " ",
       "class<kitty>": " ",
+      "class<com.mitchellh.ghostty> title<v>": " ",
+      "class<com.mitchellh.ghostty>": " ",
       "class<code-oss>": "󰨞 ",
       "class<feh>": "󰋩 ",
       "class<mpv>": " ",
