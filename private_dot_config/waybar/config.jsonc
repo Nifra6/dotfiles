@@ -285,6 +285,7 @@
     },
     "on-click": "pavucontrol",
     "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
 
   // -- Laptop battery
