@@ -20,9 +20,9 @@ local clipboard = "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 -- Autostart
 ------------------------------
 hl.on("hyprland.start", function()
-	hl.exec_cmd("discord", { workspace = 1 })
-	hl.exec_cmd("thunderbird", { workspace = 6 })
-	hl.exec_cmd("protonmail-bridge", { workspace = 7 })
+	hl.exec_cmd("discord", { workspace = "1 silent" })
+	hl.exec_cmd("thunderbird", { workspace = "6 silent" })
+	hl.exec_cmd("protonmail-bridge", { workspace = "7 silent" })
 	hl.exec_cmd("hypridle & awww-daemon & waybar & dunst")
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
