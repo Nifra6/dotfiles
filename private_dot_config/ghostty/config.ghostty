@@ -1,3 +1,9 @@
 theme = Catppuccin Latte
 window-decoration = none
 background-opacity = 0.92
+keybind = ctrl+shift+enter=new_split:auto
+keybind = ctrl+shift+w=close_surface
+keybind = ctrl+shift+h=previous_tab
+keybind = ctrl+shift+j=goto_split:previous
+keybind = ctrl+shift+k=goto_split:next
+keybind = ctrl+shift+l=next_tab
