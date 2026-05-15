@@ -145,7 +145,7 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
 -- Screenshot
-hl.bind("Print", hl.dsp.exec_cmd("grim -g '$(slurp -d -b BD00FF10)' - | wl-copy -t image/png"))
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d -b BD00FF10)" - | wl-copy -t image/png'))
 -- Applications
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 -- Move focus
