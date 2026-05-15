@@ -87,9 +87,9 @@
       "class<signal>": "󰍡",
       "class<*filelight>": "󰃢",
       "class<steam>": "󰓓",
-      "class<steam_app_*>": "󰊖 ",
+      "class<steam_app_.*>": "󰊗 ",
       "class<wineboot.exe>": "󰡶 ",
-      "class<factorio>": "󰊖 ",
+      "class<factorio>": "󰊗 ",
     },
   },
 
