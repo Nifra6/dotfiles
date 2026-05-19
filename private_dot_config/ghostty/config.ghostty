@@ -1,6 +1,7 @@
 theme = Catppuccin Latte
 window-decoration = none
 background-opacity = 0.92
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo,path
 keybind = ctrl+shift+enter=new_split:auto
 keybind = ctrl+shift+w=close_surface
 keybind = ctrl+shift+h=previous_tab
