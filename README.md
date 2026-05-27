@@ -3,7 +3,7 @@
 <details>
 <summary>Desktop example (terminal theme has changed)</summary>
 
-<img src="ressources/exemple.png" width="200" alt="exemple">
+<img src="ressources/exemple.png" width="800" alt="exemple">
 
 </details>
 
@@ -73,7 +73,7 @@ Yeah, maybe this readme will be updated, but ... yeah ¯\\\_(ツ)\_/¯
 ### Icons used : Quest Sprout
 
 <a href="https://ko-fi.com/s/9f790faf39">
-<img src="ressources/_Pack100.png" width="200" alt="questSproutPack100">
+<img src="ressources/_Pack100.png" width="500" alt="questSproutPack100">
 </a>
 
 "Quest Sprout" and "Swords: The Webcomic" are © 2018-2024 by Matthew J Wills.
