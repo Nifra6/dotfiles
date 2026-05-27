@@ -1,15 +1,9 @@
 # My dotfiles - Managed with [chezmoi](https://www.chezmoi.io/)
 
-<!-- markdownlint-disable MD013 MD026 MD033 MD045-->
-
-<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim/badges/plugins?style=flat" /></a>
-<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim/badges/leaderkey?style=flat" /></a>
-<a href="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim"><img src="https://dotfyle.com/Nifra6/dotfiles-privatedotconfig-nvim/badges/plugin-manager?style=flat" /></a>
-
 <details>
-<summary>Desktop example</summary>
+<summary>Desktop example (terminal theme has changed)</summary>
 
-![exemple](ressources/exemple.png)
+<img src="ressources/exemple.png" width="200" alt="exemple">
 
 </details>
 
@@ -21,26 +15,27 @@ And my nvim config is [here](https://gitlab.com/nifra/nvim).
 
 ## What I use on my setup
 
-| Need                | Answer                                                                                     | Comments                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| Distribution        | [Arch](https://archlinux.org/)                                                             | love it or hate it, I love it                                          |
-| Compositor          | [Hyprland](https://hyprland.org/)                                                          | tile manager that hype me                                              |
-| Statusbar           | [waybar](https://github.com/Alexays/Waybar)                                                | just perfect                                                           |
-| Wallpaper daemon    | [awww](https://codeberg.org/LGFae/awww)                                                    | dynamic and beautiful transitions                                      |
-| Notification daemon | [dunst](https://dunst-project.org/)                                                        | a little complicated to configure from scratch                         |
-| Logout Utility      | [wleave](https://github.com/AMNatty/wleave)                                                | I prefer this fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) |
-| Shell               | [zsh](https://www.zsh.org/) (without oh-my-zsh)                                            | better config than bash, more DIY than fish                            |
-| File Manager        | CLI : [ranger](https://ranger.fm/) / GUI : [nautilus](https://apps.gnome.org/fr/Nautilus/) | ranger -> vim motion for the win                                       |
-| Terminal Emulator   | [kitty](https://sw.kovidgoyal.net/kitty/)                                                  | tiling and tabs included, pretty powerfull                             |
-| IDE                 | [neovim](https://neovim.io/) with [lazy.vim](https://github.com/folke/lazy.nvim)           | Config is working even if not super clean                              |
-| Git TUI             | [lazygit](https://github.com/jesseduffield/lazygit)                                        | intuitive and powerfull, with vim motions                              |
+| Need                | Answer                                              | Comments                                                               |
+| ------------------- | --------------------------------------------------- | ---------------------------------------------------------------------- |
+| Distribution        | [Arch](https://archlinux.org/)                      | love it or hate it, I love it                                          |
+| Compositor          | [Hyprland](https://hyprland.org/)                   | tile manager that hype me                                              |
+| Statusbar           | [waybar](https://github.com/Alexays/Waybar)         | just perfect                                                           |
+| Wallpaper daemon    | [awww](https://codeberg.org/LGFae/awww)             | dynamic and beautiful transitions                                      |
+| Notification daemon | [dunst](https://dunst-project.org/)                 | a little complicated to configure from scratch                         |
+| Logout Utility      | [wleave](https://github.com/AMNatty/wleave)         | I prefer this fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) |
+| Shell               | [zsh](https://www.zsh.org/) (without oh-my-zsh)     | better config than bash, more DIY than fish                            |
+| CLI File Explorer   | [yazi](https://yazi-rs.github.io/)                  | vim motion for the win                                                 |
+| GUI File Explorer   | [nautilus](https://apps.gnome.org/fr/Nautilus/)     | the less ugly for me                                                   |
+| Terminal Emulator   | [ghostty](https://ghostty.org/)                     | tiling and tabs included, pretty powerfull                             |
+| IDE                 | [neovim](https://neovim.io/)                        | so cool and powerfull and hackable and perfect ...                     |
+| Git TUI             | [lazygit](https://github.com/jesseduffield/lazygit) | intuitive and powerfull, with vim motions                              |
 
 ## What I accomodate with at work
 
 | Need                | Answer                                               | Comments                             |
 | ------------------- | ---------------------------------------------------- | ------------------------------------ |
 | Distribution        | Ubuntu 22.04                                         | canonical not the best, apt outdated |
-| Desktop Environment | [Regolith](https://regolith-desktop.com/) (i3 as TM) | i dn't want issues with the GPU      |
+| Desktop Environment | [Regolith](https://regolith-desktop.com/) (i3 as TM) | I don't want issues with the GPU     |
 
 ## Installation
 
@@ -65,11 +60,11 @@ chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
 To install all the applications, run the script `~/.scripts/make_ubuntu_usable`.
 
 > ⚠️
-> For nvim to work with node.js, you need to add the node snap directly to your path: `export PATH=/snap/node/current/bin:$PATH` (see the .zshenv).
+> For nvim to work with node.js, you need to add the node snap directly to your path: `export PATH=/snap/node/current/bin:$PATH` (see the `.zshenv`).
 
 ## That's everything folks
 
-Yeah maybe this readme will be updated, but ... yeah ¯\\\_(ツ)\_/¯
+Yeah, maybe this readme will be updated, but ... yeah ¯\\\_(ツ)\_/¯
 
 À plus dans le bus !
 
@@ -77,7 +72,9 @@ Yeah maybe this readme will be updated, but ... yeah ¯\\\_(ツ)\_/¯
 
 ### Icons used : Quest Sprout
 
-[![questSproutPack100](ressources/_Pack100.png)](https://ko-fi.com/s/9f790faf39)
+<a href="https://ko-fi.com/s/9f790faf39">
+<img src="ressources/_Pack100.png" width="200" alt="questSproutPack100">
+</a>
 
 "Quest Sprout" and "Swords: The Webcomic" are © 2018-2024 by Matthew J Wills.
 All rights reserved.
