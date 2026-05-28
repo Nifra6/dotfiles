@@ -2,7 +2,7 @@
 theme = Catppuccin Latte
 window-decoration = none
 background-opacity = 0.92
-shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo,path
+shell-integration-features = cursor,sudo,ssh-env,ssh-terminfo,path
 
 # Keybinds
 keybind = ctrl+shift+enter=new_split:auto

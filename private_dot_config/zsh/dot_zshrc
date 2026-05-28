@@ -25,9 +25,9 @@ zstyle ':completion:*' menu select
 source ${ZDOTDIR}/aliases
 
 
-# -- Kitty tabs
+# -- Shell title
 # ---------------------------
-source ${ZDOTDIR}/kitty_title.zsh
+source ${ZDOTDIR}/shell_title.zsh
 
 
 # -- Prompt
