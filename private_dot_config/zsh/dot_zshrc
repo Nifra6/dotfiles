@@ -96,7 +96,6 @@ function y() {
 # -- Miscellaneous
 # ---------------------------
 bindkey -v
-source ${HOME}/.config/ranger/shell_automatic_cd.sh
 
 
 # -- Conda
@@ -138,8 +137,6 @@ case $DISTRO in
 
 esac
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
-
 case $HOSTNAME in
 
     "gonto")
@@ -152,8 +149,6 @@ case $HOSTNAME in
         ;;
 
     "nascane")
-        export SDKMAN_DIR="$HOME/Applications/SDKMan"
-        [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
         ;;
 
     "wrandrall")
