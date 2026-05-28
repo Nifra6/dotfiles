@@ -34,3 +34,4 @@ function _clap_dynamic_completer_prek() {
 }
 
 compdef _clap_dynamic_completer_prek prek
+eval "$(COMPLETE=zsh prek)"

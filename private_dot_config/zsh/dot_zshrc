@@ -173,3 +173,8 @@ case $HOSTNAME in
         ;;
 
 esac
+
+
+# -- Completion
+# ---------------------------
+eval "$(COMPLETE=zsh prek)"
