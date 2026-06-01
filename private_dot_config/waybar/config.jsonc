@@ -75,6 +75,7 @@
       "class<Chromium>": "󰊯 ",
       "class<Brave-browser>": "󰊯 ",
       "class<Brave-browser> title<.*Twitch.*>": "󰕃 ",
+      "class<Brave-browser> title<.*Board Game Arena.*>": "󰇎 ",
       "title<.*PIP.*>": "󰻏",
       "class<*pavucontrol>": "󱟛",
       "class<Zotero>": "󰂺",
