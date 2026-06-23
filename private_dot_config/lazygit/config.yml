@@ -1,3 +1,6 @@
+git:
+  parseEmoji: true
+
 gui:
   nerdFontsVersion: "3"
 
