@@ -39,7 +39,7 @@ And my nvim config is [here](https://gitlab.com/nifra/nvim).
 
 ## Installation
 
-### Arch Linux :
+### Arch Linux
 
 ```BASH
 pacman -S chezmoi
@@ -50,7 +50,7 @@ The packages will be installed automatically, but for now not everything is auto
 Yes I want to full automatize install from bare Arch to my distro.
 No I don't plan to do that soon.
 
-### Ubuntu :
+### Ubuntu
 
 ```BASH
 snap install chezmoi --classic
@@ -58,9 +58,6 @@ chezmoi init --apply https://gitlab.com/nifra/dotfiles.git
 ```
 
 To install all the applications, run the script `~/.scripts/make_ubuntu_usable`.
-
-> ⚠️
-> For nvim to work with node.js, you need to add the node snap directly to your path: `export PATH=/snap/node/current/bin:$PATH` (see the `.zshenv`).
 
 ## That's everything folks
 

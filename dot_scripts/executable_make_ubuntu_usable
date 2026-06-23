@@ -17,11 +17,15 @@ sudo apt install -y dunst neofetch python-is-python3 ripgrep ranger xclip zathur
 sudo snap install brave
 sudo snap install zotero-snap
 sudo snap install discord
-sudo snap install node --classic
 sudo snap install lsd --classic
 sudo snap install yazi --classic
 sudo snap install nvim --classic
 sudo snap install mpv --classic
+
+# Node.js
+if ! command -v nvm >/dev/null 2>&1; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
+fi
 
 # btop
 if ! command -v btop >/dev/null 2>&1; then
