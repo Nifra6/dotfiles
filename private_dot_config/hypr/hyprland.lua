@@ -174,7 +174,7 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Move workspace to another monitor
-hl.bind(mainMod .. " + M", hl.dsp.window.move({ monitor = "+1" }))
+hl.bind(mainMod .. " + M", hl.dsp.workspace.move({ monitor = "+1" }))
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 local azerty_keys = {
