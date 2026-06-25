@@ -127,6 +127,17 @@ case $DISTRO in
         # ---------------------------
         source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
         source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        # -- Node.js
+        # ---------------------------
+        nvm() {
+            unset -f nvm node npm npx
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            nvm "$@"
+        }
+        node() { unset -f nvm node npm npx; \. "$NVM_DIR/nvm.sh"; node "$@"; }
+        npm()  { unset -f nvm node npm npx; \. "$NVM_DIR/nvm.sh"; npm "$@";  }
+        npx()  { unset -f nvm node npm npx; \. "$NVM_DIR/nvm.sh"; npx "$@";  }
         ;;
     "Arch Linux")
         # -- Suggestions and colours
