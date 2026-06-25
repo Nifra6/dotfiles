@@ -24,12 +24,6 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export ZDOTDIR=${HOME}/.config/zsh
 
-# -- ssh-agent
-# ---------------------------
-if [[ -z "$SSH_AUTH_SOCK" ]] ; then
-    eval `ssh-agent -s`
-    ssh-add
-fi
 
 # -- Apps on Ubuntu
 # ---------------------------
