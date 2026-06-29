@@ -1,6 +1,10 @@
 # Options
 theme = Catppuccin Latte
 window-decoration = none
+working-directory = home
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
+split-inherit-working-directory = false
 background-opacity = 0.92
 shell-integration-features = cursor,no-title,sudo,ssh-env,ssh-terminfo,path
 
