@@ -86,7 +86,14 @@ def resolve_revisions(text: str, /, *, accept: bool = True) -> str:
 if __name__ == "__main__":
     import sys
 
-    with Path(sys.argv[1]).open() as f:
+    file = Path(sys.argv[1])
+    with file.open() as f:
         content = f.read()
     accept = "--reject" not in sys.argv
-    print(resolve_revisions(content, accept=accept))  # noqa: T201
+
+    new_content = resolve_revisions(content, accept=accept)
+    backup_path = file.with_name(file.name + ".backup")
+    file.rename(backup_path)
+
+    with Path(sys.argv[1]).open("w") as f:
+        f.write(new_content)
