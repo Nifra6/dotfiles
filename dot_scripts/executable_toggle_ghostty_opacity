@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Taken from https://github.com/ghostty-org/ghostty/issues/5047#issuecomment-4509467908
+
+CONFIG=$(readlink -f "$HOME/.config/ghostty/config.ghostty")
+CURRENT=$(awk -F'= ' '/^background-opacity/{print $2}' "$CONFIG")
+OPACITY_VALUE="0.92"
+
+if [ "$CURRENT" = $OPACITY_VALUE ]; then
+    sed -i 's/^background-opacity = .*/background-opacity = 1/' "$CONFIG"
+else
+    sed -i "s/^background-opacity = .*/background-opacity = $OPACITY_VALUE/" "$CONFIG"
+fi
+
+kill -SIGUSR2 $(pgrep ghostty) 2>/dev/null
