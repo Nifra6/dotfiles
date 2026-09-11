@@ -34,6 +34,10 @@ alias lg='lazygit'
 alias cm='chezmoi'
 alias py='python'
 
+# -- Alt names
+# ---------------------------
+alias notif_pause="dunstctl set-paused true"
+alias notif_resume="dunstctl set-paused false"
 
 # -- Command config
 # ---------------------------
