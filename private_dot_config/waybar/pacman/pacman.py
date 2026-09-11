@@ -31,7 +31,6 @@ def write_output(packages):
             output_text = f"  {nb_packages} paquets disponibles"
             output_alt = "available"
             output_tooltip = "\n".join(packages)
-
             output_class = "info"
     output = {
         "text": output_text,

@@ -23,6 +23,7 @@
   ],
   "modules-center": [
     "idle_inhibitor",
+    "custom/notif",
     "custom/weather",
     "clock#date",
     "clock#hour",
@@ -149,6 +150,18 @@
     },
     "tooltip-format-activated": "Veille désactivée",
     "tooltip-format-deactivated": "Veille activée",
+  },
+
+  "custom/notif": {
+    "exec": "python $HOME/.config/waybar/dunst/pause.py",
+    "exec-on-event": true,
+    "format": "{icon}",
+    "format-icons": {
+      "running": "󰂚",
+      "paused": "󰂛",
+    },
+    "interval": 600,
+    "on-click": "dunstctl set-paused toggle",
   },
 
   // -- Weather
