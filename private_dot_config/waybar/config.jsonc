@@ -105,7 +105,7 @@
   // -- System updates
   // ---------------------------
   "custom/pacman": {
-    "exec": "python $HOME/.config/waybar/pacman/pacman.py",
+    "exec": "$HOME/.config/waybar/pacman/check_updates.py",
     "exec-on-event": true,
     "format": "{icon}{0}",
     "format-icons": {
@@ -113,7 +113,7 @@
       "uptodate": "󰗡",
     },
     "interval": 600,
-    "on-click": "kitty --class kitty-scratch -c ~/.config/kitty/kitty-scratch.conf zsh -i -c update",
+    "on-click": "ghostty -e zsh -i -c update",
     "return-type": "json",
   },
 
@@ -153,7 +153,7 @@
   },
 
   "custom/notif": {
-    "exec": "python $HOME/.config/waybar/dunst/pause.py",
+    "exec": "$HOME/.config/waybar/dunst/pause.py",
     "exec-on-event": true,
     "format": "{icon}",
     "format-icons": {
@@ -162,6 +162,7 @@
     },
     "interval": 600,
     "on-click": "dunstctl set-paused toggle",
+    "return-type": "json",
   },
 
   // -- Weather

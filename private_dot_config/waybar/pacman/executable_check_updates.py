@@ -1,47 +1,48 @@
+#!/usr/bin/env python3
+"""Check package updates and write JSON output for waybar."""
+
 import json
 import subprocess
 import sys
 
 
-def check_updates():
+def check_updates() -> list[str]:
+    """Check package updates.
+
+    Return:
+        The list of updates available.
+    """
     try:
         output = subprocess.check_output(
-            ["checkupdates", "--nocolor"], universal_newlines=True
+            ["checkupdates", "--nocolor"],  # noqa: S607
+            universal_newlines=True,
+            timeout=60,
         )
-        updates = output.strip().split("\n")
-        return updates
+        return output.strip().split("\n")
     except subprocess.CalledProcessError:
         return []
 
 
-def write_output(packages):
+def write_output(packages: list[str]) -> None:
+    """Write the pending updates as a JSON for waybar."""
     nb_packages = len(packages)
     match nb_packages:
         case 0:
             output_text = ""
             output_alt = "uptodate"
             output_tooltip = ""
-            output_class = "good"
         case 1:
             output_text = "  1 paquet disponible"
             output_alt = "available"
             output_tooltip = packages[0]
-            output_class = "info"
         case _:
             output_text = f"  {nb_packages} paquets disponibles"
             output_alt = "available"
             output_tooltip = "\n".join(packages)
-            output_class = "info"
-    output = {
-        "text": output_text,
-        "alt": output_alt,
-        "tooltip": output_tooltip,
-        "class": output_class,
-    }
+    output = {"text": output_text, "alt": output_alt, "tooltip": output_tooltip}
     sys.stdout.write(json.dumps(output) + "\n")
     sys.stdout.flush()
 
 
 if __name__ == "__main__":
-    updates = check_updates()
-    write_output(updates)
+    write_output(check_updates())

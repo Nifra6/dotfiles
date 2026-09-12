@@ -19,21 +19,16 @@ def main() -> None:
 
     match output:
         case "true\n":
-            output_text = "Notifications en pause."
+            output_tooltip = "Notifications en pause"
             output_alt = "paused"
         case "false\n":
-            output_text = "Notifications visibles."
+            output_tooltip = "Notifications visibles"
             output_alt = "running"
         case _:
             msg = f"Problème avec dunst, on obtient :'{output}'."
             raise RuntimeError(msg)
 
-    output = {
-        "text": output_text,
-        "alt": output_alt,
-        "tooltip": output_text,
-        "class": "info",
-    }
+    output = {"alt": output_alt, "tooltip": output_tooltip}
 
     sys.stdout.write(json.dumps(output) + "\n")
     sys.stdout.flush()
