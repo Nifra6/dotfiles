@@ -11,7 +11,7 @@ widget_spacing = 8
 padding = 6
 background_opacity = 0
 
-start = ["group:system", "workspaces", "yuuto/arch-updater:widget", "media"]
+start = ["group:system", "taskbar", "yuuto/arch-updater:widget", "media"]
 center = ["group:center"]
 end = ["group:right"]
 
@@ -35,30 +35,39 @@ id = "right"
 fill = "#646464"
 foreground = "#FFFFFF"
 opacity = 0.9
-members = ["network", "sysmon", "volume", "brightness", "battery"]
+members = ["network", "sysmon", "output_volume", "input_volume", "brightness", "battery"]
 padding = 10
+
+[widget.caffeine]
+enabled = false
+
+[widget.notifications]
+enabled = false
 
 [widget.clock]
 format = "{:L%A %d %B} | {:%H:%M}"
 capsule = true
 
+[widget.input_volume]
+hide_when_inactive = true
+
 [widget.media]
 hide_when_no_media = true
+artist_first = true
 max_length = 375
 capsule = true
 capsule_thickness = 0.7
-capsule_fill = "#66cc99"
-capsule_foreground = "#2a5c45"
+# capsule_fill = "#66cc99"
+# capsule_foreground = "#2a5c45"
 
 [widget.sysmon]
 stat = "disk_free"
 
 [widget."yuuto/arch-updater:widget"]
 capsule = true
-capsule_fill = "#87ceeb"
+# capsule_fill = "#87ceeb"
+# capsule_foreground = "#2a5c45"
 
-[widget.workspaces]
-style = "focus_hint"
+[widget.taskbar]
+group_by_workspace = true
 capsule = true
-capsule_fill = "#005635"
-capsule_foreground = "#FFFFFF"
