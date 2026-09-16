@@ -48,6 +48,9 @@ enabled = false
 format = "{:L%A %d %B} | {:%H:%M}"
 capsule = true
 
+[widget.weather]
+show_condition = false
+
 [widget.input_volume]
 hide_when_inactive = true
 
