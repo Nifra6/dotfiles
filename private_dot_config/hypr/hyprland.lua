@@ -15,8 +15,10 @@ hl.monitor({
 ------------------------------
 local terminal = "ghostty"
 local commandsMenu = "wofi --show run --allow-images"
-local appsMenu = "wofi --show drun --allow-images"
-local exitMenu = "wleave"
+-- local appsMenu = "wofi --show drun --allow-images"
+local appsMenu = "noctalia msg panel-toggle launcher"
+-- local exitMenu = "wleave"
+local exitMenu = "noctalia msg panel-toggle session"
 local webBrowser = "brave"
 local fileManager = "nautilus"
 local clipboard = "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
@@ -24,15 +26,21 @@ local clipboard = "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 -- Autostart
 ------------------------------
 hl.on("hyprland.start", function()
+	-- hl.exec_cmd("wlsunset -l 48.68 -L 6.18") --Blue filter at night
+	-- hl.exec_cmd("awww-daemon") -- Wallpaper
+	-- hl.exec_cmd("waybar") --Status bar
+	-- hl.exec_cmd("dunst") --Notifications
+	-- hl.exec_cmd("blueman-applet & blueman-tray & rfkill unblock bluetooth") -- Bluetooth
+	-- hl.exec_cmd("hypridle") -- Idle system
+	hl.exec_cmd("noctalia")
+	hl.exec_cmd("rfkill unblock bluetooth")
 	hl.exec_cmd("discord", { workspace = "1 silent" })
+	hl.exec_cmd("signal-desktop", { workspace = "1 silent" })
 	hl.exec_cmd("thunderbird", { workspace = "6 silent" })
 	hl.exec_cmd("protonmail-bridge", { workspace = "7 silent" })
-	hl.exec_cmd("hypridle & awww-daemon & waybar & dunst")
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
-	hl.exec_cmd("blueman-applet & blueman-tray & rfkill unblock bluetooth")
 	hl.exec_cmd("udiskie --tray")
-	hl.exec_cmd("wlsunset -l 48.68 -L 6.18")
 	hl.exec_cmd("hyprctl setcursor 'Capitaine Cursors' 40")
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
@@ -53,7 +61,6 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("LANG", "fr_FR.UTF-8")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 hl.env("_JAVA_AWT_WM_NONREPARENTING", "1")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "x11")
 
@@ -91,6 +98,7 @@ hl.config({
 		sensitivity = 0,
 		touchpad = { natural_scroll = true },
 	},
+	cursor = { no_hardware_cursors = 1 },
 })
 
 -- Animations

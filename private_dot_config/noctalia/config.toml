@@ -1,0 +1,39 @@
+[include]
+files = ["bars/waybar.toml"]
+
+[theme]
+builtin = "Catppuccin"
+mode = "auto"
+
+[location]
+auto_locate = true
+
+[nightlight]
+enabled = true
+
+[bar.default]
+enabled = false
+
+[widget.clock]
+format = "{:L%A %d %B} | {:%H:%M}"
+
+[widget.media]
+hide_when_no_media = true
+# capsule = true
+# max_length = 375
+
+[plugins]
+enabled = ["yuuto/arch-updater"]
+
+[plugin_settings."yuuto/arch-updater"]
+auto_check_hours = 1
+panel_placement = "floating"
+
+[shell.panel]
+control_center_placement = "floating"
+session_placement = "floating"
+
+[dock]
+enabled = false
+auto_hide = true
+reserve_space = false

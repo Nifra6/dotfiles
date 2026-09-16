@@ -1,0 +1,18 @@
+[idle.behavior.lock]
+timeout = 90
+action = "lock"
+enabled = true
+
+[idle.behavior.screen-off]
+timeout = 180
+action = "screen_off"
+enabled = true
+
+[idle.behavior.suspend]
+timeout = 300
+action = "suspend"
+
+[lockscreen]
+blur_intensity = 0
+tint_intensity = 0
+wallpaper = "~/Images/Wallpaper/SFW/owl_drawing.png"

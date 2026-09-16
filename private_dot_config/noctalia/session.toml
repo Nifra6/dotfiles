@@ -1,0 +1,20 @@
+[[shell.session.actions]]
+action = "lock"
+label = "Verrouiller"
+shortcut = "l"
+
+[[shell.session.actions]]
+action = "suspend"
+label = "Mettre en veille"
+glyph = "zzz"
+shortcut = "v"
+
+[[shell.session.actions]]
+action = "reboot"
+label = "Redémarrer"
+shortcut = "r"
+
+[[shell.session.actions]]
+action = "shutdown"
+label = "Éteindre"
+shortcut = "e"

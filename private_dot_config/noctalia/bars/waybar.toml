@@ -1,0 +1,64 @@
+[bar.waybar]
+enabled = true
+thickness = 30
+position = "top"
+layer = "top"
+
+capsule_thickness = 1
+margin_ends = 0
+margin_edge = 6
+widget_spacing = 8
+padding = 6
+background_opacity = 0
+
+start = ["group:system", "workspaces", "yuuto/arch-updater:widget", "media"]
+center = ["group:center"]
+end = ["group:right"]
+
+[[bar.waybar.capsule_group]]
+id = "system"
+fill = "#1793d1"
+foreground = "#FFFFFF"
+members = ["session", "control-center"]
+
+[[bar.waybar.capsule_group]]
+id = "center"
+fill = "#9b59b6"
+foreground = "#FFFFFF"
+opacity = 0.9
+members = ["caffeine", "notifications", "weather", "clock", "tray"]
+padding = 10
+widget_spacing = 10
+
+[[bar.waybar.capsule_group]]
+id = "right"
+fill = "#646464"
+foreground = "#FFFFFF"
+opacity = 0.9
+members = ["network", "sysmon", "volume", "brightness", "battery"]
+padding = 10
+
+[widget.clock]
+format = "{:L%A %d %B} | {:%H:%M}"
+capsule = true
+
+[widget.media]
+hide_when_no_media = true
+max_length = 375
+capsule = true
+capsule_thickness = 0.7
+capsule_fill = "#66cc99"
+capsule_foreground = "#2a5c45"
+
+[widget.sysmon]
+stat = "disk_free"
+
+[widget."yuuto/arch-updater:widget"]
+capsule = true
+capsule_fill = "#87ceeb"
+
+[widget.workspaces]
+style = "focus_hint"
+capsule = true
+capsule_fill = "#005635"
+capsule_foreground = "#FFFFFF"

@@ -6,7 +6,7 @@ packages:
       - "gdm-settings" # configure gdm
       # - "matlab-support" # correct lib issues if MATLAB is installed
       - "paru" # AUR helper
-      - "prek-bin" # pre-commit hooks 
+      - "prek-bin" # pre-commit hooks
       - "quarto-cli-bin" # Quarto language binary
       - "r2modman-bin" # thunderstore od manager for linux
       - "wleave-git" # logout menu
@@ -103,6 +103,7 @@ packages:
       - "hypridle" # sleep system
       - "hyprland" # compositor
       - "hyprlock" # lock system
+      - "noctalia" # desktop shell
       - "swww" # wallpaper
       - "slurp" # region selection (used with grim for example)
       - "waybar" # status bar
