@@ -1,18 +1,15 @@
-[include]
-files = ["bars/waybar.toml"]
-
 [theme]
 builtin = "Catppuccin"
 mode = "auto"
+
+[wallpaper.default]
+path = "~/Images/Wallpaper/Altered/Seeds-of-Unity.jpg"
 
 [location]
 auto_locate = true
 
 [nightlight]
 enabled = true
-
-[bar.default]
-enabled = false
 
 [plugins]
 enabled = ["yuuto/arch-updater"]
