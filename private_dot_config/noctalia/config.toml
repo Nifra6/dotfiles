@@ -12,12 +12,14 @@ auto_locate = true
 enabled = true
 
 [plugins]
-enabled = ["yuuto/arch-updater"]
+enabled = ["yuuto/arch-updater", "profidev/hypr-screen-mirror"]
 
 [plugin_settings."yuuto/arch-updater"]
 auto_check_hours = 1
 panel_placement = "floating"
+update_cmd = "paru -Pw ; paru -Scc ; paru -Syu ; pacdiff -s ; paru -c ; chezmoi update -v ; sudo rm -rf /var/cache/pacman/pkg/download-*"
 
 [shell.panel]
 control_center_placement = "floating"
 session_placement = "floating"
+wallpaper_placement = "floating"

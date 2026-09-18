@@ -1,7 +1,3 @@
--- Requirements
-------------------------------
-local mirror = require("scripts.mirror")
-
 -- Monitors
 ------------------------------
 hl.monitor({
@@ -14,11 +10,12 @@ hl.monitor({
 -- My programs
 ------------------------------
 local terminal = "ghostty"
+local noctalia_ipc = "noctalia msg "
 local commandsMenu = "wofi --show run --allow-images"
 -- local appsMenu = "wofi --show drun --allow-images"
-local appsMenu = "noctalia msg panel-toggle launcher"
+local appsMenu = noctalia_ipc .. "panel-toggle launcher"
 -- local exitMenu = "wleave"
-local exitMenu = "noctalia msg panel-toggle session"
+local exitMenu = noctalia_ipc .. "panel-toggle session"
 local webBrowser = "brave"
 local fileManager = "nautilus"
 local clipboard = "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
@@ -125,7 +122,8 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(webBrowser))
-hl.bind(mainMod .. " + SHIFT + M", mirror.toggle_mirror)
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(noctalia_ipc .. "panel-toggle profidev/hypr-screen-mirror:panel"))
+
 -- Sound
 hl.bind(
 	"XF86AudioRaiseVolume",
