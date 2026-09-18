@@ -61,7 +61,6 @@ show_progress = true
 title_scroll = "on_hover"
 max_length = 375
 capsule = true
-capsule_thickness = 0.7
 # capsule_fill = "#66cc99"
 # capsule_foreground = "#2a5c45"
 
