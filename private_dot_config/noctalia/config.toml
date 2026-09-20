@@ -11,6 +11,25 @@ auto_locate = true
 [nightlight]
 enabled = true
 
+[control_center]
+# sidebar = "full"
+sidebar_section = "none"
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
 [plugins]
 enabled = ["yuuto/arch-updater", "profidev/hypr-screen-mirror"]
 
