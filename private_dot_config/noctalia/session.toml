@@ -4,7 +4,7 @@ label = "Verrouiller"
 shortcut = "l"
 
 [[shell.session.actions]]
-action = "suspend"
+action = "lock_and_suspend"
 label = "Mettre en veille"
 glyph = "zzz"
 shortcut = "v"

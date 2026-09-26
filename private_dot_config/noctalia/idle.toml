@@ -10,7 +10,7 @@ enabled = true
 
 [idle.behavior.suspend]
 timeout = 300
-action = "suspend"
+action = "lock_and_suspend"
 
 [lockscreen]
 blur_intensity = 0

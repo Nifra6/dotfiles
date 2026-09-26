@@ -15,7 +15,6 @@ auto_locate = true
 enabled = true
 
 [control_center]
-# sidebar = "full"
 sidebar_section = "none"
 
 [[control_center.shortcuts]]
