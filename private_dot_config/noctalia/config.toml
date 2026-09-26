@@ -2,6 +2,9 @@
 builtin = "Catppuccin"
 mode = "auto"
 
+[wallpaper]
+directory = "~/Images/Fonds d'écran/"
+
 [wallpaper.default]
 path = "~/Images/Wallpaper/Altered/Seeds-of-Unity.jpg"
 
