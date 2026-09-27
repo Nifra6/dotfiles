@@ -224,9 +224,14 @@ hl.window_rule({
 })
 hl.window_rule({
 	name = "Brave-media-popup",
-	match = { title = "^Mode PIP (Picture-in-Picture)$" },
+	match = {
+		class = "brave-browser",
+		title = "Mode PIP \\(Picture-in-Picture\\)",
+	},
 	float = true,
-	size = { 320, 180 },
+	keep_aspect_ratio = true,
+	border_color = "#a9a9a9",
+	size = { 480, 270 },
 })
 hl.window_rule({
 	name = "Steam-float",
