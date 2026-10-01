@@ -9,8 +9,9 @@ text/html=brave-browser.desktop;brave.desktop
 application/xhtml+xml=brave-browser.desktop;brave.desktop
 application/xml=brave-browser.desktop
 
-# Mail
+# Social
 x-scheme-handler/mailto=thunderbird.desktop
+x-scheme-handler/fluxer=fluxer.desktop;
 
 # Video
 video/mp4=mpv.desktop;mpv_mpv.desktop
@@ -53,11 +54,7 @@ x-scheme-handler/unknown=brave-browser.desktop
 text/html=brave-browser.desktop
 application/xhtml+xml=brave-browser.desktop
 application/xml=brave-browser.desktop
-
 x-scheme-handler/mailto=thunderbird.desktop
-
-
-
 video/mp4=mpv.desktop;mpv_mpv.desktop
 video/x-matroska=mpv.desktop;mpv_mpv.desktop
 video/x-msvideo=mpv.desktop;mpv_mpv.desktop
@@ -77,8 +74,6 @@ image/png=feh.desktop
 image/webp=feh.desktop
 image/gif=feh.desktop
 image/svg+xml=feh.desktop
-
 application/pdf=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura.desktop
-
 application/x-shellscript=kitty-open.desktop
