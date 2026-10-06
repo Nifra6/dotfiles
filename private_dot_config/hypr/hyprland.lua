@@ -10,37 +10,23 @@ hl.monitor({
 -- My programs
 ------------------------------
 local terminal = "ghostty"
-local noctalia_ipc = "noctalia msg "
-local commandsMenu = "wofi --show run --allow-images"
--- local appsMenu = "wofi --show drun --allow-images"
-local appsMenu = noctalia_ipc .. "panel-toggle launcher"
--- local exitMenu = "wleave"
-local exitMenu = noctalia_ipc .. "panel-toggle session"
 local webBrowser = "brave"
 local fileManager = "nautilus"
-local clipboard = "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+local noctalia_ipc = "noctalia msg "
 
 -- Autostart
 ------------------------------
 hl.on("hyprland.start", function()
-	-- hl.exec_cmd("wlsunset -l 48.68 -L 6.18") --Blue filter at night
-	-- hl.exec_cmd("awww-daemon") -- Wallpaper
-	-- hl.exec_cmd("waybar") --Status bar
-	-- hl.exec_cmd("dunst") --Notifications
-	-- hl.exec_cmd("blueman-applet & blueman-tray & rfkill unblock bluetooth") -- Bluetooth
-	-- hl.exec_cmd("hypridle") -- Idle system
 	hl.exec_cmd("noctalia")
-	hl.exec_cmd("rfkill unblock bluetooth")
 	hl.exec_cmd("discord", { workspace = "1 silent" })
 	hl.exec_cmd("signal-desktop", { workspace = "1 silent" })
 	hl.exec_cmd("thunderbird", { workspace = "6 silent" })
 	hl.exec_cmd("protonmail-bridge", { workspace = "7 silent" })
-	hl.exec_cmd("wl-paste --type text --watch cliphist store")
-	hl.exec_cmd("wl-paste --type image --watch cliphist store")
 	hl.exec_cmd("udiskie --tray")
 	hl.exec_cmd("hyprctl setcursor 'Capitaine Cursors' 40")
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("rfkill unblock bluetooth")
 end)
 
 -- Environment variables
@@ -115,45 +101,28 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(appsMenu))
-hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd(commandsMenu))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(exitMenu))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(noctalia_ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(noctalia_ipc .. "panel-toggle session"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(noctalia_ipc .. "panel-toggle clipboard"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(webBrowser))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(noctalia_ipc .. "panel-toggle profidev/hypr-screen-mirror:panel"))
 
 -- Sound
-hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ +5%"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ -5%"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMute",
-	hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMicMute",
-	hl.dsp.exec_cmd("pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	mainMod .. " + ALT + M",
-	hl.dsp.exec_cmd("pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("playerctl play-pause"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(noctalia_ipc .. "volume-up"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(noctalia_ipc .. "volume-down"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(noctalia_ipc .. "volume-mute"), { locked = true, repeating = true })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(noctalia_ipc .. "mic-mute"), { locked = true, repeating = true })
+hl.bind(mainMod .. " + ALT + M", hl.dsp.exec_cmd(noctalia_ipc .. "mic-mute"), { locked = true, repeating = true })
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(noctalia_ipc .. "media toggle"))
 -- Brightness
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(noctalia_ipc .. "brightness-up"), { locked = true, repeating = true })
+hl.bind(
+	"XF86MonBrightnessDown",
+	hl.dsp.exec_cmd(noctalia_ipc .. "brightness-down"),
+	{ locked = true, repeating = true }
+)
 -- Screenshot
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d -b BD00FF10)" - | wl-copy -t image/png'))
 -- Applications
