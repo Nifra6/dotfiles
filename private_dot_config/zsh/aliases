@@ -83,13 +83,13 @@ case $DISTRO in
     "Ubuntu") 
         # -- System functions
         # ---------------------------
-        alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; uv self update ; ~/.scripts/check_lazygit_version ; chezmoi update -v'
+        alias update='sudo apt update ; sudo apt upgrade ; sudo apt autoremove ; sudo snap refresh ; uv self update ; ~/.scripts/check_lazygit_version ; chezmoi update -v ; ~/.scripts/compl_update.bash'
         alias bat="batcat"
         ;;
     "Arch Linux")
         # -- System functions
         # ---------------------------
-        alias update='paru -Pw ; paru -Scc ; paru -Syu ; pacdiff -s ; paru -c ; chezmoi update -v ; sudo rm -rf /var/cache/pacman/pkg/download-* ; noctalia msg plugin yuuto/arch-updater:service all check'
+        alias update='paru -Pw ; paru -Scc ; paru -Syu ; pacdiff -s ; paru -c ; chezmoi update -v ; sudo rm -rf /var/cache/pacman/pkg/download-* ; noctalia msg plugin yuuto/arch-updater:service all check ; ~/.scripts/compl_update.bash'
         # -- Replace commands
         # ---------------------------
         alias ls='lsd'
